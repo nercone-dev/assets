@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: NerconeSansJP-Bold, 'Nercone Sans JP';
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-4 {
+        opacity: .75;
+      }
+
+      .cls-5 {
+        fill: #272727;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        opacity: .5;
+      }
+
+      .cls-8 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        fill: #1a1a1a;
+      }
+
+      .cls-13 {
+        letter-spacing: .02em;
+      }
+
+      .cls-4 {
+        font-family: NerconeSansJP-Regular, 'Nercone Sans JP';
+        font-size: 24px;
+      }
+
+      .cls-14 {
+        letter-spacing: .01em;
+      }
+
+      .cls-15 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-12" width="1280" height="640"/>
+  <g>
+    <rect class="cls-5" x="230" y="230" width="180" height="180"/>
+    <g>
+      <polygon class="cls-3" points="290 250 290 270 270 270 270 290 250 290 250 250 290 250"/>
+      <g class="cls-7">
+        <polygon class="cls-3" points="290 330 290 310 270 310 270 290 250 290 250 330 290 330"/>
+      </g>
+      <rect class="cls-2" x="290" y="310" width="60" height="20"/>
+      <g class="cls-7">
+        <polygon class="cls-3" points="350 310 350 330 370 330 370 350 390 350 390 310 350 310"/>
+      </g>
+      <polygon class="cls-3" points="350 390 350 370 370 370 370 350 390 350 390 390 350 390"/>
+      <g class="cls-7">
+        <polygon class="cls-3" points="350 390 350 370 330 370 330 350 310 350 310 390 350 390"/>
+      </g>
+      <rect class="cls-3" x="310" y="290" width="20" height="60"/>
+      <g class="cls-7">
+        <polygon class="cls-3" points="290 250 290 270 310 270 310 290 330 290 330 250 290 250"/>
+      </g>
+    </g>
+  </g>
+  <text class="cls-1" transform="translate(502.97 317.51)"><tspan x="0" y="0">LoopEight</tspan></text>
+  <text class="cls-4" transform="translate(503.6 353.78)"><tspan x="0" y="0">High Qual</tspan><tspan class="cls-6" x="109.37" y="0">i</tspan><tspan class="cls-13" x="115.04" y="0">t</tspan><tspan x="123.33" y="0">y Decent</tspan><tspan class="cls-11" x="222.94" y="0">r</tspan><tspan x="231.6" y="0">ali</tspan><tspan class="cls-8" x="256.09" y="0">z</tspan><tspan x="268.59" y="0">ed In</tspan><tspan class="cls-10" x="323.58" y="0">t</tspan><tspan x="331.11" y="0">e</tspan><tspan class="cls-14" x="344.86" y="0">r</tspan><tspan x="353.9" y="0">net S</tspan><tspan class="cls-15" x="411.2" y="0">e</tspan><tspan x="425.16" y="0">a</tspan><tspan class="cls-9" x="438.4" y="0">r</tspan><tspan x="446.78" y="0">ch Engine</tspan></text>
+</svg>

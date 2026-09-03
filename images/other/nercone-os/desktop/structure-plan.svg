@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-family: NerconeSansJP-Bold, 'Nercone Sans JP';
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        fill: #1b1464;
+      }
+
+      .cls-5 {
+        fill: #00a99d;
+      }
+
+      .cls-6, .cls-7, .cls-2 {
+        font-size: 32.5px;
+      }
+
+      .cls-6, .cls-7, .cls-2, .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        fill: #12a563;
+      }
+
+      .cls-10, .cls-11, .cls-7, .cls-12, .cls-13, .cls-8, .cls-14 {
+        font-family: NerconeSansJP-Regular, 'Nercone Sans JP';
+      }
+
+      .cls-10, .cls-12, .cls-13, .cls-8, .cls-14 {
+        opacity: .75;
+      }
+
+      .cls-10, .cls-15 {
+        letter-spacing: 0em;
+      }
+
+      .cls-16 {
+        fill: #029553;
+      }
+
+      .cls-17 {
+        fill: #4d4d4d;
+      }
+
+      .cls-18 {
+        fill: #00897d;
+      }
+
+      .cls-19 {
+        letter-spacing: 0em;
+      }
+
+      .cls-20 {
+        letter-spacing: 0em;
+      }
+
+      .cls-21 {
+        fill: #098bc2;
+      }
+
+      .cls-22 {
+        letter-spacing: 0em;
+      }
+
+      .cls-23 {
+        fill: #22b573;
+      }
+
+      .cls-24 {
+        fill: #2e3192;
+      }
+
+      .cls-25 {
+        fill: #29abe2;
+      }
+
+      .cls-12, .cls-26 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-27 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-28 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-29 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-30 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-31 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-32 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-33 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-34 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-35 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-36 {
+        letter-spacing: 0em;
+      }
+
+      .cls-37 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-38 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-39 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-40 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-41 {
+        letter-spacing: 0em;
+      }
+
+      .cls-42 {
+        letter-spacing: 0em;
+      }
+
+      .cls-43 {
+        fill: #333;
+      }
+
+      .cls-8 {
+        font-size: 25px;
+      }
+
+      .cls-44 {
+        fill: #1a1a1a;
+      }
+
+      .cls-45 {
+        letter-spacing: .02em;
+      }
+
+      .cls-46 {
+        letter-spacing: .02em;
+      }
+
+      .cls-47 {
+        letter-spacing: .02em;
+      }
+
+      .cls-48 {
+        letter-spacing: .02em;
+      }
+
+      .cls-49 {
+        letter-spacing: .02em;
+      }
+
+      .cls-50 {
+        letter-spacing: .02em;
+      }
+
+      .cls-51 {
+        letter-spacing: .01em;
+      }
+
+      .cls-52 {
+        letter-spacing: .02em;
+      }
+
+      .cls-53 {
+        letter-spacing: .02em;
+      }
+
+      .cls-54 {
+        letter-spacing: 0em;
+      }
+
+      .cls-55 {
+        letter-spacing: 0em;
+      }
+
+      .cls-56 {
+        letter-spacing: 0em;
+      }
+
+      .cls-57 {
+        letter-spacing: 0em;
+      }
+
+      .cls-58 {
+        letter-spacing: 0em;
+      }
+
+      .cls-59 {
+        letter-spacing: .01em;
+      }
+
+      .cls-60 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-44" width="1920" height="1080"/>
+  <g>
+    <g>
+      <rect class="cls-43" x="285" y="1000" width="1350" height="80"/>
+      <text class="cls-2" transform="translate(308.51 1052.98)"><tspan x="0" y="0">Ne</tspan><tspan class="cls-59" x="43.61" y="0">r</tspan><tspan class="cls-35" x="57" y="0">K</tspan><tspan x="78.84" y="0">e</tspan><tspan class="cls-60" x="97.94" y="0">r</tspan><tspan class="cls-3" x="111.18" y="0">nel</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-17" x="285" y="825" width="1350" height="175"/>
+      <text class="cls-2" transform="translate(307.44 882.78)"><tspan x="0" y="0">NKMod / NKE</tspan><tspan class="cls-51" x="212.46" y="0">x</tspan><tspan x="231.47" y="0">t</tspan></text>
+      <text class="cls-8" transform="translate(310.66 930.08)"><tspan class="cls-55" x="0" y="0">fi</tspan><tspan class="cls-47" x="15.05" y="0">r</tspan><tspan class="cls-56" x="24.6" y="0">m</tspan><tspan class="cls-58" x="46.44" y="0">w</tspan><tspan class="cls-56" x="66.65" y="0">a</tspan><tspan class="cls-41" x="80.59" y="0">r</tspan><tspan class="cls-55" x="89.46" y="0">e memo</tspan><tspan class="cls-48" x="183.91" y="0">r</tspan><tspan class="cls-55" x="193.52" y="0">y p</tspan><tspan class="cls-38" x="229.63" y="0">ow</tspan><tspan class="cls-55" x="263.82" y="0">er gpio ne</tspan><tspan class="cls-45" x="381.93" y="0">t</tspan><tspan class="cls-37" x="390.58" y="0">w</tspan><tspan class="cls-56" x="410.36" y="0">o</tspan><tspan class="cls-53" x="425.22" y="0">r</tspan><tspan class="cls-55" x="434.71" y="0">k icmp </tspan><tspan class="cls-36" x="519.54" y="0">t</tspan><tspan class="cls-56" x="527.54" y="0">cp udp c</tspan><tspan class="cls-48" x="630.13" y="0">r</tspan><tspan class="cls-55" x="639.73" y="0">yp</tspan><tspan class="cls-36" x="668.84" y="0">t</tspan><tspan class="cls-55" x="676.83" y="0">og</tspan><tspan class="cls-20" x="706.9" y="0">r</tspan><tspan class="cls-57" x="716.06" y="0">ap</tspan><tspan class="cls-40" x="745.19" y="0">h</tspan><tspan class="cls-55" x="759.46" y="0">y ethenet wlan blue</tspan><tspan class="cls-36" x="988.79" y="0">t</tspan><tspan class="cls-55" x="996.79" y="0">ooth hdmi displ</tspan><tspan class="cls-39" x="1176.58" y="0">a</tspan><tspan class="cls-55" x="1190.1" y="0">ypo</tspan><tspan class="cls-46" x="1234.06" y="0">r</tspan><tspan class="cls-19" x="1243.7" y="0">t </tspan><tspan x="0" y="30">g</tspan><tspan class="cls-42" x="15.06" y="30">r</tspan><tspan x="24.08" y="30">aphic </tspan><tspan class="cls-27" x="94.2" y="30">f</tspan><tspan x="102.48" y="30">ont </tspan><tspan class="cls-22" x="146.67" y="30">s</tspan><tspan class="cls-15" x="159.62" y="30">t</tspan><tspan x="167.47" y="30">o</tspan><tspan class="cls-42" x="182.18" y="30">r</tspan><tspan x="191.2" y="30">age mbr gpt scsi sa</tspan><tspan class="cls-54" x="418.25" y="30">t</tspan><tspan x="426.51" y="30">a </tspan><tspan class="cls-33" x="447.17" y="30">n</tspan><tspan x="461.28" y="30">vme ne</tspan><tspan class="cls-31" x="546.77" y="30">f</tspan><tspan x="555.1" y="30">s nd</tspan><tspan class="cls-31" x="604.44" y="30">f</tspan><tspan x="612.78" y="30">s </tspan><tspan class="cls-28" x="632.54" y="30">e</tspan><tspan class="cls-50" x="646.26" y="30">x</tspan><tspan class="cls-34" x="660.16" y="30">t</tspan><tspan class="cls-19" x="667.9" y="30">4 </tspan><tspan class="cls-49" x="690.75" y="30">x</tspan><tspan class="cls-30" x="704.64" y="30">f</tspan><tspan x="712.98" y="30">s z</tspan><tspan class="cls-32" x="746.13" y="30">f</tspan><tspan x="754.47" y="30">s bt</tspan><tspan class="cls-52" x="797.37" y="30">r</tspan><tspan class="cls-31" x="806.87" y="30">f</tspan><tspan x="815.21" y="30">s ...</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-23" x="285" y="745" width="1350" height="80"/>
+      <text class="cls-2" transform="translate(311.58 797.66)"><tspan x="0" y="0">NeRunE</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-9" x="285" y="665" width="240" height="80"/>
+      <text class="cls-2" transform="translate(371.22 718.09)"><tspan x="0" y="0">NDE</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="525" y="665" width="240" height="80"/>
+      <text class="cls-7" transform="translate(547.5 718.09)"><tspan x="0" y="0">ソフトウェア</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-5" x="765" y="665" width="870" height="80"/>
+      <text class="cls-2" transform="translate(797.31 718.09)"><tspan x="0" y="0">LRFN</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-18" x="765" y="585" width="277.5" height="80"/>
+      <text class="cls-7" transform="translate(798.24 638.29)"><tspan x="0" y="0">Linuxバイナリ</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-25" x="1042.5" y="585" width="255" height="80"/>
+      <text class="cls-2" transform="translate(1059.69 637.66)"><tspan x="0" y="0">ARFN</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-24" x="1297.5" y="585" width="337.5" height="80"/>
+      <text class="cls-6" transform="translate(1318.9 637.66)"><tspan class="cls-1" x="0" y="0">WRFN</tspan><tspan class="cls-11" x="98.26" y="0"> </tspan><tspan class="cls-14" x="107.18" y="0">Wine/</tspan><tspan class="cls-13" x="195.52" y="0">P</tspan><tspan class="cls-12" x="216.03" y="0">r</tspan><tspan class="cls-14" x="227.37" y="0">o</tspan><tspan class="cls-10" x="246.5" y="0">t</tspan><tspan class="cls-14" x="256.7" y="0">on</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-21" x="1042.5" y="505" width="255" height="80"/>
+      <text class="cls-7" transform="translate(1062.12 559.85)"><tspan x="0" y="0">And</tspan><tspan class="cls-26" x="60.6" y="0">r</tspan><tspan x="71.95" y="0">oidアプリ</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-4" x="1297.5" y="505" width="337.5" height="80"/>
+      <text class="cls-7" transform="translate(1347.87 558.25)"><tspan x="0" y="0">Wind</tspan><tspan class="cls-29" x="77.84" y="0">o</tspan><tspan x="96.37" y="0">wsアプリ</tspan></text>
+    </g>
+  </g>
+</svg>

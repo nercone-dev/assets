@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-16 {
+        font-size: 12px;
+      }
+
+      .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-17 {
+        font-family: NerconeSansCJKNF-Variable, 'Nercone Sans CJK NF Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-28 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-29 {
+        font-family: NerconeSansCJKNFVariable-Bold, 'Nercone Sans CJK NF Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-30 {
+        fill: #272727;
+      }
+
+      .cls-20 {
+        font-size: 24px;
+      }
+
+      .cls-31 {
+        fill: #4080c8;
+      }
+
+      .cls-2, .cls-15, .cls-16, .cls-18 {
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-3 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.12em;
+      }
+
+      .cls-6, .cls-32 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-11, .cls-33 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-15 {
+        font-size: 16px;
+      }
+
+      .cls-21 {
+        letter-spacing: 0em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-23, .cls-34 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-24 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-25 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-26 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-35 {
+        opacity: .75;
+      }
+
+      .cls-36, .cls-18 {
+        opacity: .5;
+      }
+
+      .cls-37 {
+        opacity: .1;
+      }
+
+      .cls-27 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-16 {
+        opacity: .25;
+      }
+
+      .cls-17 {
+        font-size: 48px;
+      }
+
+      .cls-18 {
+        font-size: 18px;
+      }
+
+      .cls-38 {
+        letter-spacing: -.52em;
+      }
+
+      .cls-39 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-40 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-41 {
+        letter-spacing: -.08em;
+      }
+
+      .cls-42 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-43 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-44 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-45 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-46 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-47 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-48 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-49 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-50 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-51 {
+        letter-spacing: -.17em;
+      }
+
+      .cls-52 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-53 {
+        letter-spacing: -.13em;
+      }
+
+      .cls-54 {
+        letter-spacing: -.16em;
+      }
+
+      .cls-55 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-56 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-57 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-58 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-59 {
+        fill: #c86000;
+      }
+
+      .cls-60 {
+        fill: #c84040;
+      }
+
+      .cls-61 {
+        fill: #1a1a1a;
+      }
+
+      .cls-62 {
+        fill: #00c878;
+      }
+
+      .cls-63 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-61" width="1280" height="640"/>
+  <g>
+    <rect class="cls-61" x="1177" y="537" width="71" height="71"/>
+    <polyline class="cls-28" points="1237.35 576.69 1187.65 560.08 1187.65 584.92 1212.5 584.92 1237.35 560.08 1237.35 584.92 1224.41 584.92"/>
+  </g>
+  <polygon class="cls-30" points="32 608 1105.94 608 1248 465.94 1248 32 32 32 32 608"/>
+  <text class="cls-16" transform="translate(41.83 628.45)"><tspan x="0" y="0" xml:space="preserve">nercone &lt;nercone@nercone.dev&gt;    https://nercone.dev/ (http://ltrywxxoxsz25t7voax2i3nyihhkwerxyyxq7qrpteagtdyqdybetuqd.onion/)</tspan></text>
+  <text class="cls-18" transform="translate(58.48 71.5)"><tspan x="0" y="0">PROFILE CARD</tspan></text>
+  <text class="cls-17" transform="translate(57.02 121.97)"><tspan x="0" y="0">Ne</tspan><tspan class="cls-34" x="64.15" y="0">r</tspan><tspan x="81.42" y="0">cone</tspan></text>
+  <text class="cls-15" transform="translate(260.85 101.24)"><tspan class="cls-36" x="0" y="0">a.k.a. </tspan><tspan x="67.43" y="0">Nerc1</tspan><tspan class="cls-35" x="115.59" y="0" xml:space="preserve"> / </tspan><tspan x="144.49" y="0">猫</tspan><tspan class="cls-35" x="163.76" y="0" xml:space="preserve"> / </tspan><tspan x="192.66" y="0">イワシ</tspan><tspan class="cls-36" x="0" y="20">f.k.a. </tspan><tspan x="67.43" y="20">DiamondGotCat</tspan></text>
+  <g>
+    <g class="cls-37">
+      <path class="cls-14" d="M1222,154v124H58v-124h1164M1224,152H56v128h1168v-128h0Z"/>
+    </g>
+    <text class="cls-20" transform="translate(81 224.09)"><tspan class="cls-14"><tspan class="cls-45" x="0" y="0">作</tspan><tspan class="cls-52" x="22.54" y="0">り</tspan><tspan class="cls-58" x="43.32" y="0">た</tspan><tspan class="cls-56" x="66.46" y="0">い</tspan><tspan class="cls-46" x="89.4" y="0">も</tspan><tspan class="cls-57" x="111.83" y="0">の</tspan><tspan class="cls-47" x="135.06" y="0">を</tspan><tspan class="cls-45" x="157.5" y="0">作</tspan><tspan class="cls-53" x="180.04" y="0">り</tspan><tspan class="cls-45" x="200.99" y="0">つ</tspan><tspan class="cls-41" x="223.52" y="0">つ</tspan><tspan class="cls-38" x="245.6" y="0">、</tspan><tspan class="cls-44" x="257.1" y="0">や</tspan><tspan class="cls-52" x="278.88" y="0">り</tspan><tspan class="cls-54" x="299.67" y="0">た</tspan><tspan class="cls-51" x="319.9" y="0">く</tspan><tspan class="cls-33" x="339.75" y="0">な</tspan><tspan class="cls-39" x="362.86" y="0">い</tspan><tspan class="cls-42" x="384.25" y="0">こ</tspan><tspan class="cls-55" x="406" y="0">と</tspan><tspan class="cls-43" x="427.44" y="0">か</tspan><tspan class="cls-32" x="449.2" y="0">ら</tspan><tspan x="471.87" y="0">は</tspan><tspan class="cls-63" x="495.87" y="0">逃</tspan><tspan class="cls-48" x="520.03" y="0">げ</tspan><tspan class="cls-49" x="542.77" y="0">て</tspan><tspan class="cls-40" x="565.42" y="0">い</tspan><tspan class="cls-50" x="587.36" y="0">る</tspan><tspan x="609.98" y="0">学生</tspan></tspan><tspan class="cls-31" x="0" y="28.8">󰣛 帽子</tspan><tspan class="cls-12" x="74.72" y="28.8"> </tspan><tspan class="cls-4" x="80.78" y="28.8">と</tspan><tspan class="cls-14" x="102.61" y="28.8"> </tspan><tspan class="cls-60" x="109.36" y="28.8">󰈹 火狐</tspan><tspan class="cls-12" x="184.11" y="28.8"> </tspan><tspan class="cls-4" x="190.17" y="28.8">と</tspan><tspan class="cls-14" x="212" y="28.8"> </tspan><tspan class="cls-62" x="218.75" y="28.8">󰌠 蛇</tspan><tspan class="cls-14" x="269.47" y="28.8"> </tspan><tspan class="cls-8" x="276.22" y="28.8">使</tspan><tspan class="cls-13" x="299.81" y="28.8">い</tspan><tspan class="cls-14" x="322.88" y="28.8" xml:space="preserve">  </tspan><tspan class="cls-59" x="336.38" y="28.8">󱘗 蟹</tspan><tspan class="cls-14" x="387.07" y="28.8" xml:space="preserve"> は勉強中</tspan><tspan class="cls-12" x="489.82" y="28.8">(</tspan><tspan class="cls-4" x="497.88" y="28.8">と</tspan><tspan class="cls-8" x="519.71" y="28.8">言</tspan><tspan class="cls-11" x="543.3" y="28.8">い</tspan><tspan class="cls-9" x="566.41" y="28.8">な</tspan><tspan class="cls-3" x="589.86" y="28.8">が</tspan><tspan class="cls-6" x="611.58" y="28.8">ら</tspan><tspan class="cls-14" x="634.24" y="28.8">全然</tspan><tspan class="cls-10" x="682.24" y="28.8">進</tspan><tspan class="cls-5" x="705.53" y="28.8">ん</tspan><tspan class="cls-7" x="726.62" y="28.8">で</tspan><tspan class="cls-11" x="749.23" y="28.8">いな</tspan><tspan class="cls-13" x="795.45" y="28.8">い</tspan><tspan class="cls-14" x="818.51" y="28.8">)</tspan></text>
+    <text class="cls-18" transform="translate(80.67 187.68)"><tspan x="0" y="0">ABOUT ME</tspan></text>
+  </g>
+  <g>
+    <g class="cls-37">
+      <rect class="cls-14" x="56" y="304" width="274" height="128"/>
+    </g>
+    <text class="cls-1" transform="translate(64.13 319.09)"><tspan class="cls-29" x="0" y="0">󰕄</tspan><tspan class="cls-19" x="10.45" y="0" xml:space="preserve">  </tspan><tspan class="cls-25" x="17.2" y="0">T</tspan><tspan class="cls-19" x="24.2" y="0">wit</tspan><tspan class="cls-21" x="40.85" y="0">t</tspan><tspan class="cls-19" x="44.66" y="0">er</tspan></text>
+    <text class="cls-2" transform="translate(64.13 337.06)"><tspan class="cls-36" x="0" y="0">twitter.com/</tspan><tspan x="86.7" y="0" xml:space="preserve">nercone_x  メイン</tspan><tspan class="cls-36" x="0" y="16">twitter.com/</tspan><tspan x="86.7" y="16" xml:space="preserve">nercone_y  サブ</tspan><tspan class="cls-36" x="0" y="32">twitter.com/</tspan><tspan x="86.7" y="32" xml:space="preserve">nercone_z  避難垢</tspan></text>
+  </g>
+  <g>
+    <g class="cls-37">
+      <rect class="cls-14" x="354" y="304" width="274" height="128"/>
+    </g>
+    <text class="cls-1" transform="translate(362.13 319.09)"><tspan class="cls-29" x="0" y="0">󰁥</tspan><tspan class="cls-19" x="9.98" y="0" xml:space="preserve">  </tspan><tspan class="cls-27" x="16.73" y="0">A</tspan><tspan class="cls-19" x="23.99" y="0">T P</tspan><tspan class="cls-23" x="42.78" y="0">r</tspan><tspan class="cls-19" x="47.1" y="0">o</tspan><tspan class="cls-21" x="54.29" y="0">t</tspan><tspan class="cls-19" x="58.1" y="0">ocol</tspan></text>
+    <text class="cls-2" transform="translate(362.13 337.06)"><tspan class="cls-36" x="0" y="0">bsky.app/profile/</tspan><tspan x="122.82" y="0">nercone.dev</tspan></text>
+  </g>
+  <g>
+    <g class="cls-37">
+      <rect class="cls-14" x="950" y="304" width="274" height="128"/>
+    </g>
+    <text class="cls-1" transform="translate(958.13 319.09)"><tspan class="cls-29" x="0" y="0">VRC</tspan><tspan class="cls-19" x="25.72" y="0" xml:space="preserve">  VRChat</tspan></text>
+    <text class="cls-2" transform="translate(958.13 337.06)"><tspan class="cls-36" x="0" y="0">vrchat.com/home/user/</tspan><tspan class="cls-35" x="151.72" y="0">usr_</tspan><tspan x="0" y="16">3f47312d-6fdf-4f12-85a0-b578d14d8e9c</tspan></text>
+  </g>
+  <g>
+    <g class="cls-37">
+      <rect class="cls-14" x="56" y="456" width="274" height="128"/>
+    </g>
+    <text class="cls-1" transform="translate(64.13 471.09)"><tspan class="cls-29" x="0" y="0">󰊤</tspan><tspan class="cls-19" x="9.98" y="0" xml:space="preserve">  GitHub</tspan></text>
+    <text class="cls-2" transform="translate(64.13 489.06)"><tspan class="cls-36" x="0" y="0">github.com/</tspan><tspan x="79.47" y="0">nercone-dev</tspan></text>
+  </g>
+  <g>
+    <g class="cls-37">
+      <rect class="cls-14" x="652" y="456" width="274" height="128"/>
+    </g>
+    <text class="cls-1" transform="translate(660.13 471.09)"><tspan class="cls-29" x="0" y="0">Si</tspan><tspan class="cls-19" x="11.12" y="0" xml:space="preserve">  Signal</tspan></text>
+    <text class="cls-2" transform="translate(660.13 489.06)"><tspan class="cls-35" x="0" y="0">@</tspan><tspan x="7.22" y="0">nercone.28</tspan></text>
+  </g>
+  <g>
+    <g class="cls-37">
+      <polygon class="cls-14" points="1096 584 950 584 950 456 1224 456 1096 584"/>
+    </g>
+    <text class="cls-1" transform="translate(958.13 471.09)"><tspan class="cls-29" x="0" y="0">Se</tspan><tspan class="cls-19" x="15.01" y="0" xml:space="preserve">  Session</tspan></text>
+    <text class="cls-2" transform="translate(958.13 489.06)"><tspan x="0" y="0">05ab35ee7b08483cce9e0c87c12baa</tspan><tspan x="0" y="16">fa6b479670e33986f0338c3868ca</tspan><tspan x="0" y="32">4c165168</tspan></text>
+  </g>
+  <g>
+    <g class="cls-37">
+      <rect class="cls-14" x="354" y="456" width="274" height="128"/>
+    </g>
+    <text class="cls-1" transform="translate(362.13 471.09)"><tspan class="cls-29" x="0" y="0"></tspan><tspan class="cls-19" x="11.44" y="0" xml:space="preserve">  </tspan><tspan class="cls-26" x="18.19" y="0">T</tspan><tspan class="cls-19" x="25" y="0">elegram</tspan></text>
+    <text class="cls-2" transform="translate(362.13 489.06)"><tspan class="cls-35" x="0" y="0">@</tspan><tspan x="7.22" y="0">nercone</tspan></text>
+  </g>
+  <g>
+    <g class="cls-37">
+      <rect class="cls-14" x="652" y="304" width="274" height="128"/>
+    </g>
+    <text class="cls-1" transform="translate(660.13 319.09)"><tspan class="cls-29" x="0" y="0">Mi</tspan><tspan class="cls-19" x="14.44" y="0" xml:space="preserve">  Miss</tspan><tspan class="cls-24" x="47.6" y="0">k</tspan><tspan class="cls-22" x="53.92" y="0">e</tspan><tspan class="cls-19" x="60.68" y="0">y</tspan></text>
+    <text class="cls-2" transform="translate(660.13 337.06)"><tspan class="cls-36" x="0" y="0">misskey.io/</tspan><tspan class="cls-35" x="79.47" y="0">@</tspan><tspan x="86.7" y="0">DiamondGotCat</tspan></text>
+  </g>
+</svg>

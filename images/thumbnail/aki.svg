@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: NerconeSansJP-Bold, 'Nercone Sans JP';
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #272727;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        fill: #1a1a1a;
+      }
+
+      .cls-3 {
+        font-family: NerconeSansJP-Regular, 'Nercone Sans JP';
+        font-size: 24px;
+        opacity: .75;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-12" width="1280" height="640"/>
+  <g>
+    <rect class="cls-4" x="250" y="230" width="180" height="180"/>
+    <path class="cls-2" d="M338.57,250s-13.01,35.17-9.18,46.22c0,0-10.14-16.23-31.34-27.73,0,0,1.29,25.25,20.26,44.19,0,0-26.12-5.64-31.08-2.71,0,0,12.85,21.19,40.13,19.61,0,0-11.27,0-23.67,15.56,0,0,22.64,3.16,34.88-11.95,0,0-2.42,32.69-11.21,51.4v5.41h2.93l-.9-5.86s9.02-20.74,11.27-50.5c0,0,6.31,8.12,11.27,7.89v-2.64l4.07,3.14,18.07.74s-8.46-10.23-22.65-10.97c0,0,13.12,6.93,41.34-15.27,0,0-19.56-9.31-39.36,3.47,0,0,29.71-14.69,30.28-50.09,0,0-27.89,13.2-37.05,36.55,0,0,7.14-28.26-8.06-56.46Z"/>
+  </g>
+  <text class="cls-1" transform="translate(522.97 317.51)"><tspan x="0" y="0">Aki</tspan></text>
+  <text class="cls-3" transform="translate(523.6 353.78)"><tspan class="cls-7" x="0" y="0">F</tspan><tspan x="13.44" y="0">a</tspan><tspan class="cls-5" x="26.68" y="0">s</tspan><tspan x="39.12" y="0">tAPI-inspi</tspan><tspan class="cls-8" x="147.6" y="0">r</tspan><tspan x="155.98" y="0">ed </tspan><tspan class="cls-9" x="190.76" y="0">W</tspan><tspan x="213" y="0">eb Appli</tspan><tspan class="cls-13" x="304.29" y="0">c</tspan><tspan x="317.95" y="0">ation </tspan><tspan class="cls-10" x="379.24" y="0">F</tspan><tspan class="cls-11" x="392.6" y="0">r</tspan><tspan x="401.26" y="0">am</tspan><tspan class="cls-6" x="435.33" y="0">ew</tspan><tspan x="467.5" y="0">o</tspan><tspan class="cls-14" x="481.62" y="0">r</tspan><tspan x="490.59" y="0">k</tspan></text>
+</svg>

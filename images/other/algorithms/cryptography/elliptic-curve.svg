@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 32px;
+      }
+
+      .cls-4 {
+        fill: #22b573;
+      }
+
+      .cls-3 {
+        stroke-linecap: square;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect id="_背景-2" data-name="背景" class="cls-1" x="0" y="0" width="1024" height="1024"/>
+    </clipPath>
+  </defs>
+  <g id="_背景" data-name="背景">
+    <rect class="cls-4" x="0" y="0" width="1024" height="1024"/>
+  </g>
+  <g class="cls-5">
+    <g>
+      <g id="E">
+        <path class="cls-2" d="M289.37,375h-83.37s-83.37,0-83.37,137,83.37,137,83.37,137h83.37"/>
+        <line class="cls-2" x1="289.37" y1="512" x2="122.63" y2="512"/>
+      </g>
+      <path id="C" class="cls-3" d="M745.49,0s-103.75,375-207.49,375h-26s-100-14.22-100,137,100,137,100,137h24.3c105.06-.04,209.19,375,209.19,375"/>
+      <path id="C-2" data-name="C" class="cls-2" d="M901.37,375h-83.37s-83.37,0-83.37,137,83.37,137,83.37,137h83.37"/>
+    </g>
+  </g>
+</svg>

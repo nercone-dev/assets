@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #303030;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        font-size: 24px;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-5 {
+        font-family: NerconeSansCJK-Variable, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-3, .cls-7, .cls-12, .cls-13, .cls-5 {
+        opacity: .5;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-3, .cls-14 {
+        font-size: 8px;
+      }
+
+      .cls-15 {
+        fill: #272727;
+      }
+
+      .cls-6 {
+        font-size: 6px;
+      }
+
+      .cls-6, .cls-14 {
+        fill: #a0a0a0;
+      }
+
+      .cls-16 {
+        fill: #303030;
+      }
+
+      .cls-7, .cls-9 {
+        font-size: 20px;
+      }
+
+      .cls-7, .cls-9, .cls-11 {
+        fill: #d0d0d0;
+      }
+
+      .cls-8 {
+        fill: #939393;
+      }
+
+      .cls-8, .cls-4 {
+        font-size: 12px;
+      }
+
+      .cls-12, .cls-17 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-10 {
+        fill: #c84040;
+        font-size: 16px;
+      }
+
+      .cls-4 {
+        opacity: .75;
+      }
+
+      .cls-11, .cls-5 {
+        font-size: 32px;
+      }
+
+      .cls-18 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-19 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-21 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-23 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-14 {
+        font-family: NerconeSansCJKVariable-Bold, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-24 {
+        letter-spacing: 0em;
+      }
+
+      .cls-25 {
+        letter-spacing: 0em;
+      }
+
+      .cls-26 {
+        fill: #1a1a1a;
+      }
+
+      .cls-27 {
+        letter-spacing: .02em;
+      }
+
+      .cls-28 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-26" width="1280" height="640"/>
+  <text class="cls-2" transform="translate(22 40.37)"><tspan x="0" y="0">ne</tspan><tspan class="cls-21" x="28.17" y="0">r</tspan><tspan x="36.81" y="0">cone.d</tspan><tspan class="cls-22" x="114.69" y="0">e</tspan><tspan x="128.21" y="0">v の構成</tspan></text>
+  <text class="cls-4" transform="translate(854.91 29.89)"><tspan x="0" y="0">337RFBH934NG0SSP6TEAJJ2L8DHN3KTL2N15H51VKM8HB79J6OQGZZZZ</tspan></text>
+  <g>
+    <rect class="cls-16" y="110" width="48" height="468"/>
+    <text class="cls-11" transform="translate(11.96 265.41) rotate(90)"><tspan x="0" y="0">INTERNET</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-15" x="136" y="110" width="756" height="468"/>
+    <text class="cls-5" transform="translate(159.93 159.24)"><tspan x="0" y="0">Central</tspan></text>
+    <text class="cls-3" transform="translate(689.45 144.23)"><tspan x="0" y="0">GCP Compute Engine (asia-northeast1)</tspan><tspan x="120.41" y="10">nercone.dev</tspan></text>
+    <rect class="cls-15" x="48" y="190" width="88" height="128"/>
+    <g>
+      <rect class="cls-16" x="48" y="198" width="112" height="16"/>
+      <text class="cls-14" transform="translate(54.16 208.67)"><tspan x="0" y="0">HTTP</tspan></text>
+      <text class="cls-6" transform="translate(84.92 207.94)"><tspan x="0" y="0">80/</tspan><tspan class="cls-25" x="9.66" y="0">t</tspan><tspan x="11.56" y="0">cp 443/</tspan><tspan class="cls-25" x="33.97" y="0">t</tspan><tspan x="35.88" y="0">cp 443/udp</tspan></text>
+    </g>
+    <line class="cls-1" x1="380" y1="206" x2="404" y2="206"/>
+    <line class="cls-1" x1="380" y1="262" x2="404" y2="262"/>
+    <line class="cls-1" x1="404" y1="318" x2="380" y2="318"/>
+    <polyline class="cls-1" points="404 374 308 374 308 326"/>
+    <polyline class="cls-1" points="404 430 284 430 284 326"/>
+    <polyline class="cls-1" points="404 486 260 486 260 326"/>
+    <polyline class="cls-1" points="236 326 236 542 404 542"/>
+    <g>
+      <rect class="cls-16" x="404" y="182" width="220" height="48"/>
+      <text class="cls-7" transform="translate(421.11 212.99)"><tspan class="cls-23" x="0" y="0">W</tspan><tspan x="18.69" y="0">ebsi</tspan><tspan class="cls-25" x="58" y="0">t</tspan><tspan x="64.35" y="0">e</tspan></text>
+      <text class="cls-10" transform="translate(535.37 211.66)"><tspan class="cls-17" x="0" y="0">R</tspan><tspan class="cls-20" x="10.06" y="0">e</tspan><tspan x="19.1" y="0">w</tspan><tspan class="cls-28" x="32.2" y="0">r</tspan><tspan x="38.38" y="0">iting</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="160" y="182" width="220" height="144"/>
+      <text class="cls-9" transform="translate(177.11 212.99)"><tspan x="0" y="0">Nginx</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="404" y="238" width="220" height="48"/>
+      <text class="cls-9" transform="translate(421.11 268.99)"><tspan x="0" y="0">Gi</tspan><tspan class="cls-25" x="19.77" y="0">t</tspan><tspan class="cls-28" x="26.11" y="0">e</tspan><tspan x="37.97" y="0">a</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="404" y="294" width="220" height="48"/>
+      <text class="cls-9" transform="translate(421.11 324.99)"><tspan x="0" y="0">Bluesky PDS</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="404" y="350" width="220" height="48"/>
+      <text class="cls-9" transform="translate(421.11 380.99)"><tspan class="cls-24" x="0" y="0">P</tspan><tspan x="12.67" y="0">os</tspan><tspan class="cls-19" x="35.21" y="0">t</tspan><tspan x="41.27" y="0">fix</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="404" y="406" width="220" height="48"/>
+      <text class="cls-9" transform="translate(421.11 436.99)"><tspan x="0" y="0">D</tspan><tspan class="cls-22" x="14.43" y="0">ov</tspan><tspan x="36.88" y="0">ecot</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="404" y="462" width="220" height="48"/>
+      <text class="cls-9" transform="translate(421.11 492.99)"><tspan class="cls-17" x="0" y="0">R</tspan><tspan x="12.58" y="0">oundcube</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="648" y="238" width="220" height="48"/>
+      <text class="cls-9" transform="translate(665.11 268.99)"><tspan class="cls-24" x="0" y="0">P</tspan><tspan x="12.67" y="0">os</tspan><tspan class="cls-25" x="35.21" y="0">t</tspan><tspan x="41.56" y="0">g</tspan><tspan class="cls-21" x="53.83" y="0">r</tspan><tspan x="61.03" y="0">es</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="404" y="518" width="220" height="48"/>
+      <text class="cls-9" transform="translate(421.11 548.99)"><tspan x="0" y="0">Mail Auth</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="48" y="222" width="112" height="16"/>
+      <text class="cls-14" transform="translate(54.16 232.67)"><tspan x="0" y="0">SMTP</tspan></text>
+      <text class="cls-6" transform="translate(132.27 231.94)"><tspan x="0" y="0">587/</tspan><tspan class="cls-25" x="12.83" y="0">t</tspan><tspan x="14.73" y="0">cp</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="48" y="246" width="112" height="16"/>
+      <text class="cls-14" transform="translate(54.16 256.67)"><tspan x="0" y="0">SMTPS</tspan></text>
+      <text class="cls-6" transform="translate(131.78 255.94)"><tspan x="0" y="0">465/</tspan><tspan class="cls-25" x="13.32" y="0">t</tspan><tspan x="15.22" y="0">cp</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="48" y="270" width="112" height="16"/>
+      <text class="cls-14" transform="translate(54.16 280.67)"><tspan x="0" y="0">IMAP</tspan></text>
+      <text class="cls-6" transform="translate(132.91 279.94)"><tspan x="0" y="0">143/</tspan><tspan class="cls-25" x="12.18" y="0">t</tspan><tspan x="14.09" y="0">cp</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-16" x="48" y="294" width="112" height="16"/>
+      <text class="cls-14" transform="translate(54.16 304.67)"><tspan x="0" y="0">IMAPS</tspan></text>
+      <text class="cls-6" transform="translate(131.79 303.94)"><tspan x="0" y="0">993/</tspan><tspan class="cls-25" x="13.31" y="0">t</tspan><tspan x="15.21" y="0">cp</tspan></text>
+    </g>
+    <line class="cls-1" x1="624" y1="262" x2="648" y2="262"/>
+    <polyline class="cls-1" points="624 374 672 374 672 286"/>
+    <polyline class="cls-1" points="624 430 696 430 696 286"/>
+    <polyline class="cls-1" points="624 486 720 486 720 286"/>
+  </g>
+  <g>
+    <rect class="cls-15" x="916" y="110" width="302" height="468"/>
+    <text class="cls-5" transform="translate(939.93 159.24)"><tspan class="cls-25" x="0" y="0">X</tspan><tspan x="21.52" y="0">Se</tspan><tspan class="cls-27" x="60.7" y="0">r</tspan><tspan class="cls-22" x="73.25" y="0">v</tspan><tspan x="90.61" y="0">er</tspan></text>
+    <text class="cls-3" transform="translate(1135.86 144.23)"><tspan x="0" y="0">XServer VPS</tspan><tspan x="-24.08" y="10">smtp.nercone.dev</tspan></text>
+    <g>
+      <rect class="cls-16" x="940" y="360" width="220" height="48"/>
+      <text class="cls-9" transform="translate(957.11 390.99)"><tspan class="cls-24" x="0" y="0">P</tspan><tspan x="12.67" y="0">os</tspan><tspan class="cls-19" x="35.21" y="0">t</tspan><tspan x="41.27" y="0">fix</tspan><tspan class="cls-13" x="64.43" y="0"> </tspan><tspan class="cls-12" x="70.06" y="0">R</tspan><tspan class="cls-13" x="82.64" y="0">el</tspan><tspan class="cls-12" x="99.14" y="0">a</tspan><tspan class="cls-13" x="110.08" y="0">y</tspan></text>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-15" x="690" y="380" width="12" height="12"/>
+    <rect class="cls-15" x="714" y="380" width="12" height="12"/>
+    <line class="cls-1" x1="624" y1="386" x2="940" y2="386"/>
+  </g>
+  <polyline class="cls-1" points="1160 384 1249 384 1249 609 92 609 92 542 48 542"/>
+  <text class="cls-8" transform="translate(779.22 378.99)"><tspan x="0" y="0">587/</tspan><tspan class="cls-25" x="25.66" y="0">t</tspan><tspan x="29.47" y="0">cp via </tspan><tspan class="cls-18" x="66.81" y="0">T</tspan><tspan x="73.68" y="0">ails</tspan><tspan class="cls-28" x="92.56" y="0">c</tspan><tspan x="99.53" y="0">ale ↓</tspan></text>
+  <text class="cls-8" transform="translate(1074.81 434)"><tspan x="0" y="0">25/</tspan><tspan class="cls-25" x="18.76" y="0">t</tspan><tspan x="22.57" y="0">cp </tspan><tspan class="cls-25" x="40.15" y="0">t</tspan><tspan x="43.96" y="0">o Destination Se</tspan><tspan class="cls-27" x="136.37" y="0">r</tspan><tspan class="cls-22" x="141.07" y="0">v</tspan><tspan x="147.58" y="0">er</tspan></text>
+</svg>

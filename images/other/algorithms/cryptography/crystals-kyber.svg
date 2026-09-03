@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .25;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #22b573;
+      }
+    </style>
+  </defs>
+  <g id="_背景" data-name="背景">
+    <rect class="cls-3" x="0" y="0" width="1024" height="1024"/>
+  </g>
+  <g>
+    <circle class="cls-1" cx="566" cy="566" r="18"/>
+    <circle class="cls-1" cx="620" cy="566" r="18"/>
+    <circle class="cls-1" cx="674" cy="566" r="18"/>
+    <circle class="cls-1" cx="728" cy="566" r="18"/>
+    <circle class="cls-1" cx="782" cy="566" r="18"/>
+    <circle class="cls-1" cx="836" cy="566" r="18"/>
+    <circle class="cls-1" cx="890" cy="566" r="18"/>
+    <circle class="cls-1" cx="134" cy="566" r="18"/>
+    <circle class="cls-1" cx="188" cy="566" r="18"/>
+    <circle class="cls-1" cx="242" cy="566" r="18"/>
+    <circle class="cls-1" cx="296" cy="566" r="18"/>
+    <circle class="cls-1" cx="350" cy="566" r="18"/>
+    <circle class="cls-1" cx="458" cy="566" r="18"/>
+    <circle class="cls-1" cx="566" cy="458" r="18"/>
+    <circle class="cls-1" cx="620" cy="458" r="18"/>
+    <circle class="cls-1" cx="674" cy="458" r="18"/>
+    <circle class="cls-1" cx="728" cy="458" r="18"/>
+    <circle class="cls-1" cx="782" cy="458" r="18"/>
+    <circle class="cls-1" cx="836" cy="458" r="18"/>
+    <circle class="cls-1" cx="890" cy="458" r="18"/>
+    <circle class="cls-1" cx="134" cy="458" r="18"/>
+    <circle class="cls-1" cx="188" cy="458" r="18"/>
+    <circle class="cls-1" cx="242" cy="458" r="18"/>
+    <circle class="cls-1" cx="296" cy="458" r="18"/>
+    <circle class="cls-1" cx="350" cy="458" r="18"/>
+    <circle class="cls-1" cx="458" cy="458" r="18"/>
+    <circle class="cls-1" cx="620" cy="404" r="18"/>
+    <circle class="cls-1" cx="674" cy="404" r="18"/>
+    <circle class="cls-1" cx="728" cy="404" r="18"/>
+    <circle class="cls-1" cx="782" cy="404" r="18"/>
+    <circle class="cls-1" cx="836" cy="404" r="18"/>
+    <circle class="cls-1" cx="188" cy="404" r="18"/>
+    <circle class="cls-1" cx="242" cy="404" r="18"/>
+    <circle class="cls-1" cx="296" cy="404" r="18"/>
+    <circle class="cls-1" cx="350" cy="404" r="18"/>
+    <circle class="cls-1" cx="458" cy="404" r="18"/>
+    <circle class="cls-1" cx="566" cy="350" r="18"/>
+    <circle class="cls-1" cx="674" cy="350" r="18"/>
+    <circle class="cls-1" cx="728" cy="350" r="18"/>
+    <circle class="cls-1" cx="782" cy="350" r="18"/>
+    <circle class="cls-1" cx="242" cy="350" r="18"/>
+    <circle class="cls-1" cx="296" cy="350" r="18"/>
+    <circle class="cls-1" cx="350" cy="350" r="18"/>
+    <circle class="cls-1" cx="458" cy="350" r="18"/>
+    <circle class="cls-1" cx="566" cy="296" r="18"/>
+    <circle class="cls-1" cx="620" cy="296" r="18"/>
+    <circle class="cls-1" cx="674" cy="296" r="18"/>
+    <circle class="cls-1" cx="728" cy="296" r="18"/>
+    <circle class="cls-1" cx="296" cy="296" r="18"/>
+    <circle class="cls-1" cx="350" cy="296" r="18"/>
+    <circle class="cls-1" cx="404" cy="296" r="18"/>
+    <circle class="cls-1" cx="458" cy="296" r="18"/>
+    <circle class="cls-1" cx="566" cy="242" r="18"/>
+    <circle class="cls-1" cx="620" cy="242" r="18"/>
+    <circle class="cls-1" cx="674" cy="242" r="18"/>
+    <circle class="cls-1" cx="350" cy="242" r="18"/>
+    <circle class="cls-1" cx="404" cy="242" r="18"/>
+    <circle class="cls-1" cx="458" cy="242" r="18"/>
+    <circle class="cls-1" cx="566" cy="188" r="18"/>
+    <circle class="cls-1" cx="620" cy="188" r="18"/>
+    <circle class="cls-1" cx="404" cy="188" r="18"/>
+    <circle class="cls-1" cx="458" cy="188" r="18"/>
+    <circle class="cls-1" cx="620" cy="620" r="18"/>
+    <circle class="cls-1" cx="674" cy="620" r="18"/>
+    <circle class="cls-1" cx="728" cy="620" r="18"/>
+    <circle class="cls-1" cx="782" cy="620" r="18"/>
+    <circle class="cls-1" cx="836" cy="620" r="18"/>
+    <circle class="cls-1" cx="188" cy="620" r="18"/>
+    <circle class="cls-1" cx="242" cy="620" r="18"/>
+    <circle class="cls-1" cx="296" cy="620" r="18"/>
+    <circle class="cls-1" cx="350" cy="620" r="18"/>
+    <circle class="cls-1" cx="458" cy="620" r="18"/>
+    <circle class="cls-1" cx="566" cy="674" r="18"/>
+    <circle class="cls-1" cx="674" cy="674" r="18"/>
+    <circle class="cls-1" cx="728" cy="674" r="18"/>
+    <circle class="cls-1" cx="782" cy="674" r="18"/>
+    <circle class="cls-1" cx="242" cy="674" r="18"/>
+    <circle class="cls-1" cx="296" cy="674" r="18"/>
+    <circle class="cls-1" cx="350" cy="674" r="18"/>
+    <circle class="cls-1" cx="458" cy="674" r="18"/>
+    <circle class="cls-1" cx="566" cy="728" r="18"/>
+    <circle class="cls-1" cx="620" cy="728" r="18"/>
+    <circle class="cls-1" cx="674" cy="728" r="18"/>
+    <circle class="cls-1" cx="728" cy="728" r="18"/>
+    <circle class="cls-1" cx="296" cy="728" r="18"/>
+    <circle class="cls-1" cx="350" cy="728" r="18"/>
+    <circle class="cls-1" cx="404" cy="728" r="18"/>
+    <circle class="cls-1" cx="458" cy="728" r="18"/>
+    <circle class="cls-1" cx="566" cy="782" r="18"/>
+    <circle class="cls-1" cx="620" cy="782" r="18"/>
+    <circle class="cls-1" cx="674" cy="782" r="18"/>
+    <circle class="cls-1" cx="350" cy="782" r="18"/>
+    <circle class="cls-1" cx="404" cy="782" r="18"/>
+    <circle class="cls-1" cx="458" cy="782" r="18"/>
+    <circle class="cls-1" cx="566" cy="836" r="18"/>
+    <circle class="cls-1" cx="620" cy="836" r="18"/>
+    <circle class="cls-1" cx="404" cy="836" r="18"/>
+    <circle class="cls-1" cx="458" cy="836" r="18"/>
+    <circle class="cls-1" cx="566" cy="134" r="18"/>
+    <circle class="cls-1" cx="458" cy="134" r="18"/>
+    <circle class="cls-1" cx="566" cy="890" r="18"/>
+    <circle class="cls-1" cx="458" cy="890" r="18"/>
+    <circle class="cls-1" cx="512" cy="404" r="18"/>
+    <circle class="cls-1" cx="512" cy="350" r="18"/>
+    <circle class="cls-1" cx="512" cy="296" r="18"/>
+    <circle class="cls-1" cx="512" cy="242" r="18"/>
+    <circle class="cls-1" cx="512" cy="188" r="18"/>
+    <circle class="cls-1" cx="512" cy="620" r="18"/>
+    <circle class="cls-1" cx="512" cy="674" r="18"/>
+    <circle class="cls-1" cx="512" cy="728" r="18"/>
+    <circle class="cls-1" cx="512" cy="782" r="18"/>
+    <circle class="cls-1" cx="512" cy="836" r="18"/>
+    <circle class="cls-1" cx="512" cy="134" r="18"/>
+    <circle class="cls-1" cx="512" cy="890" r="18"/>
+    <circle class="cls-1" cx="512" cy="80" r="18"/>
+    <circle class="cls-1" cx="512" cy="944" r="18"/>
+    <circle class="cls-1" cx="566" cy="512" r="18"/>
+    <circle class="cls-1" cx="620" cy="512" r="18"/>
+    <circle class="cls-1" cx="674" cy="512" r="18"/>
+    <circle class="cls-1" cx="728" cy="512" r="18"/>
+    <circle class="cls-1" cx="782" cy="512" r="18"/>
+    <circle class="cls-1" cx="836" cy="512" r="18"/>
+    <circle class="cls-1" cx="890" cy="512" r="18"/>
+    <circle class="cls-1" cx="134" cy="512" r="18"/>
+    <circle class="cls-1" cx="188" cy="512" r="18"/>
+    <circle class="cls-1" cx="242" cy="512" r="18"/>
+    <circle class="cls-1" cx="296" cy="512" r="18"/>
+    <circle class="cls-1" cx="350" cy="512" r="18"/>
+    <circle class="cls-1" cx="512" cy="512" r="18"/>
+    <circle class="cls-1" cx="944" cy="512" r="18"/>
+    <circle class="cls-1" cx="80" cy="512" r="18"/>
+  </g>
+  <g>
+    <circle class="cls-2" cx="404" cy="566" r="18"/>
+    <circle class="cls-2" cx="404" cy="458" r="18"/>
+    <circle class="cls-2" cx="566" cy="404" r="18"/>
+    <circle class="cls-2" cx="404" cy="404" r="18"/>
+    <circle class="cls-2" cx="620" cy="350" r="18"/>
+    <circle class="cls-2" cx="404" cy="350" r="18"/>
+    <circle class="cls-2" cx="566" cy="620" r="18"/>
+    <circle class="cls-2" cx="404" cy="620" r="18"/>
+    <circle class="cls-2" cx="620" cy="674" r="18"/>
+    <circle class="cls-2" cx="404" cy="674" r="18"/>
+    <circle class="cls-2" cx="512" cy="566" r="18"/>
+    <circle class="cls-2" cx="512" cy="458" r="18"/>
+    <circle class="cls-2" cx="404" cy="512" r="18"/>
+    <circle class="cls-2" cx="458" cy="512" r="18"/>
+  </g>
+</svg>
