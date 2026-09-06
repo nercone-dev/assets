@@ -2,18 +2,22 @@
 <svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
   <defs>
     <style>
-      .cls-1 {
+      .cls-1, .cls-2 {
         fill: none;
         stroke: #fff;
         stroke-miterlimit: 10;
       }
 
-      .cls-2 {
+      .cls-3 {
         fill: #1a1a1a;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
       }
     </style>
   </defs>
-  <rect class="cls-2" width="1024" height="1024"/>
+  <rect class="cls-3" width="1024" height="1024"/>
   <g>
     <rect class="cls-1" x="480" y="536" width="8" height="16"/>
     <rect class="cls-1" x="456" y="464" width="8" height="16"/>
@@ -44,46 +48,46 @@
   </g>
   <g id="warning">
     <g>
-      <rect class="cls-1" x="472" y="512" width="8" height="24"/>
-      <rect class="cls-1" x="480" y="536" width="8" height="16"/>
-      <rect class="cls-1" x="464" y="480" width="8" height="32"/>
-      <rect class="cls-1" x="456" y="464" width="8" height="16"/>
-      <rect class="cls-1" x="440" y="448" width="8" height="8"/>
-      <rect class="cls-1" x="448" y="456" width="8" height="8"/>
-      <rect class="cls-1" x="416" y="432" width="16" height="8"/>
-      <rect class="cls-1" x="432" y="440" width="8" height="8"/>
+      <rect class="cls-2" x="472" y="512" width="8" height="24"/>
+      <rect class="cls-2" x="480" y="536" width="8" height="16"/>
+      <rect class="cls-2" x="464" y="480" width="8" height="32"/>
+      <rect class="cls-2" x="456" y="464" width="8" height="16"/>
+      <rect class="cls-2" x="440" y="448" width="8" height="8"/>
+      <rect class="cls-2" x="448" y="456" width="8" height="8"/>
+      <rect class="cls-2" x="416" y="432" width="16" height="8"/>
+      <rect class="cls-2" x="432" y="440" width="8" height="8"/>
     </g>
     <g>
-      <rect class="cls-1" x="616" y="984" width="144" height="8"/>
-      <rect class="cls-1" x="760" y="992" width="24" height="8"/>
+      <rect class="cls-2" x="616" y="984" width="144" height="8"/>
+      <rect class="cls-2" x="760" y="992" width="24" height="8"/>
     </g>
     <g>
-      <polygon class="cls-1" points="632 232 632 240 624 240 624 248 616 248 616 256 608 256 608 264 600 264 600 272 592 272 592 264 584 264 584 256 576 256 576 248 568 248 568 240 560 240 560 232 568 232 568 224 576 224 576 216 584 216 584 208 592 208 592 200 600 200 600 208 608 208 608 216 616 216 616 224 624 224 624 232 632 232"/>
+      <polygon class="cls-2" points="632 232 632 240 624 240 624 248 616 248 616 256 608 256 608 264 600 264 600 272 592 272 592 264 584 264 584 256 576 256 576 248 568 248 568 240 560 240 560 232 568 232 568 224 576 224 576 216 584 216 584 208 592 208 592 200 600 200 600 208 608 208 608 216 616 216 616 224 624 224 624 232 632 232"/>
       <g>
-        <rect class="cls-1" x="592" y="192" width="8" height="8"/>
-        <rect class="cls-1" x="584" y="200" width="8" height="8"/>
-        <rect class="cls-1" x="600" y="200" width="8" height="8"/>
-        <rect class="cls-1" x="576" y="208" width="8" height="8"/>
-        <rect class="cls-1" x="608" y="208" width="8" height="8"/>
-        <rect class="cls-1" x="568" y="216" width="8" height="8"/>
-        <rect class="cls-1" x="616" y="216" width="8" height="8"/>
-        <rect class="cls-1" x="560" y="224" width="8" height="8"/>
-        <rect class="cls-1" x="624" y="224" width="8" height="8"/>
-        <rect class="cls-1" x="552" y="232" width="8" height="8"/>
-        <rect class="cls-1" x="632" y="232" width="8" height="8"/>
-        <rect class="cls-1" x="560" y="240" width="8" height="8"/>
-        <rect class="cls-1" x="624" y="240" width="8" height="8"/>
-        <rect class="cls-1" x="568" y="248" width="8" height="8"/>
-        <rect class="cls-1" x="616" y="248" width="8" height="8"/>
-        <rect class="cls-1" x="576" y="256" width="8" height="8"/>
-        <rect class="cls-1" x="608" y="256" width="8" height="8"/>
-        <rect class="cls-1" x="584" y="264" width="8" height="8"/>
-        <rect class="cls-1" x="600" y="264" width="8" height="8"/>
-        <rect class="cls-1" x="592" y="272" width="8" height="8"/>
+        <rect class="cls-2" x="592" y="192" width="8" height="8"/>
+        <rect class="cls-2" x="584" y="200" width="8" height="8"/>
+        <rect class="cls-2" x="600" y="200" width="8" height="8"/>
+        <rect class="cls-2" x="576" y="208" width="8" height="8"/>
+        <rect class="cls-2" x="608" y="208" width="8" height="8"/>
+        <rect class="cls-2" x="568" y="216" width="8" height="8"/>
+        <rect class="cls-2" x="616" y="216" width="8" height="8"/>
+        <rect class="cls-2" x="560" y="224" width="8" height="8"/>
+        <rect class="cls-2" x="624" y="224" width="8" height="8"/>
+        <rect class="cls-2" x="552" y="232" width="8" height="8"/>
+        <rect class="cls-2" x="632" y="232" width="8" height="8"/>
+        <rect class="cls-2" x="560" y="240" width="8" height="8"/>
+        <rect class="cls-2" x="624" y="240" width="8" height="8"/>
+        <rect class="cls-2" x="568" y="248" width="8" height="8"/>
+        <rect class="cls-2" x="616" y="248" width="8" height="8"/>
+        <rect class="cls-2" x="576" y="256" width="8" height="8"/>
+        <rect class="cls-2" x="608" y="256" width="8" height="8"/>
+        <rect class="cls-2" x="584" y="264" width="8" height="8"/>
+        <rect class="cls-2" x="600" y="264" width="8" height="8"/>
+        <rect class="cls-2" x="592" y="272" width="8" height="8"/>
       </g>
       <g>
-        <rect class="cls-1" x="592" y="248" width="8" height="8"/>
-        <rect class="cls-1" x="592" y="216" width="8" height="24"/>
+        <rect class="cls-2" x="592" y="248" width="8" height="8"/>
+        <rect class="cls-2" x="592" y="216" width="8" height="24"/>
       </g>
     </g>
   </g>
