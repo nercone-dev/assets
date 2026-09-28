@@ -3,10 +3,12 @@
   <defs>
     <style>
       .cls-1 {
-        font-family: NerconeMonoCJK-Variable, 'Nercone Mono CJK';
-        font-size: 24px;
-        font-variation-settings: 'wght' 400;
-        opacity: .25;
+        font-size: 96px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: NerconeSansCJK-Variable, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 400;
       }
 
       .cls-1, .cls-2, .cls-3 {
@@ -25,21 +27,19 @@
         fill: #272727;
       }
 
-      .cls-7 {
-        fill: #303030;
-      }
-
       .cls-2 {
         font-size: 30px;
       }
 
-      .cls-2, .cls-3 {
-        font-family: NerconeSansCJK-Variable, 'Nercone Sans CJK';
-        font-variation-settings: 'opsz' 14, 'wght' 400;
+      .cls-7 {
+        fill: #303030;
       }
 
       .cls-3 {
-        font-size: 96px;
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-size: 24px;
+        font-variation-settings: 'wght' 400;
+        opacity: .25;
       }
 
       .cls-8 {
@@ -80,7 +80,7 @@
     <polygon class="cls-4" points="1152 152 1152 212 1136 212 1136 208 1128 208 1128 204 1124 204 1124 200 1120 200 1120 196 1116 196 1116 192 1112 192 1112 184 1116 184 1116 176 1120 176 1120 172 1124 172 1124 168 1128 168 1128 164 1132 164 1132 156 1136 156 1136 152 1140 152 1140 144 1148 144 1148 152 1152 152"/>
     <polygon class="cls-4" points="1096 384 1096 396 1092 396 1092 400 1088 400 1088 404 1068 404 1068 396 1064 396 1064 384 1060 384 1060 368 1056 368 1056 360 1052 360 1052 356 1048 356 1048 352 1044 352 1044 348 1040 348 1040 344 1036 344 1036 340 1048 340 1048 336 1060 336 1060 340 1072 340 1072 348 1076 348 1076 356 1080 356 1080 364 1084 364 1084 368 1088 368 1088 376 1092 376 1092 384 1096 384"/>
   </g>
-  <text class="cls-3" transform="translate(123.98 329.97)"><tspan x="0" y="0">__TITLE__</tspan></text>
+  <text class="cls-1" transform="translate(123.98 329.97)"><tspan x="0" y="0">__TITLE__</tspan></text>
   <text class="cls-2" transform="translate(127.81 382.64)"><tspan x="0" y="0">__DESCRIPTION__</tspan></text>
-  <text class="cls-1" transform="translate(128.3 506.88)"><tspan x="0" y="0">__PATH__</tspan></text>
+  <text class="cls-3" transform="translate(128.3 506.88)"><tspan x="0" y="0">__PATH__</tspan></text>
 </svg>
