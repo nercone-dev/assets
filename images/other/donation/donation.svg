@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 32px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-6 {
+        font-family: NerconeSansCJKNF-Variable, 'Nercone Sans CJK NF Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-7 {
+        font-size: 14px;
+      }
+
+      .cls-7, .cls-8 {
+        opacity: .75;
+      }
+
+      .cls-9 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-9, .cls-10, .cls-11, .cls-12 {
+        opacity: .5;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-10 {
+        font-size: 10px;
+      }
+
+      .cls-14, .cls-23 {
+        letter-spacing: 0em;
+      }
+
+      .cls-15, .cls-24 {
+        letter-spacing: .02em;
+      }
+
+      .cls-8, .cls-25 {
+        font-size: 12px;
+      }
+
+      .cls-3 {
+        font-size: 40px;
+      }
+
+      .cls-26 {
+        letter-spacing: .25em;
+      }
+
+      .cls-27 {
+        fill: #272727;
+      }
+
+      .cls-16, .cls-28 {
+        letter-spacing: 0em;
+      }
+
+      .cls-17, .cls-29 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-18, .cls-30 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-19, .cls-31 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-20 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-21, .cls-32 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-33, .cls-5, .cls-6 {
+        font-size: 16px;
+      }
+
+      .cls-5 {
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-6 {
+        opacity: .25;
+      }
+
+      .cls-34 {
+        opacity: .48;
+      }
+
+      .cls-12 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-35 {
+        letter-spacing: -.5em;
+      }
+
+      .cls-36 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-37 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-38 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-39 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-40 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-41 {
+        fill: #1a1a1a;
+      }
+    </style>
+  </defs>
+  <rect class="cls-41" width="1280" height="640"/>
+  <text class="cls-3" transform="translate(32 59.45)"><tspan x="0" y="0">寄付 </tspan><tspan class="cls-11" x="91.25" y="0">Donation</tspan></text>
+  <text class="cls-2" transform="translate(34.74 148.31)"><tspan class="cls-8"><tspan class="cls-26" x="0" y="0">*</tspan><tspan x="9.01" y="0">現在</tspan><tspan class="cls-26" x="33.01" y="0">は</tspan><tspan x="48.01" y="0">Mone</tspan><tspan class="cls-29" x="80.13" y="0">r</tspan><tspan class="cls-26" x="84.45" y="0">oと</tspan><tspan x="109.65" y="0">Li</tspan><tspan class="cls-28" x="119.34" y="0">t</tspan><tspan x="123.15" y="0">ecoi</tspan><tspan class="cls-26" x="147.1" y="0">n</tspan><tspan x="157.19" y="0">による仮想通貨での寄付のみ受け付けています</tspan><tspan class="cls-35" x="409.19" y="0">。</tspan></tspan><tspan class="cls-34"><tspan class="cls-25" x="0" y="14" xml:space="preserve">   </tspan><tspan class="cls-22" x="10.12" y="13.24">Cu</tspan><tspan class="cls-15" x="23.34" y="13.24">r</tspan><tspan class="cls-17" x="27.26" y="13.24">r</tspan><tspan class="cls-22" x="30.86" y="13.24">ent</tspan><tspan class="cls-13" x="45.87" y="13.24">l</tspan><tspan class="cls-19" x="48.34" y="13.24">y</tspan><tspan class="cls-22" x="53.52" y="13.24">, I on</tspan><tspan class="cls-13" x="76.62" y="13.24">l</tspan><tspan class="cls-22" x="79.09" y="13.24">y accept c</tspan><tspan class="cls-15" x="128.31" y="13.24">r</tspan><tspan class="cls-22" x="132.23" y="13.24">yp</tspan><tspan class="cls-16" x="143.98" y="13.24">t</tspan><tspan class="cls-22" x="147.15" y="13.24">ocu</tspan><tspan class="cls-15" x="164.77" y="13.24">r</tspan><tspan class="cls-17" x="168.69" y="13.24">r</tspan><tspan class="cls-22" x="172.29" y="13.24">en</tspan><tspan class="cls-18" x="184.03" y="13.24">c</tspan><tspan class="cls-22" x="189.55" y="13.24">y donations via Mone</tspan><tspan class="cls-17" x="290.55" y="13.24">r</tspan><tspan class="cls-22" x="294.15" y="13.24">o and Li</tspan><tspan class="cls-16" x="331.49" y="13.24">t</tspan><tspan class="cls-22" x="334.67" y="13.24">ecoin.</tspan></tspan><tspan class="cls-8"><tspan class="cls-26" x="0" y="35">*</tspan><tspan x="9.01" y="35">コーヒーは飲めないのでココアです</tspan><tspan class="cls-35" x="201.01" y="35">。</tspan></tspan><tspan class="cls-11"><tspan class="cls-25" x="0" y="49" xml:space="preserve">   </tspan><tspan class="cls-22" x="10.12" y="48.24">I don&apos;t d</tspan><tspan class="cls-14" x="48.86" y="48.24">r</tspan><tspan class="cls-22" x="52.72" y="48.24">ink co</tspan><tspan class="cls-20" x="81.06" y="48.24">f</tspan><tspan class="cls-21" x="84.37" y="48.24">f</tspan><tspan class="cls-22" x="87.78" y="48.24">ee, so it&apos;s coc</tspan><tspan class="cls-14" x="153.42" y="48.24">o</tspan><tspan class="cls-22" x="159.51" y="48.24">a.</tspan></tspan><tspan class="cls-8"><tspan class="cls-26" x="0" y="70">*</tspan><tspan x="9.01" y="70">仮想通貨で寄付を募るというアイデア、そし</tspan><tspan class="cls-26" x="249.01" y="70">て</tspan><tspan x="264.01" y="70">Mone</tspan><tspan class="cls-29" x="296.13" y="70">r</tspan><tspan class="cls-26" x="300.45" y="70">oと</tspan><tspan x="325.65" y="70">Li</tspan><tspan class="cls-28" x="335.34" y="70">t</tspan><tspan x="339.15" y="70">ecoi</tspan><tspan class="cls-26" x="363.1" y="70">n</tspan><tspan x="373.19" y="70">の選択は soichi &lt;soichi1208@p</tspan><tspan class="cls-29" x="548.6" y="70">r</tspan><tspan x="552.91" y="70">o</tspan><tspan class="cls-28" x="560.11" y="70">t</tspan><tspan x="563.92" y="70">on.me&gt; さんを参考にしています</tspan><tspan class="cls-35" x="742.48" y="70">。</tspan></tspan><tspan class="cls-10"><tspan x="0" y="82.24" xml:space="preserve">   The id</tspan><tspan class="cls-23" x="37.99" y="82.24">e</tspan><tspan x="43.92" y="82.24">a of raising funds th</tspan><tspan class="cls-29" x="138.13" y="82.24">r</tspan><tspan x="141.73" y="82.24">ough c</tspan><tspan class="cls-24" x="174.21" y="82.24">r</tspan><tspan x="178.13" y="82.24">yp</tspan><tspan class="cls-28" x="189.88" y="82.24">t</tspan><tspan x="193.05" y="82.24">ocu</tspan><tspan class="cls-24" x="210.67" y="82.24">r</tspan><tspan class="cls-29" x="214.59" y="82.24">r</tspan><tspan x="218.19" y="82.24">en</tspan><tspan class="cls-30" x="229.93" y="82.24">c</tspan><tspan class="cls-31" x="235.45" y="82.24">y</tspan><tspan x="240.63" y="82.24">, as </tspan><tspan class="cls-37" x="260.03" y="82.24">w</tspan><tspan x="268.03" y="82.24">ell as the choice of Mone</tspan><tspan class="cls-29" x="386.73" y="82.24">r</tspan><tspan x="390.33" y="82.24">o and Li</tspan><tspan class="cls-28" x="427.67" y="82.24">t</tspan><tspan x="430.84" y="82.24">ecoin, was inspi</tspan><tspan class="cls-29" x="506.45" y="82.24">r</tspan><tspan x="510.05" y="82.24">ed </tspan><tspan class="cls-30" x="524.81" y="82.24">b</tspan><tspan x="530.74" y="82.24">y soichi &lt;soichi1208@p</tspan><tspan class="cls-29" x="642.53" y="82.24">r</tspan><tspan x="646.13" y="82.24">o</tspan><tspan class="cls-28" x="652.13" y="82.24">t</tspan><tspan x="655.3" y="82.24">on.me&gt;.</tspan></tspan></text>
+  <g>
+    <rect class="cls-27" x="32" y="256" width="1216" height="160"/>
+    <g>
+      <path id="_149931032" data-name=" 149931032" class="cls-4" d="M128,304c-17.67,0-32.01,14.35-31.99,32,0,3.53.57,6.93,1.62,10.11h9.57v-26.92l20.79,20.8,20.79-20.8v26.92h9.57c1.06-3.18,1.62-6.57,1.62-10.11.03-17.67-14.33-31.99-31.99-31.99h0Z"/>
+      <path id="_149931160" data-name=" 149931160" class="cls-4" d="M123.22,344.76l-9.08-9.08v16.94h-13.49c5.62,9.21,15.77,15.38,27.34,15.38s21.73-6.16,27.34-15.38h-6.55s-6.21,0-6.21,0h-.73v-16.94l-9.08,9.08-4.78,4.78-4.78-4.78h0Z"/>
+    </g>
+    <text class="cls-1" transform="translate(184.89 336.22)"><tspan x="0" y="0">Mone</tspan><tspan class="cls-29" x="85.66" y="0">r</tspan><tspan x="97.17" y="0">o </tspan><tspan class="cls-11" x="125.36" y="0">XMR</tspan></text>
+    <text class="cls-5" transform="translate(186.44 360.5)"><tspan x="0" y="0">8BQCKtXehfcWfR52yb53zaBBEYajQqMXgD7Rj8D7JBL7CQWokZKb7NzVDtPNQVFvHk1aWJKLQGSHYRfq8hV7yRQ7K9HBKqi</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-27" x="32" y="448" width="1216" height="160"/>
+    <path class="cls-4" d="M128,496c-17.67,0-32,14.33-32,32s14.33,32,32,32,32-14.33,32-32h0c0-17.67-14.33-32-32-32ZM128.52,529.05l-3.33,11.23h17.8c.5,0,.91.41.91.92,0,.09-.01.17-.04.25l-1.55,5.33c-.15.52-.63.88-1.18.88h-27.19l4.6-15.53-5.09,1.55,1.12-3.63,5.09-1.55,6.46-21.81c.15-.53.62-.89,1.17-.89h6.89c.5,0,.91.41.92.91,0,.08-.01.17-.03.25l-5.42,18.45,5.09-1.55-1.09,3.69-5.13,1.49Z"/>
+    <text class="cls-1" transform="translate(184.89 516.22)"><tspan x="0" y="0">Li</tspan><tspan class="cls-28" x="25.84" y="0">t</tspan><tspan x="36" y="0">ecoin </tspan><tspan class="cls-9" x="127.78" y="0">L</tspan><tspan class="cls-12" x="142.8" y="0">T</tspan><tspan class="cls-11" x="162.5" y="0">C</tspan></text>
+    <text class="cls-5" transform="translate(186.44 540.5)"><tspan x="0" y="0">ltcmweb1qqwxmc4u9fzyfhwa2dst9vfy8fn9kv5jd4hzy9wkqk3z4k5hz2zxxqqmqy0v8r4whv4477ue2f5kf6tzjslfwh8egn29c2h</tspan><tspan x="0" y="20">f8kmm25da2wgj584gz</tspan></text>
+  </g>
+  <text class="cls-2" transform="translate(34.28 94.43)"><tspan class="cls-33"><tspan x="0" y="0">Ne</tspan><tspan class="cls-29" x="21.38" y="0">r</tspan><tspan x="27.14" y="0">con</tspan><tspan class="cls-26" x="55.33" y="0">e</tspan><tspan x="68.66" y="0">の活動を少しでも応援してくださる場合、活動のための資金（もとい、ココア代）を寄付していただけると嬉しいです</tspan><tspan class="cls-35" x="916.66" y="0">。</tspan></tspan><tspan class="cls-7"><tspan x="0" y="18.24">If </tspan><tspan class="cls-30" x="12.88" y="18.24">y</tspan><tspan x="20.47" y="18.24">ou </tspan><tspan class="cls-37" x="41.08" y="18.24">w</tspan><tspan x="52.29" y="18.24">ould li</tspan><tspan class="cls-38" x="91.64" y="18.24">k</tspan><tspan x="99.01" y="18.24">e </tspan><tspan class="cls-28" x="111.11" y="18.24">t</tspan><tspan x="115.55" y="18.24">o suppo</tspan><tspan class="cls-24" x="169.09" y="18.24">r</tspan><tspan x="174.58" y="18.24">t Ne</tspan><tspan class="cls-29" x="201.81" y="18.24">r</tspan><tspan x="206.85" y="18.24">con</tspan><tspan class="cls-39" x="231.51" y="18.24">e</tspan><tspan x="239.47" y="18.24">&apos;s activities in a</tspan><tspan class="cls-39" x="341" y="18.24">n</tspan><tspan x="349.07" y="18.24">y w</tspan><tspan class="cls-39" x="372.33" y="18.24">a</tspan><tspan class="cls-31" x="379.99" y="18.24">y</tspan><tspan x="387.24" y="18.24">, I </tspan><tspan class="cls-37" x="402.91" y="18.24">w</tspan><tspan x="414.11" y="18.24">ould app</tspan><tspan class="cls-29" x="471.69" y="18.24">r</tspan><tspan x="476.73" y="18.24">ecia</tspan><tspan class="cls-28" x="504.14" y="18.24">t</tspan><tspan x="508.59" y="18.24">e it if </tspan><tspan class="cls-30" x="545.1" y="18.24">y</tspan><tspan x="552.7" y="18.24">ou could dona</tspan><tspan class="cls-28" x="646.98" y="18.24">t</tspan><tspan x="651.42" y="18.24">e funds </tspan><tspan class="cls-40" x="705.15" y="18.24">(</tspan><tspan x="710.1" y="18.24">or rathe</tspan><tspan class="cls-36" x="761.86" y="18.24">r</tspan><tspan x="766.25" y="18.24">, coc</tspan><tspan class="cls-23" x="798.62" y="18.24">o</tspan><tspan x="807.15" y="18.24">a mon</tspan><tspan class="cls-30" x="847.88" y="18.24">e</tspan><tspan x="855.76" y="18.24">y) </tspan><tspan class="cls-32" x="872.68" y="18.24">f</tspan><tspan x="877.45" y="18.24">or the activities.</tspan></tspan></text>
+  <text class="cls-6" transform="translate(32 629.59)"><tspan x="0" y="0">2026-10-14</tspan></text>
+</svg>
