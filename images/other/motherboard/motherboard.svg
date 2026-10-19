@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-11, .cls-9 {
+        opacity: .5;
+      }
+
+      .cls-1, .cls-3 {
+        font-size: 8px;
+      }
+
+      .cls-1, .cls-12, .cls-9 {
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-2 {
+        font-size: 24px;
+      }
+
+      .cls-2, .cls-13, .cls-4, .cls-6, .cls-7, .cls-8, .cls-14, .cls-15, .cls-16, .cls-10 {
+        font-family: NerconeSansCJKNF-Variable, 'Nercone Sans CJK NF Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-17 {
+        letter-spacing: .25em;
+      }
+
+      .cls-18 {
+        font-size: 14px;
+      }
+
+      .cls-19 {
+        font-size: 32px;
+      }
+
+      .cls-5, .cls-8 {
+        font-size: 16px;
+      }
+
+      .cls-20 {
+        fill: #262626;
+      }
+
+      .cls-6 {
+        opacity: .25;
+      }
+
+      .cls-6, .cls-7, .cls-9 {
+        font-size: 12px;
+      }
+
+      .cls-11, .cls-21 {
+        fill: #333;
+      }
+
+      .cls-14 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-23 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-24 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-25 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-26 {
+        letter-spacing: 0em;
+      }
+
+      .cls-27 {
+        fill: #1a1a1a;
+      }
+
+      .cls-10 {
+        font-size: 10px;
+        opacity: .04;
+      }
+
+      .cls-28 {
+        letter-spacing: .02em;
+      }
+
+      .cls-29 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-27" width="1280" height="640"/>
+  <rect class="cls-20" x="128" y="32" width="1024" height="576"/>
+  <g>
+    <rect class="cls-21" x="560" y="128" width="160" height="160"/>
+    <text class="cls-4" transform="translate(606.19 218.22)"><tspan class="cls-19"><tspan x="0" y="0">CPU</tspan></tspan><tspan class="cls-18"><tspan x="10.5" y="20.16">or APU</tspan></tspan></text>
+    <text class="cls-9" transform="translate(621.94 272.13)"><tspan x="0" y="0">CPU_0</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="560" y="368" width="160" height="80"/>
+    <text class="cls-2" transform="translate(596.63 415.66)"><tspan x="0" y="0">Chipset</tspan></text>
+    <text class="cls-1" transform="translate(630.37 440.75)"><tspan x="0" y="0">CS_0</tspan></text>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-21" x="448" y="128" width="16" height="320"/>
+      <text class="cls-9" transform="translate(451.87 269.94) rotate(90)"><tspan x="0" y="0">RAM_0</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-21" x="480" y="128" width="16" height="320"/>
+      <text class="cls-9" transform="translate(483.87 269.94) rotate(90)"><tspan x="0" y="0">RAM_1</tspan></text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect class="cls-21" x="784" y="128" width="16" height="320"/>
+      <text class="cls-9" transform="translate(787.87 269.94) rotate(90)"><tspan x="0" y="0">RAM_2</tspan></text>
+    </g>
+    <g>
+      <rect class="cls-21" x="816" y="128" width="16" height="320"/>
+      <text class="cls-9" transform="translate(819.87 269.94) rotate(90)"><tspan x="0" y="0">RAM_3</tspan></text>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-21" x="352" y="192" width="80" height="256"/>
+    <text class="cls-2" transform="translate(370.38 327.66)"><tspan x="0" y="0">M.2</tspan></text>
+    <text class="cls-9" transform="translate(377.55 436.13)"><tspan x="0" y="0">M2_1</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="256" y="128" width="80" height="256"/>
+    <text class="cls-2" transform="translate(274.38 263.66)"><tspan x="0" y="0">M.2</tspan></text>
+    <text class="cls-9" transform="translate(281.55 372.13)"><tspan x="0" y="0">M2_0</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="848" y="128" width="80" height="256"/>
+    <text class="cls-2" transform="translate(866.38 263.66)"><tspan x="0" y="0">M.2</tspan></text>
+    <text class="cls-9" transform="translate(873.55 372.13)"><tspan x="0" y="0">M2_2</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="944" y="192" width="80" height="256"/>
+    <text class="cls-2" transform="translate(962.38 327.66)"><tspan x="0" y="0">M.2</tspan></text>
+    <text class="cls-9" transform="translate(969.55 436.13)"><tspan x="0" y="0">M2_3</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="560" y="316" width="64" height="24"/>
+    <text class="cls-9" transform="translate(573.94 332.13)"><tspan x="0" y="0">FAN_0</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="656" y="316" width="64" height="24"/>
+    <text class="cls-9" transform="translate(669.94 332.13)"><tspan x="0" y="0">FAN_1</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-11" x="128" y="128" width="32" height="320"/>
+    <text class="cls-8" transform="translate(138.89 248.52) rotate(90)"><tspan x="0" y="0">Back</tspan><tspan class="cls-29" x="37.38" y="0">p</tspan><tspan x="47.33" y="0">anel</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="992" y="568" width="64" height="24"/>
+    <text class="cls-9" transform="translate(1005.94 584.13)"><tspan x="0" y="0">FAN_4</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="1072" y="568" width="64" height="24"/>
+    <text class="cls-9" transform="translate(1085.94 584.13)"><tspan x="0" y="0">FAN_5</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="256" y="48" width="88" height="64"/>
+    <text class="cls-7" transform="translate(273.46 73.33)"><tspan x="0" y="0">USB ROM</tspan><tspan x="0" y="21">Upda</tspan><tspan class="cls-26" x="30.36" y="21">t</tspan><tspan x="34.17" y="21">or</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="360" y="48" width="136" height="64"/>
+    <text class="cls-7" transform="translate(385.9 83.83)"><tspan x="0" y="0">Fi</tspan><tspan class="cls-28" x="9.99" y="0">r</tspan><tspan x="14.7" y="0">mwa</tspan><tspan class="cls-22" x="41.77" y="0">r</tspan><tspan x="46.08" y="0">e ROM</tspan></text>
+    <text class="cls-10" transform="translate(388.94 103.19)"><tspan x="0" y="0">半</tspan><tspan class="cls-17" x="10" y="0">年</tspan><tspan x="22.5" y="0">RO</tspan><tspan class="cls-17" x="36.58" y="0">M</tspan><tspan x="48.12" y="0">ってろ</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="660" y="-52" width="40" height="240" transform="translate(612 748) rotate(-90)"/>
+    <text class="cls-5" transform="translate(582.25 74.21)"><tspan class="cls-13" x="0" y="0">USB </tspan><tspan class="cls-15" x="37.14" y="0">4</tspan><tspan class="cls-16" x="46.94" y="0">.</tspan><tspan class="cls-13" x="51.14" y="0" xml:space="preserve">0 Gen 3x2    </tspan><tspan class="cls-12" x="147.33" y="-.71">USB_0</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="916" y="-52" width="40" height="240" transform="translate(868 1004) rotate(-90)"/>
+    <text class="cls-5" transform="translate(840.04 74.21)"><tspan class="cls-13" x="0" y="0">USB </tspan><tspan class="cls-14" x="37.14" y="0">3</tspan><tspan class="cls-13" x="46.66" y="0" xml:space="preserve">.2 Gen 2x1    </tspan><tspan class="cls-12" x="143.75" y="-.71">USB_1</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="1072" y="48" width="64" height="24"/>
+    <text class="cls-9" transform="translate(1085.94 64.13)"><tspan x="0" y="0">FAN_2</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="1072" y="88" width="64" height="24"/>
+    <text class="cls-9" transform="translate(1085.94 104.13)"><tspan x="0" y="0">FAN_3</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="144" y="512" width="480" height="16"/>
+    <text class="cls-3" transform="translate(147.55 523.11)"><tspan class="cls-13" x="0" y="0" xml:space="preserve">PCIe Gen 7    </tspan><tspan class="cls-12" x="51.15" y="-.36">PCIE_0</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-21" x="144" y="576" width="480" height="16"/>
+    <text class="cls-3" transform="translate(147.55 587.11)"><tspan class="cls-13" x="0" y="0" xml:space="preserve">PCIe Gen 7    </tspan><tspan class="cls-12" x="51.15" y="-.36">PCIE_1</tspan></text>
+  </g>
+  <text class="cls-6" transform="translate(16 627.83)"><tspan x="0" y="0">Ne</tspan><tspan class="cls-22" x="16.04" y="0">r</tspan><tspan x="20.36" y="0">con</tspan><tspan class="cls-24" x="41.5" y="0">e</tspan><tspan x="48.32" y="0">&apos;s Mobo Concept Design</tspan></text>
+  <text class="cls-6" transform="translate(1104.65 627.83)"><tspan x="0" y="0">Co</tspan><tspan class="cls-23" x="15.96" y="0">p</tspan><tspan x="23.07" y="0">y</tspan><tspan class="cls-29" x="29.82" y="0">r</tspan><tspan x="34.45" y="0">ight </tspan><tspan class="cls-25" x="59.12" y="0">(c</tspan><tspan x="70.08" y="0">) 2026 Ne</tspan><tspan class="cls-22" x="126.89" y="0">r</tspan><tspan x="131.21" y="0">cone</tspan></text>
+</svg>
