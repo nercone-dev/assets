@@ -141,19 +141,26 @@ code {
     margin-bottom: 0;
 }
 
+.block-note {
+    border-color:     var(--color-note-bright);
+}
 .block-note::before {
     background-color: var(--color-note-bright);
-    border-color:     var(--color-note-bright);
 }
 .block-note > b:first-child {
     color: var(--color-note-bright);
 }
+.block-tip {
+    border-color:     var(--color-tip-bright);
+}
 .block-tip::before {
     background-color: var(--color-tip-bright);
-    border-color:     var(--color-tip-bright);
 }
 .block-tip > b:first-child {
     color: var(--color-tip-bright);
+}
+.block-important {
+    border-color:     var(--color-important-bright);
 }
 .block-important::before {
     background-color: var(--color-important-bright);
@@ -162,12 +169,18 @@ code {
 .block-important > b:first-child {
     color: var(--color-important-bright);
 }
+.block-warning {
+    border-color:     var(--color-warning-bright);
+}
 .block-warning::before {
     background-color: var(--color-warning-bright);
     border-color:     var(--color-warning-bright);
 }
 .block-warning > b:first-child {
     color: var(--color-warning-bright);
+}
+.block-caution {
+    border-color:     var(--color-caution-bright);
 }
 .block-caution::before {
     background-color: var(--color-caution-bright);
@@ -180,7 +193,7 @@ code {
 /* Layer */
 
 .layer {
-    background-color: solid 1px var(--color-layer);
+    background-color: var(--color-layer);
 
     position: relative;
     padding: 16px;
