@@ -125,13 +125,13 @@ s {
 }
 
 .font-family-sans-nf {
-    font-family: var(--font-family-sans);
+    font-family: var(--font-family-sans-nf);
 }
 .font-family-serif-nf {
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-serif-nf);
 }
 .font-family-mono-nf {
-    font-family: var(--font-family-mono);
+    font-family: var(--font-family-mono-nf);
 }
 
 .font-weight-thin {
