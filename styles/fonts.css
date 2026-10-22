@@ -124,6 +124,16 @@ s {
     font-family: var(--font-family-mono);
 }
 
+.font-family-sans-nf {
+    font-family: var(--font-family-sans);
+}
+.font-family-serif-nf {
+    font-family: var(--font-family-serif);
+}
+.font-family-mono-nf {
+    font-family: var(--font-family-mono);
+}
+
 .font-weight-thin {
     font-weight: var(--font-weight-thin);
 }

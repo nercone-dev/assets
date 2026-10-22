@@ -1,0 +1,288 @@
+:root {
+    --color-grey-0:   hwb(0 0% 100%);
+    --color-grey-5:   hwb(0 5% 95%);
+    --color-grey-10:  hwb(0 10% 90%);
+    --color-grey-15:  hwb(0 15% 85%);
+    --color-grey-20:  hwb(0 20% 80%);
+    --color-grey-25:  hwb(0 25% 75%);
+    --color-grey-30:  hwb(0 30% 70%);
+    --color-grey-35:  hwb(0 35% 65%);
+    --color-grey-40:  hwb(0 40% 60%);
+    --color-grey-45:  hwb(0 45% 55%);
+    --color-grey-50:  hwb(0 50% 50%);
+    --color-grey-55:  hwb(0 55% 45%);
+    --color-grey-60:  hwb(0 60% 40%);
+    --color-grey-65:  hwb(0 65% 35%);
+    --color-grey-70:  hwb(0 70% 30%);
+    --color-grey-75:  hwb(0 75% 25%);
+    --color-grey-80:  hwb(0 80% 20%);
+    --color-grey-85:  hwb(0 85% 15%);
+    --color-grey-90:  hwb(0 90% 10%);
+    --color-grey-95:  hwb(0 95% 5%);
+    --color-grey-100: hwb(0 100% 0%);
+
+    --color-red-0:   hwb(0 0%    100%);
+    --color-red-5:   hwb(0 1.5%  95%);
+    --color-red-10:  hwb(0 3%    90%);
+    --color-red-15:  hwb(0 4.5%  85%);
+    --color-red-20:  hwb(0 6%    80%);
+    --color-red-25:  hwb(0 7.5%  75%);
+    --color-red-30:  hwb(0 9%    70%);
+    --color-red-35:  hwb(0 10.5% 65%);
+    --color-red-40:  hwb(0 12%   60%);
+    --color-red-45:  hwb(0 13.5% 55%);
+    --color-red-50:  hwb(0 15%   50%);
+    --color-red-55:  hwb(0 16.5% 45%);
+    --color-red-60:  hwb(0 18%   40%);
+    --color-red-65:  hwb(0 19.5% 35%);
+    --color-red-70:  hwb(0 21%   30%);
+    --color-red-75:  hwb(0 22.5% 25%);
+    --color-red-80:  hwb(0 24%   20%);
+    --color-red-85:  hwb(0 25.5% 15%);
+    --color-red-90:  hwb(0 27%   10%);
+    --color-red-95:  hwb(0 28.5% 5%);
+    --color-red-100: hwb(0 30%   0%);
+
+    --color-orange-0:   hwb(30 0% 100%);
+    --color-orange-5:   hwb(30 0% 95%);
+    --color-orange-10:  hwb(30 0% 90%);
+    --color-orange-15:  hwb(30 0% 85%);
+    --color-orange-20:  hwb(30 0% 80%);
+    --color-orange-25:  hwb(30 0% 75%);
+    --color-orange-30:  hwb(30 0% 70%);
+    --color-orange-35:  hwb(30 0% 65%);
+    --color-orange-40:  hwb(30 0% 60%);
+    --color-orange-45:  hwb(30 0% 55%);
+    --color-orange-50:  hwb(30 0% 50%);
+    --color-orange-55:  hwb(30 0% 45%);
+    --color-orange-60:  hwb(30 0% 40%);
+    --color-orange-65:  hwb(30 0% 35%);
+    --color-orange-70:  hwb(30 0% 30%);
+    --color-orange-75:  hwb(30 0% 25%);
+    --color-orange-80:  hwb(30 0% 20%);
+    --color-orange-85:  hwb(30 0% 15%);
+    --color-orange-90:  hwb(30 0% 10%);
+    --color-orange-95:  hwb(30 0% 5%);
+    --color-orange-100: hwb(30 0% 0%);
+
+    --color-yellow-0:   hwb(50 0% 100%);
+    --color-yellow-5:   hwb(50 0% 95%);
+    --color-yellow-10:  hwb(50 0% 90%);
+    --color-yellow-15:  hwb(50 0% 85%);
+    --color-yellow-20:  hwb(50 0% 80%);
+    --color-yellow-25:  hwb(50 0% 75%);
+    --color-yellow-30:  hwb(50 0% 70%);
+    --color-yellow-35:  hwb(50 0% 65%);
+    --color-yellow-40:  hwb(50 0% 60%);
+    --color-yellow-45:  hwb(50 0% 55%);
+    --color-yellow-50:  hwb(50 0% 50%);
+    --color-yellow-55:  hwb(50 0% 45%);
+    --color-yellow-60:  hwb(50 0% 40%);
+    --color-yellow-65:  hwb(50 0% 35%);
+    --color-yellow-70:  hwb(50 0% 30%);
+    --color-yellow-75:  hwb(50 0% 25%);
+    --color-yellow-80:  hwb(50 0% 20%);
+    --color-yellow-85:  hwb(50 0% 15%);
+    --color-yellow-90:  hwb(50 0% 10%);
+    --color-yellow-95:  hwb(50 0% 5%);
+    --color-yellow-100: hwb(50 0% 0%);
+
+    --color-green-0:   hwb(150 0% 100%);
+    --color-green-5:   hwb(150 0% 95%);
+    --color-green-10:  hwb(150 0% 90%);
+    --color-green-15:  hwb(150 0% 85%);
+    --color-green-20:  hwb(150 0% 80%);
+    --color-green-25:  hwb(150 0% 75%);
+    --color-green-30:  hwb(150 0% 70%);
+    --color-green-35:  hwb(150 0% 65%);
+    --color-green-40:  hwb(150 0% 60%);
+    --color-green-45:  hwb(150 0% 55%);
+    --color-green-50:  hwb(150 0% 50%);
+    --color-green-55:  hwb(150 0% 45%);
+    --color-green-60:  hwb(150 0% 40%);
+    --color-green-65:  hwb(150 0% 35%);
+    --color-green-70:  hwb(150 0% 30%);
+    --color-green-75:  hwb(150 0% 25%);
+    --color-green-80:  hwb(150 0% 20%);
+    --color-green-85:  hwb(150 0% 15%);
+    --color-green-90:  hwb(150 0% 10%);
+    --color-green-95:  hwb(150 0% 5%);
+    --color-green-100: hwb(150 0% 0%);
+
+    --color-cyan-0:   hwb(200 0% 100%);
+    --color-cyan-5:   hwb(200 1% 95%);
+    --color-cyan-10:  hwb(200 2% 90%);
+    --color-cyan-15:  hwb(200 3% 85%);
+    --color-cyan-20:  hwb(200 4% 80%);
+    --color-cyan-25:  hwb(200 5% 75%);
+    --color-cyan-30:  hwb(200 6% 70%);
+    --color-cyan-35:  hwb(200 7% 65%);
+    --color-cyan-40:  hwb(200 8% 60%);
+    --color-cyan-45:  hwb(200 9% 55%);
+    --color-cyan-50:  hwb(200 10% 50%);
+    --color-cyan-55:  hwb(200 11% 45%);
+    --color-cyan-60:  hwb(200 12% 40%);
+    --color-cyan-65:  hwb(200 13% 35%);
+    --color-cyan-70:  hwb(200 14% 30%);
+    --color-cyan-75:  hwb(200 15% 25%);
+    --color-cyan-80:  hwb(200 16% 20%);
+    --color-cyan-85:  hwb(200 17% 15%);
+    --color-cyan-90:  hwb(200 18% 10%);
+    --color-cyan-95:  hwb(200 19% 5%);
+    --color-cyan-100: hwb(200 20% 0%);
+
+    --color-blue-0:   hwb(210 0%    100%);
+    --color-blue-5:   hwb(210 1.5%  95%);
+    --color-blue-10:  hwb(210 3%    90%);
+    --color-blue-15:  hwb(210 4.5%  85%);
+    --color-blue-20:  hwb(210 6%    80%);
+    --color-blue-25:  hwb(210 7.5%  75%);
+    --color-blue-30:  hwb(210 9%    70%);
+    --color-blue-35:  hwb(210 10.5% 65%);
+    --color-blue-40:  hwb(210 12%   60%);
+    --color-blue-45:  hwb(210 13.5% 55%);
+    --color-blue-50:  hwb(210 15%   50%);
+    --color-blue-55:  hwb(210 16.5% 45%);
+    --color-blue-60:  hwb(210 18%   40%);
+    --color-blue-65:  hwb(210 19.5% 35%);
+    --color-blue-70:  hwb(210 21%   30%);
+    --color-blue-75:  hwb(210 22.5% 25%);
+    --color-blue-80:  hwb(210 24%   20%);
+    --color-blue-85:  hwb(210 25.5% 15%);
+    --color-blue-90:  hwb(210 27%   10%);
+    --color-blue-95:  hwb(210 28.5% 5%);
+    --color-blue-100: hwb(210 30%   0%);
+
+    --color-purple-0:   hwb(270 0% 100%);
+    --color-purple-5:   hwb(270 2% 95%);
+    --color-purple-10:  hwb(270 4% 90%);
+    --color-purple-15:  hwb(270 6% 85%);
+    --color-purple-20:  hwb(270 8% 80%);
+    --color-purple-25:  hwb(270 10% 75%);
+    --color-purple-30:  hwb(270 12% 70%);
+    --color-purple-35:  hwb(270 14% 65%);
+    --color-purple-40:  hwb(270 16% 60%);
+    --color-purple-45:  hwb(270 18% 55%);
+    --color-purple-50:  hwb(270 20% 50%);
+    --color-purple-55:  hwb(270 22% 45%);
+    --color-purple-60:  hwb(270 24% 40%);
+    --color-purple-65:  hwb(270 26% 35%);
+    --color-purple-70:  hwb(270 28% 30%);
+    --color-purple-75:  hwb(270 30% 25%);
+    --color-purple-80:  hwb(270 32% 20%);
+    --color-purple-85:  hwb(270 34% 15%);
+    --color-purple-90:  hwb(270 36% 10%);
+    --color-purple-95:  hwb(270 38% 5%);
+    --color-purple-100: hwb(270 40% 0%);
+
+    --color-pink-0:   hwb(300 0% 100%);
+    --color-pink-5:   hwb(300 1% 95%);
+    --color-pink-10:  hwb(300 2% 90%);
+    --color-pink-15:  hwb(300 3% 85%);
+    --color-pink-20:  hwb(300 4% 80%);
+    --color-pink-25:  hwb(300 5% 75%);
+    --color-pink-30:  hwb(300 6% 70%);
+    --color-pink-35:  hwb(300 7% 65%);
+    --color-pink-40:  hwb(300 8% 60%);
+    --color-pink-45:  hwb(300 9% 55%);
+    --color-pink-50:  hwb(300 10% 50%);
+    --color-pink-55:  hwb(300 11% 45%);
+    --color-pink-60:  hwb(300 12% 40%);
+    --color-pink-65:  hwb(300 13% 35%);
+    --color-pink-70:  hwb(300 14% 30%);
+    --color-pink-75:  hwb(300 15% 25%);
+    --color-pink-80:  hwb(300 16% 20%);
+    --color-pink-85:  hwb(300 17% 15%);
+    --color-pink-90:  hwb(300 18% 10%);
+    --color-pink-95:  hwb(300 19% 5%);
+    --color-pink-100: hwb(300 20% 0%);
+
+    /* Brightness */
+
+    --color-black: hwb(0 0% 100%);
+    --color-white: hwb(0 100% 0%);
+
+    --color-red-dark:   var(--color-red-45);
+    --color-red:        var(--color-red-75);
+    --color-red-bright: var(--color-red-100);
+
+    --color-orange-dark:   var(--color-orange-45);
+    --color-orange:        var(--color-orange-75);
+    --color-orange-bright: var(--color-orange-100);
+
+    --color-yellow-dark:   var(--color-yellow-45);
+    --color-yellow:        var(--color-yellow-75);
+    --color-yellow-bright: var(--color-yellow-100);
+
+    --color-green-dark:   var(--color-green-45);
+    --color-green:        var(--color-green-75);
+    --color-green-bright: var(--color-green-100);
+
+    --color-cyan-dark:   var(--color-cyan-45);
+    --color-cyan:        var(--color-cyan-75);
+    --color-cyan-bright: var(--color-cyan-100);
+
+    --color-blue-dark:   var(--color-blue-45);
+    --color-blue:        var(--color-blue-75);
+    --color-blue-bright: var(--color-blue-100);
+
+    --color-purple-dark:   var(--color-purple-45);
+    --color-purple:        var(--color-purple-75);
+    --color-purple-bright: var(--color-purple-100);
+
+    --color-pink-dark:   var(--color-pink-45);
+    --color-pink:        var(--color-pink-75);
+    --color-pink-bright: var(--color-pink-100);
+
+    /* Semantic */
+
+    --color-foreground:     var(--color-grey-75);
+    --color-foreground-alt: var(--color-grey-100);
+    --color-background:     var(--color-grey-5);
+    --color-background-alt: var(--color-grey-10);
+
+    --color-layer:     color-mix(in srgb, var(--color-white) 10%, transparent);
+    --color-layer-alt: color-mix(in srgb, var(--color-white) 5%, transparent);
+
+    --color-border:     color-mix(in srgb, var(--color-white) 10%, transparent);
+    --color-border-alt: color-mix(in srgb, var(--color-white) 5%, transparent);
+
+    --color-information-dark:   var(--color-blue-dark);
+    --color-information:        var(--color-blue);
+    --color-information-bright: var(--color-blue-bright);
+
+    --color-success-dark:   var(--color-green-dark);
+    --color-success:        var(--color-green);
+    --color-success-bright: var(--color-green-bright);
+
+    --color-warning-dark:   var(--color-yellow-dark);
+    --color-warning:        var(--color-yellow);
+    --color-warning-bright: var(--color-yellow-bright);
+
+    --color-error-dark:   var(--color-red-dark);
+    --color-error:        var(--color-red);
+    --color-error-bright: var(--color-red-bright);
+
+    /* Semantic (GitHub Markdown) */
+
+    --color-note-dark:   var(--color-blue-dark);
+    --color-note:        var(--color-blue);
+    --color-note-bright: var(--color-blue-bright);
+
+    --color-tip-dark:   var(--color-green-dark);
+    --color-tip:        var(--color-green);
+    --color-tip-bright: var(--color-green-bright);
+
+    --color-important-dark:   var(--color-purple-dark);
+    --color-important:        var(--color-purple);
+    --color-important-bright: var(--color-purple-bright);
+
+    --color-caution-dark:   var(--color-red-dark);
+    --color-caution:        var(--color-red);
+    --color-caution-bright: var(--color-red-bright);
+
+    /* Semantic (Components) */
+
+    --color-cursor:         color-mix(in srgb, var(--color-white) 75%, transparent);
+    --color-cursor-on-link: color-mix(in srgb, var(--color-white) 20%, transparent);
+}
