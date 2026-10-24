@@ -1,95 +1,193 @@
 (() => {
     class Cursor {
-        static LINK_SELECTORS = 'a, button, [role="button"], input[type="submit"], input[type="button"]';
-        static PADDING = 6;
-        static TOUCH_MOUSE_GUARD_MS = 800;
-        static TEXT_GAP_PX = 4;
-        static LINK_GAP_PX = 4;
+        static DEFAULTS = {
+            selector:       '#cursor',
+            linkSelector:   'a, button, [role="button"], input[type="submit"], input[type="button"]',
+            systemSelector: '.cursor-system',
+            activeClass:    'cursor-active',
+            padding:        6,
+            linkGap:        4,
+            textGap:        4
+        };
+        static RADIUS_PROPERTIES = ['borderTopLeftRadius', 'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius'];
 
-        constructor() {
-            this.ac = null;
-            this.mouseX = 0;
-            this.mouseY = 0;
-            this.currentLinkEl = null;
-            this.rafId = null;
-            this.cursor = null;
-            this.cursorVisible = false;
-            this.lastTouchTime = 0;
-            this.isMouseDown = false;
-
-            document.documentElement.style.cursor = 'none';
+        constructor(options = {}) {
+            this.options = { ...Cursor.DEFAULTS, ...options };
+            this.element = null;
+            this.abortController = null;
+            this.frame = 0;
+            this.x = 0;
+            this.y = 0;
+            this.visible = false;
+            this.detect = false;
+            this.link = null;
+            this.linkRadius = null;
         }
+
+        // Lifecycle
+        init() {
+            this.element = document.querySelector(this.options.selector);
+            if (!this.element) {
+                this.hide();
+                return;
+            }
+            if (this.abortController) return;
+
+            this.abortController = new AbortController();
+            const options = { passive: true, signal: this.abortController.signal };
+            document.addEventListener('pointermove',   this.onPointerMove, options);
+            document.addEventListener('pointerdown',   this.onPointerDown, options);
+            document.addEventListener('pointerup',     this.onPointerUp,   options);
+            document.addEventListener('pointercancel', this.onPointerUp,   options);
+            document.addEventListener('pointerout',    this.onPointerOut,  options);
+            document.addEventListener('scroll',        this.onScroll,      { ...options, capture: true });
+        }
+
+        cleanup() {
+            this.setLink(null);
+            if (this.frame) cancelAnimationFrame(this.frame);
+            this.frame = 0;
+        }
+
+        reinit() {
+            this.init();
+            if (this.visible) this.show();
+        }
+
+        destroy() {
+            this.abortController?.abort();
+            this.abortController = null;
+            this.cleanup();
+            this.hide();
+            this.element = null;
+        }
+
+        // Events
+        onPointerMove = (event) => {
+            if (event.pointerType !== 'mouse') return;
+            this.x = event.clientX;
+            this.y = event.clientY;
+            if (event.target.closest?.(this.options.systemSelector)) this.hide();
+            else this.show();
+        };
+
+        onPointerDown = (event) => {
+            if (event.pointerType !== 'mouse') this.hide();
+            else this.element?.classList.add('pressed');
+        };
+
+        onPointerUp = () => {
+            this.element?.classList.remove('pressed');
+        };
+
+        onPointerOut = (event) => {
+            if (event.pointerType !== 'mouse') return;
+            if (!event.relatedTarget || event.relatedTarget instanceof HTMLIFrameElement) this.hide();
+        };
+
+        onScroll = () => {
+            if (this.visible) this.request(true);
+        };
 
         // Visibility
-        showCursor() {
-            if (!this.cursorVisible && this.cursor) {
-                this.cursorVisible = true;
-                this.cursor.classList.add('visible');
+        show() {
+            if (!this.element) return;
+            this.visible = true;
+            this.element.classList.add('visible');
+            document.documentElement.classList.add(this.options.activeClass);
+            this.request(true);
+        }
+
+        hide() {
+            this.visible = false;
+            this.cleanup();
+            this.element?.classList.remove('visible', 'pressed', 'on-link', 'on-text');
+            document.documentElement.classList.remove(this.options.activeClass);
+        }
+
+        // Rendering
+        request(detect) {
+            if (detect) this.detect = true;
+            if (!this.frame) this.frame = requestAnimationFrame(this.render);
+        }
+
+        render = () => {
+            this.frame = 0;
+            if (!this.element || !this.visible) return;
+
+            if (this.detect) {
+                this.detect = false;
+                this.setLink(this.findLink(this.x, this.y));
             }
-        }
 
-        hideCursor() {
-            if (this.cursor) {
-                this.cursorVisible = false;
-                this.cursor.style.borderRadius = '';
-                this.cursor.classList.remove('visible');
-                this.currentLinkEl = null;
-                if (this.rafId) { cancelAnimationFrame(this.rafId); this.rafId = null; }
-                this.cursor.classList.remove('on-link', 'on-text');
+            if (this.link) {
+                this.renderLink();
+                this.request(false);
+            } else {
+                this.renderPoint();
             }
+        };
+
+        renderPoint() {
+            const style = this.element.style;
+            this.element.classList.remove('on-link');
+            this.element.classList.toggle('on-text', Cursor.isTextAt(this.x, this.y, this.options.textGap));
+            style.left = `${this.x}px`;
+            style.top  = `${this.y}px`;
+            style.width = style.height = style.borderRadius = '';
         }
 
-        isSyntheticMouse() {
-            return Date.now() - this.lastTouchTime < Cursor.TOUCH_MOUSE_GUARD_MS;
+        renderLink() {
+            const padding = this.options.padding;
+            const bounds = Cursor.boundsOf(this.link);
+            this.linkRadius ??= Cursor.radiusOf(this.link, bounds.width);
+
+            const style = this.element.style;
+            this.element.classList.remove('on-text');
+            this.element.classList.add('on-link');
+            style.left   = `${bounds.left - padding}px`;
+            style.top    = `${bounds.top  - padding}px`;
+            style.width  = `${bounds.width  + padding * 2}px`;
+            style.height = `${bounds.height + padding * 2}px`;
+            style.borderRadius = this.linkRadius.map(radius => `${radius + padding}px`).join(' ');
         }
 
-        // Helpers
-        findNearbyLink(x, y) {
-            const el = document.elementFromPoint(x, y);
-            const exact = el ? el.closest(Cursor.LINK_SELECTORS) : null;
+        setLink(link) {
+            if (this.link === link) return;
+            this.link = link;
+            this.linkRadius = null;
+        }
+
+        // Hit testing
+        findLink(x, y) {
+            const selector = this.options.linkSelector;
+            const exact = document.elementFromPoint(x, y)?.closest(selector);
             if (exact) return exact;
 
-            let best = null;
-            let bestDist = Infinity;
-            for (const link of document.querySelectorAll(Cursor.LINK_SELECTORS)) {
-                const r = link.getBoundingClientRect();
-                const dx = Math.max(0, r.left - x, x - r.right);
-                const dy = Math.max(0, r.top  - y, y - r.bottom);
-                const dist = Math.max(dx, dy);
-                if (dist <= Cursor.LINK_GAP_PX && dist < bestDist) {
-                    bestDist = dist;
-                    best = link;
+            let nearest = null;
+            let nearestDistance = Infinity;
+            for (const link of document.querySelectorAll(selector)) {
+                const rect = link.getBoundingClientRect();
+                if (rect.width === 0 && rect.height === 0) continue;
+                const distance = Math.max(0, rect.left - x, x - rect.right, rect.top - y, y - rect.bottom);
+                if (distance <= this.options.linkGap && distance < nearestDistance) {
+                    nearest = link;
+                    nearestDistance = distance;
                 }
             }
-            return best;
+            return nearest;
         }
 
-        isOverRenderedText(x, y) {
-            let node, offset;
-            if (document.caretPositionFromPoint) {
-                const pos = document.caretPositionFromPoint(x, y);
-                if (!pos || pos.offsetNode.nodeType !== Node.TEXT_NODE) return false;
-                node = pos.offsetNode;
-                offset = pos.offset;
-            } else if (document.caretRangeFromPoint) {
-                const r = document.caretRangeFromPoint(x, y);
-                if (!r || r.startContainer.nodeType !== Node.TEXT_NODE) return false;
-                node = r.startContainer;
-                offset = r.startOffset;
-            } else {
-                return false;
-            }
+        static isTextAt(x, y, gap) {
+            const caret = Cursor.caretAt(x, y);
+            if (!caret || caret.node.nodeType !== Node.TEXT_NODE) return false;
 
+            const { node, offset } = caret;
             const range = document.createRange();
-            const candidates = [];
-            if (offset < node.length) candidates.push([offset, offset + 1]);
-            if (offset > 0)           candidates.push([offset - 1, offset]);
-            if (candidates.length === 0) return false;
-
-            const gap = Cursor.TEXT_GAP_PX;
-            for (const [s, e] of candidates) {
-                range.setStart(node, s);
-                range.setEnd(node, e);
+            for (const [start, end] of [[offset, offset + 1], [offset - 1, offset]]) {
+                if (start < 0 || end > node.length) continue;
+                range.setStart(node, start);
+                range.setEnd(node, end);
                 for (const rect of range.getClientRects()) {
                     if (x >= rect.left - gap && x <= rect.right  + gap &&
                         y >= rect.top  - gap && y <= rect.bottom + gap) return true;
@@ -98,172 +196,46 @@
             return false;
         }
 
-        // Rendering
-        updateCursorForLink(el) {
-            const PADDING = Cursor.PADDING;
-            let rect = el.getBoundingClientRect();
-
-            if (getComputedStyle(el).display === 'inline') {
-                const descendants = el.querySelectorAll('*');
-                if (descendants.length > 0) {
-                    const rects = [...descendants].map(c => c.getBoundingClientRect());
-                    const left   = Math.min(...rects.map(r => r.left));
-                    const top    = Math.min(...rects.map(r => r.top));
-                    const right  = Math.max(...rects.map(r => r.right));
-                    const bottom = Math.max(...rects.map(r => r.bottom));
-                    rect = { left, top, width: right - left, height: bottom - top };
-                }
+        static caretAt(x, y) {
+            if (document.caretPositionFromPoint) {
+                const position = document.caretPositionFromPoint(x, y);
+                return position && { node: position.offsetNode, offset: position.offset };
             }
-
-            this.cursor.classList.remove('on-text');
-            this.cursor.classList.add('on-link');
-            this.cursor.style.transform = 'none';
-            this.cursor.style.left   = (rect.left - PADDING) + 'px';
-            this.cursor.style.top    = (rect.top  - PADDING) + 'px';
-            this.cursor.style.width  = (rect.width  + PADDING * 2) + 'px';
-            this.cursor.style.height = (rect.height + PADDING * 2) + 'px';
-
-            function parseRadius(val, wRef) {
-                if (!val) return 0;
-                const first = val.trim().split(' ')[0];
-                return first.endsWith('%') ? parseFloat(first) / 100 * wRef : (parseFloat(first) || 0);
+            if (document.caretRangeFromPoint) {
+                const range = document.caretRangeFromPoint(x, y);
+                return range && { node: range.startContainer, offset: range.startOffset };
             }
-
-            function resolveRadiusSource(el, wRef) {
-                const PROPS = ['borderTopLeftRadius', 'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius'];
-                for (const target of [el, ...el.children]) {
-                    const cs = getComputedStyle(target);
-                    if (PROPS.some(p => parseRadius(cs[p], wRef) > 0)) return cs;
-                }
-                return getComputedStyle(el);
-            }
-
-            const w = rect.width;
-            const cs = resolveRadiusSource(el, w);
-            this.cursor.style.borderRadius = [
-                cs.borderTopLeftRadius,
-                cs.borderTopRightRadius,
-                cs.borderBottomRightRadius,
-                cs.borderBottomLeftRadius,
-            ].map(v => `${parseRadius(v, w) + PADDING}px`).join(' ');
+            return null;
         }
 
-        trackLink = () => {
-            if (this.currentLinkEl) {
-                this.updateCursorForLink(this.currentLinkEl);
-                this.rafId = requestAnimationFrame(this.trackLink);
+        // Geometry
+        static boundsOf(element) {
+            if (getComputedStyle(element).display === 'inline') {
+                const range = document.createRange();
+                range.selectNodeContents(element);
+                const rect = range.getBoundingClientRect();
+                if (rect.width > 0 || rect.height > 0) return rect;
             }
-        };
-
-        // Lifecycle
-        init() {
-            this.ac = new AbortController();
-            const signal = this.ac.signal;
-
-            this.cursor = document.getElementById('cursor');
-            if (!this.cursor) return;
-
-            document.addEventListener('touchstart', () => { this.lastTouchTime = Date.now(); this.hideCursor(); }, { passive: true, signal });
-            document.addEventListener('touchmove',  () => { this.lastTouchTime = Date.now(); this.hideCursor(); }, { passive: true, signal });
-            document.addEventListener('touchend',   () => { this.lastTouchTime = Date.now(); },                   { passive: true, signal });
-
-            document.addEventListener('mouseover', (e) => { if (e.target.tagName === 'IFRAME' || e.target.closest('.cursor-system')) this.hideCursor(); }, { signal });
-
-            document.addEventListener('mousemove', (e) => {
-                if (this.isSyntheticMouse()) return;
-                if (e.sourceCapabilities && e.sourceCapabilities.firesTouchEvents) return;
-
-                if (e.target.closest('.cursor-system')) { this.hideCursor(); return; }
-
-                this.mouseX = e.clientX;
-                this.mouseY = e.clientY;
-
-                this.showCursor();
-
-                const linkEl = this.findNearbyLink(this.mouseX, this.mouseY);
-
-                if (linkEl) {
-                    if (this.currentLinkEl !== linkEl) {
-                        this.currentLinkEl = linkEl;
-                        if (this.rafId) cancelAnimationFrame(this.rafId);
-                        this.rafId = requestAnimationFrame(this.trackLink);
-                    }
-                } else {
-                    if (this.currentLinkEl) {
-                        this.currentLinkEl = null;
-                        if (this.rafId) { cancelAnimationFrame(this.rafId); this.rafId = null; }
-                    }
-                    this.cursor.classList.remove('on-link');
-                    this.cursor.style.transform = this.isMouseDown ? 'translate(-50%, -50%) scale(0.9)' : 'translate(-50%, -50%)';
-                    this.cursor.style.borderRadius = '';
-                    this.cursor.style.left = this.mouseX + 'px';
-                    this.cursor.style.top  = this.mouseY + 'px';
-                    this.cursor.style.width = '';
-                    this.cursor.style.height = '';
-
-                    if (this.isOverRenderedText(this.mouseX, this.mouseY)) {
-                        this.cursor.classList.add('on-text');
-                    } else {
-                        this.cursor.classList.remove('on-text');
-                    }
-                }
-            }, { signal });
-
-            document.addEventListener('mousedown', () => {
-                this.isMouseDown = true;
-                this.cursor.style.transform = this.currentLinkEl ? 'none' : 'translate(-50%, -50%) scale(0.9)';
-            }, { signal });
-            document.addEventListener('mouseup', () => {
-                this.isMouseDown = false;
-                this.cursor.style.transform = this.currentLinkEl ? 'none' : 'translate(-50%, -50%) scale(1)';
-            }, { signal });
-
-            window.addEventListener('scroll', () => {
-                if (this.currentLinkEl) this.updateCursorForLink(this.currentLinkEl);
-            }, { passive: true, signal });
+            return element.getBoundingClientRect();
         }
 
-        cleanup() {
-            if (this.ac) this.ac.abort();
-            if (this.rafId) { cancelAnimationFrame(this.rafId); this.rafId = null; }
-            document.documentElement.style.cursor = '';
-            this.currentLinkEl = null;
+        static radiusOf(element, width) {
+            for (const target of [element, ...element.children]) {
+                const style = getComputedStyle(target);
+                const radius = Cursor.RADIUS_PROPERTIES.map(property => Cursor.parseLength(style[property], width));
+                if (radius.some(value => value > 0)) return radius;
+            }
+            return [0, 0, 0, 0];
         }
 
-        reinit() {
-            this.cursor = document.getElementById('cursor');
-            if (!this.cursor) return;
-
-            this.currentLinkEl = null;
-
-            if (this.rafId) {
-                cancelAnimationFrame(this.rafId); this.rafId = null;
-            }
-
-            this.cursor.classList.remove('on-link', 'on-text');
-            this.cursor.style.transform = 'translate(-50%, -50%)';
-            this.cursor.style.borderRadius = '';
-            this.cursor.style.left = this.mouseX + 'px';
-            this.cursor.style.top  = this.mouseY + 'px';
-            this.cursor.style.width = '';
-            this.cursor.style.height = '';
-
-            const newLinkEl = this.findNearbyLink(this.mouseX, this.mouseY);
-            if (newLinkEl) {
-                this.currentLinkEl = newLinkEl;
-                this.rafId = requestAnimationFrame(this.trackLink);
-            } else if (this.isOverRenderedText(this.mouseX, this.mouseY)) {
-                this.cursor.classList.add('on-text');
-            }
-
-            this.init();
+        static parseLength(value, reference) {
+            const first = value.trim().split(/\s+/)[0];
+            const number = parseFloat(first);
+            if (!Number.isFinite(number)) return 0;
+            return first.endsWith('%') ? number / 100 * reference : number;
         }
     }
 
-    const cursor = new Cursor();
-    window.nercone.register('cursor', {
-        init:    () => cursor.init(),
-        cleanup: () => cursor.cleanup(),
-        reinit:  () => cursor.reinit()
-    });
+    window.nercone.Cursor = Cursor;
+    window.nercone.register('cursor', new Cursor());
 })();
