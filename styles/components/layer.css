@@ -1,0 +1,47 @@
+.layer {
+    background-color: var(--color-layer);
+
+    position: relative;
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.layer > *:first-child {
+    margin-top: 0;
+}
+.layer > *:last-child {
+    margin-bottom: 0;
+}
+
+.layer-note {
+    background-color: color-mix(in srgb, var(--color-note-bright) 5%, transparent);
+}
+.layer-note > b:first-child {
+    color: var(--color-note-bright);
+}
+.layer-tip {
+    background-color: color-mix(in srgb, var(--color-tip-bright) 5%, transparent);
+}
+.layer-tip > b:first-child {
+    color: var(--color-tip-bright);
+}
+.layer-important {
+    background-color: color-mix(in srgb, var(--color-important-bright) 5%, transparent);
+}
+.layer-important > b:first-child {
+    color: var(--color-important-bright);
+}
+.layer-warning {
+    background-color: color-mix(in srgb, var(--color-warning-bright) 5%, transparent);
+}
+.layer-warning > b:first-child {
+    color: var(--color-warning-bright);
+}
+.layer-caution {
+    background-color: color-mix(in srgb, var(--color-caution-bright) 5%, transparent);
+}
+.layer-caution > b:first-child {
+    color: var(--color-caution-bright);
+}

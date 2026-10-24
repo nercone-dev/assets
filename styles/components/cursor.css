@@ -1,0 +1,45 @@
+* {
+    cursor: none;
+}
+.cursor-system, .cursor-system * {
+    cursor: auto;
+}
+
+#cursor {
+    background: var(--color-cursor);
+
+    opacity: 0;
+
+    border-radius: 50%;
+
+    position: fixed;
+    z-index: 99999;
+    width: 25px;
+    height: 25px;
+
+    pointer-events: none;
+
+    transform: translate(-50%, -50%);
+    transition:
+        transform     0.075s ease-out,
+        left          0.075s ease-out,
+        top           0.075s ease-out,
+        width         0.15s cubic-bezier(0.125,1,0.25,1),
+        height        0.15s cubic-bezier(0.125,1,0.25,1),
+        border-radius 0.15s cubic-bezier(0.125,1,0.25,1),
+        background    0.15s ease,
+        opacity       0.25s ease;
+}
+
+#cursor.visible {
+    opacity: 1;
+}
+
+#cursor.on-text {
+    width: 3px;
+    border-radius: 1.5px;
+}
+#cursor.on-link {
+    background: var(--color-cursor-on-link);
+    transform: translate(0, 0);
+}

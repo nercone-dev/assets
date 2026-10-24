@@ -286,3 +286,5 @@
     --color-cursor:         color-mix(in srgb, var(--color-white) 75%, transparent);
     --color-cursor-on-link: color-mix(in srgb, var(--color-white) 20%, transparent);
 }
+
+

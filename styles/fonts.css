@@ -295,23 +295,23 @@ s {
     font-variant-alternates: historical-forms;
 }
 
-.text-style-normal {
+.font-style-normal {
     font-style: normal;
 }
-.text-style-italic {
+.font-style-italic {
     font-style: italic;
 }
 
-.text-decoration-none {
+.font-decoration-none {
     text-decoration: none;
 }
-.text-decoration-underline {
+.font-decoration-underline {
     text-decoration: underline;
 }
-.text-decoration-overline {
+.font-decoration-overline {
     text-decoration: overline;
 }
-.text-decoration-line-through {
+.font-decoration-line-through {
     text-decoration: line-through;
 }
 

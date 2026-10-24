@@ -1,0 +1,33 @@
+#loading-overlay {
+    background: var(--color-background);
+    backdrop-filter: blur(20px);
+
+    opacity: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+
+    pointer-events: none;
+}
+#loading-overlay svg {
+    will-change: opacity, filter, transform;
+
+    color: var(--color-white);
+    filter: blur(20px);
+
+    opacity: 0;
+
+    --size: clamp(340px, 28vmin, 380px);
+    width: var(--size);
+    height: calc(var(--size) * 512 / 832);
+
+    transform: scale(1);
+}
+#loading-overlay polyline {
+    will-change: stroke-dashoffset;
+}

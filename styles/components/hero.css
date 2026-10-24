@@ -1,0 +1,47 @@
+.hero {
+    background-color: color-mix(in srgb, var(--color-background) 90%, var(--color-white));
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    box-sizing: border-box;
+
+    width: 100vw;
+    height: 40vh;
+
+    margin: 0;
+    margin-left: calc(50% - 50vw);
+
+    padding: 24px;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+
+    background-image: var(--hero-image, none);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    mask-image: linear-gradient(to bottom, black, rgba(0,0,0,0.2));
+    filter: brightness(0.8) blur(1px);
+}
+main > .hero {
+    margin-top: -24px;
+}
+.hero > * {
+    position: relative;
+    margin: 0;
+}
+.hero > h1 {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.hero > p {
+    color: var(--color-foreground-alt);
+}
