@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-12 {
+        font-size: 24px;
+      }
+
+      .cls-1, .cls-4, .cls-15, .cls-12 {
+        opacity: .5;
+      }
+
+      .cls-2, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-12, .cls-13, .cls-25, .cls-14, .cls-26 {
+        font-family: NerconeSansCJK-Variable, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-27, .cls-5, .cls-28 {
+        font-family: NerconeSansCJKVariable-Bold, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-16, .cls-9, .cls-29 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-17, .cls-30 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-18, .cls-31, .cls-32 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-19 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-20, .cls-33 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-21, .cls-34 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-22, .cls-7 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        font-family: NerconeSansCJKVariable-Medium, 'Nercone Sans CJK Variable';
+        font-size: 32px;
+        font-variation-settings: 'opsz' 14, 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-23, .cls-14 {
+        font-size: 20px;
+      }
+
+      .cls-35, .cls-31, .cls-36 {
+        fill: #ffd500;
+      }
+
+      .cls-35, .cls-37 {
+        letter-spacing: 0em;
+      }
+
+      .cls-38 {
+        fill: #0d0d0d;
+      }
+
+      .cls-5 {
+        font-size: 64px;
+      }
+
+      .cls-6 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.12em;
+      }
+
+      .cls-39 {
+        fill: #262626;
+      }
+
+      .cls-11, .cls-40, .cls-26 {
+        letter-spacing: .02em;
+      }
+
+      .cls-41 {
+        opacity: .75;
+      }
+
+      .cls-42 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      .cls-43 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-44 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-13 {
+        font-size: 16px;
+      }
+
+      .cls-45 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-46 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-47 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-48 {
+        letter-spacing: 0em;
+      }
+
+      .cls-49 {
+        letter-spacing: 0em;
+      }
+
+      .cls-50, .cls-25, .cls-28 {
+        letter-spacing: 0em;
+      }
+
+      .cls-51 {
+        fill: #333;
+      }
+
+      .cls-52 {
+        fill: #1a1a1a;
+      }
+
+      .cls-53 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <rect width="1920" height="1080"/>
+  <text class="cls-5" transform="translate(63.59 110.44)"><tspan x="0" y="0">FiR</tspan><tspan class="cls-49" x="96.97" y="0">S</tspan><tspan x="138.41" y="0">TBO</tspan><tspan class="cls-47" x="272.81" y="0">O</tspan><tspan x="320.09" y="0">T</tspan></text>
+  <text class="cls-2" transform="translate(63.66 170.22)"><tspan x="0" y="0">Pl</tspan><tspan class="cls-37" x="21.14" y="0">e</tspan><tspan x="35.37" y="0">ase select E</tspan><tspan class="cls-33" x="171.46" y="0">n</tspan><tspan x="185.29" y="0">vi</tspan><tspan class="cls-32" x="204.59" y="0">r</tspan><tspan x="213.22" y="0">onment f</tspan><tspan class="cls-32" x="314.47" y="0">r</tspan><tspan x="323.11" y="0">om </tspan><tspan class="cls-46" x="365.27" y="0">f</tspan><tspan x="373.45" y="0">oll</tspan><tspan class="cls-34" x="399.47" y="0">o</tspan><tspan x="413.43" y="0">wing list </tspan><tspan class="cls-50" x="513.42" y="0">t</tspan><tspan x="521.04" y="0">o Boot</tspan></text>
+  <g>
+    <path class="cls-51" d="M1856,236v128H64v-128h1792M1857,235H63v130h1794v-130h0Z"/>
+    <text class="cls-3" transform="translate(98.69 292.22)"><tspan x="0" y="0">NecOS 1</tspan><tspan class="cls-44" x="128.48" y="0">.0.</tspan><tspan x="165.97" y="0">0</tspan></text>
+    <text class="cls-14" transform="translate(101.27 329.99)"><tspan x="0" y="0">NVMe M.2 SSD</tspan><tspan class="cls-15" x="145.97" y="0" xml:space="preserve"> / </tspan><tspan x="164.42" y="0">UNFS </tspan><tspan class="cls-15" x="224.64" y="0">/ </tspan><tspan x="237.47" y="0">u</tspan><tspan class="cls-29" x="249.3" y="0">K</tspan><tspan x="261.94" y="0">e</tspan><tspan class="cls-40" x="273.6" y="0">r</tspan><tspan x="281.45" y="0">nel 1</tspan><tspan class="cls-43" x="323.53" y="0">.0.</tspan><tspan x="346.14" y="0">0 </tspan><tspan class="cls-41" x="364.38" y="0">(203206200001)</tspan><tspan class="cls-15" x="524.16" y="0" xml:space="preserve"> / </tspan><tspan x="542.62" y="0">NecOS 1</tspan><tspan class="cls-43" x="622.66" y="0">.0.</tspan><tspan x="645.27" y="0">0 &quot;Hello, </tspan><tspan class="cls-30" x="732.42" y="0">W</tspan><tspan x="751.11" y="0">o</tspan><tspan class="cls-40" x="763.11" y="0">r</tspan><tspan x="770.95" y="0">ld!&quot; </tspan><tspan class="cls-41" x="808.73" y="0">(203206200001)</tspan></text>
+    <g>
+      <rect class="cls-39" x="1728" y="236" width="64" height="128"/>
+      <g>
+        <circle class="cls-10" cx="1760" cy="300" r="2"/>
+        <circle class="cls-10" cx="1774" cy="300" r="2"/>
+        <circle class="cls-10" cx="1746" cy="300" r="2"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-51" x="1792" y="236" width="64" height="128"/>
+      <g>
+        <line class="cls-42" x1="1808" y1="300" x2="1840" y2="300"/>
+        <polyline class="cls-42" points="1824 284 1840 300 1824 316"/>
+      </g>
+      <text class="cls-13" transform="translate(1815.03 350.11)"><tspan x="0" y="0">5s</tspan></text>
+    </g>
+  </g>
+  <g>
+    <path class="cls-52" d="M1856,396v128H64v-128h1792M1857,395H63v130h1794v-130h0Z"/>
+    <text class="cls-3" transform="translate(98.69 452.22)"><tspan class="cls-45" x="0" y="0">F</tspan><tspan x="17.7" y="0">edo</tspan><tspan class="cls-48" x="75.61" y="0">r</tspan><tspan x="87.84" y="0">a 45 Be</tspan><tspan class="cls-53" x="203.19" y="0">t</tspan><tspan x="214.23" y="0">a</tspan></text>
+    <text class="cls-23" transform="translate(101.27 489.99)"><tspan class="cls-10" x="0" y="0">NVMe M.2 SSD</tspan><tspan class="cls-4" x="145.97" y="0" xml:space="preserve"> / </tspan><tspan class="cls-10" x="164.42" y="0">Bt</tspan><tspan class="cls-11" x="184.05" y="0">r</tspan><tspan class="cls-7" x="191.89" y="0">f</tspan><tspan class="cls-10" x="198.85" y="0">s</tspan><tspan class="cls-4" x="209.4" y="0" xml:space="preserve"> / </tspan><tspan class="cls-10" x="227.86" y="0">Linux </tspan><tspan class="cls-8" x="284.2" y="0">7</tspan><tspan class="cls-10" x="293.02" y="0">.2</tspan><tspan class="cls-6" x="310.98" y="0">.</tspan><tspan class="cls-10" x="315.01" y="0">12</tspan><tspan class="cls-4" x="335.34" y="0" xml:space="preserve"> / </tspan><tspan class="cls-9" x="353.8" y="0">F</tspan><tspan class="cls-10" x="364.81" y="0">edora 45</tspan><tspan class="cls-4" x="449.88" y="0" xml:space="preserve"> / </tspan><tspan class="cls-36" x="468.34" y="0">P</tspan><tspan class="cls-31" x="481.11" y="0">r</tspan><tspan class="cls-36" x="488.31" y="0">e-</tspan><tspan class="cls-31" x="509.17" y="0">r</tspan><tspan class="cls-36" x="516.37" y="0">el</tspan><tspan class="cls-35" x="532.87" y="0">e</tspan><tspan class="cls-36" x="544.73" y="0">ase</tspan></text>
+    <g>
+      <rect class="cls-38" x="1728" y="396" width="64" height="128"/>
+      <g>
+        <circle class="cls-10" cx="1760" cy="460" r="2"/>
+        <circle class="cls-10" cx="1774" cy="460" r="2"/>
+        <circle class="cls-10" cx="1746" cy="460" r="2"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-52" x="1792" y="396" width="64" height="128"/>
+      <g>
+        <line class="cls-42" x1="1808" y1="460" x2="1840" y2="460"/>
+        <polyline class="cls-42" points="1824 444 1840 460 1824 476"/>
+      </g>
+    </g>
+  </g>
+  <text class="cls-1" transform="translate(15.3 1063.66)"><tspan class="cls-24" x="0" y="0">P</tspan><tspan class="cls-18" x="15.33" y="0">r</tspan><tspan class="cls-24" x="23.96" y="0">ess </tspan><tspan class="cls-27" x="70.04" y="0">En</tspan><tspan class="cls-28" x="99.56" y="0">t</tspan><tspan class="cls-27" x="108.12" y="0">er</tspan><tspan class="cls-24" x="132.19" y="0"> </tspan><tspan class="cls-25" x="138.94" y="0">t</tspan><tspan class="cls-24" x="146.55" y="0">o Boot with Selec</tspan><tspan class="cls-25" x="343.93" y="0">t</tspan><tspan class="cls-24" x="351.55" y="0">ed E</tspan><tspan class="cls-20" x="401.41" y="0">n</tspan><tspan class="cls-24" x="415.24" y="0">vi</tspan><tspan class="cls-18" x="434.54" y="0">r</tspan><tspan class="cls-24" x="443.18" y="0">onment, </tspan><tspan class="cls-27" x="542.46" y="0">O</tspan><tspan class="cls-24" x="560.95" y="0"> </tspan><tspan class="cls-25" x="567.7" y="0">t</tspan><tspan class="cls-24" x="575.32" y="0">o Sh</tspan><tspan class="cls-21" x="626.05" y="0">o</tspan><tspan class="cls-24" x="640.01" y="0">w Options e.g. </tspan><tspan class="cls-16" x="810.39" y="0">K</tspan><tspan class="cls-24" x="825.56" y="0">e</tspan><tspan class="cls-26" x="839.55" y="0">r</tspan><tspan class="cls-24" x="848.96" y="0">nel </tspan><tspan class="cls-17" x="889.7" y="0">V</tspan><tspan class="cls-24" x="905.04" y="0">ersion and A</tspan><tspan class="cls-18" x="1047.53" y="0">r</tspan><tspan class="cls-24" x="1056.16" y="0">gumen</tspan><tspan class="cls-25" x="1134.27" y="0">t</tspan><tspan class="cls-24" x="1141.89" y="0">s. Use a</tspan><tspan class="cls-26" x="1232.97" y="0">r</tspan><tspan class="cls-18" x="1242.38" y="0">r</tspan><tspan class="cls-21" x="1251.01" y="0">o</tspan><tspan class="cls-24" x="1264.97" y="0">w </tspan><tspan class="cls-22" x="1291.36" y="0">k</tspan><tspan class="cls-19" x="1303.99" y="0">e</tspan><tspan class="cls-24" x="1317.52" y="0">ys </tspan><tspan class="cls-25" x="1350.42" y="0">t</tspan><tspan class="cls-24" x="1358.04" y="0">o n</tspan><tspan class="cls-20" x="1393.36" y="0">a</tspan><tspan class="cls-24" x="1406.48" y="0">viga</tspan><tspan class="cls-25" x="1453.98" y="0">t</tspan><tspan class="cls-24" x="1461.6" y="0">e list.</tspan></text>
+  <g>
+    <path class="cls-52" d="M1856,556v128H64v-128h1792M1857,555H63v130h1794v-130h0Z"/>
+    <text class="cls-3" transform="translate(98.69 612.22)"><tspan x="0" y="0">Wind</tspan><tspan class="cls-32" x="79.19" y="0">o</tspan><tspan x="97.98" y="0">ws 11</tspan></text>
+    <text class="cls-14" transform="translate(101.27 649.99)"><tspan x="0" y="0">NVMe M.2 SSD</tspan><tspan class="cls-15" x="145.97" y="0" xml:space="preserve"> / </tspan><tspan x="164.42" y="0">NTFS</tspan><tspan class="cls-15" x="217.04" y="0" xml:space="preserve"> / </tspan><tspan x="235.5" y="0">Wind</tspan><tspan class="cls-34" x="284.11" y="0">o</tspan><tspan x="295.74" y="0">ws NT 1</tspan><tspan class="cls-43" x="370.03" y="0">0.</tspan><tspan x="387.39" y="0">0 </tspan><tspan class="cls-41" x="405.63" y="0">(22621)</tspan><tspan class="cls-15" x="477.35" y="0" xml:space="preserve"> / </tspan><tspan x="495.81" y="0">Wind</tspan><tspan class="cls-34" x="544.42" y="0">o</tspan><tspan x="556.05" y="0">ws 11 22H2</tspan></text>
+    <g>
+      <rect class="cls-38" x="1728" y="556" width="64" height="128"/>
+      <g>
+        <circle class="cls-10" cx="1760" cy="620" r="2"/>
+        <circle class="cls-10" cx="1774" cy="620" r="2"/>
+        <circle class="cls-10" cx="1746" cy="620" r="2"/>
+      </g>
+    </g>
+    <g>
+      <rect class="cls-52" x="1792" y="556" width="64" height="128"/>
+      <g>
+        <line class="cls-42" x1="1808" y1="620" x2="1840" y2="620"/>
+        <polyline class="cls-42" points="1824 604 1840 620 1824 636"/>
+      </g>
+    </g>
+  </g>
+  <text class="cls-12" transform="translate(1653.48 1063.66)"><tspan x="0" y="0">1</tspan><tspan class="cls-43" x="9.76" y="0">.0.</tspan><tspan x="36.9" y="0">0 (203206200001)</tspan></text>
+</svg>
