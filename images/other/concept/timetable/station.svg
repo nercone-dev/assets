@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #404040;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        font-family: NerconeSansCJKVariable-Bold, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        font-size: 128px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-4, .cls-6 {
+        font-size: 96px;
+      }
+
+      .cls-7 {
+        font-family: NerconeSansCJKVariable-Medium, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-8 {
+        font-family: NerconeSansCJK-Variable, 'Nercone Sans CJK Variable';
+        font-size: 84px;
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-9 {
+        fill: #397cbf;
+      }
+
+      .cls-10 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-13 {
+        fill: #bf3939;
+      }
+    </style>
+  </defs>
+  <rect width="3840" height="1080"/>
+  <g>
+    <g>
+      <rect x="-.5" y="-.5" width="3841" height="361"/>
+      <path class="cls-1" d="M3840,0v360H0V0h3840M3841-1H-1v362h3842V-1h0Z"/>
+    </g>
+    <g>
+      <rect class="cls-9" x="100" y="100" width="672" height="160"/>
+      <text class="cls-4" transform="translate(151.68 210.66)"><tspan x="0" y="0">こだま　865</tspan></text>
+    </g>
+    <text class="cls-5" transform="translate(841.67 153.38)"><tspan class="cls-6"><tspan class="cls-2" x="0" y="0">新大阪 行き </tspan><tspan class="cls-7" x="525.56" y="0">各駅停車</tspan></tspan><tspan class="cls-8"><tspan x="0" y="117.44">自由席 1-</tspan><tspan class="cls-11" x="348.43" y="117.44">6</tspan><tspan x="397.69" y="117.44">, 1</tspan><tspan class="cls-10" x="479.68" y="117.44">5</tspan><tspan x="527.26" y="117.44">, 16 号車</tspan></tspan></text>
+    <text class="cls-3" transform="translate(3422 230.88)"><tspan class="cls-12" x="0" y="0">7</tspan><tspan x="70.13" y="0">:23</tspan></text>
+  </g>
+  <g>
+    <g>
+      <rect x="-.5" y="359.5" width="3841" height="361"/>
+      <path class="cls-1" d="M3840,360v360H0v-360h3840M3841,359H-1v362h3842v-362h0Z"/>
+    </g>
+    <g>
+      <rect class="cls-13" x="100" y="460" width="672" height="160"/>
+      <text class="cls-4" transform="translate(161.1 570.66)"><tspan x="0" y="0">ひかり　631</tspan></text>
+    </g>
+    <text class="cls-5" transform="translate(841.67 513.38)"><tspan class="cls-6"><tspan class="cls-2" x="0" y="0">新大阪 行き </tspan><tspan class="cls-7" x="525.56" y="0">名古屋・岐阜羽島・米原・京都</tspan></tspan><tspan class="cls-8"><tspan x="0" y="117.44">自由席 1-5 号車</tspan></tspan></text>
+    <text class="cls-3" transform="translate(3415.5 590.88)"><tspan class="cls-12" x="0" y="0">7</tspan><tspan x="70.12" y="0">:49</tspan></text>
+  </g>
+  <g>
+    <g>
+      <rect x="-.5" y="719.5" width="3841" height="361"/>
+      <path class="cls-1" d="M3840,720v360H0v-360h3840M3841,719H-1v362h3842v-362h0Z"/>
+    </g>
+    <g>
+      <rect class="cls-9" x="100" y="820" width="672" height="160"/>
+      <text class="cls-4" transform="translate(153.62 930.66)"><tspan x="0" y="0">こだま　867</tspan></text>
+    </g>
+    <text class="cls-5" transform="translate(841.67 873.38)"><tspan class="cls-6"><tspan class="cls-2" x="0" y="0">新大阪 行き </tspan><tspan class="cls-7" x="525.56" y="0">各駅停車</tspan></tspan><tspan class="cls-8"><tspan x="0" y="117.44">自由席 1-</tspan><tspan class="cls-11" x="348.43" y="117.44">6</tspan><tspan x="397.69" y="117.44">, 1</tspan><tspan class="cls-10" x="479.68" y="117.44">5</tspan><tspan x="527.26" y="117.44">, 16 号車</tspan></tspan></text>
+    <text class="cls-3" transform="translate(3405.07 950.88)"><tspan x="0" y="0">8:02</tspan></text>
+  </g>
+</svg>
