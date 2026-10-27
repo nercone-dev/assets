@@ -14,7 +14,7 @@
       }
 
       .cls-2 {
-        opacity: .25;
+        opacity: .5;
       }
     </style>
   </defs>

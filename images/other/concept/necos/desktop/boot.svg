@@ -45,7 +45,7 @@
         fill: none;
         stroke: #fff;
         stroke-miterlimit: 10;
-        stroke-width: 16px;
+        stroke-width: 8px;
       }
 
       .cls-18 {
@@ -56,11 +56,7 @@
         font-size: 16px;
       }
 
-      .cls-17 {
-        opacity: .25;
-      }
-
-      .cls-15, .cls-20, .cls-11 {
+      .cls-15, .cls-17, .cls-20, .cls-11 {
         opacity: .5;
       }
 
@@ -70,6 +66,10 @@
 
       .cls-21, .cls-22, .cls-13, .cls-23 {
         opacity: .75;
+      }
+
+      .cls-17 {
+        stroke-linecap: round;
       }
 
       .cls-23 {
@@ -114,12 +114,15 @@
     </style>
   </defs>
   <rect width="1920" height="1080"/>
-  <g>
-    <path class="cls-17" d="M912,444h0c-26.51,0-48,21.49-48,48h0c0,26.51,21.49,48,48,48h96c26.51,0,48,21.49,48,48h0c0,26.51-21.49,48-48,48h0c-26.51,0-48-21.49-48-48v-96c0-26.51-21.49-48-48-48Z"/>
-    <path class="cls-16" d="M912,444c-26.51,0-48,21.49-48,48h0c0,26.51,21.49,48,48,48h96c26.51,0,48,21.49,48,48h0c0,26.51-21.49,48-48,48"/>
-  </g>
   <text class="cls-2" transform="translate(827.31 857.66)"><tspan x="0" y="0">One moment pl</tspan><tspan class="cls-31" x="177.3" y="0">e</tspan><tspan x="191.84" y="0">ase..</tspan><tspan class="cls-27" x="249.55" y="0">.</tspan><tspan x="257.27" y="0">!</tspan></text>
   <text class="cls-8" transform="translate(803.14 885.11)"><tspan class="cls-19"><tspan x="0" y="0">Running UNFS H</tspan><tspan class="cls-31" x="126.37" y="0">e</tspan><tspan x="135.85" y="0">a</tspan><tspan class="cls-29" x="144.84" y="0">l</tspan><tspan x="148.95" y="0">thcheck (620/20</tspan><tspan class="cls-14" x="275.22" y="0">0</tspan><tspan x="285" y="0">7)...</tspan></tspan><tspan class="cls-18"><tspan class="cls-23" x="17.81" y="26.24">5</tspan><tspan class="cls-21" x="25.74" y="26.24">.</tspan><tspan class="cls-22" x="29.46" y="26.24">8ms elapsed</tspan><tspan class="cls-20" x="113.82" y="26.24" xml:space="preserve"> / </tspan><tspan class="cls-22" x="126.74" y="26.24">app</tspan><tspan class="cls-13" x="151.75" y="26.24">r</tspan><tspan class="cls-21" x="156.79" y="26.24">o</tspan><tspan class="cls-22" x="164.87" y="26.24">x. 1</tspan><tspan class="cls-21" x="186.18" y="26.24">3</tspan><tspan class="cls-22" x="194.51" y="26.24">.2ms </tspan><tspan class="cls-13" x="230.67" y="26.24">r</tspan><tspan class="cls-22" x="235.71" y="26.24">emaining</tspan></tspan></text>
   <text class="cls-15" transform="translate(15.3 1063.66)"><tspan class="cls-9" x="0" y="0">P</tspan><tspan class="cls-4" x="10.22" y="0">r</tspan><tspan class="cls-9" x="15.98" y="0">ess </tspan><tspan class="cls-1" x="46.7" y="0">L</tspan><tspan class="cls-9" x="55.74" y="0"> </tspan><tspan class="cls-10" x="60.24" y="0">t</tspan><tspan class="cls-9" x="65.32" y="0">o Sh</tspan><tspan class="cls-7" x="99.14" y="0">o</tspan><tspan class="cls-9" x="108.45" y="0">w Logs, </tspan><tspan class="cls-1" x="172.05" y="0">S</tspan><tspan class="cls-9" x="182.52" y="0"> </tspan><tspan class="cls-10" x="187.02" y="0">t</tspan><tspan class="cls-9" x="192.1" y="0">o </tspan><tspan class="cls-6" x="206.2" y="0">R</tspan><tspan class="cls-9" x="216.26" y="0">eboot and en</tspan><tspan class="cls-10" x="315.82" y="0">t</tspan><tspan class="cls-9" x="320.9" y="0">er Sa</tspan><tspan class="cls-3" x="360" y="0">f</tspan><tspan class="cls-9" x="365.45" y="0">e Mode, </tspan><tspan class="cls-1" x="431.56" y="0">R</tspan><tspan class="cls-9" x="442.07" y="0"> </tspan><tspan class="cls-10" x="446.57" y="0">t</tspan><tspan class="cls-9" x="451.65" y="0">o </tspan><tspan class="cls-6" x="465.74" y="0">R</tspan><tspan class="cls-9" x="475.8" y="0">eboot and en</tspan><tspan class="cls-10" x="575.37" y="0">t</tspan><tspan class="cls-9" x="580.45" y="0">er </tspan><tspan class="cls-6" x="600.3" y="0">R</tspan><tspan class="cls-9" x="610.36" y="0">ec</tspan><tspan class="cls-5" x="628.83" y="0">ov</tspan><tspan class="cls-9" x="646.79" y="0">e</tspan><tspan class="cls-12" x="656.12" y="0">r</tspan><tspan class="cls-9" x="662.39" y="0">y E</tspan><tspan class="cls-6" x="685.5" y="0">n</tspan><tspan class="cls-9" x="694.72" y="0">vi</tspan><tspan class="cls-4" x="707.59" y="0">r</tspan><tspan class="cls-9" x="713.34" y="0">onment.</tspan></text>
   <text class="cls-11" transform="translate(1369.99 1063.66)"><tspan x="0" y="0">NecOS 1</tspan><tspan class="cls-24" x="64.03" y="0">.0.</tspan><tspan x="82.12" y="0">0 / u</tspan><tspan class="cls-26" x="116.45" y="0">K</tspan><tspan x="126.56" y="0">e</tspan><tspan class="cls-30" x="135.89" y="0">r</tspan><tspan x="142.16" y="0">nel 1</tspan><tspan class="cls-24" x="175.83" y="0">.0.</tspan><tspan x="193.92" y="0">0 </tspan><tspan class="cls-28" x="208.52" y="0">(</tspan><tspan x="214.17" y="0">commit def062</tspan><tspan class="cls-24" x="329.37" y="0">0</tspan><tspan x="339.05" y="0">, x8</tspan><tspan class="cls-25" x="366.8" y="0">6_</tspan><tspan x="382.56" y="0">64) with 42 ukmods</tspan></text>
+  <g>
+    <path class="cls-16" d="M1012.62,464.86l38.76,67.14c2.86,4.95,2.86,11.05,0,16l-38.76,67.14c-2.86,4.95-8.14,8-13.86,8h-77.52c-5.72,0-11-3.05-13.86-8l-38.76-67.14c-2.86-4.95-2.86-11.05,0-16l38.76-67.14c2.86-4.95,8.14-8,13.86-8h77.52c5.72,0,11,3.05,13.86,8Z"/>
+    <g>
+      <path class="cls-17" d="M936,492h0c-13.25,0-24,10.75-24,24h0c0,13.25,10.75,24,24,24h48c13.25,0,24,10.75,24,24h0c0,13.25-10.75,24-24,24h0c-13.25,0-24-10.75-24-24v-48c0-13.25-10.75-24-24-24Z"/>
+      <path class="cls-16" d="M936,492c-13.25,0-24,10.75-24,24h0c0,13.25,10.75,24,24,24h48c13.25,0,24,10.75,24,24h0c0,13.25-10.75,24-24,24"/>
+    </g>
+  </g>
 </svg>
