@@ -236,7 +236,9 @@
 
     /* Semantic */
 
-    --color-foreground:     var(--color-grey-75);
+    color-scheme: dark;
+
+    --color-foreground:    var(--color-grey-75);
     --color-foreground-alt: var(--color-grey-100);
     --color-background:     var(--color-grey-5);
     --color-background-alt: var(--color-grey-10);

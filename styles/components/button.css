@@ -1,0 +1,76 @@
+.button {
+    color: var(--button-foreground, var(--color-foreground-alt));
+    background-color: var(--button-background, var(--color-layer-alt));
+    border: solid 1px var(--button-border, var(--color-border));
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    box-sizing: border-box;
+    padding: var(--button-padding, 8px 16px);
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-touch-callout: none;
+
+    transition:
+        color            0.15s ease,
+        background-color 0.15s ease,
+        border-color     0.15s ease,
+        transform        0.15s cubic-bezier(0.125,1,0.25,1);
+}
+
+.button:hover {
+    background-color: color-mix(in srgb, var(--button-background, var(--color-layer-alt)), var(--color-foreground) 10%);
+}
+.button:active {
+    transform: scale(0.98);
+}
+.button:focus-visible {
+    outline: solid 1px var(--color-foreground-alt);
+    outline-offset: 2px;
+}
+
+.button:disabled, .button[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.button-primary {
+    --button-foreground: var(--color-background);
+    --button-background: var(--color-foreground-alt);
+    --button-border:     var(--color-foreground-alt);
+}
+.button-information {
+    --button-foreground: var(--color-information-bright);
+    --button-background: color-mix(in srgb, var(--color-information-bright) 10%, transparent);
+    --button-border:     var(--color-information);
+}
+.button-success {
+    --button-foreground: var(--color-success-bright);
+    --button-background: color-mix(in srgb, var(--color-success-bright) 10%, transparent);
+    --button-border:     var(--color-success);
+}
+.button-warning {
+    --button-foreground: var(--color-warning-bright);
+    --button-background: color-mix(in srgb, var(--color-warning-bright) 10%, transparent);
+    --button-border:     var(--color-warning);
+}
+.button-error {
+    --button-foreground: var(--color-error-bright);
+    --button-background: color-mix(in srgb, var(--color-error-bright) 10%, transparent);
+    --button-border:     var(--color-error);
+}

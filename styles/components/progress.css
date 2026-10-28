@@ -1,0 +1,99 @@
+/* Linear */
+
+.progress-linear {
+    background-color: var(--progress-track, var(--color-layer));
+
+    position: relative;
+    overflow: hidden;
+
+    height: var(--progress-thickness, 4px);
+}
+.progress-linear::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-color: var(--progress-color, var(--color-foreground-alt));
+
+    transform-origin: left;
+    transform: scaleX(var(--progress-value, 0));
+    transition: transform 0.3s cubic-bezier(0.125,1,0.25,1);
+}
+.progress-linear:dir(rtl)::before {
+    transform-origin: right;
+}
+.progress-linear:not([aria-valuenow])::before {
+    inset: 0 auto 0 0;
+    width: 40%;
+    transform: none;
+    animation: progress-linear var(--progress-duration, 1.5s) cubic-bezier(0.65,0,0.35,1) infinite;
+}
+.progress-linear:not([aria-valuenow]):dir(rtl)::before {
+    animation-direction: reverse;
+}
+
+@keyframes progress-linear {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(250%);  }
+}
+
+/* Circular */
+
+.progress-circular {
+    width:  var(--progress-size, 48px);
+    height: var(--progress-size, 48px);
+
+    transform: rotate(-90deg);
+}
+.progress-circular circle {
+    fill: none;
+    stroke-width: var(--progress-thickness, 4px);
+}
+.progress-circular:not([aria-valuenow]) {
+    animation: progress-circular-rotate var(--progress-duration, 1.5s) linear infinite;
+}
+
+@keyframes progress-circular-rotate {
+    from { transform: rotate(-90deg); }
+    to   { transform: rotate(270deg); }
+}
+@keyframes progress-circular-dash {
+    0%   { stroke-dasharray: 0.01 1; stroke-dashoffset: 0;     }
+    50%  { stroke-dasharray: 0.7 1;  stroke-dashoffset: -0.15; }
+    100% { stroke-dasharray: 0.7 1;  stroke-dashoffset: -0.99; }
+}
+
+/* Logo */
+
+.progress-logo {
+    height: var(--progress-size, 48px);
+    aspect-ratio: 78 / 48;
+}
+.progress-logo polyline {
+    fill: none;
+    stroke-width: var(--progress-thickness, 4px);
+    stroke-miterlimit: 10;
+}
+
+@keyframes progress-logo {
+    from { stroke-dashoffset: 1;  }
+    to   { stroke-dashoffset: -1; }
+}
+
+/* Track & Indicator */
+
+.progress-track {
+    stroke: var(--progress-track, var(--color-layer));
+}
+.progress-indicator {
+    stroke: var(--progress-color, var(--color-foreground-alt));
+    stroke-dasharray: 1 1;
+    stroke-dashoffset: calc(1 - var(--progress-value, 0));
+    transition: stroke-dashoffset 0.3s cubic-bezier(0.125,1,0.25,1);
+}
+.progress-circular:not([aria-valuenow]) .progress-indicator {
+    animation: progress-circular-dash var(--progress-duration, 1.5s) ease-in-out infinite;
+}
+.progress-logo:not([aria-valuenow]) .progress-indicator {
+    animation: progress-logo var(--progress-duration, 3s) cubic-bezier(0.65,0,0.35,1) infinite;
+}
