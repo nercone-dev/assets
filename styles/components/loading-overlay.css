@@ -13,6 +13,8 @@
     z-index: 100000;
 
     pointer-events: none;
+
+    content: "<svg viewBox=\"96 256 832 512\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"48\" stroke-miterlimit=\"10\"/></svg>";
 }
 #loading-overlay svg {
     will-change: opacity, filter, transform;
