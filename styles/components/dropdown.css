@@ -1,7 +1,7 @@
 .dropdown {
-    color: var(--dropdown-foreground, var(--color-foreground-alt));
-    background-color: var(--dropdown-background, var(--color-layer-alt));
-    border: solid 1px var(--dropdown-border, var(--color-border));
+    color: var(--color-dropdown-foreground);
+    background-color: var(--color-dropdown-background);
+    border: solid 1px var(--color-dropdown-border);
     border-radius: 0;
     outline: none;
     appearance: none;
@@ -51,7 +51,7 @@
     border-color: color-mix(in srgb, var(--color-foreground) 40%, transparent);
 }
 .dropdown:focus-visible {
-    border-color: var(--dropdown-focus, var(--color-foreground-alt));
+    border-color: var(--color-dropdown-focus);
 }
 
 .dropdown:user-invalid {

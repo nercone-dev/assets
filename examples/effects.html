@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Effects - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+    <header>
+        <div>
+            <a href="index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="typography.html">Typography</a>
+            <a href="layout.html">Layout</a>
+            <a href="forms.html">Forms</a>
+            <a href="loading.html">Loading</a>
+            <a href="effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <h1>Effects</h1>
+        <p>Cursor・Loading overlay・Page transition の使用例です。これらはページ全体に作用します。</p>
+
+        <h2>Cursor</h2>
+        <p><code>&lt;div id="cursor"&gt;&lt;/div&gt;</code> を置き、<code>cursor.js</code> を読み込むと、マウスカーソルが円に置き換わります。リンクやボタンの上では要素を囲む形に、テキストの上では縦線に変わります。すべての例のページで有効です。</p>
+        <div class="flex" style="flex-wrap: wrap">
+            <button class="button" type="button">ボタンの上</button>
+            <a class="button" href="index.html">リンクの上</a>
+        </div>
+        <div class="layer cursor-system">
+            <p>この領域 (<code>cursor-system</code>) ではシステムのカーソルが使われます。</p>
+        </div>
+        <pre><code>&lt;link rel="stylesheet" href="styles/components/cursor.css"&gt;
+&lt;script src="scripts/cursor.js" defer&gt;&lt;/script&gt;
+...
+&lt;div id="cursor"&gt;&lt;/div&gt;</code></pre>
+
+        <h2>Loading overlay</h2>
+        <p>ページを直接開いたときに、ロゴを描くアニメーションの後でページを表示します。このページを開いたときに表示されたものです。JavaScript が無効な環境では <code>noscript.css</code> によって非表示になります。</p>
+        <div class="flex">
+            <button class="button" type="button" onclick="location.reload()">再読み込みして再生</button>
+        </div>
+        <pre><code>&lt;link rel="stylesheet" href="styles/components/loading-overlay.css"&gt;
+&lt;noscript&gt;&lt;link rel="stylesheet" href="styles/noscript.css"&gt;&lt;/noscript&gt;
+&lt;script src="scripts/loading-overlay.js" defer&gt;&lt;/script&gt;
+...
+&lt;div id="loading-overlay"&gt;
+    &lt;svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/&gt;
+    &lt;/svg&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2>Page transition</h2>
+        <p><code>view-transition.js</code> を読み込むと、同じオリジンのリンクを開くときに <code>header</code> と <code>main</code> だけを入れ替え、View Transition API でアニメーションします。対応していないブラウザでは通常のページ移動になります。</p>
+        <div class="flex" style="flex-wrap: wrap">
+            <a class="button" href="typography.html">Typography へ</a>
+            <a class="button" href="layout.html">Layout へ</a>
+            <a class="button" href="index.html" target="_blank">新しいタブで開く (遷移なし)</a>
+        </div>
+        <pre><code>&lt;link rel="stylesheet" href="styles/components/view-transition.css"&gt;
+&lt;script src="scripts/initializer.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/view-transition.js" defer&gt;&lt;/script&gt;</code></pre>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

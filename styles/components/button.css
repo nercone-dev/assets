@@ -1,7 +1,7 @@
 .button {
-    color: var(--button-foreground, var(--color-foreground-alt));
-    background-color: var(--button-background, var(--color-layer-alt));
-    border: solid 1px var(--button-border, var(--color-border));
+    color: var(--color-button-foreground);
+    background-color: var(--color-button-background);
+    border: solid 1px var(--color-button-border);
     border-radius: 0;
     outline: none;
     appearance: none;
@@ -33,7 +33,7 @@
 }
 
 .button:hover {
-    background-color: color-mix(in srgb, var(--button-background, var(--color-layer-alt)), var(--color-foreground) 10%);
+    background-color: color-mix(in srgb, var(--color-button-background), var(--color-foreground) 10%);
 }
 .button:active {
     transform: scale(0.98);
@@ -50,27 +50,27 @@
 }
 
 .button-primary {
-    --button-foreground: var(--color-background);
-    --button-background: var(--color-foreground-alt);
-    --button-border:     var(--color-foreground-alt);
+    --color-button-foreground: var(--color-button-primary-foreground);
+    --color-button-background: var(--color-button-primary-background);
+    --color-button-border:     var(--color-button-primary-border);
 }
 .button-information {
-    --button-foreground: var(--color-information-bright);
-    --button-background: color-mix(in srgb, var(--color-information-bright) 10%, transparent);
-    --button-border:     var(--color-information);
+    --color-button-foreground: var(--color-button-information-foreground);
+    --color-button-background: var(--color-button-information-background);
+    --color-button-border:     var(--color-button-information-border);
 }
 .button-success {
-    --button-foreground: var(--color-success-bright);
-    --button-background: color-mix(in srgb, var(--color-success-bright) 10%, transparent);
-    --button-border:     var(--color-success);
+    --color-button-foreground: var(--color-button-success-foreground);
+    --color-button-background: var(--color-button-success-background);
+    --color-button-border:     var(--color-button-success-border);
 }
 .button-warning {
-    --button-foreground: var(--color-warning-bright);
-    --button-background: color-mix(in srgb, var(--color-warning-bright) 10%, transparent);
-    --button-border:     var(--color-warning);
+    --color-button-foreground: var(--color-button-warning-foreground);
+    --color-button-background: var(--color-button-warning-background);
+    --color-button-border:     var(--color-button-warning-border);
 }
 .button-error {
-    --button-foreground: var(--color-error-bright);
-    --button-background: color-mix(in srgb, var(--color-error-bright) 10%, transparent);
-    --button-border:     var(--color-error);
+    --color-button-foreground: var(--color-button-error-foreground);
+    --color-button-background: var(--color-button-error-background);
+    --color-button-border:     var(--color-button-error-border);
 }

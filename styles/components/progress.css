@@ -1,7 +1,7 @@
 /* Linear */
 
 .progress-linear {
-    background-color: var(--progress-track, var(--color-layer));
+    background-color: var(--color-progress-track);
 
     position: relative;
     overflow: hidden;
@@ -13,7 +13,7 @@
     position: absolute;
     inset: 0;
 
-    background-color: var(--progress-color, var(--color-foreground-alt));
+    background-color: var(--color-progress);
 
     transform-origin: left;
     transform: scaleX(var(--progress-value, 0));
@@ -83,12 +83,12 @@
 /* Track & Indicator */
 
 .progress-track {
-    stroke: var(--progress-track, var(--color-layer));
+    stroke: var(--color-progress-track);
 }
 .progress-indicator {
-    stroke: var(--progress-color, var(--color-foreground-alt));
+    stroke: var(--color-progress);
     stroke-dasharray: 1 1;
-    stroke-dashoffset: calc(1 - var(--progress-value, 0));
+    stroke-dashoffset: calc((1 - var(--progress-value, 0)) * 1px);
     transition: stroke-dashoffset 0.3s cubic-bezier(0.125,1,0.25,1);
 }
 .progress-circular:not([aria-valuenow]) .progress-indicator {

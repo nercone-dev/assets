@@ -114,6 +114,16 @@ s {
     text-decoration: line-through;
 }
 
+strong {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-foreground-alt);
+}
+
+mark {
+    background-color: var(--color-yellow-opacity-10);
+    color: var(--color-yellow-bright);
+}
+
 .font-family-sans {
     font-family: var(--font-family-sans);
 }

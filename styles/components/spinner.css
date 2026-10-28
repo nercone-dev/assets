@@ -1,6 +1,8 @@
 /* Linear */
 
 .spinner-linear {
+    background-color: var(--color-spinner-track);
+
     position: relative;
     overflow: hidden;
 
@@ -11,7 +13,7 @@
     position: absolute;
     inset: 0 auto 0 0;
 
-    background-color: var(--spinner-color, var(--color-foreground-alt));
+    background-color: var(--color-spinner);
 
     width: 25%;
     animation: spinner-linear var(--spinner-duration, 1s) cubic-bezier(0.65,0,0.35,1) infinite alternate;
@@ -32,8 +34,9 @@
 }
 .spinner-circular circle {
     fill: none;
-    stroke: var(--spinner-color, var(--color-foreground-alt));
     stroke-width: var(--spinner-thickness, 4px);
+}
+.spinner-circular .spinner-indicator {
     stroke-dasharray: 0.25 0.75;
 }
 
@@ -50,9 +53,10 @@
 }
 .spinner-logo polyline {
     fill: none;
-    stroke: var(--spinner-color, var(--color-foreground-alt));
     stroke-width: var(--spinner-thickness, 4px);
     stroke-miterlimit: 10;
+}
+.spinner-logo .spinner-indicator {
     stroke-dasharray: 1 1;
 
     animation: spinner-logo var(--spinner-duration, 3s) cubic-bezier(0.65,0,0.35,1) infinite;
@@ -61,4 +65,13 @@
 @keyframes spinner-logo {
     from { stroke-dashoffset: 1;  }
     to   { stroke-dashoffset: -1; }
+}
+
+/* Track & Indicator */
+
+.spinner-track {
+    stroke: var(--color-spinner-track);
+}
+.spinner-indicator {
+    stroke: var(--color-spinner);
 }

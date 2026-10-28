@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="typography.html">Typography</a>
+            <a href="layout.html">Layout</a>
+            <a href="forms.html">Forms</a>
+            <a href="loading.html">Loading</a>
+            <a href="effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <div class="hero" style="--hero-image: url('/images/header/wide.webp')">
+            <h1>Examples</h1>
+            <p>コンポーネントと通常の要素の使用例</p>
+        </div>
+
+        <p>このディレクトリには、<code>styles/</code> と <code>scripts/</code> の使用例が入っています。どのページも同じスタイルシートとスクリプトを読み込んでいるため、ページ間の移動ではページ遷移のアニメーションも確認できます。</p>
+
+        <h2>ページ</h2>
+        <a href="typography.html">
+            <div class="layer">
+                <b>Typography</b>
+                <p>見出し・段落・リスト・表・引用・コードなど、HTMLの通常の要素と、フォントのクラス。</p>
+            </div>
+        </a>
+        <a href="layout.html">
+            <div class="layer">
+                <b>Layout</b>
+                <p>Hero・Block・Layer と、レイアウト用のユーティリティクラス。</p>
+            </div>
+        </a>
+        <a href="forms.html">
+            <div class="layer">
+                <b>Forms</b>
+                <p>Text field・Button・Dropdown と、それらの状態。</p>
+            </div>
+        </a>
+        <a href="loading.html">
+            <div class="layer">
+                <b>Loading</b>
+                <p>Progress と Spinner。値を操作して動作を確認できます。</p>
+            </div>
+        </a>
+        <a href="effects.html">
+            <div class="layer">
+                <b>Effects</b>
+                <p>Cursor・Loading overlay・Page transition。</p>
+            </div>
+        </a>
+
+        <h2>読み込み</h2>
+        <p>必要なファイルだけを読み込んでください。<code>colors.css</code> はすべてのコンポーネントで必要です。</p>
+        <pre><code>&lt;link rel="stylesheet" href="styles/colors.css"&gt;
+&lt;link rel="stylesheet" href="styles/fonts.css"&gt;
+&lt;link rel="stylesheet" href="styles/main.css"&gt;
+&lt;link rel="stylesheet" href="styles/components/button.css"&gt;
+&lt;script src="scripts/initializer.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/progress.js" defer&gt;&lt;/script&gt;</code></pre>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

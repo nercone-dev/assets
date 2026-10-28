@@ -1,7 +1,7 @@
 .textfield {
-    color: var(--textfield-foreground, var(--color-foreground-alt));
-    background-color: var(--textfield-background, var(--color-layer-alt));
-    border: solid 1px var(--textfield-border, var(--color-border));
+    color: var(--color-textfield-foreground);
+    background-color: var(--color-textfield-background);
+    border: solid 1px var(--color-textfield-border);
     border-radius: 0;
     outline: none;
     appearance: none;
@@ -32,7 +32,7 @@ textarea.textfield {
     border-color: color-mix(in srgb, var(--color-foreground) 40%, transparent);
 }
 .textfield:focus-visible {
-    border-color: var(--textfield-focus, var(--color-foreground-alt));
+    border-color: var(--color-textfield-focus);
 }
 
 .textfield:user-invalid {

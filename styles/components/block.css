@@ -15,6 +15,10 @@
     margin-bottom: 0;
 }
 
+a:has(> .block) {
+    text-decoration: none;
+}
+
 .block-note {
     border-color: var(--color-note);
 }

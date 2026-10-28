@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Loading - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="typography.html">Typography</a>
+            <a href="layout.html">Layout</a>
+            <a href="forms.html">Forms</a>
+            <a href="loading.html">Loading</a>
+            <a href="effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <h1>Loading</h1>
+        <p>Progress と Spinner の表示例です。</p>
+
+        <h2>Progress</h2>
+        <p>値は <code>aria-valuenow</code> から読み取られます。<code>aria-valuenow</code> がなければ、長さが不明な (indeterminate) 表示になります。</p>
+
+        <h3>値の操作</h3>
+        <div class="layer">
+            <label for="progress-value">値: <output id="progress-output" for="progress-value">40</output></label>
+            <input id="progress-value" type="range" min="0" max="100" value="40">
+            <div class="flex" style="flex-wrap: wrap">
+                <button class="button" id="progress-indeterminate" type="button">Indeterminate にする</button>
+                <button class="button button-primary" id="progress-run" type="button">0 から 100 まで進める</button>
+            </div>
+        </div>
+
+        <h3>Linear</h3>
+        <div class="progress-linear" data-progress-demo role="progressbar" aria-label="Linear" aria-valuenow="40"></div>
+
+        <h3>Circular</h3>
+        <svg class="progress-circular" data-progress-demo viewBox="0 0 48 48" role="progressbar" aria-label="Circular" aria-valuenow="40">
+            <circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/>
+            <circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/>
+        </svg>
+
+        <h3>Logo</h3>
+        <svg class="progress-logo" data-progress-demo viewBox="0 0 78 48" role="progressbar" aria-label="Logo" aria-valuenow="40">
+            <polyline class="progress-track"     points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+            <polyline class="progress-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+        </svg>
+
+        <h3>Indeterminate</h3>
+        <div class="progress-linear" role="progressbar" aria-label="Indeterminate linear"></div>
+        <div class="flex" style="align-items: center">
+            <svg class="progress-circular" viewBox="0 0 48 48" role="progressbar" aria-label="Indeterminate circular">
+                <circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/>
+                <circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/>
+            </svg>
+            <svg class="progress-logo" viewBox="0 0 78 48" role="progressbar" aria-label="Indeterminate logo">
+                <polyline class="progress-track"     points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+                <polyline class="progress-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+            </svg>
+        </div>
+
+        <h3>範囲の指定</h3>
+        <p><code>aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"</code> (3/5 = 60%)</p>
+        <div class="progress-linear" role="progressbar" aria-label="Steps" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"></div>
+
+        <h3>カスタマイズ</h3>
+        <div class="flex" style="align-items: center; --progress-size: 96px; --progress-thickness: 2px">
+            <svg class="progress-circular" viewBox="0 0 48 48" role="progressbar" aria-label="Success" aria-valuenow="75" style="--color-progress: var(--color-success-bright)">
+                <circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/>
+                <circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/>
+            </svg>
+            <svg class="progress-logo" viewBox="0 0 78 48" role="progressbar" aria-label="Information" style="--color-progress: var(--color-information-bright)">
+                <polyline class="progress-track"     points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+                <polyline class="progress-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+            </svg>
+        </div>
+        <div class="progress-linear" role="progressbar" aria-label="Warning" aria-valuenow="30" style="--color-progress: var(--color-warning-bright); --progress-thickness: 8px"></div>
+
+        <pre><code>&lt;div class="progress-linear" role="progressbar" aria-label="Upload" aria-valuenow="40"&gt;&lt;/div&gt;</code></pre>
+
+        <h2>Spinner</h2>
+        <p>測定できる進捗がない短い待ち時間に使います。スクリプトは不要です。</p>
+
+        <h3>Linear</h3>
+        <div class="spinner-linear" role="status" aria-label="Loading"></div>
+
+        <h3>Circular と Logo</h3>
+        <div class="flex" style="align-items: center">
+            <svg class="spinner-circular" viewBox="0 0 48 48" role="status" aria-label="Loading">
+                <circle class="spinner-track"     cx="24" cy="24" r="20" pathLength="1"/>
+                <circle class="spinner-indicator" cx="24" cy="24" r="20" pathLength="1"/>
+            </svg>
+            <svg class="spinner-logo" viewBox="0 0 78 48" role="status" aria-label="Loading">
+                <polyline class="spinner-track"     points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+                <polyline class="spinner-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+            </svg>
+        </div>
+
+        <h3>ボタンの中</h3>
+        <div class="flex">
+            <button class="button" type="button" disabled style="--spinner-size: 1em; --spinner-thickness: 6px">
+                <svg class="spinner-circular" viewBox="0 0 48 48" aria-hidden="true">
+                    <circle class="spinner-indicator" cx="24" cy="24" r="20" pathLength="1"/>
+                </svg>
+                保存中
+            </button>
+        </div>
+
+        <h3>カスタマイズ</h3>
+        <div class="flex" style="align-items: center; --spinner-size: 96px; --spinner-thickness: 2px">
+            <svg class="spinner-circular" viewBox="0 0 48 48" role="status" aria-label="Loading" style="--color-spinner: var(--color-error-bright); --spinner-duration: 2s">
+                <circle class="spinner-track"     cx="24" cy="24" r="20" pathLength="1"/>
+                <circle class="spinner-indicator" cx="24" cy="24" r="20" pathLength="1"/>
+            </svg>
+            <svg class="spinner-logo" viewBox="0 0 78 48" role="status" aria-label="Loading" style="--color-spinner: var(--color-purple-bright)">
+                <polyline class="spinner-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+            </svg>
+        </div>
+
+        <pre><code>&lt;svg class="spinner-circular" viewBox="0 0 48 48" role="status" aria-label="Loading"&gt;
+    &lt;circle class="spinner-track"     cx="24" cy="24" r="20" pathLength="1"/&gt;
+    &lt;circle class="spinner-indicator" cx="24" cy="24" r="20" pathLength="1"/&gt;
+&lt;/svg&gt;</code></pre>
+
+        <script>
+            (() => {
+                const range         = document.getElementById('progress-value');
+                const output        = document.getElementById('progress-output');
+                const indeterminate = document.getElementById('progress-indeterminate');
+                const run           = document.getElementById('progress-run');
+                const progresses    = document.querySelectorAll('[data-progress-demo]');
+                let timer = 0;
+
+                const setValue = (value) => {
+                    range.value = value;
+                    output.value = value;
+                    for (const progress of progresses) progress.setAttribute('aria-valuenow', value);
+                };
+
+                range.addEventListener('input', () => {
+                    clearInterval(timer);
+                    setValue(range.value);
+                });
+
+                indeterminate.addEventListener('click', () => {
+                    clearInterval(timer);
+                    output.value = '-';
+                    for (const progress of progresses) progress.removeAttribute('aria-valuenow');
+                });
+
+                run.addEventListener('click', () => {
+                    clearInterval(timer);
+                    let value = 0;
+                    setValue(value);
+                    timer = setInterval(() => {
+                        value = Math.min(value + 5, 100);
+                        setValue(value);
+                        if (value === 100) clearInterval(timer);
+                    }, 200);
+                });
+            })();
+        </script>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

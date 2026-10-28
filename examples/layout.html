@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Layout - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="typography.html">Typography</a>
+            <a href="layout.html">Layout</a>
+            <a href="forms.html">Forms</a>
+            <a href="loading.html">Loading</a>
+            <a href="effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <div class="hero" style="--hero-image: url('/images/header/wide.webp')">
+            <h1>Layout</h1>
+            <p>Hero・Block・Layer とユーティリティクラス</p>
+        </div>
+
+        <h2>Hero</h2>
+        <p><code>main</code> の最初の子に <code>hero</code> を置くと、画面幅いっぱいに広がります。背景画像は <code>--hero-image</code> で指定します。このページの最上部が Hero です。</p>
+        <p>相対URLはページではなく <code>hero.css</code> の位置を基準に解決されるため、<code>/</code> から始まるパスか完全なURLを指定してください。</p>
+        <pre><code>&lt;div class="hero" style="--hero-image: url('/images/header/wide.webp')"&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;p&gt;Subtitle&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2>Block</h2>
+        <p>枠線で囲まれた領域です。最初の子が <code>&lt;b&gt;</code> の場合、それが見出しとして色付けされます。</p>
+        <div class="block">
+            <p>バリアントなしの Block です。</p>
+        </div>
+        <div class="block block-note">
+            <b>Note</b>
+            <p>知っておくと役に立つ情報です。</p>
+        </div>
+        <div class="block block-tip">
+            <b>Tip</b>
+            <p>より良く使うためのヒントです。</p>
+        </div>
+        <div class="block block-important">
+            <b>Important</b>
+            <p>目的を達成するために必要な情報です。</p>
+        </div>
+        <div class="block block-warning">
+            <b>Warning</b>
+            <p>問題を避けるために注意が必要な情報です。</p>
+        </div>
+        <div class="block block-caution">
+            <b>Caution</b>
+            <p>操作によるリスクや悪影響についての情報です。</p>
+        </div>
+        <pre><code>&lt;div class="block block-note"&gt;
+    &lt;b&gt;Note&lt;/b&gt;
+    &lt;p&gt;Text&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2>Layer</h2>
+        <p>背景色の付いた領域です。バリアントは Block と同じです。</p>
+        <div class="layer">
+            <p>バリアントなしの Layer です。</p>
+        </div>
+        <div class="layer layer-note">
+            <b>Note</b>
+            <p>知っておくと役に立つ情報です。</p>
+        </div>
+        <div class="layer layer-tip">
+            <b>Tip</b>
+            <p>より良く使うためのヒントです。</p>
+        </div>
+        <div class="layer layer-important">
+            <b>Important</b>
+            <p>目的を達成するために必要な情報です。</p>
+        </div>
+        <div class="layer layer-warning">
+            <b>Warning</b>
+            <p>問題を避けるために注意が必要な情報です。</p>
+        </div>
+        <div class="layer layer-caution">
+            <b>Caution</b>
+            <p>操作によるリスクや悪影響についての情報です。</p>
+        </div>
+        <pre><code>&lt;div class="layer layer-tip"&gt;
+    &lt;b&gt;Tip&lt;/b&gt;
+    &lt;p&gt;Text&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2>Flex</h2>
+        <p><code>flex</code> で子要素を横に並べ、<code>flex:1</code> から <code>flex:10</code> で比率を指定します。</p>
+        <div class="flex">
+            <div class="layer flex:1"><p>flex:1</p></div>
+            <div class="layer flex:2"><p>flex:2</p></div>
+            <div class="layer flex:3"><p>flex:3</p></div>
+        </div>
+        <pre><code>&lt;div class="flex"&gt;
+    &lt;div class="flex:1"&gt;...&lt;/div&gt;
+    &lt;div class="flex:2"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2>レスポンシブ</h2>
+        <p>画面幅に応じて表示を切り替えます。ウィンドウの幅を変えて確認してください。</p>
+        <div class="layer small:hide"><p>幅が 768px より大きいときに表示されます (<code>small:hide</code>)。</p></div>
+        <div class="layer hide small:show"><p>幅が 768px 以下のときに表示されます (<code>hide small:show</code>)。</p></div>
+
+        <h2>枠線</h2>
+        <div class="border" style="padding: 16px">
+            <p><code>border</code> クラスで枠線を付けた要素です。</p>
+        </div>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

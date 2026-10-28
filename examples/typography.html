@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Typography - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="typography.html">Typography</a>
+            <a href="layout.html">Layout</a>
+            <a href="forms.html">Forms</a>
+            <a href="loading.html">Loading</a>
+            <a href="effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <h1>Typography</h1>
+        <p>HTMLの通常の要素と、<code>fonts.css</code> のクラスの表示例です。</p>
+
+        <h2>見出し</h2>
+        <h1>見出し1 Heading 1</h1>
+        <h2>見出し2 Heading 2</h2>
+        <h3>見出し3 Heading 3</h3>
+        <h4>見出し4 Heading 4</h4>
+        <h5>見出し5 Heading 5</h5>
+        <h6>見出し6 Heading 6</h6>
+
+        <h2>段落とインライン要素</h2>
+        <p>これは段落です。The quick brown fox jumps over the lazy dog. いろはにほへと ちりぬるを わかよたれそ つねならむ。</p>
+        <p><b>太字 (b)</b>、<strong>強調 (strong)</strong>、<i>斜体 (i)</i>、<em>強調 (em)</em>、<u>下線 (u)</u>、<s>取り消し線 (s)</s>、<a href="index.html">リンク (a)</a>、<code>インラインコード (code)</code>、<kbd>Ctrl</kbd> + <kbd>C</kbd> (kbd)、<mark>ハイライト (mark)</mark>、<small>小さな文字 (small)</small>、H<sub>2</sub>O (sub)、x<sup>2</sup> (sup)、<abbr title="HyperText Markup Language">HTML</abbr> (abbr)。</p>
+        <p>改行を含む段落です。<br>この行は <code>&lt;br&gt;</code> の後にあります。</p>
+
+        <h2>リスト</h2>
+        <h3>順序なしリスト</h3>
+        <ul>
+            <li>りんご</li>
+            <li>みかん
+                <ul>
+                    <li>温州みかん</li>
+                    <li>ぽんかん</li>
+                </ul>
+            </li>
+            <li>ぶどう</li>
+        </ul>
+        <h3>順序付きリスト</h3>
+        <ol>
+            <li>リポジトリをクローンする</li>
+            <li>スタイルシートを読み込む</li>
+            <li>要素にクラスを追加する</li>
+        </ol>
+        <h3>説明リスト</h3>
+        <dl>
+            <dt>Text field</dt>
+            <dd>1行または複数行のテキスト入力。</dd>
+            <dt>Button</dt>
+            <dd>操作を実行するためのボタン。</dd>
+        </dl>
+
+        <h2>引用</h2>
+        <blockquote>
+            <p>Write programs that do one thing and do it well.</p>
+        </blockquote>
+
+        <h2>区切り線</h2>
+        <p>この下に区切り線があります。</p>
+        <hr>
+        <p>この上に区切り線があります。</p>
+
+        <h2>表</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>コンポーネント</th>
+                    <th>ファイル</th>
+                    <th>スクリプト</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Button</td>
+                    <td><code>button.css</code></td>
+                    <td>不要</td>
+                </tr>
+                <tr>
+                    <td>Progress</td>
+                    <td><code>progress.css</code></td>
+                    <td><code>progress.js</code></td>
+                </tr>
+                <tr>
+                    <td>Spinner</td>
+                    <td><code>spinner.css</code></td>
+                    <td>不要</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>コード</h2>
+        <pre><code>(() =&gt; {
+    const button = document.querySelector('.button-primary');
+    button.addEventListener('click', () =&gt; console.log('clicked'));
+})();</code></pre>
+
+        <h2>折りたたみ</h2>
+        <details>
+            <summary>詳細を表示</summary>
+            <p>折りたたまれていた内容です。</p>
+        </details>
+
+        <h2>画像</h2>
+        <figure>
+            <img src="../images/banner.svg" alt="バナー" style="max-width: 100%; height: auto">
+            <figcaption>images/banner.svg</figcaption>
+        </figure>
+
+        <h2>フォント</h2>
+        <h3>ファミリー</h3>
+        <p class="font-family-sans">Sans: The quick brown fox jumps over the lazy dog. あのイーハトーヴォのすきとおった風</p>
+        <p class="font-family-serif">Serif: The quick brown fox jumps over the lazy dog. あのイーハトーヴォのすきとおった風</p>
+        <p class="font-family-mono">Mono: The quick brown fox jumps over the lazy dog. あのイーハトーヴォのすきとおった風</p>
+        <h3>ウェイト</h3>
+        <p class="font-weight-thin">Thin (100) あのイーハトーヴォ</p>
+        <p class="font-weight-extralight">ExtraLight (200) あのイーハトーヴォ</p>
+        <p class="font-weight-light">Light (300) あのイーハトーヴォ</p>
+        <p class="font-weight-regular">Regular (400) あのイーハトーヴォ</p>
+        <p class="font-weight-medium">Medium (500) あのイーハトーヴォ</p>
+        <p class="font-weight-semibold">SemiBold (600) あのイーハトーヴォ</p>
+        <p class="font-weight-bold">Bold (700) あのイーハトーヴォ</p>
+        <p class="font-weight-extrabold">ExtraBold (800) あのイーハトーヴォ</p>
+        <p class="font-weight-black">Black (900) あのイーハトーヴォ</p>
+        <p class="font-weight-extrablack">ExtraBlack (1000) あのイーハトーヴォ</p>
+        <h3>色</h3>
+        <p>
+            <span class="fg-color-red">red</span>
+            <span class="fg-color-orange">orange</span>
+            <span class="fg-color-yellow">yellow</span>
+            <span class="fg-color-green">green</span>
+            <span class="fg-color-cyan">cyan</span>
+            <span class="fg-color-blue">blue</span>
+            <span class="fg-color-purple">purple</span>
+            <span class="fg-color-pink">pink</span>
+        </p>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

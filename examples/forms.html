@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Forms - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="typography.html">Typography</a>
+            <a href="layout.html">Layout</a>
+            <a href="forms.html">Forms</a>
+            <a href="loading.html">Loading</a>
+            <a href="effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <h1>Forms</h1>
+        <p>Text field・Button・Dropdown の表示例です。</p>
+
+        <h2>Text field</h2>
+        <p><code>&lt;input&gt;</code> または <code>&lt;textarea&gt;</code> に <code>textfield</code> を追加します。</p>
+        <h3>種類</h3>
+        <input class="textfield" type="text" placeholder="text">
+        <input class="textfield" type="password" placeholder="password">
+        <input class="textfield" type="email" placeholder="you@example.com">
+        <input class="textfield" type="number" placeholder="number">
+        <input class="textfield" type="search" placeholder="search">
+        <input class="textfield" type="tel" placeholder="tel">
+        <input class="textfield" type="url" placeholder="https://example.com">
+        <input class="textfield" type="date">
+        <input class="textfield" type="time">
+        <input class="textfield" type="datetime-local">
+        <input class="textfield" type="month">
+        <input class="textfield" type="week">
+        <textarea class="textfield" rows="4" placeholder="textarea"></textarea>
+        <h3>状態</h3>
+        <input class="textfield" type="text" value="エラー (aria-invalid)" aria-invalid="true">
+        <input class="textfield" type="email" value="not-an-email" required>
+        <p><small>上のメールアドレス欄は、編集すると検証に失敗してエラー表示になります。</small></p>
+        <input class="textfield" type="text" value="読み取り専用 (readonly)" readonly>
+        <input class="textfield" type="text" value="無効 (disabled)" disabled>
+        <pre><code>&lt;input class="textfield" type="email" placeholder="you@example.com"&gt;
+&lt;textarea class="textfield" rows="4"&gt;&lt;/textarea&gt;</code></pre>
+
+        <h2>Button</h2>
+        <p><code>&lt;button&gt;</code> または <code>&lt;a&gt;</code> に <code>button</code> を追加し、必要に応じてバリアントを1つ追加します。</p>
+        <h3>バリアント</h3>
+        <div class="flex" style="flex-wrap: wrap">
+            <button class="button">Default</button>
+            <button class="button button-primary">Primary</button>
+            <button class="button button-information">Information</button>
+            <button class="button button-success">Success</button>
+            <button class="button button-warning">Warning</button>
+            <button class="button button-error">Error</button>
+        </div>
+        <h3>リンク</h3>
+        <div class="flex" style="flex-wrap: wrap">
+            <a class="button" href="index.html">トップへ戻る</a>
+            <a class="button button-primary" href="loading.html">次へ</a>
+        </div>
+        <h3>無効</h3>
+        <div class="flex" style="flex-wrap: wrap">
+            <button class="button" disabled>Default</button>
+            <button class="button button-primary" disabled>Primary</button>
+            <a class="button button-error" aria-disabled="true">Error (a)</a>
+        </div>
+        <h3>カスタマイズ</h3>
+        <div class="flex" style="flex-wrap: wrap; align-items: center; --button-padding: 4px 8px">
+            <button class="button">Small</button>
+            <button class="button button-primary">Small</button>
+        </div>
+        <pre><code>&lt;button class="button"&gt;Cancel&lt;/button&gt;
+&lt;button class="button button-primary"&gt;Save&lt;/button&gt;
+&lt;a class="button button-error" href="/delete"&gt;Delete&lt;/a&gt;</code></pre>
+
+        <h2>Dropdown</h2>
+        <p><code>&lt;select&gt;</code> に <code>dropdown</code> を追加します。</p>
+        <select class="dropdown">
+            <option>One</option>
+            <option>Two</option>
+            <option>Three</option>
+        </select>
+        <select class="dropdown">
+            <optgroup label="Fruits">
+                <option>Apple</option>
+                <option>Orange</option>
+            </optgroup>
+            <optgroup label="Vegetables">
+                <option>Carrot</option>
+                <option>Tomato</option>
+            </optgroup>
+        </select>
+        <select class="dropdown" multiple>
+            <option selected>Multiple One</option>
+            <option>Multiple Two</option>
+            <option selected>Multiple Three</option>
+        </select>
+        <select class="dropdown" aria-invalid="true">
+            <option>エラー (aria-invalid)</option>
+        </select>
+        <select class="dropdown" disabled>
+            <option>無効 (disabled)</option>
+        </select>
+        <pre><code>&lt;select class="dropdown"&gt;
+    &lt;option&gt;One&lt;/option&gt;
+    &lt;option&gt;Two&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+        <h2>フォームの例</h2>
+        <form class="layer" onsubmit="event.preventDefault()">
+            <b>お問い合わせ</b>
+            <label for="form-name">名前</label>
+            <input class="textfield" id="form-name" type="text" required>
+            <label for="form-email">メールアドレス</label>
+            <input class="textfield" id="form-email" type="email" required>
+            <label for="form-topic">種類</label>
+            <select class="dropdown" id="form-topic">
+                <option>質問</option>
+                <option>不具合の報告</option>
+                <option>その他</option>
+            </select>
+            <label for="form-message">内容</label>
+            <textarea class="textfield" id="form-message" rows="4" required></textarea>
+            <div class="flex">
+                <button class="button" type="reset">リセット</button>
+                <button class="button button-primary" type="submit">送信</button>
+            </div>
+        </form>
+        <p><small>このフォームはどこにも送信されません。</small></p>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>
