@@ -1,7 +1,7 @@
-html.cursor-active, html.cursor-active * {
-    cursor: none;
+html.cursor-active, html.cursor-active :not(.cursor-system, .cursor-system *) {
+    cursor: none !important;
 }
-html.cursor-active .cursor-system, html.cursor-active .cursor-system * {
+html.cursor-active .cursor-system {
     cursor: auto;
 }
 
