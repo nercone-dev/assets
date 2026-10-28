@@ -443,11 +443,11 @@
     --color-background:     var(--color-grey-5);
     --color-background-alt: var(--color-grey-10);
 
-    --color-layer:     var(--color-white-opacity-10);
-    --color-layer-alt: var(--color-white-opacity-5);
+    --color-layer:     var(--color-white-opacity-5);
+    --color-layer-alt: var(--color-white-opacity-10);
 
     --color-border:     var(--color-white-opacity-10);
-    --color-border-alt: var(--color-white-opacity-5);
+    --color-border-alt: var(--color-white-opacity-15);
 
     --color-information-dark:   var(--color-blue-dark);
     --color-information:        var(--color-blue);
