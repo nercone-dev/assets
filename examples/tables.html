@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Tables - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/popup.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/slider.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/table.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/toast.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/slider.js" defer></script>
+    <script src="../scripts/toast.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/examples/index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="/examples/typography.html">Typography</a>
+            <a href="/examples/layout.html">Layout</a>
+            <a href="/examples/colors.html">Colors</a>
+            <a href="/examples/forms.html">Forms</a>
+            <a href="/examples/tables.html">Tables</a>
+            <a href="/examples/overlays.html">Overlays</a>
+            <a href="/examples/loading.html">Loading</a>
+            <a href="/examples/effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <h1>Tables</h1>
+        <p>Table の表示例です。</p>
+
+        <h2>基本</h2>
+        <p><code>&lt;table&gt;</code> に <code>table</code> を追加します。<code>&lt;thead&gt;</code> の見出しには背景が付きます。</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>コンポーネント</th>
+                    <th>ファイル</th>
+                    <th>スクリプト</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Button</td>
+                    <td><code>button.css</code></td>
+                    <td>不要</td>
+                </tr>
+                <tr>
+                    <td>Slider</td>
+                    <td><code>slider.css</code></td>
+                    <td><code>slider.js</code></td>
+                </tr>
+                <tr>
+                    <td>Table</td>
+                    <td><code>table.css</code></td>
+                    <td>不要</td>
+                </tr>
+                <tr>
+                    <td>Popup</td>
+                    <td><code>popup.css</code></td>
+                    <td><code>popup.js</code></td>
+                </tr>
+                <tr>
+                    <td>Toast</td>
+                    <td><code>toast.css</code></td>
+                    <td><code>toast.js</code></td>
+                </tr>
+            </tbody>
+        </table>
+        <pre><code>&lt;table class="table"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;One&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+        <h2>バリアント</h2>
+        <p>バリアントは組み合わせて使えます。</p>
+        <h3>table-striped と table-hover</h3>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>色</th>
+                    <th class="table-numeric">色相</th>
+                    <th class="table-numeric">dark</th>
+                    <th class="table-numeric">無印</th>
+                    <th class="table-numeric">bright</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="fg-color-red-bright">red</td><td class="table-numeric">0</td><td class="table-numeric">45</td><td class="table-numeric">75</td><td class="table-numeric">100</td></tr>
+                <tr><td class="fg-color-orange-bright">orange</td><td class="table-numeric">30</td><td class="table-numeric">45</td><td class="table-numeric">75</td><td class="table-numeric">100</td></tr>
+                <tr><td class="fg-color-yellow-bright">yellow</td><td class="table-numeric">50</td><td class="table-numeric">45</td><td class="table-numeric">75</td><td class="table-numeric">100</td></tr>
+                <tr><td class="fg-color-green-bright">green</td><td class="table-numeric">150</td><td class="table-numeric">45</td><td class="table-numeric">75</td><td class="table-numeric">100</td></tr>
+                <tr><td class="fg-color-cyan-bright">cyan</td><td class="table-numeric">200</td><td class="table-numeric">45</td><td class="table-numeric">75</td><td class="table-numeric">100</td></tr>
+                <tr><td class="fg-color-blue-bright">blue</td><td class="table-numeric">210</td><td class="table-numeric">45</td><td class="table-numeric">75</td><td class="table-numeric">100</td></tr>
+                <tr><td class="fg-color-purple-bright">purple</td><td class="table-numeric">270</td><td class="table-numeric">45</td><td class="table-numeric">75</td><td class="table-numeric">100</td></tr>
+                <tr><td class="fg-color-pink-bright">pink</td><td class="table-numeric">300</td><td class="table-numeric">45</td><td class="table-numeric">75</td><td class="table-numeric">100</td></tr>
+            </tbody>
+        </table>
+        <p><code>table-numeric</code> を付けたセルは右揃えになり、数字の幅が揃います。</p>
+
+        <h3>table-bordered</h3>
+        <table class="table table-bordered">
+            <caption>caption は表の下に表示されます。</caption>
+            <thead>
+                <tr>
+                    <th>クラス</th>
+                    <th>効果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><code>table-striped</code></td><td>偶数行に背景を付けます。</td></tr>
+                <tr><td><code>table-hover</code></td><td>ポインターが乗った行に背景を付けます。</td></tr>
+                <tr><td><code>table-bordered</code></td><td>すべてのセルに枠線を付けます。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>行の見出し</h3>
+        <table class="table table-bordered">
+            <tbody>
+                <tr><th scope="row">名前</th><td>Nercone</td></tr>
+                <tr><th scope="row">ライセンス</th><td>コードは MIT、その他は CC BY 4.0</td></tr>
+            </tbody>
+        </table>
+
+        <h2>横スクロール</h2>
+        <p>幅の大きな表は <code>table-scroll</code> で囲むと、ページではなく表だけが横にスクロールします。</p>
+        <div class="table-scroll">
+            <table class="table table-striped" style="white-space: nowrap">
+                <thead>
+                    <tr>
+                        <th>step</th>
+                        <th>grey</th><th>red</th><th>orange</th><th>yellow</th><th>green</th><th>cyan</th><th>blue</th><th>purple</th><th>pink</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="table-numeric">25</td><td><code>--color-grey-25</code></td><td><code>--color-red-25</code></td><td><code>--color-orange-25</code></td><td><code>--color-yellow-25</code></td><td><code>--color-green-25</code></td><td><code>--color-cyan-25</code></td><td><code>--color-blue-25</code></td><td><code>--color-purple-25</code></td><td><code>--color-pink-25</code></td></tr>
+                    <tr><td class="table-numeric">50</td><td><code>--color-grey-50</code></td><td><code>--color-red-50</code></td><td><code>--color-orange-50</code></td><td><code>--color-yellow-50</code></td><td><code>--color-green-50</code></td><td><code>--color-cyan-50</code></td><td><code>--color-blue-50</code></td><td><code>--color-purple-50</code></td><td><code>--color-pink-50</code></td></tr>
+                    <tr><td class="table-numeric">75</td><td><code>--color-grey-75</code></td><td><code>--color-red-75</code></td><td><code>--color-orange-75</code></td><td><code>--color-yellow-75</code></td><td><code>--color-green-75</code></td><td><code>--color-cyan-75</code></td><td><code>--color-blue-75</code></td><td><code>--color-purple-75</code></td><td><code>--color-pink-75</code></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <pre><code>&lt;div class="table-scroll"&gt;
+    &lt;table class="table"&gt;…&lt;/table&gt;
+&lt;/div&gt;</code></pre>
+
+        <h2>カスタマイズ</h2>
+        <p><code>--table-padding</code> でセルの余白を変えられます。</p>
+        <table class="table table-striped" style="--table-padding: 4px 8px">
+            <thead>
+                <tr><th>Compact</th><th class="table-numeric">Value</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>One</td><td class="table-numeric">1</td></tr>
+                <tr><td>Ten</td><td class="table-numeric">10</td></tr>
+                <tr><td>Hundred</td><td class="table-numeric">100</td></tr>
+            </tbody>
+        </table>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

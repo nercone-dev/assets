@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Overlays - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/popup.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/slider.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/table.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/toast.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/slider.js" defer></script>
+    <script src="../scripts/toast.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/examples/index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="/examples/typography.html">Typography</a>
+            <a href="/examples/layout.html">Layout</a>
+            <a href="/examples/colors.html">Colors</a>
+            <a href="/examples/forms.html">Forms</a>
+            <a href="/examples/tables.html">Tables</a>
+            <a href="/examples/overlays.html">Overlays</a>
+            <a href="/examples/loading.html">Loading</a>
+            <a href="/examples/effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <h1>Overlays</h1>
+        <p>Popup と Toast の使用例です。どちらもページの上に重ねて表示されます。</p>
+
+        <h2>Popup</h2>
+        <p><code>&lt;dialog&gt;</code> に <code>popup</code> を追加します。<code>popup.js</code> を読み込むと、<code>data-popup-open="ID"</code> を持つ要素で開き、<code>data-popup-close</code> を持つ要素で閉じます。<kbd>Esc</kbd> でも閉じられます。</p>
+        <div class="flex" style="flex-wrap: wrap">
+            <button class="button" type="button" data-popup-open="popup-basic">基本</button>
+            <button class="button" type="button" data-popup-open="popup-dismiss">外側をクリックで閉じる</button>
+            <button class="button button-error" type="button" data-popup-open="popup-confirm">確認</button>
+            <button class="button" type="button" data-popup-open="popup-form">フォーム</button>
+            <button class="button" type="button" data-popup-open="popup-long">長い内容</button>
+        </div>
+        <p>結果: <output id="popup-result">-</output></p>
+
+        <dialog class="popup" id="popup-basic" aria-labelledby="popup-basic-title">
+            <h2 id="popup-basic-title">Popup</h2>
+            <p>これは基本的な Popup です。</p>
+            <div class="popup-actions">
+                <button class="button button-primary" type="button" data-popup-close>閉じる</button>
+            </div>
+        </dialog>
+
+        <dialog class="popup" id="popup-dismiss" closedby="any" aria-labelledby="popup-dismiss-title">
+            <h2 id="popup-dismiss-title">外側をクリックで閉じる</h2>
+            <p><code>closedby="any"</code> を付けると、Popup の外側をクリックしたときにも閉じます。対応していないブラウザでは <code>popup.js</code> が同じ動作をします。</p>
+        </dialog>
+
+        <dialog class="popup" id="popup-confirm" aria-labelledby="popup-confirm-title" style="--popup-width: 360px">
+            <h2 id="popup-confirm-title">削除しますか？</h2>
+            <p>この操作は取り消せません。</p>
+            <div class="popup-actions">
+                <button class="button" type="button" data-popup-close="cancel">キャンセル</button>
+                <button class="button button-error" type="button" data-popup-close="delete">削除</button>
+            </div>
+        </dialog>
+
+        <dialog class="popup" id="popup-form" aria-labelledby="popup-form-title">
+            <h2 id="popup-form-title">名前を変更</h2>
+            <form method="dialog" class="flex" style="flex-direction: column">
+                <label for="popup-form-name">新しい名前</label>
+                <input class="textfield" id="popup-form-name" name="name" type="text" required autofocus>
+                <div class="popup-actions">
+                    <button class="button" type="button" data-popup-close>キャンセル</button>
+                    <button class="button button-primary" type="submit" value="save">保存</button>
+                </div>
+            </form>
+        </dialog>
+
+        <dialog class="popup" id="popup-long" closedby="any" aria-labelledby="popup-long-title">
+            <h2 id="popup-long-title">長い内容</h2>
+            <p>内容が画面に収まらないときは、Popup の中だけがスクロールします。</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="popup-actions">
+                <button class="button button-primary" type="button" data-popup-close>閉じる</button>
+            </div>
+        </dialog>
+
+        <pre><code>&lt;button class="button" data-popup-open="confirm"&gt;削除&lt;/button&gt;
+
+&lt;dialog class="popup" id="confirm" closedby="any" aria-labelledby="confirm-title"&gt;
+    &lt;h2 id="confirm-title"&gt;削除しますか？&lt;/h2&gt;
+    &lt;div class="popup-actions"&gt;
+        &lt;button class="button" data-popup-close="cancel"&gt;キャンセル&lt;/button&gt;
+        &lt;button class="button button-error" data-popup-close="delete"&gt;削除&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+        <p><code>data-popup-close</code> の値は <code>returnValue</code> になり、<code>close</code> イベントで読み取れます。<code>&lt;form method="dialog"&gt;</code> も使えます。スクリプトからは次のように操作します。</p>
+        <pre><code>const popup = window.nercone.get('popup');
+popup.open('confirm');
+popup.close('confirm', 'cancel');
+popup.toggle(document.getElementById('confirm'));</code></pre>
+
+        <h2>Toast</h2>
+        <p>短い通知を画面の端に表示し、一定時間後に自動で閉じます。<code>toast.js</code> を読み込み、<code>data-toast="メッセージ"</code> を持つ要素をクリックするか、スクリプトから表示します。ポインターやフォーカスが Toast にある間は自動で閉じません。</p>
+        <h3>バリアント</h3>
+        <div class="flex" style="flex-wrap: wrap">
+            <button class="button" type="button" data-toast="保存しました">Default</button>
+            <button class="button button-information" type="button" data-toast="新しいバージョンがあります" data-toast-variant="information">Information</button>
+            <button class="button button-success" type="button" data-toast="アップロードが完了しました" data-toast-variant="success">Success</button>
+            <button class="button button-warning" type="button" data-toast="ストレージの残りが少なくなっています" data-toast-variant="warning">Warning</button>
+            <button class="button button-error" type="button" data-toast="接続に失敗しました" data-toast-variant="error">Error</button>
+        </div>
+        <pre><code>&lt;button class="button" data-toast="保存しました" data-toast-variant="success"&gt;保存&lt;/button&gt;</code></pre>
+
+        <h3>スクリプト</h3>
+        <div class="flex" style="flex-wrap: wrap">
+            <button class="button" type="button" id="toast-persistent">自動で閉じない</button>
+            <button class="button" type="button" id="toast-long">長いメッセージ</button>
+            <button class="button" type="button" id="toast-many">7 件まとめて (上限 5 件)</button>
+            <button class="button" type="button" id="toast-clear">すべて閉じる</button>
+        </div>
+        <pre><code>const toast = window.nercone.get('toast');
+toast.show('保存しました', { variant: 'success' });
+toast.show('自動で閉じない', { duration: 0 });
+toast.clear();</code></pre>
+        <p><code>variant</code> は <code>information</code>・<code>success</code>・<code>warning</code>・<code>error</code> のいずれかです。<code>warning</code> と <code>error</code> は <code>role="alert"</code> になり、支援技術ですぐに読み上げられます。</p>
+
+        <h3>位置などの変更</h3>
+        <p>オプションを変えるときは、新しいインスタンスを同じ名前で登録します。位置は <code>top-start</code>・<code>top-center</code>・<code>top-end</code>・<code>bottom-start</code>・<code>bottom-center</code>・<code>bottom-end</code> から選べます。</p>
+        <pre><code>window.nercone.register('toast', new window.nercone.Toast({
+    position: 'top-center',
+    duration: 3000,
+    limit:    3,
+    label:    '通知',
+    closeLabel: '閉じる'
+}));</code></pre>
+
+        <script>
+            (() => {
+                const result = document.getElementById('popup-result');
+                for (const popup of document.querySelectorAll('.popup')) {
+                    popup.addEventListener('close', () => {
+                        result.value = `${popup.id}: ${popup.returnValue || '(なし)'}`;
+                        popup.returnValue = '';
+                    });
+                }
+
+                const toast = () => window.nercone.get('toast');
+                document.getElementById('toast-persistent').addEventListener('click', () => {
+                    toast().show('このメッセージは閉じるボタンを押すまで残ります', { duration: 0 });
+                });
+                document.getElementById('toast-long').addEventListener('click', () => {
+                    toast().show('長いメッセージは折り返して表示されます。Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', { variant: 'information' });
+                });
+                document.getElementById('toast-many').addEventListener('click', () => {
+                    for (let index = 1; index <= 7; index++) toast().show(`通知 ${index}`);
+                });
+                document.getElementById('toast-clear').addEventListener('click', () => {
+                    toast().clear();
+                });
+            })();
+        </script>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

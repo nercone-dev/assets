@@ -12,10 +12,16 @@ html.cursor-active .cursor-system, html.cursor-active .cursor-system * {
 
     border-radius: 50%;
 
+    border: none;
+
     position: fixed;
     z-index: 99999;
+    inset: auto;
     width: 25px;
     height: 25px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
 
     pointer-events: none;
 

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Colors - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/popup.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/slider.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/table.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/toast.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/slider.js" defer></script>
+    <script src="../scripts/toast.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+    <style>
+        .swatches {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(var(--swatch-size, 144px), 1fr));
+            gap: 8px;
+        }
+        .swatches-scale {
+            --swatch-size: 0;
+            grid-template-columns: 64px repeat(21, minmax(32px, 1fr));
+            gap: 2px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+        .swatches-scale > span {
+            font-size: small;
+            align-self: center;
+        }
+        .swatch {
+            color: var(--color-foreground);
+            background: none;
+            border: solid 1px var(--color-border);
+            outline: none;
+            appearance: none;
+
+            font: inherit;
+            font-size: small;
+            line-height: 1.5;
+            text-align: start;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 0;
+            cursor: pointer;
+        }
+        .swatch:focus-visible {
+            outline: solid 1px var(--color-foreground-alt);
+            outline-offset: 2px;
+        }
+        .swatch::before {
+            content: "";
+            display: block;
+            height: 48px;
+            background-color: var(--swatch);
+            /* A checkerboard behind the color shows its transparency. */
+            background-image: linear-gradient(var(--swatch), var(--swatch)), conic-gradient(var(--color-grey-20) 25%, var(--color-grey-10) 0 50%, var(--color-grey-20) 0 75%, var(--color-grey-10) 0);
+            background-size: auto, 12px 12px;
+        }
+        .swatch > span {
+            padding: 4px 8px;
+            overflow-wrap: anywhere;
+        }
+        .swatches-scale .swatch {
+            border: none;
+        }
+        .swatches-scale .swatch::before {
+            height: 32px;
+        }
+        .swatches-scale .swatch > span {
+            padding: 2px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="/examples/index.html"><b>Examples</b></a>
+        </div>
+        <div class="small:hide">
+            <a href="/examples/typography.html">Typography</a>
+            <a href="/examples/layout.html">Layout</a>
+            <a href="/examples/colors.html">Colors</a>
+            <a href="/examples/forms.html">Forms</a>
+            <a href="/examples/tables.html">Tables</a>
+            <a href="/examples/overlays.html">Overlays</a>
+            <a href="/examples/loading.html">Loading</a>
+            <a href="/examples/effects.html">Effects</a>
+        </div>
+    </header>
+    <main>
+        <h1>Colors</h1>
+        <p><code>colors.css</code> で定義されている色の一覧です。色をクリックすると <code>var(--color-…)</code> をコピーします。</p>
+
+        <h2>Palette</h2>
+        <p>各色相に <code>0</code> (黒) から <code>100</code> (最も明るい) まで 5 刻みの 21 段階があります。<code>--color-{hue}-{step}</code> で参照します。</p>
+        <div class="swatches swatches-scale" data-swatches="palette"></div>
+
+        <h2>Brightness</h2>
+        <p>よく使う明るさには名前が付いています。<code>-dark</code> は 45、無印は 75、<code>-bright</code> は 100 です。</p>
+        <div class="swatches" data-swatches="brightness"></div>
+
+        <h2>Opacity</h2>
+        <p><code>--color-{hue}-opacity-{step}</code> は、その色相の 100 を指定した割合で透明と混ぜた色です。<code>white</code> もあります。</p>
+        <div class="swatches swatches-scale" data-swatches="opacity"></div>
+
+        <h2>Semantic</h2>
+        <p>用途ごとの色です。ページやコンポーネントはこれらを使うため、ここを上書きするだけで全体の配色を変えられます。</p>
+        <h3>Base</h3>
+        <div class="swatches" data-swatches="base"></div>
+        <h3>Status</h3>
+        <div class="swatches" data-swatches="status"></div>
+        <h3>GitHub Markdown</h3>
+        <div class="swatches" data-swatches="markdown"></div>
+
+        <h2>Utility classes</h2>
+        <p>すべての色に、文字色 (<code>fg-color-</code> / <code>text-color-</code>)、背景色 (<code>bg-color-</code> / <code>background-color-</code>)、枠線の色 (<code>bd-color-</code> / <code>border-color-</code>) のクラスがあります。</p>
+        <p>
+            <span class="fg-color-red-bright">red-bright</span>
+            <span class="fg-color-orange-bright">orange-bright</span>
+            <span class="fg-color-yellow-bright">yellow-bright</span>
+            <span class="fg-color-green-bright">green-bright</span>
+            <span class="fg-color-cyan-bright">cyan-bright</span>
+            <span class="fg-color-blue-bright">blue-bright</span>
+            <span class="fg-color-purple-bright">purple-bright</span>
+            <span class="fg-color-pink-bright">pink-bright</span>
+        </p>
+        <div class="flex" style="flex-wrap: wrap">
+            <div class="layer bg-color-blue-opacity-10">bg-color-blue-opacity-10</div>
+            <div class="block bd-color-green">bd-color-green</div>
+            <div class="block bg-color-purple-opacity-10 bd-color-purple fg-color-purple-bright">3 つの組み合わせ</div>
+        </div>
+        <pre><code>&lt;span class="fg-color-red-bright"&gt;…&lt;/span&gt;
+&lt;div class="block bg-color-purple-opacity-10 bd-color-purple"&gt;…&lt;/div&gt;</code></pre>
+
+        <h2>カスタマイズ</h2>
+        <p>変数は <code>:root</code> で定義されているため、任意の要素で上書きできます。上書きはその要素の子孫にだけ反映されます。</p>
+        <div class="layer" style="--color-button-primary-background: var(--color-pink-bright); --color-button-primary-border: var(--color-pink-bright); --color-slider: var(--color-pink-bright); --color-slider-thumb: var(--color-pink-bright)">
+            <div class="flex" style="flex-wrap: wrap">
+                <button class="button button-primary" type="button">Pink primary</button>
+            </div>
+            <input class="slider" type="range" value="60" aria-label="Pink slider">
+        </div>
+        <pre><code>&lt;div style="--color-button-primary-background: var(--color-pink-bright)"&gt;
+    &lt;button class="button button-primary"&gt;Pink primary&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+        <script>
+            (() => {
+                const HUES  = ['grey', 'red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'purple', 'pink'];
+                const STEPS = Array.from({ length: 21 }, (_, index) => index * 5);
+                const GROUPS = {
+                    palette:    HUES.flatMap(hue => [hue, ...STEPS.map(step => `${hue}-${step}`)]),
+                    opacity:    ['white', ...HUES.slice(1)].flatMap(hue => [hue, ...STEPS.map(step => `${hue}-opacity-${step}`)]),
+                    brightness: ['black', 'white', ...HUES.slice(1).flatMap(hue => [`${hue}-dark`, hue, `${hue}-bright`])],
+                    base:       ['foreground', 'foreground-alt', 'background', 'background-alt', 'layer', 'layer-alt', 'border', 'border-alt', 'cursor', 'cursor-on-link'],
+                    status:     ['information', 'success', 'warning', 'error'].flatMap(name => [`${name}-dark`, name, `${name}-bright`]),
+                    markdown:   ['note', 'tip', 'important', 'caution'].flatMap(name => [`${name}-dark`, name, `${name}-bright`])
+                };
+
+                const swatchOf = (name, label) => {
+                    const swatch = document.createElement('button');
+                    swatch.className = 'swatch';
+                    swatch.type = 'button';
+                    swatch.title = `--color-${name}`;
+                    swatch.style.setProperty('--swatch', `var(--color-${name})`);
+                    swatch.dataset.color = name;
+                    const text = document.createElement('span');
+                    text.textContent = label;
+                    swatch.append(text);
+                    return swatch;
+                };
+
+                for (const container of document.querySelectorAll('[data-swatches]')) {
+                    const scale = container.classList.contains('swatches-scale');
+                    for (const name of GROUPS[container.dataset.swatches]) {
+                        if (scale && !/\d$/.test(name)) {
+                            const label = document.createElement('span');
+                            label.textContent = name;
+                            container.append(label);
+                            continue;
+                        }
+                        container.append(swatchOf(name, scale ? name.split('-').pop() : name));
+                    }
+                }
+
+                const copy = async (event) => {
+                    const swatch = event.target.closest('.swatch');
+                    if (!swatch) return;
+                    const text = `var(--color-${swatch.dataset.color})`;
+                    const toast = window.nercone.get('toast');
+                    try {
+                        await navigator.clipboard.writeText(text);
+                        toast?.show(`${text} をコピーしました`, { variant: 'success', duration: 2000 });
+                    } catch {
+                        toast?.show(`${text} をコピーできませんでした`, { variant: 'error' });
+                    }
+                };
+                // <main> is kept across page transitions, so listen on elements that are replaced with the page.
+                for (const container of document.querySelectorAll('[data-swatches]')) container.addEventListener('click', copy);
+            })();
+        </script>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

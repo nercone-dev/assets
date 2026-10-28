@@ -8,9 +8,15 @@
     align-items: center;
     justify-content: center;
 
+    border: none;
+
     position: fixed;
     inset: 0;
     z-index: 100000;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
 
     pointer-events: none;
 

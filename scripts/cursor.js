@@ -7,7 +7,8 @@
             activeClass:    'cursor-active',
             padding:        6,
             linkGap:        4,
-            textGap:        4
+            textGap:        4,
+            layer:          1
         };
         static RADIUS_PROPERTIES = ['borderTopLeftRadius', 'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius'];
 
@@ -33,6 +34,8 @@
             }
             if (this.abortController) return;
 
+            // In the top layer, the cursor stays visible above modal popups and toasts.
+            window.nercone.topLayer.add(this.element, this.options.layer);
             this.abortController = new AbortController();
             const options = { passive: true, signal: this.abortController.signal };
             document.addEventListener('pointermove',   this.onPointerMove, options);
@@ -41,6 +44,7 @@
             document.addEventListener('pointercancel', this.onPointerUp,   options);
             document.addEventListener('pointerout',    this.onPointerOut,  options);
             document.addEventListener('scroll',        this.onScroll,      { ...options, capture: true });
+            document.addEventListener('toggle',        this.onToggle,      { ...options, capture: true });
         }
 
         cleanup() {
@@ -59,6 +63,7 @@
             this.abortController = null;
             this.cleanup();
             this.hide();
+            if (this.element) window.nercone.topLayer.remove(this.element);
             this.element = null;
         }
 
@@ -89,6 +94,11 @@
             if (this.visible) this.request(true);
         };
 
+        onToggle = () => {
+            // Opening or closing a popup changes what is under the pointer without moving it.
+            if (this.visible) this.request(true);
+        };
+
         // Visibility
         show() {
             if (!this.element) return;
@@ -115,6 +125,8 @@
             this.frame = 0;
             if (!this.element || !this.visible) return;
 
+            // A link that is no longer rendered (such as a button in a closed popup) has no position to follow.
+            if (this.link && !Cursor.isRendered(this.link)) this.detect = true;
             if (this.detect) {
                 this.detect = false;
                 this.setLink(this.findLink(this.x, this.y));
@@ -161,12 +173,15 @@
         // Hit testing
         findLink(x, y) {
             const selector = this.options.linkSelector;
-            const exact = document.elementFromPoint(x, y)?.closest(selector);
+            const target = document.elementFromPoint(x, y);
+            const exact = target?.closest(selector);
             if (exact) return exact;
 
+            // An open modal dialog makes everything outside it inert, so links there cannot be reached.
+            const scope = target?.closest(':modal') ?? document;
             let nearest = null;
             let nearestDistance = Infinity;
-            for (const link of document.querySelectorAll(selector)) {
+            for (const link of scope.querySelectorAll(selector)) {
                 const rect = link.getBoundingClientRect();
                 if (rect.width === 0 && rect.height === 0) continue;
                 const distance = Math.max(0, rect.left - x, x - rect.right, rect.top - y, y - rect.bottom);
@@ -176,6 +191,10 @@
                 }
             }
             return nearest;
+        }
+
+        static isRendered(element) {
+            return element.isConnected && element.getClientRects().length > 0;
         }
 
         static isTextAt(x, y, gap) {

@@ -527,6 +527,43 @@
 
     --color-spinner:       var(--color-foreground-alt);
     --color-spinner-track: var(--color-layer);
+
+    --color-slider:       var(--color-foreground-alt);
+    --color-slider-track: var(--color-layer);
+    --color-slider-thumb: var(--color-foreground-alt);
+    --color-slider-focus: var(--color-foreground-alt);
+
+    --color-table-foreground:        var(--color-foreground);
+    --color-table-header-foreground: var(--color-foreground-alt);
+    --color-table-header-background: var(--color-layer-alt);
+    --color-table-border:            var(--color-border);
+    --color-table-stripe:            var(--color-layer-alt);
+    --color-table-hover:             var(--color-layer);
+
+    --color-popup-foreground: var(--color-foreground);
+    --color-popup-background: var(--color-background-alt);
+    --color-popup-border:     var(--color-border);
+    --color-popup-backdrop:   color-mix(in srgb, var(--color-black) 50%, transparent);
+
+    --color-toast-foreground: var(--color-foreground-alt);
+    --color-toast-background: var(--color-background-alt);
+    --color-toast-border:     var(--color-border);
+
+    --color-toast-information-foreground: var(--color-information-bright);
+    --color-toast-information-background: color-mix(in srgb, var(--color-information-bright) 10%, var(--color-background-alt));
+    --color-toast-information-border:     var(--color-information);
+
+    --color-toast-success-foreground: var(--color-success-bright);
+    --color-toast-success-background: color-mix(in srgb, var(--color-success-bright) 10%, var(--color-background-alt));
+    --color-toast-success-border:     var(--color-success);
+
+    --color-toast-warning-foreground: var(--color-warning-bright);
+    --color-toast-warning-background: color-mix(in srgb, var(--color-warning-bright) 10%, var(--color-background-alt));
+    --color-toast-warning-border:     var(--color-warning);
+
+    --color-toast-error-foreground: var(--color-error-bright);
+    --color-toast-error-background: color-mix(in srgb, var(--color-error-bright) 10%, var(--color-background-alt));
+    --color-toast-error-border:     var(--color-error);
 }
 
 /* Foreground (color) */

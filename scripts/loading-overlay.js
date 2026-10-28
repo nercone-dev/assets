@@ -3,6 +3,7 @@
         static DEFAULTS = {
             selector: '#loading-overlay',
             easing:   'cubic-bezier(0.125,1,0.25,1)',
+            layer:    2,
             duration: {
                 in:   3000,
                 wait: 1000,
@@ -24,6 +25,7 @@
         init() {
             this.element = document.querySelector(this.options.selector);
             if (!this.element) return;
+            window.nercone.topLayer.add(this.element, this.options.layer);
             this.play().catch(() => {}).finally(() => this.remove());
         }
 
@@ -87,6 +89,7 @@
         }
 
         remove() {
+            if (this.element) window.nercone.topLayer.remove(this.element);
             this.element?.remove();
             this.element = null;
             this.animations = [];

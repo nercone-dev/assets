@@ -1,0 +1,86 @@
+.popup {
+    color: var(--color-popup-foreground);
+    background-color: var(--color-popup-background);
+    border: solid 1px var(--color-popup-border);
+    border-radius: 0;
+    outline: none;
+
+    line-height: 1.5;
+
+    box-sizing: border-box;
+    width: var(--popup-width, 480px);
+    max-width: calc(100vw - 32px);
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: var(--popup-padding, 24px);
+
+    overflow: auto;
+    overscroll-behavior: contain;
+
+    opacity: 0;
+    transform: scale(0.96);
+    transition:
+        opacity   0.2s ease,
+        transform 0.2s cubic-bezier(0.125,1,0.25,1),
+        overlay   0.2s allow-discrete,
+        display   0.2s allow-discrete;
+}
+.popup[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    opacity: 1;
+    transform: none;
+}
+@starting-style {
+    .popup[open] {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+}
+
+.popup > *:first-child {
+    margin-top: 0;
+}
+.popup > *:last-child {
+    margin-bottom: 0;
+}
+.popup > h1, .popup > h2 {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.popup::backdrop {
+    background-color: var(--color-popup-backdrop);
+    backdrop-filter: blur(var(--popup-backdrop-blur, 4px));
+
+    opacity: 0;
+    transition:
+        opacity 0.2s ease,
+        overlay 0.2s allow-discrete,
+        display 0.2s allow-discrete;
+}
+.popup[open]::backdrop {
+    opacity: 1;
+}
+@starting-style {
+    .popup[open]::backdrop {
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .popup, .popup::backdrop {
+        transition: none;
+    }
+}
+
+/* Actions */
+
+.popup-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}

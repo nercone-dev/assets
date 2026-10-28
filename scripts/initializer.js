@@ -22,6 +22,10 @@
             Nercone.stop(name, feature);
         }
 
+        get(name) {
+            return this.features.get(name) ?? null;
+        }
+
         cleanup() {
             for (const [name, feature] of this.features) Nercone.call(name, feature, 'cleanup');
         }
@@ -64,6 +68,68 @@
         }
     }
 
+    class TopLayer {
+        // Keeps elements above everything else in the top layer, such as modal dialogs and popovers,
+        // which are drawn above any z-index. Elements with a larger order are drawn above smaller ones.
+        constructor() {
+            this.elements = new Map();
+            this.abortController = null;
+        }
+
+        static isSupported() {
+            return typeof HTMLElement.prototype.showPopover === 'function';
+        }
+
+        add(element, order = 0) {
+            if (!TopLayer.isSupported()) return;
+            element.popover = 'manual';
+            this.elements.set(element, order);
+            if (!this.abortController) {
+                this.abortController = new AbortController();
+                document.addEventListener('toggle', this.onToggle, { capture: true, signal: this.abortController.signal });
+            }
+            this.raise();
+        }
+
+        remove(element) {
+            if (!this.elements.delete(element)) return;
+            if (TopLayer.isOpen(element)) element.hidePopover();
+            if (this.elements.size > 0) return;
+            this.abortController.abort();
+            this.abortController = null;
+        }
+
+        raise() {
+            const elements = [...this.elements].sort((a, b) => a[1] - b[1]).map(([element]) => element);
+            for (const element of elements) {
+                if (!element.isConnected) {
+                    this.elements.delete(element);
+                    continue;
+                }
+                // Showing a popover again moves it to the top of the top layer.
+                if (TopLayer.isOpen(element)) element.hidePopover();
+                element.showPopover();
+            }
+        }
+
+        onToggle = (event) => {
+            // <details> also fires toggle, but only modal dialogs and popovers enter the top layer.
+            const target = event.target;
+            if (event.newState !== 'open' || this.elements.has(target) || !TopLayer.isInTopLayer(target)) return;
+            this.raise();
+        };
+
+        static isOpen(element) {
+            return element.matches(':popover-open');
+        }
+
+        static isInTopLayer(element) {
+            return element.matches(':modal, :popover-open');
+        }
+    }
+
     window.nercone ??= new Nercone();
     window.nercone.Nercone = Nercone;
+    window.nercone.TopLayer = TopLayer;
+    window.nercone.topLayer ??= new TopLayer();
 })();
