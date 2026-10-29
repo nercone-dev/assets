@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/components/button.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
     <link rel="stylesheet" href="../styles/components/dropdown.css">
     <link rel="stylesheet" href="../styles/components/hero.css">
     <link rel="stylesheet" href="../styles/components/layer.css">
     <link rel="stylesheet" href="../styles/components/loading-overlay.css">
     <link rel="stylesheet" href="../styles/components/popup.css">
     <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
     <link rel="stylesheet" href="../styles/components/slider.css">
     <link rel="stylesheet" href="../styles/components/spinner.css">
     <link rel="stylesheet" href="../styles/components/table.css">
@@ -31,26 +33,43 @@
     <script src="../scripts/loading-overlay.js" defer></script>
     <script src="../scripts/popup.js" defer></script>
     <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
     <script src="../scripts/slider.js" defer></script>
     <script src="../scripts/toast.js" defer></script>
     <script src="../scripts/view-transition.js" defer></script>
 </head>
 <body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
     <header>
         <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
             <a href="/examples/index.html"><b>Examples</b></a>
         </div>
-        <div class="small:hide">
-            <a href="/examples/typography.html">Typography</a>
-            <a href="/examples/layout.html">Layout</a>
-            <a href="/examples/colors.html">Colors</a>
-            <a href="/examples/forms.html">Forms</a>
-            <a href="/examples/tables.html">Tables</a>
-            <a href="/examples/overlays.html">Overlays</a>
-            <a href="/examples/loading.html">Loading</a>
-            <a href="/examples/effects.html">Effects</a>
-        </div>
     </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html" aria-current="page">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
     <main>
         <div class="hero" style="--hero-image: url('/images/header/wide.webp')">
             <h1>Layout</h1>
@@ -58,7 +77,7 @@
         </div>
 
         <h2>Hero</h2>
-        <p><code>main</code> の最初の子に <code>hero</code> を置くと、画面幅いっぱいに広がります。背景画像は <code>--hero-image</code> で指定します。このページの最上部が Hero です。</p>
+        <p><code>main</code> の最初の子に <code>hero</code> を置くと、<code>main</code> の余白を越えて <code>main</code> の幅いっぱいに広がります。Sidebar がある場合は、Sidebar を除いた幅になります。<code>main</code> の外では画面幅いっぱいに広がります。背景画像は <code>--hero-image</code> で指定します。このページの最上部が Hero です。</p>
         <p>相対URLはページではなく <code>hero.css</code> の位置を基準に解決されるため、<code>/</code> から始まるパスか完全なURLを指定してください。</p>
         <pre><code>&lt;div class="hero" style="--hero-image: url('/images/header/wide.webp')"&gt;
     &lt;h1&gt;Title&lt;/h1&gt;
@@ -125,6 +144,24 @@
     &lt;p&gt;Text&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 
+        <h2>Details</h2>
+        <p><code>&lt;details&gt;</code> は、見出しの帯と中身の領域に分かれた見た目になります。クラスは必要ありません。右端の三角は開くと上を向きます。</p>
+        <details>
+            <summary>閉じた状態</summary>
+            <p>中身です。</p>
+        </details>
+        <details open>
+            <summary>開いた状態</summary>
+            <p>中身の要素は左右と上に <code>--details-padding</code> (既定値 <code>16px</code>) の余白を空けて並びます。</p>
+            <pre><code>-----BEGIN EXAMPLE-----
+Text
+-----END EXAMPLE-----</code></pre>
+        </details>
+        <pre><code>&lt;details&gt;
+    &lt;summary&gt;Title&lt;/summary&gt;
+    &lt;p&gt;Text&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+
         <h2>Flex</h2>
         <p><code>flex</code> で子要素を横に並べ、<code>flex:1</code> から <code>flex:10</code> で比率を指定します。</p>
         <div class="flex">
@@ -138,9 +175,61 @@
 &lt;/div&gt;</code></pre>
 
         <h2>レスポンシブ</h2>
-        <p>画面幅に応じて表示を切り替えます。ウィンドウの幅を変えて確認してください。</p>
-        <div class="layer small:hide"><p>幅が 768px より大きいときに表示されます (<code>small:hide</code>)。</p></div>
-        <div class="layer hide small:show"><p>幅が 768px 以下のときに表示されます (<code>hide small:show</code>)。</p></div>
+        <p>画面幅に応じて表示を切り替えます。<code>hide</code> と <code>show</code> は常に、<code>small:</code> は幅 768px 以下、<code>medium:</code> は 769px から 1080px、<code>large:</code> は 1081px 以上で適用されます。ウィンドウの幅を変えて確認してください。</p>
+        <div class="layer hide small:show"><p><code>small</code> (〜768px) です。(<code>hide small:show</code>)</p></div>
+        <div class="layer hide medium:show"><p><code>medium</code> (769px〜1080px) です。(<code>hide medium:show</code>)</p></div>
+        <div class="layer hide large:show"><p><code>large</code> (1081px〜) です。(<code>hide large:show</code>)</p></div>
+        <div class="layer small:hide"><p>幅が 768px 以下のときは隠れます (<code>small:hide</code>)。</p></div>
+        <div class="layer large:hide"><p>幅が 1081px 以上のときは隠れます (<code>large:hide</code>)。</p></div>
+        <pre><code>&lt;nav class="small:hide"&gt;…&lt;/nav&gt;
+&lt;button class="hide small:show"&gt;…&lt;/button&gt;</code></pre>
+        <p><code>show</code> 系のクラスは <code>display: block</code> にします。上の <code>small:show</code> などの Layer も、表示されている間は <code>block</code> になっています。<code>flex</code> などほかの <code>display</code> が必要な要素では、<code>hide</code> を使わずに <code>*:hide</code> の組み合わせで切り替えてください。</p>
+
+        <h2>ユーティリティクラスの優先順位</h2>
+        <p><code>main.css</code>・<code>colors.css</code>・<code>fonts.css</code> の、1つの性質だけを変えるクラス (このページのクラス、<code>fg-color-*</code>、<code>font-weight-*</code> など) は <code>!important</code> で指定されています。このため、読み込む順番や詳細度に関係なく、コンポーネントの見た目や <code>style</code> 属性よりも優先されます。</p>
+        <div class="flex" style="flex-wrap: wrap">
+            <button class="font-weight-light" type="button">button font-weight-light</button>
+            <div class="block bd-color-pink bg-color-pink-opacity-10 no-padding"><p>block bd-color-pink bg-color-pink-opacity-10 no-padding</p></div>
+        </div>
+
+        <h2>余白</h2>
+        <p><code>no-padding</code> と <code>no-margin</code> は、すべての方向または <code>-top</code>・<code>-bottom</code>・<code>-left</code>・<code>-right</code> の1方向の余白を 0 にします。</p>
+        <div class="flex" style="flex-wrap: wrap">
+            <div class="layer flex:1"><p>通常の Layer</p></div>
+            <div class="layer no-padding flex:1"><p>no-padding</p></div>
+            <div class="layer no-padding-left flex:1"><p>no-padding-left</p></div>
+        </div>
+        <div class="flex" style="flex-wrap: wrap">
+            <div class="border flex:1">
+                <ul>
+                    <li>通常のリスト</li>
+                    <li>左に余白があります</li>
+                </ul>
+            </div>
+            <div class="border flex:1">
+                <ul class="no-padding-left">
+                    <li>no-padding-left</li>
+                    <li>左の余白がありません</li>
+                </ul>
+            </div>
+        </div>
+        <pre><code>&lt;div class="layer no-padding"&gt;…&lt;/div&gt;
+&lt;ul class="no-padding-left"&gt;…&lt;/ul&gt;</code></pre>
+
+        <h2>はみ出し</h2>
+        <p><code>overflow-show</code>・<code>overflow-hide</code>・<code>overflow-scroll</code> は、要素からはみ出した内容の扱いを変えます。</p>
+        <div class="flex" style="flex-wrap: wrap">
+            <div class="block overflow-show flex:1" style="height: 48px"><p>overflow-show: はみ出した内容もそのまま表示されます。はみ出した内容もそのまま表示されます。</p></div>
+            <div class="block overflow-hide flex:1" style="height: 48px"><p>overflow-hide: はみ出した内容は隠れます。はみ出した内容は隠れます。はみ出した内容は隠れます。</p></div>
+            <div class="block overflow-scroll flex:1" style="height: 48px"><p>overflow-scroll: はみ出した内容はスクロールで見られます。はみ出した内容はスクロールで見られます。</p></div>
+        </div>
+
+        <h2>選択</h2>
+        <p><code>unselectable</code> はテキストを選択できなくします。<code>selectable</code> は、選択できない要素の中で再び選択できるようにします。</p>
+        <div class="layer unselectable">
+            <p>この文章は選択できません (<code>unselectable</code>)。</p>
+            <p class="selectable">この文章は選択できます (<code>selectable</code>)。</p>
+        </div>
 
         <h2>枠線</h2>
         <div class="border" style="padding: 16px">

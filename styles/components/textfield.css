@@ -1,4 +1,4 @@
-.textfield {
+.textfield, :where(input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea) {
     color: var(--color-textfield-foreground);
     background-color: var(--color-textfield-background);
     border: solid 1px var(--color-textfield-border);
@@ -19,33 +19,33 @@
         border-color     0.15s ease,
         background-color 0.15s ease;
 }
-textarea.textfield {
+textarea.textfield, :where(textarea) {
     resize: vertical;
 }
 
-.textfield::placeholder {
+.textfield::placeholder, :where(input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea)::placeholder {
     color: color-mix(in srgb, var(--color-foreground) 50%, transparent);
     opacity: 1;
 }
 
-.textfield:hover {
+.textfield:hover, :where(input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea):hover {
     border-color: color-mix(in srgb, var(--color-foreground) 40%, transparent);
 }
-.textfield:focus-visible {
+.textfield:focus-visible, :where(input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea):focus-visible {
     border-color: var(--color-textfield-focus);
 }
 
-.textfield:user-invalid {
+.textfield:user-invalid, :where(input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea):user-invalid {
     border-color: var(--color-error);
 }
-.textfield[aria-invalid="true"] {
+.textfield[aria-invalid="true"], :where(input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea)[aria-invalid="true"] {
     border-color: var(--color-error);
 }
 
-.textfield:read-only {
+.textfield:read-only, :where(input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea):read-only {
     background-color: transparent;
 }
-.textfield:disabled {
+.textfield:disabled, :where(input:not([type]), input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input[type="week"], textarea):disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }

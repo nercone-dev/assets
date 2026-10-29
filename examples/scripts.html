@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Scripts - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/popup.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
+    <link rel="stylesheet" href="../styles/components/slider.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/table.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/toast.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
+    <script src="../scripts/slider.js" defer></script>
+    <script src="../scripts/toast.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+    <header>
+        <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <a href="/examples/index.html"><b>Examples</b></a>
+        </div>
+    </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html" aria-current="page">Scripts</a>
+        </details>
+    </nav>
+    <main>
+        <h1>Scripts</h1>
+        <p><code>scripts/</code> のスクリプトに共通する仕組みと、スクリプトから使える API の一覧です。各コンポーネントの使い方は、それぞれのページを見てください。</p>
+
+        <h2>initializer.js</h2>
+        <p>ほかのスクリプトより先に、<code>defer</code> を付けずに読み込みます。<code>window.nercone</code> を作り、各スクリプトの機能 (feature) を登録・管理します。</p>
+        <pre><code>&lt;script src="scripts/initializer.js"&gt;&lt;/script&gt;
+&lt;script src="scripts/toast.js" defer&gt;&lt;/script&gt;</code></pre>
+
+        <h3>window.nercone</h3>
+        <div class="table-scroll">
+            <table>
+                <thead>
+                    <tr><th>メソッド</th><th>動作</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>register(name, feature)</code></td><td>機能を登録し、DOM の準備ができたら <code>init()</code> を呼びます。同じ名前の機能があれば、先にそれを止めます。</td></tr>
+                    <tr><td><code>unregister(name)</code></td><td>機能を止め (<code>destroy()</code>、なければ <code>cleanup()</code>)、登録を消します。</td></tr>
+                    <tr><td><code>get(name)</code></td><td>登録されている機能を返します。なければ <code>null</code> です。</td></tr>
+                    <tr><td><code>cleanup()</code></td><td>すべての機能の <code>cleanup()</code> を呼びます。ページ遷移で中身を入れ替える直前に呼ばれます。</td></tr>
+                    <tr><td><code>reinit(doc)</code></td><td>すべての機能の <code>reinit(doc)</code> を呼びます。ページ遷移で中身を入れ替えた直後に、新しいページの <code>Document</code> を渡して呼ばれます。</td></tr>
+                    <tr><td><code>setNavigator(navigator)</code></td><td>ページ遷移を行うオブジェクトを登録します。<code>view-transition.js</code> が使います。</td></tr>
+                    <tr><td><code>navigate(href)</code></td><td>登録されたナビゲーターでページを移動します。なければ通常のページ移動をします。</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>機能は、次のメソッドを必要なものだけ持つオブジェクトです。メソッドが例外を投げても、ほかの機能は止まりません。</p>
+        <pre><code>window.nercone.register('clock', {
+    init()       { /* ページを開いたとき */ },
+    cleanup()    { /* ページ遷移で中身を入れ替える直前 */ },
+    reinit(doc)  { /* ページ遷移で中身を入れ替えた直後 */ },
+    destroy()    { /* unregister や、同じ名前での register */ }
+});</code></pre>
+        <p>各スクリプトのクラスも <code>window.nercone</code> に置かれています (<code>window.nercone.Toast</code> など)。オプションを変えるときは、新しいインスタンスを同じ名前で登録します。</p>
+
+        <h3>試す</h3>
+        <div class="flex" style="flex-wrap: wrap">
+            <button type="button" id="scripts-features">登録されている機能を表示</button>
+            <button type="button" id="scripts-navigate">navigate('/examples/index.html')</button>
+        </div>
+        <p>結果: <output id="scripts-output">-</output></p>
+
+        <h2>TopLayer</h2>
+        <p>モーダルの Popup などは、どの <code>z-index</code> よりも上の top layer に表示されます。それよりも上に表示し続けたい要素は <code>window.nercone.topLayer</code> に登録します。<code>order</code> が大きい要素ほど上になります。</p>
+        <pre><code>window.nercone.topLayer.add(element, order);
+window.nercone.topLayer.remove(element);</code></pre>
+        <p>Toast は <code>0</code>、Cursor は <code>1</code>、Loading overlay は <code>2</code> で登録されています。下のボタンは Popup を開いた 1 秒後に Toast を表示します。Toast とカーソルが Popup より上に表示されます。</p>
+        <div class="flex">
+            <button type="button" id="scripts-top-layer">Popup の上に Toast を表示</button>
+        </div>
+        <dialog id="scripts-popup" closedby="any" aria-labelledby="scripts-popup-title">
+            <h2 id="scripts-popup-title">Popup</h2>
+            <p>まもなく Toast が表示されます。</p>
+            <div class="popup-actions">
+                <button class="button-primary" type="button" data-popup-close>閉じる</button>
+            </div>
+        </dialog>
+
+        <h2>オプション</h2>
+        <p>オプションはコンストラクタに渡します。渡さなかった項目には既定値が使われます。</p>
+
+        <h3>Cursor</h3>
+        <table>
+            <thead><tr><th>名前</th><th>既定値</th><th>説明</th></tr></thead>
+            <tbody>
+                <tr><td><code>selector</code></td><td><code>'#cursor'</code></td><td>カーソルの要素。</td></tr>
+                <tr><td><code>linkSelector</code></td><td><code>'a, button, …'</code></td><td>カーソルが囲む要素。</td></tr>
+                <tr><td><code>systemSelector</code></td><td><code>'.cursor-system'</code></td><td>システムのカーソルを使う領域。</td></tr>
+                <tr><td><code>activeClass</code></td><td><code>'cursor-active'</code></td><td>カーソルが表示されている間 <code>&lt;html&gt;</code> に付くクラス。</td></tr>
+                <tr><td><code>padding</code></td><td><code>6</code></td><td>要素を囲むときの余白 (px)。</td></tr>
+                <tr><td><code>linkGap</code></td><td><code>4</code></td><td>要素の外側でも囲む距離 (px)。</td></tr>
+                <tr><td><code>textGap</code></td><td><code>4</code></td><td>文字の外側でも縦線にする距離 (px)。</td></tr>
+                <tr><td><code>layer</code></td><td><code>1</code></td><td>TopLayer での順番。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>LoadingOverlay</h3>
+        <table>
+            <thead><tr><th>名前</th><th>既定値</th><th>説明</th></tr></thead>
+            <tbody>
+                <tr><td><code>selector</code></td><td><code>'#loading-overlay'</code></td><td>オーバーレイの要素。</td></tr>
+                <tr><td><code>easing</code></td><td><code>'cubic-bezier(…)'</code></td><td>アニメーションのイージング。</td></tr>
+                <tr><td><code>layer</code></td><td><code>2</code></td><td>TopLayer での順番。</td></tr>
+                <tr><td><code>duration.in</code></td><td><code>3000</code></td><td>ロゴを描く時間 (ms)。</td></tr>
+                <tr><td><code>duration.wait</code></td><td><code>1000</code></td><td>描き終えてから消え始めるまでの時間 (ms)。</td></tr>
+                <tr><td><code>duration.out</code></td><td><code>1000</code></td><td>消える時間 (ms)。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>PageTransition</h3>
+        <table>
+            <thead><tr><th>名前</th><th>既定値</th><th>説明</th></tr></thead>
+            <tbody>
+                <tr><td><code>regions</code></td><td><code>['header', 'main']</code></td><td>入れ替える要素。どれかが移動先にない場合は通常のページ移動になります。</td></tr>
+                <tr><td><code>keepMeta</code></td><td><code>['charset', 'viewport', 'color-scheme', 'theme-color']</code></td><td>入れ替えない <code>&lt;meta&gt;</code> の名前。</td></tr>
+                <tr><td><code>headers</code></td><td><code>{ 'X-Requested-With': 'view-transition' }</code></td><td>ページを取得するときのリクエストヘッダー。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Popup</h3>
+        <table>
+            <thead><tr><th>名前</th><th>既定値</th><th>説明</th></tr></thead>
+            <tbody>
+                <tr><td><code>selector</code></td><td><code>'.popup'</code></td><td>Popup の要素。</td></tr>
+                <tr><td><code>openAttribute</code></td><td><code>'data-popup-open'</code></td><td>Popup を開く要素の属性。</td></tr>
+                <tr><td><code>closeAttribute</code></td><td><code>'data-popup-close'</code></td><td>Popup を閉じる要素の属性。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Progress</h3>
+        <table>
+            <thead><tr><th>名前</th><th>既定値</th><th>説明</th></tr></thead>
+            <tbody>
+                <tr><td><code>selector</code></td><td><code>'.progress-linear, …'</code></td><td>Progress の要素。</td></tr>
+                <tr><td><code>property</code></td><td><code>'--progress-value'</code></td><td>割合 (0 から 1) を書き込むカスタムプロパティ。</td></tr>
+                <tr><td><code>min</code></td><td><code>0</code></td><td><code>aria-valuemin</code> がないときの最小値。</td></tr>
+                <tr><td><code>max</code></td><td><code>100</code></td><td><code>aria-valuemax</code> がないときの最大値。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Sidebar</h3>
+        <table>
+            <thead><tr><th>名前</th><th>既定値</th><th>説明</th></tr></thead>
+            <tbody>
+                <tr><td><code>selector</code></td><td><code>'.sidebar'</code></td><td>Sidebar の要素。</td></tr>
+                <tr><td><code>media</code></td><td><code>'(max-width: 768px)'</code></td><td>Sidebar がポップオーバーになる画面の条件。<code>sidebar.css</code> の <code>@media</code> と合わせます。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Slider</h3>
+        <table>
+            <thead><tr><th>名前</th><th>既定値</th><th>説明</th></tr></thead>
+            <tbody>
+                <tr><td><code>selector</code></td><td><code>'.slider'</code></td><td>Slider の要素。</td></tr>
+                <tr><td><code>property</code></td><td><code>'--slider-value'</code></td><td>割合 (0 から 1) を書き込むカスタムプロパティ。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Toast</h3>
+        <table>
+            <thead><tr><th>名前</th><th>既定値</th><th>説明</th></tr></thead>
+            <tbody>
+                <tr><td><code>position</code></td><td><code>'bottom-end'</code></td><td>表示する位置。</td></tr>
+                <tr><td><code>duration</code></td><td><code>5000</code></td><td>自動で閉じるまでの時間 (ms)。<code>0</code> で閉じません。</td></tr>
+                <tr><td><code>limit</code></td><td><code>5</code></td><td>同時に表示する最大数。超えると古いものから閉じます。</td></tr>
+                <tr><td><code>dismissible</code></td><td><code>true</code></td><td>閉じるボタンを表示するか。</td></tr>
+                <tr><td><code>label</code></td><td><code>'Notifications'</code></td><td>コンテナの <code>aria-label</code>。</td></tr>
+                <tr><td><code>closeLabel</code></td><td><code>'Close'</code></td><td>閉じるボタンの <code>aria-label</code>。</td></tr>
+                <tr><td><code>triggerAttribute</code></td><td><code>'data-toast'</code></td><td>Toast を表示する要素の属性。</td></tr>
+                <tr><td><code>variantAttribute</code></td><td><code>'data-toast-variant'</code></td><td>バリアントを指定する属性。</td></tr>
+                <tr><td><code>layer</code></td><td><code>0</code></td><td>TopLayer での順番。</td></tr>
+            </tbody>
+        </table>
+
+        <script>
+            (() => {
+                const output = document.getElementById('scripts-output');
+                document.getElementById('scripts-features').addEventListener('click', () => {
+                    output.value = [...window.nercone.features.keys()].join(', ');
+                });
+                document.getElementById('scripts-navigate').addEventListener('click', () => {
+                    window.nercone.navigate('/examples/index.html');
+                });
+                document.getElementById('scripts-top-layer').addEventListener('click', () => {
+                    window.nercone.get('popup').open('scripts-popup');
+                    setTimeout(() => window.nercone.get('toast').show('Popup の上に表示されています', { variant: 'information' }), 1000);
+                });
+            })();
+        </script>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

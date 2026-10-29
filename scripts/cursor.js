@@ -2,7 +2,7 @@
     class Cursor {
         static DEFAULTS = {
             selector:       '#cursor',
-            linkSelector:   'a, button, [role="button"], input[type="submit"], input[type="button"]',
+            linkSelector:   'a, button, summary, [role="button"], input[type="submit"], input[type="button"]',
             systemSelector: '.cursor-system',
             activeClass:    'cursor-active',
             padding:        6,

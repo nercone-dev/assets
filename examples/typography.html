@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/components/button.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
     <link rel="stylesheet" href="../styles/components/dropdown.css">
     <link rel="stylesheet" href="../styles/components/hero.css">
     <link rel="stylesheet" href="../styles/components/layer.css">
     <link rel="stylesheet" href="../styles/components/loading-overlay.css">
     <link rel="stylesheet" href="../styles/components/popup.css">
     <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
     <link rel="stylesheet" href="../styles/components/slider.css">
     <link rel="stylesheet" href="../styles/components/spinner.css">
     <link rel="stylesheet" href="../styles/components/table.css">
@@ -31,26 +33,43 @@
     <script src="../scripts/loading-overlay.js" defer></script>
     <script src="../scripts/popup.js" defer></script>
     <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
     <script src="../scripts/slider.js" defer></script>
     <script src="../scripts/toast.js" defer></script>
     <script src="../scripts/view-transition.js" defer></script>
 </head>
 <body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
     <header>
         <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
             <a href="/examples/index.html"><b>Examples</b></a>
         </div>
-        <div class="small:hide">
-            <a href="/examples/typography.html">Typography</a>
-            <a href="/examples/layout.html">Layout</a>
-            <a href="/examples/colors.html">Colors</a>
-            <a href="/examples/forms.html">Forms</a>
-            <a href="/examples/tables.html">Tables</a>
-            <a href="/examples/overlays.html">Overlays</a>
-            <a href="/examples/loading.html">Loading</a>
-            <a href="/examples/effects.html">Effects</a>
-        </div>
     </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html" aria-current="page">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
     <main>
         <h1>Typography</h1>
         <p>HTMLの通常の要素と、<code>fonts.css</code> のクラスの表示例です。</p>
@@ -105,8 +124,8 @@
         <p>この上に区切り線があります。</p>
 
         <h2>表</h2>
-        <p>表は <code>table</code> クラスを付けると整います。詳しくは <a href="tables.html">Tables</a> を見てください。</p>
-        <table class="table">
+        <p>表は自動的に整います。詳しくは <a href="tables.html">Tables</a> を見てください。</p>
+        <table>
             <thead>
                 <tr>
                     <th>コンポーネント</th>
@@ -156,6 +175,12 @@
         <p class="font-family-sans">Sans: The quick brown fox jumps over the lazy dog. あのイーハトーヴォのすきとおった風</p>
         <p class="font-family-serif">Serif: The quick brown fox jumps over the lazy dog. あのイーハトーヴォのすきとおった風</p>
         <p class="font-family-mono">Mono: The quick brown fox jumps over the lazy dog. あのイーハトーヴォのすきとおった風</p>
+        <p>名前の最後に <code>-nf</code> が付くファミリーは、Nerd Fonts のアイコンを含みます。<code>&lt;code&gt;</code> と <code>&lt;pre&gt;</code> には <code>font-family-mono-nf</code> が使われています。</p>
+        <p class="font-family-sans-nf">Sans NF: The quick brown fox &#xe0b0; &#xf09b; &#xf120; あのイーハトーヴォ</p>
+        <p class="font-family-serif-nf">Serif NF: The quick brown fox &#xe0b0; &#xf09b; &#xf120; あのイーハトーヴォ</p>
+        <p class="font-family-mono-nf">Mono NF: The quick brown fox &#xe0b0; &#xf09b; &#xf120; あのイーハトーヴォ</p>
+        <pre><code>&lt;p class="font-family-serif"&gt;…&lt;/p&gt;
+font-family: var(--font-family-mono-nf);</code></pre>
         <h3>ウェイト</h3>
         <p class="font-weight-thin">Thin (100) あのイーハトーヴォ</p>
         <p class="font-weight-extralight">ExtraLight (200) あのイーハトーヴォ</p>
@@ -167,6 +192,45 @@
         <p class="font-weight-extrabold">ExtraBold (800) あのイーハトーヴォ</p>
         <p class="font-weight-black">Black (900) あのイーハトーヴォ</p>
         <p class="font-weight-extrablack">ExtraBlack (1000) あのイーハトーヴォ</p>
+        <p><code>font-weight-100</code> から <code>font-weight-1000</code> までの数字のクラスと、<code>--font-weight-*</code> 変数もあります。</p>
+        <p><span class="font-weight-100">100</span> <span class="font-weight-200">200</span> <span class="font-weight-300">300</span> <span class="font-weight-400">400</span> <span class="font-weight-500">500</span> <span class="font-weight-600">600</span> <span class="font-weight-700">700</span> <span class="font-weight-800">800</span> <span class="font-weight-900">900</span> <span class="font-weight-1000">1000</span></p>
+        <h3>大きさ</h3>
+        <p><span class="font-size-xx-small">xx-small</span> <span class="font-size-x-small">x-small</span> <span class="font-size-small">small</span> <span class="font-size-medium">medium</span> <span class="font-size-large">large</span> <span class="font-size-x-large">x-large</span> <span class="font-size-xx-large">xx-large</span> <span class="font-size-xxx-large">xxx-large</span></p>
+        <p>親に対して <span class="font-size-smaller">smaller</span> / <span class="font-size-larger">larger</span></p>
+        <h3>スタイルと装飾</h3>
+        <p><span class="font-style-italic">font-style-italic</span>、<i class="font-style-normal">font-style-normal (i)</i>、<span class="font-decoration-underline">font-decoration-underline</span>、<span class="font-decoration-overline">font-decoration-overline</span>、<span class="font-decoration-line-through">font-decoration-line-through</span>、<a class="font-decoration-none" href="/examples/index.html">font-decoration-none (a)</a></p>
+        <h3>字形 (font-variant)</h3>
+        <p><code>font-variant-*</code> のクラスは CSS の <code>font-variant</code> の各値に対応します。フォントが対応していない字形は変わりません。</p>
+        <table>
+            <thead>
+                <tr><th>クラス</th><th>表示</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>font-variant-caps-small</code></td><td class="font-variant-caps-small">Small Caps</td></tr>
+                <tr><td><code>font-variant-caps-all-small</code></td><td class="font-variant-caps-all-small">All Small Caps</td></tr>
+                <tr><td><code>font-variant-caps-petite</code></td><td class="font-variant-caps-petite">Petite Caps</td></tr>
+                <tr><td><code>font-variant-caps-all-petite</code></td><td class="font-variant-caps-all-petite">All Petite Caps</td></tr>
+                <tr><td><code>font-variant-caps-unicase</code></td><td class="font-variant-caps-unicase">Unicase</td></tr>
+                <tr><td><code>font-variant-caps-titling</code></td><td class="font-variant-caps-titling">Titling Caps</td></tr>
+                <tr><td><code>font-variant-ligatures-none</code></td><td class="font-variant-ligatures-none">office fi fl -&gt; =&gt;</td></tr>
+                <tr><td><code>font-variant-ligatures-common</code></td><td class="font-variant-ligatures-common">office fi fl -&gt; =&gt;</td></tr>
+                <tr><td><code>font-variant-ligatures-discretionary</code></td><td class="font-variant-ligatures-discretionary">ct st Th</td></tr>
+                <tr><td><code>font-variant-ligatures-historical</code></td><td class="font-variant-ligatures-historical">ct st Th</td></tr>
+                <tr><td><code>font-variant-ligatures-no-contextual</code></td><td class="font-variant-ligatures-no-contextual">-&gt; =&gt; !=</td></tr>
+                <tr><td><code>font-variant-numeric-tabular</code></td><td class="font-variant-numeric-tabular">1111<br>8888</td></tr>
+                <tr><td><code>font-variant-numeric-proportional</code></td><td class="font-variant-numeric-proportional">1111<br>8888</td></tr>
+                <tr><td><code>font-variant-numeric-oldstyle</code></td><td class="font-variant-numeric-oldstyle">0123456789</td></tr>
+                <tr><td><code>font-variant-numeric-lining</code></td><td class="font-variant-numeric-lining">0123456789</td></tr>
+                <tr><td><code>font-variant-numeric-slashed-zero</code></td><td class="font-variant-numeric-slashed-zero">0 O 0</td></tr>
+                <tr><td><code>font-variant-numeric-ordinal</code></td><td class="font-variant-numeric-ordinal">1st 2nd 3rd</td></tr>
+                <tr><td><code>font-variant-numeric-diagonal-fractions</code></td><td class="font-variant-numeric-diagonal-fractions">1/2 3/4</td></tr>
+                <tr><td><code>font-variant-numeric-stacked-fractions</code></td><td class="font-variant-numeric-stacked-fractions">1/2 3/4</td></tr>
+                <tr><td><code>font-variant-position-sub</code></td><td>H<span class="font-variant-position-sub">2</span>O</td></tr>
+                <tr><td><code>font-variant-position-super</code></td><td>x<span class="font-variant-position-super">2</span></td></tr>
+                <tr><td><code>font-variant-historical-forms</code></td><td class="font-variant-historical-forms">historical s</td></tr>
+            </tbody>
+        </table>
+        <p>それぞれに打ち消すクラス (<code>font-variant-normal</code>、<code>font-variant-caps-normal</code>、<code>font-variant-ligatures-normal</code>・<code>-no-common</code>・<code>-no-discretionary</code>・<code>-no-historical</code>・<code>-contextual</code>、<code>font-variant-numeric-normal</code>、<code>font-variant-position-normal</code>) もあります。</p>
         <h3>色</h3>
         <p>
             <span class="fg-color-red">red</span>

@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/components/button.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
     <link rel="stylesheet" href="../styles/components/dropdown.css">
     <link rel="stylesheet" href="../styles/components/hero.css">
     <link rel="stylesheet" href="../styles/components/layer.css">
     <link rel="stylesheet" href="../styles/components/loading-overlay.css">
     <link rel="stylesheet" href="../styles/components/popup.css">
     <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
     <link rel="stylesheet" href="../styles/components/slider.css">
     <link rel="stylesheet" href="../styles/components/spinner.css">
     <link rel="stylesheet" href="../styles/components/table.css">
@@ -31,33 +33,50 @@
     <script src="../scripts/loading-overlay.js" defer></script>
     <script src="../scripts/popup.js" defer></script>
     <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
     <script src="../scripts/slider.js" defer></script>
     <script src="../scripts/toast.js" defer></script>
     <script src="../scripts/view-transition.js" defer></script>
 </head>
 <body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
     <header>
         <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
             <a href="/examples/index.html"><b>Examples</b></a>
         </div>
-        <div class="small:hide">
-            <a href="/examples/typography.html">Typography</a>
-            <a href="/examples/layout.html">Layout</a>
-            <a href="/examples/colors.html">Colors</a>
-            <a href="/examples/forms.html">Forms</a>
-            <a href="/examples/tables.html">Tables</a>
-            <a href="/examples/overlays.html">Overlays</a>
-            <a href="/examples/loading.html">Loading</a>
-            <a href="/examples/effects.html">Effects</a>
-        </div>
     </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html" aria-current="page">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
     <main>
         <h1>Tables</h1>
         <p>Table の表示例です。</p>
 
         <h2>基本</h2>
-        <p><code>&lt;table&gt;</code> に <code>table</code> を追加します。<code>&lt;thead&gt;</code> の見出しには背景が付きます。</p>
-        <table class="table">
+        <p><code>&lt;table&gt;</code> に適用されます。クラスは必要ありません。<code>&lt;thead&gt;</code> の見出しには背景が付きます。</p>
+        <table>
             <thead>
                 <tr>
                     <th>コンポーネント</th>
@@ -93,7 +112,7 @@
                 </tr>
             </tbody>
         </table>
-        <pre><code>&lt;table class="table"&gt;
+        <pre><code>&lt;table&gt;
     &lt;thead&gt;
         &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;
     &lt;/thead&gt;
@@ -105,7 +124,7 @@
         <h2>バリアント</h2>
         <p>バリアントは組み合わせて使えます。</p>
         <h3>table-striped と table-hover</h3>
-        <table class="table table-striped table-hover">
+        <table class="table-striped table-hover">
             <thead>
                 <tr>
                     <th>色</th>
@@ -129,7 +148,7 @@
         <p><code>table-numeric</code> を付けたセルは右揃えになり、数字の幅が揃います。</p>
 
         <h3>table-bordered</h3>
-        <table class="table table-bordered">
+        <table class="table-bordered">
             <caption>caption は表の下に表示されます。</caption>
             <thead>
                 <tr>
@@ -145,7 +164,7 @@
         </table>
 
         <h3>行の見出し</h3>
-        <table class="table table-bordered">
+        <table class="table-bordered">
             <tbody>
                 <tr><th scope="row">名前</th><td>Nercone</td></tr>
                 <tr><th scope="row">ライセンス</th><td>コードは MIT、その他は CC BY 4.0</td></tr>
@@ -155,7 +174,7 @@
         <h2>横スクロール</h2>
         <p>幅の大きな表は <code>table-scroll</code> で囲むと、ページではなく表だけが横にスクロールします。</p>
         <div class="table-scroll">
-            <table class="table table-striped" style="white-space: nowrap">
+            <table class="table-striped" style="white-space: nowrap">
                 <thead>
                     <tr>
                         <th>step</th>
@@ -170,12 +189,12 @@
             </table>
         </div>
         <pre><code>&lt;div class="table-scroll"&gt;
-    &lt;table class="table"&gt;…&lt;/table&gt;
+    &lt;table&gt;…&lt;/table&gt;
 &lt;/div&gt;</code></pre>
 
         <h2>カスタマイズ</h2>
         <p><code>--table-padding</code> でセルの余白を変えられます。</p>
-        <table class="table table-striped" style="--table-padding: 4px 8px">
+        <table class="table-striped" style="--table-padding: 4px 8px">
             <thead>
                 <tr><th>Compact</th><th class="table-numeric">Value</th></tr>
             </thead>

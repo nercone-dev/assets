@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Navigation - Examples</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/colors.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/block.css">
+    <link rel="stylesheet" href="../styles/components/button.css">
+    <link rel="stylesheet" href="../styles/components/code.css">
+    <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
+    <link rel="stylesheet" href="../styles/components/dropdown.css">
+    <link rel="stylesheet" href="../styles/components/hero.css">
+    <link rel="stylesheet" href="../styles/components/layer.css">
+    <link rel="stylesheet" href="../styles/components/loading-overlay.css">
+    <link rel="stylesheet" href="../styles/components/popup.css">
+    <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
+    <link rel="stylesheet" href="../styles/components/slider.css">
+    <link rel="stylesheet" href="../styles/components/spinner.css">
+    <link rel="stylesheet" href="../styles/components/table.css">
+    <link rel="stylesheet" href="../styles/components/textfield.css">
+    <link rel="stylesheet" href="../styles/components/toast.css">
+    <link rel="stylesheet" href="../styles/components/view-transition.css">
+    <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+    <script src="../scripts/initializer.js"></script>
+    <script src="../scripts/cursor.js" defer></script>
+    <script src="../scripts/loading-overlay.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
+    <script src="../scripts/slider.js" defer></script>
+    <script src="../scripts/toast.js" defer></script>
+    <script src="../scripts/view-transition.js" defer></script>
+</head>
+<body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+    <header>
+        <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <a href="/examples/index.html"><b>Examples</b></a>
+        </div>
+    </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html" aria-current="page">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
+    <main>
+        <h1>Navigation</h1>
+        <p>Header と Sidebar の使用例です。どちらもページの端に固定され、このページの上部と左側にあるものがそれぞれの実例です。</p>
+
+        <h2>Header</h2>
+        <p><code>main.css</code> は <code>&lt;header&gt;</code> を画面上部に固定し、背景をぼかします。<code>main</code> は Header の高さだけ上に余白を空けます。</p>
+        <p>Header の直接の子を <code>&lt;div&gt;</code> で分けると横に並び、最初の <code>&lt;div&gt;</code> が残りの幅を使います。2つ目以降の <code>&lt;div&gt;</code> は右端に寄ります。</p>
+        <pre><code>&lt;header&gt;
+    &lt;div&gt;
+        &lt;a href="/"&gt;&lt;b&gt;Site&lt;/b&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="small:hide"&gt;
+        &lt;a href="/about"&gt;About&lt;/a&gt;
+        &lt;a href="/blog"&gt;Blog&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+
+        <h2>Sidebar</h2>
+        <p>画面の端に固定されるナビゲーションです。<code>&lt;nav&gt;</code> に <code>sidebar</code> を追加し、<code>main</code> より前に置きます。<code>main</code> は Sidebar の幅だけ横にずれます。</p>
+        <p>幅が 768px 以下の画面では Sidebar は隠れ、<code>sidebar-toggle</code> のボタンで開くポップオーバーになります。開閉、外側のクリックや <kbd>Esc</kbd> で閉じる動作、フォーカスの管理はブラウザの <code>popover</code> 属性が行います。ウィンドウの幅を変えて確認してください。</p>
+        <pre><code>&lt;header&gt;
+    &lt;div&gt;
+        &lt;button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー"&gt;…&lt;/button&gt;
+        &lt;a href="/"&gt;&lt;b&gt;Site&lt;/b&gt;&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;nav class="sidebar" id="sidebar" popover aria-label="サイト"&gt;
+    &lt;a href="/" aria-current="page"&gt;Home&lt;/a&gt;
+    &lt;p class="sidebar-heading"&gt;Docs&lt;/p&gt;
+    &lt;a href="/docs/install.html"&gt;Install&lt;/a&gt;
+    &lt;a href="/docs/usage.html"&gt;Usage&lt;/a&gt;
+    &lt;hr&gt;
+    &lt;details&gt;
+        &lt;summary&gt;More&lt;/summary&gt;
+        &lt;a href="/faq.html"&gt;FAQ&lt;/a&gt;
+    &lt;/details&gt;
+&lt;/nav&gt;
+&lt;main&gt;…&lt;/main&gt;</code></pre>
+
+        <h3>要素</h3>
+        <table>
+            <thead>
+                <tr><th>要素</th><th>表示</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>&lt;a&gt;</code></td><td>1行に1つのリンク。<code>aria-current="page"</code> を持つリンクは強調されます。</td></tr>
+                <tr><td><code>.sidebar-heading</code></td><td>リンクのまとまりの見出し。</td></tr>
+                <tr><td><code>&lt;details&gt;</code> と <code>&lt;summary&gt;</code></td><td>折りたためるまとまり。右端の三角は開くと上を向き、中のリンクは字下げされて左の線にぶら下がります。</td></tr>
+                <tr><td><code>&lt;hr&gt;</code></td><td>区切り線。</td></tr>
+            </tbody>
+        </table>
+
+        <h3>sidebar.js</h3>
+        <p><code>sidebar.js</code> を読み込むと、次のことを行います。読み込まなくても Sidebar は表示され、ポップオーバーも開閉できます。</p>
+        <ul>
+            <li>表示中のページを指すリンクに <code>aria-current="page"</code> を付け、それ以外のリンクからは外します。そのリンクを含む <code>&lt;details&gt;</code> は開きます。</li>
+            <li>ポップオーバーの中のリンクを押したときと、画面が広くなったときに、ポップオーバーを閉じます。</li>
+        </ul>
+        <p>Sidebar は <code>header</code> と <code>main</code> の外にあるため、<code>view-transition.js</code> によるページ遷移では置き換えられず、スクロール位置や <code>&lt;details&gt;</code> の開閉がそのまま残ります。このため、表示中のページの印は <code>sidebar.js</code> が付け直します。</p>
+        <div class="block block-important">
+            <b>Important</b>
+            <p>Sidebar のリンクには <code>/</code> から始まるパスか完全なURLを指定してください。ページ遷移で残った Sidebar の相対URLは、移動先のページを基準に解決されます。</p>
+        </div>
+        <div class="block block-tip">
+            <b>Tip</b>
+            <p>ページごとに Sidebar の内容が違う場合は、<code>PageTransition</code> の <code>regions</code> に <code>'#sidebar'</code> を加えると、Sidebar もページと一緒に置き換えられます。詳しくは <a href="/examples/effects.html">Effects</a> を見てください。</p>
+        </div>
+
+        <h3>カスタマイズ</h3>
+        <p>幅は <code>--sidebar-width</code> (既定値 <code>240px</code>)、左右の余白は <code>--sidebar-padding</code> (既定値 <code>12px</code>) で変えられます。<code>--sidebar-width</code> は <code>main</code> のずれにも使われるため、Sidebar と <code>main</code> の両方に届く <code>:root</code> などで指定してください。</p>
+        <pre><code>:root {
+    --sidebar-width: 280px;
+}</code></pre>
+        <p>色は <code>--color-sidebar-*</code> で変えられます。一覧は <a href="/examples/colors.html">Colors</a> を見てください。画面が狭いときに切り替える幅を変える場合は、<code>sidebar.css</code> の <code>@media</code> と、<code>Sidebar</code> の <code>media</code> オプションを合わせて変えてください。</p>
+        <pre><code>window.nercone.register('sidebar', new window.nercone.Sidebar({
+    media: '(max-width: 1080px)'
+}));</code></pre>
+    </main>
+    <div id="cursor"></div>
+</body>
+</html>

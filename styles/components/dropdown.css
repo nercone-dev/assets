@@ -1,4 +1,4 @@
-.dropdown {
+.dropdown, :where(select) {
     color: var(--color-dropdown-foreground);
     background-color: var(--color-dropdown-background);
     border: solid 1px var(--color-dropdown-border);
@@ -31,37 +31,37 @@
         border-color     0.15s ease,
         background-color 0.15s ease;
 }
-.dropdown:dir(rtl) {
+.dropdown:dir(rtl), :where(select):dir(rtl) {
     background-position:
         left 15px center,
         left 20px center;
 }
-.dropdown[multiple], .dropdown[size]:not([size="1"]) {
+.dropdown[multiple], :where(select)[multiple], .dropdown[size]:not([size="1"]), :where(select)[size]:not([size="1"]) {
     background-image: none;
     padding-inline-end: 12px;
     cursor: auto;
 }
 
-.dropdown option, .dropdown optgroup {
+.dropdown option, :where(select) option, .dropdown optgroup, :where(select) optgroup {
     color: var(--color-foreground-alt);
     background-color: var(--color-background-alt);
 }
 
-.dropdown:hover {
+.dropdown:hover, :where(select):hover {
     border-color: color-mix(in srgb, var(--color-foreground) 40%, transparent);
 }
-.dropdown:focus-visible {
+.dropdown:focus-visible, :where(select):focus-visible {
     border-color: var(--color-dropdown-focus);
 }
 
-.dropdown:user-invalid {
+.dropdown:user-invalid, :where(select):user-invalid {
     border-color: var(--color-error);
 }
-.dropdown[aria-invalid="true"] {
+.dropdown[aria-invalid="true"], :where(select)[aria-invalid="true"] {
     border-color: var(--color-error);
 }
 
-.dropdown:disabled {
+.dropdown:disabled, :where(select):disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }

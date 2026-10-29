@@ -105,129 +105,129 @@ ul, ol {
 /* Responsive Design */
 
 .hide {
-    display: none;
+    display: none !important;
 }
 .show {
-    display: block;
+    display: block !important;
 }
 
 @media (max-width: 768px) {
     .small\:hide {
-        display: none;
+        display: none !important;
     }
     .small\:show {
-        display: block;
+        display: block !important;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1080px) {
     .medium\:hide {
-        display: none;
+        display: none !important;
     }
     .medium\:show {
-        display: block;
+        display: block !important;
     }
 }
 
 @media (min-width: 1081px) {
     .large\:hide {
-        display: none;
+        display: none !important;
     }
     .large\:show {
-        display: block;
+        display: block !important;
     }
 }
 
 /* Layout */
 
 .no-padding {
-    padding: 0;
+    padding: 0 !important;
 }
 .no-padding-top {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 .no-padding-bottom {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
 }
 .no-padding-left {
-    padding-left: 0;
+    padding-left: 0 !important;
 }
 .no-padding-right {
-    padding-right: 0;
+    padding-right: 0 !important;
 }
 
 .no-margin {
-    margin: 0;
+    margin: 0 !important;
 }
 .no-margin-top {
-    margin-top: 0;
+    margin-top: 0 !important;
 }
 .no-margin-bottom {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 .no-margin-left {
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 .no-margin-right {
-    margin-right: 0;
+    margin-right: 0 !important;
 }
 
 .flex {
-    display: flex;
-    gap: 16px;
+    display: flex !important;
+    gap: 16px !important;
 }
 .flex\:1 {
-    flex: 1;
+    flex: 1 !important;
 }
 .flex\:2 {
-    flex: 2;
+    flex: 2 !important;
 }
 .flex\:3 {
-    flex: 3;
+    flex: 3 !important;
 }
 .flex\:4 {
-    flex: 4;
+    flex: 4 !important;
 }
 .flex\:5 {
-    flex: 5;
+    flex: 5 !important;
 }
 .flex\:6 {
-    flex: 6;
+    flex: 6 !important;
 }
 .flex\:7 {
-    flex: 7;
+    flex: 7 !important;
 }
 .flex\:8 {
-    flex: 8;
+    flex: 8 !important;
 }
 .flex\:9 {
-    flex: 9;
+    flex: 9 !important;
 }
 .flex\:10 {
-    flex: 10;
+    flex: 10 !important;
 }
 
 /* Misc */
 
 .border {
-    border: solid var(--color-border) 1px;
+    border: solid var(--color-border) 1px !important;
 }
 
 .selectable {
-    user-select: auto;
-    -webkit-touch-callout: default;
+    user-select: auto !important;
+    -webkit-touch-callout: default !important;
 }
 .unselectable {
-    user-select: none;
-    -webkit-touch-callout: none;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
 }
 
 .overflow-show {
-    overflow: visible;
+    overflow: visible !important;
 }
 .overflow-hide {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 .overflow-scroll {
-    overflow: scroll;
+    overflow: scroll !important;
 }

@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/components/button.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
     <link rel="stylesheet" href="../styles/components/dropdown.css">
     <link rel="stylesheet" href="../styles/components/hero.css">
     <link rel="stylesheet" href="../styles/components/layer.css">
     <link rel="stylesheet" href="../styles/components/loading-overlay.css">
     <link rel="stylesheet" href="../styles/components/popup.css">
     <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
     <link rel="stylesheet" href="../styles/components/slider.css">
     <link rel="stylesheet" href="../styles/components/spinner.css">
     <link rel="stylesheet" href="../styles/components/table.css">
@@ -31,65 +33,86 @@
     <script src="../scripts/loading-overlay.js" defer></script>
     <script src="../scripts/popup.js" defer></script>
     <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
     <script src="../scripts/slider.js" defer></script>
     <script src="../scripts/toast.js" defer></script>
     <script src="../scripts/view-transition.js" defer></script>
 </head>
 <body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
     <header>
         <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
             <a href="/examples/index.html"><b>Examples</b></a>
         </div>
-        <div class="small:hide">
-            <a href="/examples/typography.html">Typography</a>
-            <a href="/examples/layout.html">Layout</a>
-            <a href="/examples/colors.html">Colors</a>
-            <a href="/examples/forms.html">Forms</a>
-            <a href="/examples/tables.html">Tables</a>
-            <a href="/examples/overlays.html">Overlays</a>
-            <a href="/examples/loading.html">Loading</a>
-            <a href="/examples/effects.html">Effects</a>
-        </div>
     </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html" aria-current="page">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
     <main>
         <h1>Forms</h1>
         <p>Text field・Button・Dropdown・Slider の表示例です。</p>
 
         <h2>Text field</h2>
-        <p><code>&lt;input&gt;</code> または <code>&lt;textarea&gt;</code> に <code>textfield</code> を追加します。</p>
+        <p>テキストを入力する <code>&lt;input&gt;</code> (<code>type</code> が <code>text</code>、<code>search</code>、<code>email</code>、<code>url</code>、<code>tel</code>、<code>password</code>、<code>number</code>、日付と時刻のもの、または指定なし) と <code>&lt;textarea&gt;</code> に適用されます。クラスは必要ありません。ほかの要素には <code>textfield</code> クラスで同じ見た目を付けられます。</p>
         <h3>種類</h3>
-        <input class="textfield" type="text" placeholder="text">
-        <input class="textfield" type="password" placeholder="password">
-        <input class="textfield" type="email" placeholder="you@example.com">
-        <input class="textfield" type="number" placeholder="number">
-        <input class="textfield" type="search" placeholder="search">
-        <input class="textfield" type="tel" placeholder="tel">
-        <input class="textfield" type="url" placeholder="https://example.com">
-        <input class="textfield" type="date">
-        <input class="textfield" type="time">
-        <input class="textfield" type="datetime-local">
-        <input class="textfield" type="month">
-        <input class="textfield" type="week">
-        <textarea class="textfield" rows="4" placeholder="textarea"></textarea>
+        <input type="text" placeholder="text">
+        <input type="password" placeholder="password">
+        <input type="email" placeholder="you@example.com">
+        <input type="number" placeholder="number">
+        <input type="search" placeholder="search">
+        <input type="tel" placeholder="tel">
+        <input type="url" placeholder="https://example.com">
+        <input type="date">
+        <input type="time">
+        <input type="datetime-local">
+        <input type="month">
+        <input type="week">
+        <textarea rows="4" placeholder="textarea"></textarea>
         <h3>状態</h3>
-        <input class="textfield" type="text" value="エラー (aria-invalid)" aria-invalid="true">
-        <input class="textfield" type="email" value="not-an-email" required>
+        <input type="text" value="エラー (aria-invalid)" aria-invalid="true">
+        <input type="email" value="not-an-email" required>
         <p><small>上のメールアドレス欄は、編集すると検証に失敗してエラー表示になります。</small></p>
-        <input class="textfield" type="text" value="読み取り専用 (readonly)" readonly>
-        <input class="textfield" type="text" value="無効 (disabled)" disabled>
-        <pre><code>&lt;input class="textfield" type="email" placeholder="you@example.com"&gt;
-&lt;textarea class="textfield" rows="4"&gt;&lt;/textarea&gt;</code></pre>
+        <input type="text" value="読み取り専用 (readonly)" readonly>
+        <input type="text" value="無効 (disabled)" disabled>
+        <h3>カスタマイズ</h3>
+        <p>余白は <code>--textfield-padding</code>、色は <code>--color-textfield-*</code> で変えられます。</p>
+        <input type="text" placeholder="--textfield-padding: 4px 8px" style="--textfield-padding: 4px 8px">
+        <input type="text" placeholder="--color-textfield-focus: var(--color-information-bright)" style="--color-textfield-focus: var(--color-information-bright)">
+        <pre><code>&lt;input type="email" placeholder="you@example.com"&gt;
+&lt;textarea rows="4"&gt;&lt;/textarea&gt;</code></pre>
 
         <h2>Button</h2>
-        <p><code>&lt;button&gt;</code> または <code>&lt;a&gt;</code> に <code>button</code> を追加し、必要に応じてバリアントを1つ追加します。</p>
+        <p><code>&lt;button&gt;</code> と <code>&lt;input type="button"&gt;</code>、<code>&lt;input type="submit"&gt;</code>、<code>&lt;input type="reset"&gt;</code> に適用されます。クラスは必要ありません。<code>&lt;a&gt;</code> などほかの要素には <code>button</code> クラスを追加します。必要に応じてバリアントを1つ追加します。</p>
         <h3>バリアント</h3>
         <div class="flex" style="flex-wrap: wrap">
-            <button class="button">Default</button>
-            <button class="button button-primary">Primary</button>
-            <button class="button button-information">Information</button>
-            <button class="button button-success">Success</button>
-            <button class="button button-warning">Warning</button>
-            <button class="button button-error">Error</button>
+            <button>Default</button>
+            <button class="button-primary">Primary</button>
+            <button class="button-information">Information</button>
+            <button class="button-success">Success</button>
+            <button class="button-warning">Warning</button>
+            <button class="button-error">Error</button>
         </div>
         <h3>リンク</h3>
         <div class="flex" style="flex-wrap: wrap">
@@ -98,27 +121,27 @@
         </div>
         <h3>無効</h3>
         <div class="flex" style="flex-wrap: wrap">
-            <button class="button" disabled>Default</button>
-            <button class="button button-primary" disabled>Primary</button>
+            <button disabled>Default</button>
+            <button class="button-primary" disabled>Primary</button>
             <a class="button button-error" aria-disabled="true">Error (a)</a>
         </div>
         <h3>カスタマイズ</h3>
         <div class="flex" style="flex-wrap: wrap; align-items: center; --button-padding: 4px 8px">
-            <button class="button">Small</button>
-            <button class="button button-primary">Small</button>
+            <button>Small</button>
+            <button class="button-primary">Small</button>
         </div>
-        <pre><code>&lt;button class="button"&gt;Cancel&lt;/button&gt;
-&lt;button class="button button-primary"&gt;Save&lt;/button&gt;
+        <pre><code>&lt;button&gt;Cancel&lt;/button&gt;
+&lt;button class="button-primary"&gt;Save&lt;/button&gt;
 &lt;a class="button button-error" href="/delete"&gt;Delete&lt;/a&gt;</code></pre>
 
         <h2>Dropdown</h2>
-        <p><code>&lt;select&gt;</code> に <code>dropdown</code> を追加します。</p>
-        <select class="dropdown">
+        <p><code>&lt;select&gt;</code> に適用されます。クラスは必要ありません。</p>
+        <select>
             <option>One</option>
             <option>Two</option>
             <option>Three</option>
         </select>
-        <select class="dropdown">
+        <select>
             <optgroup label="Fruits">
                 <option>Apple</option>
                 <option>Orange</option>
@@ -128,29 +151,32 @@
                 <option>Tomato</option>
             </optgroup>
         </select>
-        <select class="dropdown" multiple>
+        <select multiple>
             <option selected>Multiple One</option>
             <option>Multiple Two</option>
             <option selected>Multiple Three</option>
         </select>
-        <select class="dropdown" aria-invalid="true">
+        <select aria-invalid="true">
             <option>エラー (aria-invalid)</option>
         </select>
-        <select class="dropdown" disabled>
+        <select disabled>
             <option>無効 (disabled)</option>
         </select>
-        <pre><code>&lt;select class="dropdown"&gt;
+        <select style="--dropdown-padding: 4px 8px" aria-label="Compact">
+            <option>--dropdown-padding: 4px 8px</option>
+        </select>
+        <pre><code>&lt;select&gt;
     &lt;option&gt;One&lt;/option&gt;
     &lt;option&gt;Two&lt;/option&gt;
 &lt;/select&gt;</code></pre>
 
         <h2>Slider</h2>
-        <p><code>&lt;input type="range"&gt;</code> に <code>slider</code> を追加します。<code>slider.js</code> を読み込むと、値までの部分が塗られます。</p>
+        <p><code>&lt;input type="range"&gt;</code> に適用されます。クラスは必要ありません。<code>slider.js</code> を読み込むと、値までの部分が塗られます。</p>
         <div class="layer">
             <label for="slider-volume">音量: <output id="slider-volume-output" for="slider-volume">30</output></label>
-            <input class="slider" id="slider-volume" type="range" min="0" max="100" value="30">
+            <input id="slider-volume" type="range" min="0" max="100" value="30">
             <label for="slider-step">段階 (min="1" max="5" step="1"): <output id="slider-step-output" for="slider-step">3</output></label>
-            <input class="slider" id="slider-step" type="range" min="1" max="5" step="1" value="3" list="slider-step-marks">
+            <input id="slider-step" type="range" min="1" max="5" step="1" value="3" list="slider-step-marks">
             <datalist id="slider-step-marks">
                 <option value="1"></option>
                 <option value="2"></option>
@@ -160,34 +186,34 @@
             </datalist>
         </div>
         <h3>状態</h3>
-        <input class="slider" type="range" value="70" aria-label="エラー (aria-invalid)" aria-invalid="true">
-        <input class="slider" type="range" value="50" aria-label="無効 (disabled)" disabled>
+        <input type="range" value="70" aria-label="エラー (aria-invalid)" aria-invalid="true">
+        <input type="range" value="50" aria-label="無効 (disabled)" disabled>
         <h3>カスタマイズ</h3>
-        <input class="slider" type="range" value="40" aria-label="Success" style="--color-slider: var(--color-success-bright); --color-slider-thumb: var(--color-success-bright); --slider-thickness: 8px; --slider-thumb-size: 24px">
-        <input class="slider" type="range" value="80" aria-label="Thin" style="--slider-thickness: 2px; --slider-thumb-size: 12px">
-        <pre><code>&lt;input class="slider" type="range" min="0" max="100" value="30"&gt;</code></pre>
+        <input type="range" value="40" aria-label="Success" style="--color-slider: var(--color-success-bright); --color-slider-thumb: var(--color-success-bright); --slider-thickness: 8px; --slider-thumb-size: 24px">
+        <input type="range" value="80" aria-label="Thin" style="--slider-thickness: 2px; --slider-thumb-size: 12px">
+        <pre><code>&lt;input type="range" min="0" max="100" value="30"&gt;</code></pre>
         <p>スクリプトから <code>value</code> を変えたときは、<code>input</code> イベントが発生しないため、<code>window.nercone.get('slider').update(element)</code> を呼んでください。</p>
 
         <h2>フォームの例</h2>
         <form class="layer" onsubmit="event.preventDefault()">
             <b>お問い合わせ</b>
             <label for="form-name">名前</label>
-            <input class="textfield" id="form-name" type="text" required>
+            <input id="form-name" type="text" required>
             <label for="form-email">メールアドレス</label>
-            <input class="textfield" id="form-email" type="email" required>
+            <input id="form-email" type="email" required>
             <label for="form-topic">種類</label>
-            <select class="dropdown" id="form-topic">
+            <select id="form-topic">
                 <option>質問</option>
                 <option>不具合の報告</option>
                 <option>その他</option>
             </select>
             <label for="form-message">内容</label>
-            <textarea class="textfield" id="form-message" rows="4" required></textarea>
+            <textarea id="form-message" rows="4" required></textarea>
             <label for="form-priority">優先度</label>
-            <input class="slider" id="form-priority" type="range" min="1" max="3" value="2">
+            <input id="form-priority" type="range" min="1" max="3" value="2">
             <div class="flex">
-                <button class="button" type="reset">リセット</button>
-                <button class="button button-primary" type="submit">送信</button>
+                <button type="reset">リセット</button>
+                <button class="button-primary" type="submit">送信</button>
             </div>
         </form>
         <p><small>このフォームはどこにも送信されません。</small></p>

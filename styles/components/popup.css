@@ -1,4 +1,4 @@
-.popup {
+.popup, :where(dialog) {
     color: var(--color-popup-foreground);
     background-color: var(--color-popup-background);
     border: solid 1px var(--color-popup-border);
@@ -25,7 +25,7 @@
         overlay   0.2s allow-discrete,
         display   0.2s allow-discrete;
 }
-.popup[open] {
+.popup[open], :where(dialog)[open] {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -34,24 +34,24 @@
     transform: none;
 }
 @starting-style {
-    .popup[open] {
+    .popup[open], :where(dialog)[open] {
         opacity: 0;
         transform: scale(0.96);
     }
 }
 
-.popup > *:first-child {
+.popup > *:first-child, :where(dialog) > *:first-child {
     margin-top: 0;
 }
-.popup > *:last-child {
+.popup > *:last-child, :where(dialog) > *:last-child {
     margin-bottom: 0;
 }
-.popup > h1, .popup > h2 {
+.popup > h1, :where(dialog) > h1, .popup > h2, :where(dialog) > h2 {
     padding-bottom: 0;
     border-bottom: none;
 }
 
-.popup::backdrop {
+.popup::backdrop, :where(dialog)::backdrop {
     background-color: var(--color-popup-backdrop);
     backdrop-filter: blur(var(--popup-backdrop-blur, 4px));
 
@@ -61,17 +61,17 @@
         overlay 0.2s allow-discrete,
         display 0.2s allow-discrete;
 }
-.popup[open]::backdrop {
+.popup[open]::backdrop, :where(dialog)[open]::backdrop {
     opacity: 1;
 }
 @starting-style {
-    .popup[open]::backdrop {
+    .popup[open]::backdrop, :where(dialog)[open]::backdrop {
         opacity: 0;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .popup, .popup::backdrop {
+    .popup, :where(dialog), .popup::backdrop, :where(dialog)::backdrop {
         transition: none;
     }
 }

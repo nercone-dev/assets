@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/components/button.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
     <link rel="stylesheet" href="../styles/components/dropdown.css">
     <link rel="stylesheet" href="../styles/components/hero.css">
     <link rel="stylesheet" href="../styles/components/layer.css">
     <link rel="stylesheet" href="../styles/components/loading-overlay.css">
     <link rel="stylesheet" href="../styles/components/popup.css">
     <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
     <link rel="stylesheet" href="../styles/components/slider.css">
     <link rel="stylesheet" href="../styles/components/spinner.css">
     <link rel="stylesheet" href="../styles/components/table.css">
@@ -31,26 +33,43 @@
     <script src="../scripts/loading-overlay.js" defer></script>
     <script src="../scripts/popup.js" defer></script>
     <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
     <script src="../scripts/slider.js" defer></script>
     <script src="../scripts/toast.js" defer></script>
     <script src="../scripts/view-transition.js" defer></script>
 </head>
 <body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
     <header>
         <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
             <a href="/examples/index.html"><b>Examples</b></a>
         </div>
-        <div class="small:hide">
-            <a href="/examples/typography.html">Typography</a>
-            <a href="/examples/layout.html">Layout</a>
-            <a href="/examples/colors.html">Colors</a>
-            <a href="/examples/forms.html">Forms</a>
-            <a href="/examples/tables.html">Tables</a>
-            <a href="/examples/overlays.html">Overlays</a>
-            <a href="/examples/loading.html">Loading</a>
-            <a href="/examples/effects.html">Effects</a>
-        </div>
     </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html" aria-current="page">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
     <main>
         <h1>Loading</h1>
         <p>Progress と Spinner の表示例です。</p>
@@ -61,10 +80,10 @@
         <h3>値の操作</h3>
         <div class="layer">
             <label for="progress-value">値: <output id="progress-output" for="progress-value">40</output></label>
-            <input class="slider" id="progress-value" type="range" min="0" max="100" value="40">
+            <input id="progress-value" type="range" min="0" max="100" value="40">
             <div class="flex" style="flex-wrap: wrap">
-                <button class="button" id="progress-indeterminate" type="button">Indeterminate にする</button>
-                <button class="button button-primary" id="progress-run" type="button">0 から 100 まで進める</button>
+                <button id="progress-indeterminate" type="button">Indeterminate にする</button>
+                <button class="button-primary" id="progress-run" type="button">0 から 100 まで進める</button>
             </div>
         </div>
 
@@ -135,7 +154,7 @@
 
         <h3>ボタンの中</h3>
         <div class="flex">
-            <button class="button" type="button" disabled style="--spinner-size: 1em; --spinner-thickness: 6px">
+            <button type="button" disabled style="--spinner-size: 1em; --spinner-thickness: 6px">
                 <svg class="spinner-circular" viewBox="0 0 48 48" aria-hidden="true">
                     <circle class="spinner-indicator" cx="24" cy="24" r="20" pathLength="1"/>
                 </svg>

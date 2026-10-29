@@ -1,0 +1,67 @@
+:where(details:not(.sidebar details)) {
+    color: var(--color-details-foreground);
+    background-color: var(--color-details-background);
+}
+:where(details:not(.sidebar details))[open] {
+    padding-bottom: var(--details-padding, 16px);
+}
+
+:where(details:not(.sidebar details)) > summary {
+    color: var(--color-details-summary-foreground);
+    background-color: var(--color-details-summary-background);
+
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: var(--details-summary-padding, 12px 16px);
+
+    list-style: none;
+    cursor: pointer;
+
+    transition: background-color 0.15s ease;
+}
+:where(details:not(.sidebar details)) > summary::-webkit-details-marker {
+    display: none;
+}
+:where(details:not(.sidebar details)) > summary:hover {
+    background-color: var(--color-details-summary-hover);
+}
+:where(details:not(.sidebar details)) > summary:focus-visible {
+    outline: solid 1px var(--color-foreground-alt);
+    outline-offset: -1px;
+}
+
+/* Marker: a triangle pointing down when closed and up when open */
+
+:where(details:not(.sidebar details)) > summary::after {
+    content: "";
+
+    flex-shrink: 0;
+
+    width: 0.75em;
+    height: 0.6em;
+
+    background-color: currentColor;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+    transition: transform 0.2s cubic-bezier(0.125,1,0.25,1);
+}
+:where(details:not(.sidebar details))[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+:where(details:not(.sidebar details)) > :not(summary) {
+    margin-top: var(--details-padding, 16px);
+    margin-inline: var(--details-padding, 16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :where(details:not(.sidebar details)) > summary, :where(details:not(.sidebar details)) > summary::after {
+        transition: none;
+    }
+}

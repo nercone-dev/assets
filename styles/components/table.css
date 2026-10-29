@@ -1,4 +1,4 @@
-.table {
+.table, :where(table) {
     color: var(--color-table-foreground);
     border: solid 1px var(--color-table-border);
     border-collapse: collapse;
@@ -7,7 +7,7 @@
     line-height: 1.5;
 }
 
-.table th, .table td {
+.table th, :where(table) th, .table td, :where(table) td {
     border-bottom: solid 1px var(--color-table-border);
 
     text-align: start;
@@ -16,15 +16,15 @@
     padding: var(--table-padding, 8px 12px);
 }
 
-.table th {
+.table th, :where(table) th {
     color: var(--color-table-header-foreground);
     font-weight: var(--font-weight-semibold);
 }
-.table thead th {
+.table thead th, :where(table) thead th {
     background-color: var(--color-table-header-background);
 }
 
-.table caption {
+.table caption, :where(table) caption {
     color: var(--color-foreground);
     text-align: start;
     caption-side: bottom;
@@ -32,7 +32,7 @@
     padding-top: 8px;
 }
 
-.table .table-numeric {
+.table .table-numeric, :where(table) .table-numeric {
     text-align: end;
     font-variant-numeric: tabular-nums;
 }
@@ -60,6 +60,6 @@
     overflow-x: auto;
     max-width: 100%;
 }
-.table-scroll > .table {
+.table-scroll > .table, .table-scroll > :where(table) {
     min-width: 100%;
 }

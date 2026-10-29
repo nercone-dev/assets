@@ -32,7 +32,8 @@
     filter: brightness(0.8) blur(1px);
 }
 main > .hero {
-    margin-top: -24px;
+    width: auto;
+    margin: -24px -24px 0;
 }
 .hero > * {
     position: relative;

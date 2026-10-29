@@ -1,4 +1,4 @@
-.button {
+.button, :where(button:not(.sidebar-toggle, .toast-close), input[type="button"], input[type="submit"], input[type="reset"]) {
     color: var(--color-button-foreground);
     background-color: var(--color-button-background);
     border: solid 1px var(--color-button-border);
@@ -32,18 +32,18 @@
         transform        0.15s cubic-bezier(0.125,1,0.25,1);
 }
 
-.button:hover {
+.button:hover, :where(button:not(.sidebar-toggle, .toast-close), input[type="button"], input[type="submit"], input[type="reset"]):hover {
     background-color: color-mix(in srgb, var(--color-button-background), var(--color-foreground) 10%);
 }
-.button:active {
+.button:active, :where(button:not(.sidebar-toggle, .toast-close), input[type="button"], input[type="submit"], input[type="reset"]):active {
     transform: scale(0.98);
 }
-.button:focus-visible {
+.button:focus-visible, :where(button:not(.sidebar-toggle, .toast-close), input[type="button"], input[type="submit"], input[type="reset"]):focus-visible {
     outline: solid 1px var(--color-foreground-alt);
     outline-offset: 2px;
 }
 
-.button:disabled, .button[aria-disabled="true"] {
+.button:disabled, :where(button:not(.sidebar-toggle, .toast-close), input[type="button"], input[type="submit"], input[type="reset"]):disabled, .button[aria-disabled="true"], :where(button:not(.sidebar-toggle, .toast-close), input[type="button"], input[type="submit"], input[type="reset"])[aria-disabled="true"] {
     opacity: 0.5;
     cursor: not-allowed;
     pointer-events: none;

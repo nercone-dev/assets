@@ -1,0 +1,222 @@
+.sidebar {
+    color: var(--color-sidebar-foreground);
+    background-color: var(--color-sidebar-background);
+    border: none;
+    border-inline-end: solid 1px var(--color-sidebar-border);
+    outline: none;
+
+    line-height: 1.5;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    position: fixed;
+    z-index: 5;
+    inset-block: 0;
+    inset-inline: 0 auto;
+
+    box-sizing: border-box;
+    width: var(--sidebar-width, 240px);
+    max-width: calc(100vw - 48px);
+    height: auto;
+    margin: 0;
+    padding: 88px var(--sidebar-padding, 12px) 24px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.sidebar ~ main {
+    margin-inline-start: var(--sidebar-width, 240px);
+}
+
+/* Items */
+
+.sidebar a, .sidebar summary {
+    color: inherit;
+    text-decoration: none;
+
+    padding: 6px 12px;
+
+    transition:
+        color            0.15s ease,
+        background-color 0.15s ease;
+}
+.sidebar a:hover, .sidebar summary:hover {
+    background-color: var(--color-sidebar-hover);
+}
+.sidebar a:focus-visible, .sidebar summary:focus-visible {
+    outline: solid 1px var(--color-foreground-alt);
+    outline-offset: -1px;
+}
+.sidebar a {
+    display: block;
+}
+.sidebar a[aria-current="page"] {
+    color: var(--color-sidebar-active-foreground);
+    background-color: var(--color-sidebar-active-background);
+    font-weight: var(--font-weight-semibold);
+}
+
+.sidebar-heading {
+    color: var(--color-sidebar-heading);
+
+    font-size: small;
+    font-weight: var(--font-weight-semibold);
+
+    padding: 16px 12px 4px;
+}
+.sidebar > .sidebar-heading:first-child {
+    padding-top: 0;
+}
+
+.sidebar details > * + * {
+    margin-top: 2px;
+}
+.sidebar summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    list-style: none;
+    cursor: pointer;
+}
+.sidebar summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Marker: the same triangle as .details, pointing down when closed and up when open */
+
+.sidebar summary::after {
+    content: "";
+
+    flex-shrink: 0;
+
+    width: 0.6em;
+    height: 0.45em;
+
+    background-color: currentColor;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+
+    opacity: 0.6;
+
+    transition: transform 0.2s cubic-bezier(0.125,1,0.25,1);
+}
+.sidebar details[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+/* Links in a folder hang from a guide line */
+
+.sidebar details > a {
+    border-inline-start: solid 1px var(--color-sidebar-border);
+
+    margin-inline-start: 12px;
+}
+.sidebar details > a[aria-current="page"] {
+    border-inline-start-color: var(--color-sidebar-active-foreground);
+}
+
+.sidebar hr {
+    border: none;
+    border-top: solid 1px var(--color-sidebar-border);
+
+    margin: 8px 0;
+}
+
+/* Toggle */
+
+.sidebar-toggle {
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+    appearance: none;
+
+    font: inherit;
+    line-height: inherit;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    cursor: pointer;
+}
+.sidebar-toggle:focus-visible {
+    outline: solid 1px currentColor;
+    outline-offset: 2px;
+}
+.sidebar-toggle svg {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+/* Small screens: a popover opened with the toggle */
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+
+        border-inline-end: none;
+
+        padding-top: 24px;
+
+        transform: translateX(-100%);
+        transition:
+            transform 0.2s cubic-bezier(0.125,1,0.25,1),
+            overlay   0.2s allow-discrete,
+            display   0.2s allow-discrete;
+    }
+    .sidebar:dir(rtl) {
+        transform: translateX(100%);
+    }
+    .sidebar ~ main {
+        margin-inline-start: 0;
+    }
+    .sidebar-toggle {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar:popover-open {
+        display: flex;
+        transform: none;
+    }
+    @starting-style {
+        .sidebar:popover-open {
+            transform: translateX(-100%);
+        }
+        .sidebar:popover-open:dir(rtl) {
+            transform: translateX(100%);
+        }
+    }
+
+    .sidebar::backdrop {
+        background-color: var(--color-sidebar-backdrop);
+
+        opacity: 0;
+        transition:
+            opacity 0.2s ease,
+            overlay 0.2s allow-discrete,
+            display 0.2s allow-discrete;
+    }
+    .sidebar:popover-open::backdrop {
+        opacity: 1;
+    }
+    @starting-style {
+        .sidebar:popover-open::backdrop {
+            opacity: 0;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar, .sidebar::backdrop, .sidebar summary::after {
+        transition: none;
+    }
+}

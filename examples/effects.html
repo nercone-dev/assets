@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/components/button.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
     <link rel="stylesheet" href="../styles/components/dropdown.css">
     <link rel="stylesheet" href="../styles/components/hero.css">
     <link rel="stylesheet" href="../styles/components/layer.css">
     <link rel="stylesheet" href="../styles/components/loading-overlay.css">
     <link rel="stylesheet" href="../styles/components/popup.css">
     <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
     <link rel="stylesheet" href="../styles/components/slider.css">
     <link rel="stylesheet" href="../styles/components/spinner.css">
     <link rel="stylesheet" href="../styles/components/table.css">
@@ -31,6 +33,7 @@
     <script src="../scripts/loading-overlay.js" defer></script>
     <script src="../scripts/popup.js" defer></script>
     <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
     <script src="../scripts/slider.js" defer></script>
     <script src="../scripts/toast.js" defer></script>
     <script src="../scripts/view-transition.js" defer></script>
@@ -43,27 +46,38 @@
     </div>
     <header>
         <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
             <a href="/examples/index.html"><b>Examples</b></a>
         </div>
-        <div class="small:hide">
-            <a href="/examples/typography.html">Typography</a>
-            <a href="/examples/layout.html">Layout</a>
-            <a href="/examples/colors.html">Colors</a>
-            <a href="/examples/forms.html">Forms</a>
-            <a href="/examples/tables.html">Tables</a>
-            <a href="/examples/overlays.html">Overlays</a>
-            <a href="/examples/loading.html">Loading</a>
-            <a href="/examples/effects.html">Effects</a>
-        </div>
     </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html" aria-current="page">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
     <main>
         <h1>Effects</h1>
-        <p>Cursor・Loading overlay・Page transition の使用例です。これらはページ全体に作用します。</p>
+        <p>Cursor・Loading overlay・Page transition の使用例です。これらはページ全体に作用し、すべての例のページで有効です。</p>
 
         <h2>Cursor</h2>
         <p><code>&lt;div id="cursor"&gt;&lt;/div&gt;</code> を置き、<code>cursor.js</code> を読み込むと、マウスカーソルが円に置き換わります。リンクやボタンの上では要素を囲む形に、テキストの上では縦線に変わります。すべての例のページで有効です。</p>
         <div class="flex" style="flex-wrap: wrap">
-            <button class="button" type="button">ボタンの上</button>
+            <button type="button">ボタンの上</button>
             <a class="button" href="index.html">リンクの上</a>
         </div>
         <div class="layer cursor-system">
@@ -73,11 +87,25 @@
 &lt;script src="scripts/cursor.js" defer&gt;&lt;/script&gt;
 ...
 &lt;div id="cursor"&gt;&lt;/div&gt;</code></pre>
+        <p>押している間は少し縮みます。色は <code>--color-cursor</code> と <code>--color-cursor-on-link</code> で変えられます。マウス以外 (タッチやペン) の操作ではカーソルは表示されません。囲む要素の種類や余白は、オプションで変えられます。</p>
+        <pre><code>window.nercone.register('cursor', new window.nercone.Cursor({
+    linkSelector: 'a, button',
+    padding:      8
+}));</code></pre>
+        <details>
+            <summary>summary (既定で囲まれます)</summary>
+            <p>下のボタンでカーソルのオプションを変えると、summary が囲まれなくなります。別のページに移動しても、再読み込みするまで変更は残ります。</p>
+        </details>
+        <div class="flex" style="flex-wrap: wrap">
+            <button type="button" id="cursor-summary">summary を囲まない</button>
+            <button type="button" id="cursor-default">既定に戻す</button>
+        </div>
 
         <h2>Loading overlay</h2>
-        <p>ページを直接開いたときに、ロゴを描くアニメーションの後でページを表示します。このページを開いたときに表示されたものです。JavaScript が無効な環境では <code>noscript.css</code> によって非表示になります。</p>
+        <p>ページを直接開いたときに、ロゴを描くアニメーションの後でページを表示します。すべての例のページに置かれており、このページを開いたときに表示されたものです。</p>
+        <p>Loading overlay は <code>header</code> と <code>main</code> の外にあるため、ページ遷移では再生されません。再生が終わると要素は取り除かれます。JavaScript が無効な環境では <code>noscript.css</code> によって非表示になり、視差効果を減らす設定 (<code>prefers-reduced-motion</code>) ではロゴを描かずにフェードアウトだけをします。</p>
         <div class="flex">
-            <button class="button" type="button" onclick="location.reload()">再読み込みして再生</button>
+            <button type="button" onclick="location.reload()">再読み込みして再生</button>
         </div>
         <pre><code>&lt;link rel="stylesheet" href="styles/components/loading-overlay.css"&gt;
 &lt;noscript&gt;&lt;link rel="stylesheet" href="styles/noscript.css"&gt;&lt;/noscript&gt;
@@ -88,6 +116,10 @@
         &lt;polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/&gt;
     &lt;/svg&gt;
 &lt;/div&gt;</code></pre>
+        <p>時間はオプションで変えられます。</p>
+        <pre><code>window.nercone.register('loading-overlay', new window.nercone.LoadingOverlay({
+    duration: { in: 1500, wait: 500, out: 500 }
+}));</code></pre>
 
         <h2>Page transition</h2>
         <p><code>view-transition.js</code> を読み込むと、同じオリジンのリンクを開くときに <code>header</code> と <code>main</code> だけを入れ替え、View Transition API でアニメーションします。対応していないブラウザでは通常のページ移動になります。</p>
@@ -99,6 +131,36 @@
         <pre><code>&lt;link rel="stylesheet" href="styles/components/view-transition.css"&gt;
 &lt;script src="scripts/initializer.js"&gt;&lt;/script&gt;
 &lt;script src="scripts/view-transition.js" defer&gt;&lt;/script&gt;</code></pre>
+        <p>遷移では次のことを行います。</p>
+        <ul>
+            <li>移動先のページを取得し、まだ読み込んでいないスタイルシートとスクリプトを先に読み込みます。</li>
+            <li><code>&lt;title&gt;</code>、<code>&lt;meta&gt;</code>、<code>canonical</code>、<code>&lt;style&gt;</code> を移動先のものに合わせます。</li>
+            <li>入れ替えの前後に <code>window.nercone.cleanup()</code> と <code>window.nercone.reinit(doc)</code> を呼び、各機能を新しいページに合わせます。</li>
+            <li>戻る・進むではスクロール位置を復元し、<code>#id</code> へのリンクではその要素までスクロールします。</li>
+        </ul>
+        <p>次の場合は通常のページ移動になります: 別のオリジン、<code>target</code> や <code>download</code> を持つリンク、修飾キーを押しながらのクリック、HTML 以外の応答、移動先に入れ替える要素がない場合。</p>
+        <div class="flex" style="flex-wrap: wrap">
+            <a class="button" href="#page-transition-regions">ページ内のリンク (#id)</a>
+            <a class="button" href="../images/banner.svg">HTML 以外 (通常の移動)</a>
+            <button type="button" onclick="window.nercone.navigate('/examples/scripts.html')">スクリプトから移動</button>
+        </div>
+        <p>入れ替える要素は <code>regions</code> で変えられます。ページごとに内容が違う Sidebar も入れ替える例です。</p>
+        <pre id="page-transition-regions"><code>window.nercone.setNavigator(new window.nercone.PageTransition({
+    regions: ['header', '#sidebar', 'main']
+}));</code></pre>
+        <p>サーバーは <code>X-Requested-With: view-transition</code> ヘッダーで、遷移のための取得かどうかを判断できます。アニメーションは <code>view-transition.css</code> で <code>header</code> と <code>main</code> に名前を付けて行っています。視差効果を減らす設定ではアニメーションしません。</p>
+
+        <script>
+            (() => {
+                const Cursor = window.nercone.Cursor;
+                document.getElementById('cursor-summary').addEventListener('click', () => {
+                    window.nercone.register('cursor', new Cursor({ linkSelector: 'a, button, [role="button"], input[type="submit"], input[type="button"]' }));
+                });
+                document.getElementById('cursor-default').addEventListener('click', () => {
+                    window.nercone.register('cursor', new Cursor());
+                });
+            })();
+        </script>
     </main>
     <div id="cursor"></div>
 </body>

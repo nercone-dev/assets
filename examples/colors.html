@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/components/button.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
     <link rel="stylesheet" href="../styles/components/dropdown.css">
     <link rel="stylesheet" href="../styles/components/hero.css">
     <link rel="stylesheet" href="../styles/components/layer.css">
     <link rel="stylesheet" href="../styles/components/loading-overlay.css">
     <link rel="stylesheet" href="../styles/components/popup.css">
     <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
     <link rel="stylesheet" href="../styles/components/slider.css">
     <link rel="stylesheet" href="../styles/components/spinner.css">
     <link rel="stylesheet" href="../styles/components/table.css">
@@ -31,6 +33,7 @@
     <script src="../scripts/loading-overlay.js" defer></script>
     <script src="../scripts/popup.js" defer></script>
     <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
     <script src="../scripts/slider.js" defer></script>
     <script src="../scripts/toast.js" defer></script>
     <script src="../scripts/view-transition.js" defer></script>
@@ -52,13 +55,12 @@
             align-self: center;
         }
         .swatch {
-            color: var(--color-foreground);
-            background: none;
-            border: solid 1px var(--color-border);
-            outline: none;
-            appearance: none;
+            /* Drop the default <button> style from button.css; only what is set below applies. */
+            all: unset;
 
-            font: inherit;
+            color: var(--color-foreground);
+            border: solid 1px var(--color-border);
+
             font-size: small;
             line-height: 1.5;
             text-align: start;
@@ -66,7 +68,7 @@
             display: flex;
             flex-direction: column;
 
-            padding: 0;
+            box-sizing: border-box;
             cursor: pointer;
         }
         .swatch:focus-visible {
@@ -99,21 +101,37 @@
     </style>
 </head>
 <body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
     <header>
         <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
             <a href="/examples/index.html"><b>Examples</b></a>
         </div>
-        <div class="small:hide">
-            <a href="/examples/typography.html">Typography</a>
-            <a href="/examples/layout.html">Layout</a>
-            <a href="/examples/colors.html">Colors</a>
-            <a href="/examples/forms.html">Forms</a>
-            <a href="/examples/tables.html">Tables</a>
-            <a href="/examples/overlays.html">Overlays</a>
-            <a href="/examples/loading.html">Loading</a>
-            <a href="/examples/effects.html">Effects</a>
-        </div>
     </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html" aria-current="page">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
     <main>
         <h1>Colors</h1>
         <p><code>colors.css</code> で定義されている色の一覧です。色をクリックすると <code>var(--color-…)</code> をコピーします。</p>
@@ -138,6 +156,9 @@
         <div class="swatches" data-swatches="status"></div>
         <h3>GitHub Markdown</h3>
         <div class="swatches" data-swatches="markdown"></div>
+        <h3>Components</h3>
+        <p>コンポーネントの色は <code>--color-{component}-*</code> です。既定では上の色を参照しています。</p>
+        <div class="swatches" data-swatches="components"></div>
 
         <h2>Utility classes</h2>
         <p>すべての色に、文字色 (<code>fg-color-</code> / <code>text-color-</code>)、背景色 (<code>bg-color-</code> / <code>background-color-</code>)、枠線の色 (<code>bd-color-</code> / <code>border-color-</code>) のクラスがあります。</p>
@@ -163,12 +184,12 @@
         <p>変数は <code>:root</code> で定義されているため、任意の要素で上書きできます。上書きはその要素の子孫にだけ反映されます。</p>
         <div class="layer" style="--color-button-primary-background: var(--color-pink-bright); --color-button-primary-border: var(--color-pink-bright); --color-slider: var(--color-pink-bright); --color-slider-thumb: var(--color-pink-bright)">
             <div class="flex" style="flex-wrap: wrap">
-                <button class="button button-primary" type="button">Pink primary</button>
+                <button class="button-primary" type="button">Pink primary</button>
             </div>
-            <input class="slider" type="range" value="60" aria-label="Pink slider">
+            <input type="range" value="60" aria-label="Pink slider">
         </div>
         <pre><code>&lt;div style="--color-button-primary-background: var(--color-pink-bright)"&gt;
-    &lt;button class="button button-primary"&gt;Pink primary&lt;/button&gt;
+    &lt;button class="button-primary"&gt;Pink primary&lt;/button&gt;
 &lt;/div&gt;</code></pre>
 
         <script>
@@ -179,9 +200,80 @@
                     palette:    HUES.flatMap(hue => [hue, ...STEPS.map(step => `${hue}-${step}`)]),
                     opacity:    ['white', ...HUES.slice(1)].flatMap(hue => [hue, ...STEPS.map(step => `${hue}-opacity-${step}`)]),
                     brightness: ['black', 'white', ...HUES.slice(1).flatMap(hue => [`${hue}-dark`, hue, `${hue}-bright`])],
-                    base:       ['foreground', 'foreground-alt', 'background', 'background-alt', 'layer', 'layer-alt', 'border', 'border-alt', 'cursor', 'cursor-on-link'],
+                    base:       ['foreground', 'foreground-alt', 'background', 'background-alt', 'layer', 'layer-alt', 'border', 'border-alt'],
                     status:     ['information', 'success', 'warning', 'error'].flatMap(name => [`${name}-dark`, name, `${name}-bright`]),
-                    markdown:   ['note', 'tip', 'important', 'caution'].flatMap(name => [`${name}-dark`, name, `${name}-bright`])
+                    markdown:   ['note', 'tip', 'important', 'caution'].flatMap(name => [`${name}-dark`, name, `${name}-bright`]),
+                    components: [
+                        'cursor',
+                        'cursor-on-link',
+                        'button-foreground',
+                        'button-background',
+                        'button-border',
+                        'button-primary-foreground',
+                        'button-primary-background',
+                        'button-primary-border',
+                        'button-information-foreground',
+                        'button-information-background',
+                        'button-information-border',
+                        'button-success-foreground',
+                        'button-success-background',
+                        'button-success-border',
+                        'button-warning-foreground',
+                        'button-warning-background',
+                        'button-warning-border',
+                        'button-error-foreground',
+                        'button-error-background',
+                        'button-error-border',
+                        'textfield-foreground',
+                        'textfield-background',
+                        'textfield-border',
+                        'textfield-focus',
+                        'dropdown-foreground',
+                        'dropdown-background',
+                        'dropdown-border',
+                        'dropdown-focus',
+                        'progress',
+                        'progress-track',
+                        'spinner',
+                        'spinner-track',
+                        'slider',
+                        'slider-track',
+                        'slider-thumb',
+                        'slider-focus',
+                        'table-foreground',
+                        'table-header-foreground',
+                        'table-header-background',
+                        'table-border',
+                        'table-stripe',
+                        'table-hover',
+                        'popup-foreground',
+                        'popup-background',
+                        'popup-border',
+                        'popup-backdrop',
+                        'toast-foreground',
+                        'toast-background',
+                        'toast-border',
+                        'toast-information-foreground',
+                        'toast-information-background',
+                        'toast-information-border',
+                        'toast-success-foreground',
+                        'toast-success-background',
+                        'toast-success-border',
+                        'toast-warning-foreground',
+                        'toast-warning-background',
+                        'toast-warning-border',
+                        'toast-error-foreground',
+                        'toast-error-background',
+                        'toast-error-border',
+                        'sidebar-foreground',
+                        'sidebar-background',
+                        'sidebar-border',
+                        'sidebar-heading',
+                        'sidebar-hover',
+                        'sidebar-active-foreground',
+                        'sidebar-active-background',
+                        'sidebar-backdrop'
+                    ]
                 };
 
                 const swatchOf = (name, label) => {

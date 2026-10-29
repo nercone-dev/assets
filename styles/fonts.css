@@ -125,233 +125,233 @@ mark {
 }
 
 .font-family-sans {
-    font-family: var(--font-family-sans);
+    font-family: var(--font-family-sans) !important;
 }
 .font-family-serif {
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-serif) !important;
 }
 .font-family-mono {
-    font-family: var(--font-family-mono);
+    font-family: var(--font-family-mono) !important;
 }
 
 .font-family-sans-nf {
-    font-family: var(--font-family-sans-nf);
+    font-family: var(--font-family-sans-nf) !important;
 }
 .font-family-serif-nf {
-    font-family: var(--font-family-serif-nf);
+    font-family: var(--font-family-serif-nf) !important;
 }
 .font-family-mono-nf {
-    font-family: var(--font-family-mono-nf);
+    font-family: var(--font-family-mono-nf) !important;
 }
 
 .font-weight-thin {
-    font-weight: var(--font-weight-thin);
+    font-weight: var(--font-weight-thin) !important;
 }
 .font-weight-extralight {
-    font-weight: var(--font-weight-extralight);
+    font-weight: var(--font-weight-extralight) !important;
 }
 .font-weight-light {
-    font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light) !important;
 }
 .font-weight-regular {
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-regular) !important;
 }
 .font-weight-medium {
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium) !important;
 }
 .font-weight-semibold {
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold) !important;
 }
 .font-weight-bold {
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold) !important;
 }
 .font-weight-extrabold {
-    font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold) !important;
 }
 .font-weight-black {
-    font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black) !important;
 }
 .font-weight-extrablack {
-    font-weight: var(--font-weight-extrablack);
+    font-weight: var(--font-weight-extrablack) !important;
 }
 
 .font-weight-100 {
-    font-weight: 100;
+    font-weight: 100 !important;
 }
 .font-weight-200 {
-    font-weight: 200;
+    font-weight: 200 !important;
 }
 .font-weight-300 {
-    font-weight: 300;
+    font-weight: 300 !important;
 }
 .font-weight-400 {
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 .font-weight-500 {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 .font-weight-600 {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 .font-weight-700 {
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 .font-weight-800 {
-    font-weight: 800;
+    font-weight: 800 !important;
 }
 .font-weight-900 {
-    font-weight: 900;
+    font-weight: 900 !important;
 }
 .font-weight-1000 {
-    font-weight: 1000;
+    font-weight: 1000 !important;
 }
 
 .font-variant-normal {
-    font-variant: normal;
+    font-variant: normal !important;
 }
 
 .font-variant-caps-normal {
-    font-variant-caps: normal;
+    font-variant-caps: normal !important;
 }
 .font-variant-caps-small {
-    font-variant-caps: small-caps;
+    font-variant-caps: small-caps !important;
 }
 .font-variant-caps-all-small {
-    font-variant-caps: all-small-caps;
+    font-variant-caps: all-small-caps !important;
 }
 .font-variant-caps-petite {
-    font-variant-caps: petite-caps;
+    font-variant-caps: petite-caps !important;
 }
 .font-variant-caps-all-petite {
-    font-variant-caps: all-petite-caps;
+    font-variant-caps: all-petite-caps !important;
 }
 .font-variant-caps-unicase {
-    font-variant-caps: unicase;
+    font-variant-caps: unicase !important;
 }
 .font-variant-caps-titling {
-    font-variant-caps: titling-caps;
+    font-variant-caps: titling-caps !important;
 }
 
 .font-variant-ligatures-normal {
-    font-variant-ligatures: normal;
+    font-variant-ligatures: normal !important;
 }
 .font-variant-ligatures-none {
-    font-variant-ligatures: none;
+    font-variant-ligatures: none !important;
 }
 .font-variant-ligatures-contextual {
-    font-variant-ligatures: contextual;
+    font-variant-ligatures: contextual !important;
 }
 .font-variant-ligatures-no-contextual {
-    font-variant-ligatures: no-contextual;
+    font-variant-ligatures: no-contextual !important;
 }
 .font-variant-ligatures-common {
-    font-variant-ligatures: common-ligatures;
+    font-variant-ligatures: common-ligatures !important;
 }
 .font-variant-ligatures-no-common {
-    font-variant-ligatures: no-common-ligatures;
+    font-variant-ligatures: no-common-ligatures !important;
 }
 .font-variant-ligatures-discretionary {
-    font-variant-ligatures: discretionary-ligatures;
+    font-variant-ligatures: discretionary-ligatures !important;
 }
 .font-variant-ligatures-no-discretionary {
-    font-variant-ligatures: no-discretionary-ligatures;
+    font-variant-ligatures: no-discretionary-ligatures !important;
 }
 .font-variant-ligatures-historical {
-    font-variant-ligatures: historical-ligatures;
+    font-variant-ligatures: historical-ligatures !important;
 }
 .font-variant-ligatures-no-historical {
-    font-variant-ligatures: no-historical-ligatures;
+    font-variant-ligatures: no-historical-ligatures !important;
 }
 
 .font-variant-numeric-normal {
-    font-variant-numeric: normal;
+    font-variant-numeric: normal !important;
 }
 .font-variant-numeric-ordinal {
-    font-variant-numeric: ordinal;
+    font-variant-numeric: ordinal !important;
 }
 .font-variant-numeric-slashed-zero {
-    font-variant-numeric: slashed-zero;
+    font-variant-numeric: slashed-zero !important;
 }
 .font-variant-numeric-lining {
-    font-variant-numeric: lining-nums;
+    font-variant-numeric: lining-nums !important;
 }
 .font-variant-numeric-oldstyle {
-    font-variant-numeric: oldstyle-nums;
+    font-variant-numeric: oldstyle-nums !important;
 }
 .font-variant-numeric-proportional {
-    font-variant-numeric: proportional-nums;
+    font-variant-numeric: proportional-nums !important;
 }
 .font-variant-numeric-tabular {
-    font-variant-numeric: tabular-nums;
+    font-variant-numeric: tabular-nums !important;
 }
 .font-variant-numeric-diagonal-fractions {
-    font-variant-numeric: diagonal-fractions;
+    font-variant-numeric: diagonal-fractions !important;
 }
 .font-variant-numeric-stacked-fractions {
-    font-variant-numeric: stacked-fractions;
+    font-variant-numeric: stacked-fractions !important;
 }
 
 .font-variant-position-normal {
-    font-variant-position: normal;
+    font-variant-position: normal !important;
 }
 .font-variant-position-sub {
-    font-variant-position: sub;
+    font-variant-position: sub !important;
 }
 .font-variant-position-super {
-    font-variant-position: super;
+    font-variant-position: super !important;
 }
 
 .font-variant-historical-forms {
-    font-variant-alternates: historical-forms;
+    font-variant-alternates: historical-forms !important;
 }
 
 .font-style-normal {
-    font-style: normal;
+    font-style: normal !important;
 }
 .font-style-italic {
-    font-style: italic;
+    font-style: italic !important;
 }
 
 .font-decoration-none {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .font-decoration-underline {
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 .font-decoration-overline {
-    text-decoration: overline;
+    text-decoration: overline !important;
 }
 .font-decoration-line-through {
-    text-decoration: line-through;
+    text-decoration: line-through !important;
 }
 
 .font-size-xx-small {
-    font-size: xx-small;
+    font-size: xx-small !important;
 }
 .font-size-x-small {
-    font-size: x-small;
+    font-size: x-small !important;
 }
 .font-size-small {
-    font-size: small;
+    font-size: small !important;
 }
 .font-size-medium {
-    font-size: medium;
+    font-size: medium !important;
 }
 .font-size-large {
-    font-size: large;
+    font-size: large !important;
 }
 .font-size-x-large {
-    font-size: x-large;
+    font-size: x-large !important;
 }
 .font-size-xx-large {
-    font-size: xx-large;
+    font-size: xx-large !important;
 }
 .font-size-xxx-large {
-    font-size: xxx-large;
+    font-size: xxx-large !important;
 }
 .font-size-smaller {
-    font-size: smaller;
+    font-size: smaller !important;
 }
 .font-size-larger {
-    font-size: larger;
+    font-size: larger !important;
 }

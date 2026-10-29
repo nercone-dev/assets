@@ -1,7 +1,7 @@
 (() => {
     class Popup {
         static DEFAULTS = {
-            selector:       '.popup',
+            selector:       '.popup, dialog',
             openAttribute:  'data-popup-open',
             closeAttribute: 'data-popup-close'
         };
@@ -19,7 +19,7 @@
         }
 
         cleanup() {
-            for (const popup of document.querySelectorAll(`${this.options.selector}[open]`)) popup.close();
+            for (const popup of document.querySelectorAll(this.options.selector)) if (popup.open) popup.close();
         }
 
         reinit() {

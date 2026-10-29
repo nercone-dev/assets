@@ -1,7 +1,7 @@
 (() => {
     class Slider {
         static DEFAULTS = {
-            selector: '.slider',
+            selector: '.slider, input[type="range"]',
             property: '--slider-value'
         };
         static ATTRIBUTES = ['value', 'min', 'max'];

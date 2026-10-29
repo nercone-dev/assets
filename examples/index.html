@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="../styles/components/button.css">
     <link rel="stylesheet" href="../styles/components/code.css">
     <link rel="stylesheet" href="../styles/components/cursor.css">
+    <link rel="stylesheet" href="../styles/components/details.css">
     <link rel="stylesheet" href="../styles/components/dropdown.css">
     <link rel="stylesheet" href="../styles/components/hero.css">
     <link rel="stylesheet" href="../styles/components/layer.css">
     <link rel="stylesheet" href="../styles/components/loading-overlay.css">
     <link rel="stylesheet" href="../styles/components/popup.css">
     <link rel="stylesheet" href="../styles/components/progress.css">
+    <link rel="stylesheet" href="../styles/components/sidebar.css">
     <link rel="stylesheet" href="../styles/components/slider.css">
     <link rel="stylesheet" href="../styles/components/spinner.css">
     <link rel="stylesheet" href="../styles/components/table.css">
@@ -31,33 +33,51 @@
     <script src="../scripts/loading-overlay.js" defer></script>
     <script src="../scripts/popup.js" defer></script>
     <script src="../scripts/progress.js" defer></script>
+    <script src="../scripts/sidebar.js" defer></script>
     <script src="../scripts/slider.js" defer></script>
     <script src="../scripts/toast.js" defer></script>
     <script src="../scripts/view-transition.js" defer></script>
 </head>
 <body>
+    <div id="loading-overlay">
+        <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+        </svg>
+    </div>
     <header>
         <div>
+            <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
             <a href="/examples/index.html"><b>Examples</b></a>
         </div>
-        <div class="small:hide">
-            <a href="/examples/typography.html">Typography</a>
-            <a href="/examples/layout.html">Layout</a>
-            <a href="/examples/colors.html">Colors</a>
-            <a href="/examples/forms.html">Forms</a>
-            <a href="/examples/tables.html">Tables</a>
-            <a href="/examples/overlays.html">Overlays</a>
-            <a href="/examples/loading.html">Loading</a>
-            <a href="/examples/effects.html">Effects</a>
-        </div>
     </header>
+    <nav class="sidebar" id="sidebar" popover aria-label="Examples">
+        <a href="/examples/index.html" aria-current="page">Home</a>
+        <p class="sidebar-heading">Basics</p>
+        <a href="/examples/typography.html">Typography</a>
+        <a href="/examples/layout.html">Layout</a>
+        <a href="/examples/colors.html">Colors</a>
+        <p class="sidebar-heading">Components</p>
+        <a href="/examples/navigation.html">Navigation</a>
+        <a href="/examples/forms.html">Forms</a>
+        <a href="/examples/tables.html">Tables</a>
+        <a href="/examples/overlays.html">Overlays</a>
+        <a href="/examples/loading.html">Loading</a>
+        <details>
+            <summary>Advanced</summary>
+            <a href="/examples/effects.html">Effects</a>
+            <a href="/examples/scripts.html">Scripts</a>
+        </details>
+    </nav>
     <main>
         <div class="hero" style="--hero-image: url('/images/header/wide.webp')">
             <h1>Examples</h1>
             <p>コンポーネントと通常の要素の使用例</p>
         </div>
 
-        <p>このディレクトリには、<code>styles/</code> と <code>scripts/</code> の使用例が入っています。どのページも同じスタイルシートとスクリプトを読み込んでいるため、ページ間の移動ではページ遷移のアニメーションも確認できます。</p>
+        <p>このディレクトリには、<code>styles/</code> と <code>scripts/</code> の使用例が入っています。どのページも同じスタイルシートとスクリプトを読み込み、Loading overlay・Header・Sidebar・Cursor を置いているため、ページ間の移動ではページ遷移のアニメーションも確認できます。</p>
+        <p>ページはリポジトリの最上位を公開した状態で開いてください (例: <code>python3 -m http.server</code> を実行し <code>/examples/</code> を開く)。リンクと画像は <code>/</code> から始まるパスで書かれています。</p>
 
         <h2>ページ</h2>
         <a href="/examples/typography.html">
@@ -76,6 +96,12 @@
             <div class="layer">
                 <b>Colors</b>
                 <p>パレット・明るさ・透明度・用途ごとの色と、色のユーティリティクラス。</p>
+            </div>
+        </a>
+        <a href="/examples/navigation.html">
+            <div class="layer">
+                <b>Navigation</b>
+                <p>Header と Sidebar。画面が狭いときの Sidebar の開閉。</p>
             </div>
         </a>
         <a href="/examples/forms.html">
@@ -106,6 +132,12 @@
             <div class="layer">
                 <b>Effects</b>
                 <p>Cursor・Loading overlay・Page transition。</p>
+            </div>
+        </a>
+        <a href="/examples/scripts.html">
+            <div class="layer">
+                <b>Scripts</b>
+                <p><code>window.nercone</code> の API、TopLayer、各スクリプトのオプション。</p>
             </div>
         </a>
 
