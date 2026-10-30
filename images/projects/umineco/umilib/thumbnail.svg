@@ -44,9 +44,9 @@
     </style>
   </defs>
   <rect class="cls-6" width="1280" height="640"/>
-  <text class="cls-1" transform="translate(123.98 329.97)"><tspan x="0" y="0">umilib</tspan></text>
-  <text class="cls-2" transform="translate(127.81 382.64)"><tspan x="0" y="0">A massive library crate containing types and</tspan><tspan x="0" y="32">implementations of many protocols and</tspan><tspan x="0" y="64">algorithms.</tspan></text>
-  <text class="cls-3" transform="translate(128.3 506.88)"><tspan x="0" y="0">umineco-dev</tspan></text>
+  <text class="cls-1" transform="translate(123.98 273.97)"><tspan x="0" y="0">umilib</tspan></text>
+  <text class="cls-2" transform="translate(127.81 326.64)"><tspan x="0" y="0">A massive library crate containing types and</tspan><tspan x="0" y="32">implementations of many protocols and</tspan><tspan x="0" y="64">algorithms.</tspan></text>
+  <text class="cls-3" transform="translate(128.3 450.88)"><tspan x="0" y="0">umineco-dev</tspan></text>
   <g>
     <rect class="cls-4" x="800" y="160" width="320" height="320"/>
     <path class="cls-5" d="M865,272.5v47.5c0,26.23,21.27,47.5,47.5,47.5h0c26.23,0,47.5-21.27,47.5-47.5v-47.5s47.5,47.5,47.5,47.5l47.5-47.5v95"/>
