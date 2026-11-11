@@ -1,0 +1,33 @@
+.hide {
+    display: none !important;
+}
+.show {
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .small\:hide {
+        display: none !important;
+    }
+    .small\:show {
+        display: block !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+    .medium\:hide {
+        display: none !important;
+    }
+    .medium\:show {
+        display: block !important;
+    }
+}
+
+@media (min-width: 1081px) {
+    .large\:hide {
+        display: none !important;
+    }
+    .large\:show {
+        display: block !important;
+    }
+}

@@ -1,0 +1,22 @@
+.border {
+    border: solid var(--color-border) 1px !important;
+}
+
+.selectable {
+    user-select: auto !important;
+    -webkit-touch-callout: default !important;
+}
+.unselectable {
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+}
+
+.overflow-show {
+    overflow: visible !important;
+}
+.overflow-hide {
+    overflow: hidden !important;
+}
+.overflow-scroll {
+    overflow: scroll !important;
+}
