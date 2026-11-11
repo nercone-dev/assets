@@ -60,7 +60,7 @@ jobs:
             exit 1
           fi
 
-          # Without a tag, the files come from the commit the tag will be created on when the release is published.
+          # Without a tag, the tag is created on this commit (the release's target, or the commit the run started from).
           if [ "$tag" = exists ]; then
             ref="refs/tags/$TAG"
           elif [ -n "$release_target" ]; then
@@ -81,11 +81,36 @@ jobs:
           ref: ${{ steps.source.outputs.ref }}
           persist-credentials: false
 
+      # The tag is created before the release, so that the draft is linked to it from the start.
+      # Without this, a draft has no tag (its URL shows untagged-…) until it is published.
+      - name: Create tag if missing
+        if: steps.source.outputs.tag == 'missing'
+        run: |
+          sha=$(git rev-parse HEAD)
+          gh api "repos/$GH_REPO/git/refs" -f "ref=refs/tags/$TAG" -f "sha=$sha" > /dev/null
+          echo "Created tag $TAG at $sha"
+
       - name: Create draft release if missing
         if: steps.source.outputs.release == 'missing'
         run: |
-          gh release create "$TAG" --draft --title "$TAG" --notes "" --target "$(git rev-parse HEAD)"
+          gh release create "$TAG" --draft --verify-tag --title "$TAG" --notes ""
           echo "Created draft release $TAG"
+
+      - name: Link draft release to tag
+        run: |
+          # A draft made before its tag existed stays untagged until its tag is set again.
+          # GitHub may also need a moment to see a tag that was just created.
+          for i in 1 2 3 4 5; do
+            url=$(gh release view "$TAG" --json url --jq .url)
+            case "$url" in
+              */untagged-*) ;;
+              *) echo "Release: $url"; exit 0 ;;
+            esac
+            gh release edit "$TAG" --tag "$TAG" > /dev/null
+            sleep $((i * 3))
+          done
+          echo "::error::Release $TAG is still not linked to its tag: $url"
+          exit 1
 
       - name: Install tools
         run: |
@@ -193,15 +218,8 @@ jobs:
           upload "$out/font.woff2"
 
       - name: Publish draft release
-        env:
-          TAG_STATE: ${{ steps.source.outputs.tag }}
         run: |
           if [ "$(gh release view "$TAG" --json isDraft --jq .isDraft)" = true ]; then
-            # Publishing creates a missing tag at the release's target. Pin the target to the commit
-            # the files came from, in case it is a branch that has moved since.
-            if [ "$TAG_STATE" = missing ]; then
-              gh release edit "$TAG" --target "$(git rev-parse HEAD)"
-            fi
             gh release edit "$TAG" --draft=false
             echo "Published release $TAG"
           else
