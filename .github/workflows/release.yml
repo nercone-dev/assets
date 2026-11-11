@@ -99,18 +99,16 @@ jobs:
       - name: Link draft release to tag
         run: |
           # A draft made before its tag existed stays untagged until its tag is set again.
-          # GitHub may also need a moment to see a tag that was just created.
-          for i in 1 2 3 4 5; do
-            url=$(gh release view "$TAG" --json url --jq .url)
-            case "$url" in
-              */untagged-*) ;;
-              *) echo "Release: $url"; exit 0 ;;
-            esac
-            gh release edit "$TAG" --tag "$TAG" > /dev/null
-            sleep $((i * 3))
-          done
-          echo "::error::Release $TAG is still not linked to its tag: $url"
-          exit 1
+          # The URL of a draft is always .../untagged-<random>, even when it is linked to its tag,
+          # so the link is checked by the release's tag name and the tag's commit, not by its URL.
+          gh release edit "$TAG" --tag "$TAG" > /dev/null
+          release_tag=$(gh release view "$TAG" --json tagName --jq .tagName)
+          if [ "$release_tag" != "$TAG" ]; then
+            echo "::error::Release $TAG has tag name '$release_tag'"
+            exit 1
+          fi
+          sha=$(gh api "repos/$GH_REPO/commits/refs/tags/$TAG" --jq .sha)
+          echo "Release $TAG is linked to tag $TAG at $sha"
 
       - name: Install tools
         run: |
