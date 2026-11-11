@@ -1,0 +1,209 @@
+name: Release
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.event.release.tag_name || inputs.tag }}
+  cancel-in-progress: false
+
+env:
+  TAG: ${{ github.event.release.tag_name || inputs.tag }}
+  GH_TOKEN: ${{ github.token }}
+  GH_REPO: ${{ github.repository }}
+  FONTTOOLS_VERSION: "4.68.0"
+  # GitHub rejects release assets of 2 GiB or more.
+  ASSET_SIZE_LIMIT: "2147483648"
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    steps:
+      - name: Resolve source
+        id: source
+        run: |
+          case "$TAG" in
+            '' | -* | *[!A-Za-z0-9._+-]*)
+              echo "::error::Unsupported tag name: '$TAG' (allowed: A-Z a-z 0-9 . _ + -, not starting with -)"
+              exit 1
+              ;;
+          esac
+
+          # Only "not found" means missing; any other error (rate limit, network) stops the run.
+          if out=$(gh api "repos/$GH_REPO/git/ref/tags/$TAG" 2>&1); then
+            tag=exists
+          elif printf '%s' "$out" | grep -q 'HTTP 404'; then
+            tag=missing
+          else
+            echo "::error::Failed to look up tag $TAG: $out"
+            exit 1
+          fi
+          if out=$(gh release view "$TAG" --json targetCommitish --jq .targetCommitish 2>&1); then
+            release=exists
+            release_target=$out
+          elif [ "$out" = "release not found" ]; then
+            release=missing
+            release_target=
+          else
+            echo "::error::Failed to look up release $TAG: $out"
+            exit 1
+          fi
+
+          # Without a tag, the files come from the commit the tag will be created on when the release is published.
+          if [ "$tag" = exists ]; then
+            ref="refs/tags/$TAG"
+          elif [ -n "$release_target" ]; then
+            ref="$release_target"
+          else
+            ref="$GITHUB_SHA"
+          fi
+          echo "Tag: $tag, release: $release, source: $ref"
+          {
+            echo "tag=$tag"
+            echo "release=$release"
+            echo "ref=$ref"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ steps.source.outputs.ref }}
+          persist-credentials: false
+
+      - name: Create draft release if missing
+        if: steps.source.outputs.release == 'missing'
+        run: |
+          gh release create "$TAG" --draft --title "$TAG" --notes "" --target "$(git rev-parse HEAD)"
+          echo "Created draft release $TAG"
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends p7zip-full woff2 xz-utils zip
+          python3 -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/pip" install --disable-pip-version-check "fonttools==$FONTTOOLS_VERSION"
+
+      - name: Define upload helper
+        run: |
+          # upload FILE: checks the size limit, attaches FILE to the release, then removes it to free disk space.
+          cat > "$RUNNER_TEMP/upload.sh" << 'EOS'
+          upload() {
+            size=$(stat -c %s "$1")
+            echo "${1##*/}: $size bytes"
+            if [ "$size" -ge "$ASSET_SIZE_LIMIT" ]; then
+              echo "::error::${1##*/} is $size bytes, over the release asset limit ($ASSET_SIZE_LIMIT bytes)"
+              return 1
+            fi
+            gh release upload "$TAG" "$1" --clobber
+            rm -f "$1"
+          }
+          EOS
+
+      - name: Build contents
+        run: |
+          export LC_ALL=C
+
+          # Prints the files under $1 matching $2, shallower files first, then by path.
+          # This keeps base files (styles/*.css) before the ones in subdirectories (styles/components/*.css).
+          list() {
+            find "$1" -type f -name "$2" | awk -F/ '{ print NF "\t" $0 }' | sort -t "$(printf '\t')" -k1,1n -k2 | cut -f2-
+          }
+          # Concatenates files, each preceded by a comment with its path.
+          concat() {
+            for f in "$@"; do
+              printf '/* %s */\n' "$f"
+              awk 1 "$f"
+            done
+          }
+
+          name="assets-$TAG"
+          stage="$RUNNER_TEMP/stage/$name"
+          mkdir -p "$stage"
+
+          # Hard links: the files are not modified, so they are not copied.
+          cp -al README.md fonts images scripts sounds styles "$stage/"
+
+          # script.js: initializer.js defines window.nercone, which the other scripts use, so it comes first.
+          mapfile -t scripts < <(list scripts '*.js' | grep -vxF 'scripts/initializer.js')
+          concat scripts/initializer.js "${scripts[@]}" > "$stage/script.js"
+
+          # style.css: noscript.css is only for <noscript>, so it is left out.
+          mapfile -t styles < <(list styles '*.css' | grep -vxF 'styles/noscript.css')
+          [ "${#styles[@]}" -gt 0 ] || { echo "::error::No styles found"; exit 1; }
+          concat "${styles[@]}" > "$stage/style.css"
+
+          ls -l "$stage"
+          echo "STAGE_PARENT=$RUNNER_TEMP/stage" >> "$GITHUB_ENV"
+          echo "ASSET_NAME=$name" >> "$GITHUB_ENV"
+
+      - name: Archive and upload
+        run: |
+          # UTF-8 so that non-ASCII file names (in images/) are stored correctly.
+          export LC_ALL=C.UTF-8
+          out="$RUNNER_TEMP/out"
+          mkdir -p "$out"
+          cd "$STAGE_PARENT"
+          . "$RUNNER_TEMP/upload.sh"
+
+          # Each archive is uploaded and removed before the next one, to keep disk usage low.
+          for ext in zip 7z tar.gz tar.xz; do
+            file="$out/$ASSET_NAME.$ext"
+            echo "::group::$ASSET_NAME.$ext"
+            case "$ext" in
+              zip)    zip -q -r -9 "$file" "$ASSET_NAME" ;;
+              7z)     7z a -bd -t7z -mx=9 -mmt=on "$file" "$ASSET_NAME" > /dev/null ;;
+              tar.gz) tar --sort=name --owner=0 --group=0 --numeric-owner -cf - "$ASSET_NAME" | gzip -9 > "$file" ;;
+              tar.xz) tar --sort=name --owner=0 --group=0 --numeric-owner -cf - "$ASSET_NAME" | xz -9 -T0 > "$file" ;;
+            esac
+            upload "$file"
+            echo "::endgroup::"
+          done
+
+      # Attached as separate assets: inside the archives they made the zip and tar.gz larger than the asset limit.
+      # WOFF 1.0 cannot contain a collection, so only TTC and WOFF2 are made.
+      # woff2_compress takes about 25 minutes and 9 GB of memory for the current fonts.
+      - name: Build and upload font collections
+        run: |
+          export LC_ALL=C
+          . "$RUNNER_TEMP/upload.sh"
+          out="$RUNNER_TEMP/font"
+          mkdir -p "$out"
+
+          fonts=()
+          while IFS= read -r f; do fonts+=("$f"); done < <(find fonts -type f -name '*.ttf' | sort)
+          [ "${#fonts[@]}" -gt 0 ] || { echo "::error::No fonts found"; exit 1; }
+          printf '%s\n' "${fonts[@]}"
+
+          "$RUNNER_TEMP/venv/bin/fonttools" ttLib --no-recalc-timestamp -o "$out/font.ttc" "${fonts[@]}"
+          woff2_compress "$out/font.ttc"
+          [ -s "$out/font.woff2" ] || { echo "::error::woff2_compress did not write font.woff2"; exit 1; }
+
+          upload "$out/font.ttc"
+          upload "$out/font.woff2"
+
+      - name: Publish draft release
+        env:
+          TAG_STATE: ${{ steps.source.outputs.tag }}
+        run: |
+          if [ "$(gh release view "$TAG" --json isDraft --jq .isDraft)" = true ]; then
+            # Publishing creates a missing tag at the release's target. Pin the target to the commit
+            # the files came from, in case it is a branch that has moved since.
+            if [ "$TAG_STATE" = missing ]; then
+              gh release edit "$TAG" --target "$(git rev-parse HEAD)"
+            fi
+            gh release edit "$TAG" --draft=false
+            echo "Published release $TAG"
+          else
+            echo "Release $TAG is already published"
+          fi
