@@ -21,14 +21,18 @@ env:
   TAG: ${{ github.event.release.tag_name || inputs.tag }}
   GH_TOKEN: ${{ github.token }}
   GH_REPO: ${{ github.repository }}
+  ESBUILD_VERSION: "0.28.2"
   FONTTOOLS_VERSION: "4.68.0"
   # GitHub rejects release assets of 2 GiB or more.
   ASSET_SIZE_LIMIT: "2147483648"
 
 jobs:
-  release:
+  # Makes sure the tag and a draft release exist, and resolves the commit that the other jobs build.
+  prepare:
     runs-on: ubuntu-24.04
-    timeout-minutes: 240
+    timeout-minutes: 10
+    outputs:
+      sha: ${{ steps.link.outputs.sha }}
     steps:
       - name: Resolve source
         id: source
@@ -75,18 +79,14 @@ jobs:
             echo "ref=$ref"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Checkout
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          ref: ${{ steps.source.outputs.ref }}
-          persist-credentials: false
-
       # The tag is created before the release, so that the draft is linked to it from the start.
       # Without this, a draft has no tag (its URL shows untagged-…) until it is published.
       - name: Create tag if missing
         if: steps.source.outputs.tag == 'missing'
+        env:
+          REF: ${{ steps.source.outputs.ref }}
         run: |
-          sha=$(git rev-parse HEAD)
+          sha=$(gh api "repos/$GH_REPO/commits/$REF" --jq .sha)
           gh api "repos/$GH_REPO/git/refs" -f "ref=refs/tags/$TAG" -f "sha=$sha" > /dev/null
           echo "Created tag $TAG at $sha"
 
@@ -97,6 +97,7 @@ jobs:
           echo "Created draft release $TAG"
 
       - name: Link draft release to tag
+        id: link
         run: |
           # A draft made before its tag existed stays untagged until its tag is set again.
           # The URL of a draft is always .../untagged-<random>, even when it is linked to its tag,
@@ -109,97 +110,66 @@ jobs:
           fi
           sha=$(gh api "repos/$GH_REPO/commits/refs/tags/$TAG" --jq .sha)
           echo "Release $TAG is linked to tag $TAG at $sha"
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+
+  # Archives of the whole repository, with script.js and style.css built in.
+  contents:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.prepare.outputs.sha }}
+          persist-credentials: false
 
       - name: Install tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends p7zip-full woff2 xz-utils zip
+          sudo apt-get install -y --no-install-recommends p7zip-full xz-utils zip
+          # --ignore-scripts: the bin/esbuild shim runs the binary of the platform package installed as an optional dependency,
+          # so esbuild's install script (which only verifies and optimizes that setup) is not needed.
+          npm install --prefix "$RUNNER_TEMP/esbuild" --no-save --no-audit --no-fund --ignore-scripts "esbuild@$ESBUILD_VERSION"
+          echo "ESBUILD=$RUNNER_TEMP/esbuild/node_modules/.bin/esbuild" >> "$GITHUB_ENV"
+
+      # Writes dist/assets-$TAG/ and its archives (see tools/build.sh).
+      - name: Build contents
+        run: |
+          "$ESBUILD" --version
+          tools/build.sh "$TAG"
+
+      - name: Upload contents
+        run: .github/scripts/upload.sh dist/assets-"$TAG".zip dist/assets-"$TAG".7z dist/assets-"$TAG".tar.gz dist/assets-"$TAG".tar.xz
+
+  # Attached as separate assets: inside the archives they made the zip and tar.gz larger than the asset limit.
+  # WOFF 1.0 cannot contain a collection, so only TTC and WOFF2 are made.
+  # woff2_compress needs about 9 GB of memory for the current fonts; the whole job took about an hour in a recent run.
+  fonts:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      # Only fonts/ and the upload script are needed; images/ and sounds/ are not checked out.
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.prepare.outputs.sha }}
+          persist-credentials: false
+          sparse-checkout: |
+            .github/scripts
+            fonts
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends woff2
           python3 -m venv "$RUNNER_TEMP/venv"
           "$RUNNER_TEMP/venv/bin/pip" install --disable-pip-version-check "fonttools==$FONTTOOLS_VERSION"
 
-      - name: Define upload helper
-        run: |
-          # upload FILE: checks the size limit, attaches FILE to the release, then removes it to free disk space.
-          cat > "$RUNNER_TEMP/upload.sh" << 'EOS'
-          upload() {
-            size=$(stat -c %s "$1")
-            echo "${1##*/}: $size bytes"
-            if [ "$size" -ge "$ASSET_SIZE_LIMIT" ]; then
-              echo "::error::${1##*/} is $size bytes, over the release asset limit ($ASSET_SIZE_LIMIT bytes)"
-              return 1
-            fi
-            gh release upload "$TAG" "$1" --clobber
-            rm -f "$1"
-          }
-          EOS
-
-      - name: Build contents
-        run: |
-          export LC_ALL=C
-
-          # Prints the files under $1 matching $2, shallower files first, then by path.
-          # This keeps base files (styles/*.css) before the ones in subdirectories (styles/components/*.css).
-          list() {
-            find "$1" -type f -name "$2" | awk -F/ '{ print NF "\t" $0 }' | sort -t "$(printf '\t')" -k1,1n -k2 | cut -f2-
-          }
-          # Concatenates files, each preceded by a comment with its path.
-          concat() {
-            for f in "$@"; do
-              printf '/* %s */\n' "$f"
-              awk 1 "$f"
-            done
-          }
-
-          name="assets-$TAG"
-          stage="$RUNNER_TEMP/stage/$name"
-          mkdir -p "$stage"
-
-          # Hard links: the files are not modified, so they are not copied.
-          cp -al README.md fonts images scripts sounds styles "$stage/"
-
-          # script.js: initializer.js defines window.nercone, which the other scripts use, so it comes first.
-          mapfile -t scripts < <(list scripts '*.js' | grep -vxF 'scripts/initializer.js')
-          concat scripts/initializer.js "${scripts[@]}" > "$stage/script.js"
-
-          # style.css: noscript.css is only for <noscript>, so it is left out.
-          mapfile -t styles < <(list styles '*.css' | grep -vxF 'styles/noscript.css')
-          [ "${#styles[@]}" -gt 0 ] || { echo "::error::No styles found"; exit 1; }
-          concat "${styles[@]}" > "$stage/style.css"
-
-          ls -l "$stage"
-          echo "STAGE_PARENT=$RUNNER_TEMP/stage" >> "$GITHUB_ENV"
-          echo "ASSET_NAME=$name" >> "$GITHUB_ENV"
-
-      - name: Archive and upload
-        run: |
-          # UTF-8 so that non-ASCII file names (in images/) are stored correctly.
-          export LC_ALL=C.UTF-8
-          out="$RUNNER_TEMP/out"
-          mkdir -p "$out"
-          cd "$STAGE_PARENT"
-          . "$RUNNER_TEMP/upload.sh"
-
-          # Each archive is uploaded and removed before the next one, to keep disk usage low.
-          for ext in zip 7z tar.gz tar.xz; do
-            file="$out/$ASSET_NAME.$ext"
-            echo "::group::$ASSET_NAME.$ext"
-            case "$ext" in
-              zip)    zip -q -r -9 "$file" "$ASSET_NAME" ;;
-              7z)     7z a -bd -t7z -mx=9 -mmt=on "$file" "$ASSET_NAME" > /dev/null ;;
-              tar.gz) tar --sort=name --owner=0 --group=0 --numeric-owner -cf - "$ASSET_NAME" | gzip -9 > "$file" ;;
-              tar.xz) tar --sort=name --owner=0 --group=0 --numeric-owner -cf - "$ASSET_NAME" | xz -9 -T0 > "$file" ;;
-            esac
-            upload "$file"
-            echo "::endgroup::"
-          done
-
-      # Attached as separate assets: inside the archives they made the zip and tar.gz larger than the asset limit.
-      # WOFF 1.0 cannot contain a collection, so only TTC and WOFF2 are made.
-      # woff2_compress takes about 25 minutes and 9 GB of memory for the current fonts.
       - name: Build and upload font collections
         run: |
           export LC_ALL=C
-          . "$RUNNER_TEMP/upload.sh"
           out="$RUNNER_TEMP/font"
           mkdir -p "$out"
 
@@ -212,9 +182,14 @@ jobs:
           woff2_compress "$out/font.ttc"
           [ -s "$out/font.woff2" ] || { echo "::error::woff2_compress did not write font.woff2"; exit 1; }
 
-          upload "$out/font.ttc"
-          upload "$out/font.woff2"
+          .github/scripts/upload.sh "$out/font.ttc" "$out/font.woff2"
 
+  # Published only after every asset is attached, so a failed run leaves a draft instead of an incomplete release.
+  publish:
+    needs: [contents, fonts]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
       - name: Publish draft release
         run: |
           if [ "$(gh release view "$TAG" --json isDraft --jq .isDraft)" = true ]; then
