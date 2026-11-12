@@ -178,11 +178,11 @@ jobs:
           [ "${#fonts[@]}" -gt 0 ] || { echo "::error::No fonts found"; exit 1; }
           printf '%s\n' "${fonts[@]}"
 
-          "$RUNNER_TEMP/venv/bin/fonttools" ttLib --no-recalc-timestamp -o "$out/font.ttc" "${fonts[@]}"
-          woff2_compress "$out/font.ttc"
-          [ -s "$out/font.woff2" ] || { echo "::error::woff2_compress did not write font.woff2"; exit 1; }
+          "$RUNNER_TEMP/venv/bin/fonttools" ttLib --no-recalc-timestamp -o "$out/fonts.ttc" "${fonts[@]}"
+          woff2_compress "$out/fonts.ttc"
+          [ -s "$out/fonts.woff2" ] || { echo "::error::woff2_compress did not write fonts.woff2"; exit 1; }
 
-          .github/scripts/upload.sh "$out/font.ttc" "$out/font.woff2"
+          .github/scripts/upload.sh "$out/fonts.ttc" "$out/fonts.woff2"
 
   # Published only after every asset is attached, so a failed run leaves a draft instead of an incomplete release.
   publish:

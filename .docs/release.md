@@ -8,7 +8,7 @@ The workflow runs on a created release or by hand with a tag (`workflow_dispatch
 
 1. `prepare`: checks the tag name, creates the tag and a draft release when they are missing, links the draft to the tag, and outputs the tag's commit SHA. The other jobs check out this SHA, so they all build the same commit even if the tag or a branch moves during the run.
 2. `contents`: runs `tools/build.sh <tag>` and attaches the archives it writes, `assets-<tag>.{zip,7z,tar.gz,tar.xz}`.
-3. `fonts`: attaches every font in `fonts/` as one collection, `font.ttc` and `font.woff2`.
+3. `fonts`: attaches every font in `fonts/` as one collection, `fonts.ttc` and `fonts.woff2`.
 4. `publish`: publishes the draft. It needs both `contents` and `fonts`, so a failed run leaves a draft instead of a published release with missing assets.
 
 `contents` and `fonts` run in parallel. Before they were split, they ran one after another in one job, and the font collection (`woff2_compress` needs about 9 GB of memory, and the font step took about 50 minutes in a recent run) made the run long. Each job also gets its own runner disk. `fonts` uses a sparse checkout (`fonts/` and `.github/scripts/`), since it does not need `images/` or `sounds/`.
