@@ -20,31 +20,31 @@ a:has(> .block) {
 }
 
 .block-note {
-    border-color: var(--color-note);
+    border-color: var(--color-note-normal);
 }
 .block-note > b:first-child {
     color: var(--color-note-bright);
 }
 .block-tip {
-    border-color: var(--color-tip);
+    border-color: var(--color-tip-normal);
 }
 .block-tip > b:first-child {
     color: var(--color-tip-bright);
 }
 .block-important {
-    border-color: var(--color-important);
+    border-color: var(--color-important-normal);
 }
 .block-important > b:first-child {
     color: var(--color-important-bright);
 }
 .block-warning {
-    border-color: var(--color-warning);
+    border-color: var(--color-warning-normal);
 }
 .block-warning > b:first-child {
     color: var(--color-warning-bright);
 }
 .block-caution {
-    border-color: var(--color-caution);
+    border-color: var(--color-caution-normal);
 }
 .block-caution > b:first-child {
     color: var(--color-caution-bright);

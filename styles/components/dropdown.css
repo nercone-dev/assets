@@ -55,10 +55,10 @@
 }
 
 .dropdown:user-invalid, :where(select):user-invalid {
-    border-color: var(--color-error);
+    border-color: var(--color-error-normal);
 }
 .dropdown[aria-invalid="true"], :where(select)[aria-invalid="true"] {
-    border-color: var(--color-error);
+    border-color: var(--color-error-normal);
 }
 
 .dropdown:disabled, :where(select):disabled {
