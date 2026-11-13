@@ -1,201 +1,302 @@
 :root {
-    --color-grey-0:   hwb(0 0% 100%);
-    --color-grey-5:   hwb(0 5% 95%);
-    --color-grey-10:  hwb(0 10% 90%);
-    --color-grey-15:  hwb(0 15% 85%);
-    --color-grey-20:  hwb(0 20% 80%);
-    --color-grey-25:  hwb(0 25% 75%);
-    --color-grey-30:  hwb(0 30% 70%);
-    --color-grey-35:  hwb(0 35% 65%);
-    --color-grey-40:  hwb(0 40% 60%);
-    --color-grey-45:  hwb(0 45% 55%);
-    --color-grey-50:  hwb(0 50% 50%);
-    --color-grey-55:  hwb(0 55% 45%);
-    --color-grey-60:  hwb(0 60% 40%);
-    --color-grey-65:  hwb(0 65% 35%);
-    --color-grey-70:  hwb(0 70% 30%);
-    --color-grey-75:  hwb(0 75% 25%);
-    --color-grey-80:  hwb(0 80% 20%);
-    --color-grey-85:  hwb(0 85% 15%);
-    --color-grey-90:  hwb(0 90% 10%);
-    --color-grey-95:  hwb(0 95% 5%);
-    --color-grey-100: hwb(0 100% 0%);
+    --color-black: hwb(0 0% 100%);
+    --color-white: hwb(0 100% 0%);
 
-    --color-red-0:   hwb(0 0%    100%);
-    --color-red-5:   hwb(0 1.5%  95%);
-    --color-red-10:  hwb(0 3%    90%);
-    --color-red-15:  hwb(0 4.5%  85%);
-    --color-red-20:  hwb(0 6%    80%);
-    --color-red-25:  hwb(0 7.5%  75%);
-    --color-red-30:  hwb(0 9%    70%);
-    --color-red-35:  hwb(0 10.5% 65%);
-    --color-red-40:  hwb(0 12%   60%);
-    --color-red-45:  hwb(0 13.5% 55%);
-    --color-red-50:  hwb(0 15%   50%);
-    --color-red-55:  hwb(0 16.5% 45%);
-    --color-red-60:  hwb(0 18%   40%);
-    --color-red-65:  hwb(0 19.5% 35%);
-    --color-red-70:  hwb(0 21%   30%);
-    --color-red-75:  hwb(0 22.5% 25%);
-    --color-red-80:  hwb(0 24%   20%);
-    --color-red-85:  hwb(0 25.5% 15%);
-    --color-red-90:  hwb(0 27%   10%);
-    --color-red-95:  hwb(0 28.5% 5%);
-    --color-red-100: hwb(0 30%   0%);
+    --color-grey:    hwb(0   100% 0%);
+    --color-red:     hwb(0    30% 0%);
+    --color-orange:  hwb(30    0% 0%);
+    --color-yellow:  hwb(50    0% 0%);
+    --color-green:   hwb(130   0% 0%);
+    --color-emerald: hwb(150   0% 0%);
+    --color-cyan:    hwb(200  20% 0%);
+    --color-blue:    hwb(220  30% 0%);
+    --color-indigo:  hwb(230  30% 0%);
+    --color-purple:  hwb(260  20% 0%);
+    --color-pink:    hwb(330  30% 0%);
 
-    --color-orange-0:   hwb(30 0% 100%);
-    --color-orange-5:   hwb(30 0% 95%);
-    --color-orange-10:  hwb(30 0% 90%);
-    --color-orange-15:  hwb(30 0% 85%);
-    --color-orange-20:  hwb(30 0% 80%);
-    --color-orange-25:  hwb(30 0% 75%);
-    --color-orange-30:  hwb(30 0% 70%);
-    --color-orange-35:  hwb(30 0% 65%);
-    --color-orange-40:  hwb(30 0% 60%);
-    --color-orange-45:  hwb(30 0% 55%);
-    --color-orange-50:  hwb(30 0% 50%);
-    --color-orange-55:  hwb(30 0% 45%);
-    --color-orange-60:  hwb(30 0% 40%);
-    --color-orange-65:  hwb(30 0% 35%);
-    --color-orange-70:  hwb(30 0% 30%);
-    --color-orange-75:  hwb(30 0% 25%);
-    --color-orange-80:  hwb(30 0% 20%);
-    --color-orange-85:  hwb(30 0% 15%);
-    --color-orange-90:  hwb(30 0% 10%);
-    --color-orange-95:  hwb(30 0% 5%);
-    --color-orange-100: hwb(30 0% 0%);
+    /* Brightness */
 
-    --color-yellow-0:   hwb(50 0% 100%);
-    --color-yellow-5:   hwb(50 0% 95%);
-    --color-yellow-10:  hwb(50 0% 90%);
-    --color-yellow-15:  hwb(50 0% 85%);
-    --color-yellow-20:  hwb(50 0% 80%);
-    --color-yellow-25:  hwb(50 0% 75%);
-    --color-yellow-30:  hwb(50 0% 70%);
-    --color-yellow-35:  hwb(50 0% 65%);
-    --color-yellow-40:  hwb(50 0% 60%);
-    --color-yellow-45:  hwb(50 0% 55%);
-    --color-yellow-50:  hwb(50 0% 50%);
-    --color-yellow-55:  hwb(50 0% 45%);
-    --color-yellow-60:  hwb(50 0% 40%);
-    --color-yellow-65:  hwb(50 0% 35%);
-    --color-yellow-70:  hwb(50 0% 30%);
-    --color-yellow-75:  hwb(50 0% 25%);
-    --color-yellow-80:  hwb(50 0% 20%);
-    --color-yellow-85:  hwb(50 0% 15%);
-    --color-yellow-90:  hwb(50 0% 10%);
-    --color-yellow-95:  hwb(50 0% 5%);
-    --color-yellow-100: hwb(50 0% 0%);
+    --color-grey-0:   color-mix(in srgb, var(--color-grey) 0%, var(--color-black));
+    --color-grey-5:   color-mix(in srgb, var(--color-grey) 5%, var(--color-black));
+    --color-grey-10:  color-mix(in srgb, var(--color-grey) 10%, var(--color-black));
+    --color-grey-15:  color-mix(in srgb, var(--color-grey) 15%, var(--color-black));
+    --color-grey-20:  color-mix(in srgb, var(--color-grey) 20%, var(--color-black));
+    --color-grey-25:  color-mix(in srgb, var(--color-grey) 25%, var(--color-black));
+    --color-grey-30:  color-mix(in srgb, var(--color-grey) 30%, var(--color-black));
+    --color-grey-35:  color-mix(in srgb, var(--color-grey) 35%, var(--color-black));
+    --color-grey-40:  color-mix(in srgb, var(--color-grey) 40%, var(--color-black));
+    --color-grey-45:  color-mix(in srgb, var(--color-grey) 45%, var(--color-black));
+    --color-grey-50:  color-mix(in srgb, var(--color-grey) 50%, var(--color-black));
+    --color-grey-55:  color-mix(in srgb, var(--color-grey) 55%, var(--color-black));
+    --color-grey-60:  color-mix(in srgb, var(--color-grey) 60%, var(--color-black));
+    --color-grey-65:  color-mix(in srgb, var(--color-grey) 65%, var(--color-black));
+    --color-grey-70:  color-mix(in srgb, var(--color-grey) 70%, var(--color-black));
+    --color-grey-75:  color-mix(in srgb, var(--color-grey) 75%, var(--color-black));
+    --color-grey-80:  color-mix(in srgb, var(--color-grey) 80%, var(--color-black));
+    --color-grey-85:  color-mix(in srgb, var(--color-grey) 85%, var(--color-black));
+    --color-grey-90:  color-mix(in srgb, var(--color-grey) 90%, var(--color-black));
+    --color-grey-95:  color-mix(in srgb, var(--color-grey) 95%, var(--color-black));
+    --color-grey-100: color-mix(in srgb, var(--color-grey) 100%, var(--color-black));
 
-    --color-green-0:   hwb(150 0% 100%);
-    --color-green-5:   hwb(150 0% 95%);
-    --color-green-10:  hwb(150 0% 90%);
-    --color-green-15:  hwb(150 0% 85%);
-    --color-green-20:  hwb(150 0% 80%);
-    --color-green-25:  hwb(150 0% 75%);
-    --color-green-30:  hwb(150 0% 70%);
-    --color-green-35:  hwb(150 0% 65%);
-    --color-green-40:  hwb(150 0% 60%);
-    --color-green-45:  hwb(150 0% 55%);
-    --color-green-50:  hwb(150 0% 50%);
-    --color-green-55:  hwb(150 0% 45%);
-    --color-green-60:  hwb(150 0% 40%);
-    --color-green-65:  hwb(150 0% 35%);
-    --color-green-70:  hwb(150 0% 30%);
-    --color-green-75:  hwb(150 0% 25%);
-    --color-green-80:  hwb(150 0% 20%);
-    --color-green-85:  hwb(150 0% 15%);
-    --color-green-90:  hwb(150 0% 10%);
-    --color-green-95:  hwb(150 0% 5%);
-    --color-green-100: hwb(150 0% 0%);
+    --color-red-0:   color-mix(in srgb, var(--color-red) 0%, var(--color-black));
+    --color-red-5:   color-mix(in srgb, var(--color-red) 5%, var(--color-black));
+    --color-red-10:  color-mix(in srgb, var(--color-red) 10%, var(--color-black));
+    --color-red-15:  color-mix(in srgb, var(--color-red) 15%, var(--color-black));
+    --color-red-20:  color-mix(in srgb, var(--color-red) 20%, var(--color-black));
+    --color-red-25:  color-mix(in srgb, var(--color-red) 25%, var(--color-black));
+    --color-red-30:  color-mix(in srgb, var(--color-red) 30%, var(--color-black));
+    --color-red-35:  color-mix(in srgb, var(--color-red) 35%, var(--color-black));
+    --color-red-40:  color-mix(in srgb, var(--color-red) 40%, var(--color-black));
+    --color-red-45:  color-mix(in srgb, var(--color-red) 45%, var(--color-black));
+    --color-red-50:  color-mix(in srgb, var(--color-red) 50%, var(--color-black));
+    --color-red-55:  color-mix(in srgb, var(--color-red) 55%, var(--color-black));
+    --color-red-60:  color-mix(in srgb, var(--color-red) 60%, var(--color-black));
+    --color-red-65:  color-mix(in srgb, var(--color-red) 65%, var(--color-black));
+    --color-red-70:  color-mix(in srgb, var(--color-red) 70%, var(--color-black));
+    --color-red-75:  color-mix(in srgb, var(--color-red) 75%, var(--color-black));
+    --color-red-80:  color-mix(in srgb, var(--color-red) 80%, var(--color-black));
+    --color-red-85:  color-mix(in srgb, var(--color-red) 85%, var(--color-black));
+    --color-red-90:  color-mix(in srgb, var(--color-red) 90%, var(--color-black));
+    --color-red-95:  color-mix(in srgb, var(--color-red) 95%, var(--color-black));
+    --color-red-100: color-mix(in srgb, var(--color-red) 100%, var(--color-black));
 
-    --color-cyan-0:   hwb(200 0% 100%);
-    --color-cyan-5:   hwb(200 1% 95%);
-    --color-cyan-10:  hwb(200 2% 90%);
-    --color-cyan-15:  hwb(200 3% 85%);
-    --color-cyan-20:  hwb(200 4% 80%);
-    --color-cyan-25:  hwb(200 5% 75%);
-    --color-cyan-30:  hwb(200 6% 70%);
-    --color-cyan-35:  hwb(200 7% 65%);
-    --color-cyan-40:  hwb(200 8% 60%);
-    --color-cyan-45:  hwb(200 9% 55%);
-    --color-cyan-50:  hwb(200 10% 50%);
-    --color-cyan-55:  hwb(200 11% 45%);
-    --color-cyan-60:  hwb(200 12% 40%);
-    --color-cyan-65:  hwb(200 13% 35%);
-    --color-cyan-70:  hwb(200 14% 30%);
-    --color-cyan-75:  hwb(200 15% 25%);
-    --color-cyan-80:  hwb(200 16% 20%);
-    --color-cyan-85:  hwb(200 17% 15%);
-    --color-cyan-90:  hwb(200 18% 10%);
-    --color-cyan-95:  hwb(200 19% 5%);
-    --color-cyan-100: hwb(200 20% 0%);
+    --color-orange-0:   color-mix(in srgb, var(--color-orange) 0%, var(--color-black));
+    --color-orange-5:   color-mix(in srgb, var(--color-orange) 5%, var(--color-black));
+    --color-orange-10:  color-mix(in srgb, var(--color-orange) 10%, var(--color-black));
+    --color-orange-15:  color-mix(in srgb, var(--color-orange) 15%, var(--color-black));
+    --color-orange-20:  color-mix(in srgb, var(--color-orange) 20%, var(--color-black));
+    --color-orange-25:  color-mix(in srgb, var(--color-orange) 25%, var(--color-black));
+    --color-orange-30:  color-mix(in srgb, var(--color-orange) 30%, var(--color-black));
+    --color-orange-35:  color-mix(in srgb, var(--color-orange) 35%, var(--color-black));
+    --color-orange-40:  color-mix(in srgb, var(--color-orange) 40%, var(--color-black));
+    --color-orange-45:  color-mix(in srgb, var(--color-orange) 45%, var(--color-black));
+    --color-orange-50:  color-mix(in srgb, var(--color-orange) 50%, var(--color-black));
+    --color-orange-55:  color-mix(in srgb, var(--color-orange) 55%, var(--color-black));
+    --color-orange-60:  color-mix(in srgb, var(--color-orange) 60%, var(--color-black));
+    --color-orange-65:  color-mix(in srgb, var(--color-orange) 65%, var(--color-black));
+    --color-orange-70:  color-mix(in srgb, var(--color-orange) 70%, var(--color-black));
+    --color-orange-75:  color-mix(in srgb, var(--color-orange) 75%, var(--color-black));
+    --color-orange-80:  color-mix(in srgb, var(--color-orange) 80%, var(--color-black));
+    --color-orange-85:  color-mix(in srgb, var(--color-orange) 85%, var(--color-black));
+    --color-orange-90:  color-mix(in srgb, var(--color-orange) 90%, var(--color-black));
+    --color-orange-95:  color-mix(in srgb, var(--color-orange) 95%, var(--color-black));
+    --color-orange-100: color-mix(in srgb, var(--color-orange) 100%, var(--color-black));
 
-    --color-blue-0:   hwb(210 0%    100%);
-    --color-blue-5:   hwb(210 1.5%  95%);
-    --color-blue-10:  hwb(210 3%    90%);
-    --color-blue-15:  hwb(210 4.5%  85%);
-    --color-blue-20:  hwb(210 6%    80%);
-    --color-blue-25:  hwb(210 7.5%  75%);
-    --color-blue-30:  hwb(210 9%    70%);
-    --color-blue-35:  hwb(210 10.5% 65%);
-    --color-blue-40:  hwb(210 12%   60%);
-    --color-blue-45:  hwb(210 13.5% 55%);
-    --color-blue-50:  hwb(210 15%   50%);
-    --color-blue-55:  hwb(210 16.5% 45%);
-    --color-blue-60:  hwb(210 18%   40%);
-    --color-blue-65:  hwb(210 19.5% 35%);
-    --color-blue-70:  hwb(210 21%   30%);
-    --color-blue-75:  hwb(210 22.5% 25%);
-    --color-blue-80:  hwb(210 24%   20%);
-    --color-blue-85:  hwb(210 25.5% 15%);
-    --color-blue-90:  hwb(210 27%   10%);
-    --color-blue-95:  hwb(210 28.5% 5%);
-    --color-blue-100: hwb(210 30%   0%);
+    --color-yellow-0:   color-mix(in srgb, var(--color-yellow) 0%, var(--color-black));
+    --color-yellow-5:   color-mix(in srgb, var(--color-yellow) 5%, var(--color-black));
+    --color-yellow-10:  color-mix(in srgb, var(--color-yellow) 10%, var(--color-black));
+    --color-yellow-15:  color-mix(in srgb, var(--color-yellow) 15%, var(--color-black));
+    --color-yellow-20:  color-mix(in srgb, var(--color-yellow) 20%, var(--color-black));
+    --color-yellow-25:  color-mix(in srgb, var(--color-yellow) 25%, var(--color-black));
+    --color-yellow-30:  color-mix(in srgb, var(--color-yellow) 30%, var(--color-black));
+    --color-yellow-35:  color-mix(in srgb, var(--color-yellow) 35%, var(--color-black));
+    --color-yellow-40:  color-mix(in srgb, var(--color-yellow) 40%, var(--color-black));
+    --color-yellow-45:  color-mix(in srgb, var(--color-yellow) 45%, var(--color-black));
+    --color-yellow-50:  color-mix(in srgb, var(--color-yellow) 50%, var(--color-black));
+    --color-yellow-55:  color-mix(in srgb, var(--color-yellow) 55%, var(--color-black));
+    --color-yellow-60:  color-mix(in srgb, var(--color-yellow) 60%, var(--color-black));
+    --color-yellow-65:  color-mix(in srgb, var(--color-yellow) 65%, var(--color-black));
+    --color-yellow-70:  color-mix(in srgb, var(--color-yellow) 70%, var(--color-black));
+    --color-yellow-75:  color-mix(in srgb, var(--color-yellow) 75%, var(--color-black));
+    --color-yellow-80:  color-mix(in srgb, var(--color-yellow) 80%, var(--color-black));
+    --color-yellow-85:  color-mix(in srgb, var(--color-yellow) 85%, var(--color-black));
+    --color-yellow-90:  color-mix(in srgb, var(--color-yellow) 90%, var(--color-black));
+    --color-yellow-95:  color-mix(in srgb, var(--color-yellow) 95%, var(--color-black));
+    --color-yellow-100: color-mix(in srgb, var(--color-yellow) 100%, var(--color-black));
 
-    --color-purple-0:   hwb(270 0% 100%);
-    --color-purple-5:   hwb(270 2% 95%);
-    --color-purple-10:  hwb(270 4% 90%);
-    --color-purple-15:  hwb(270 6% 85%);
-    --color-purple-20:  hwb(270 8% 80%);
-    --color-purple-25:  hwb(270 10% 75%);
-    --color-purple-30:  hwb(270 12% 70%);
-    --color-purple-35:  hwb(270 14% 65%);
-    --color-purple-40:  hwb(270 16% 60%);
-    --color-purple-45:  hwb(270 18% 55%);
-    --color-purple-50:  hwb(270 20% 50%);
-    --color-purple-55:  hwb(270 22% 45%);
-    --color-purple-60:  hwb(270 24% 40%);
-    --color-purple-65:  hwb(270 26% 35%);
-    --color-purple-70:  hwb(270 28% 30%);
-    --color-purple-75:  hwb(270 30% 25%);
-    --color-purple-80:  hwb(270 32% 20%);
-    --color-purple-85:  hwb(270 34% 15%);
-    --color-purple-90:  hwb(270 36% 10%);
-    --color-purple-95:  hwb(270 38% 5%);
-    --color-purple-100: hwb(270 40% 0%);
+    --color-green-0:   color-mix(in srgb, var(--color-green) 0%, var(--color-black));
+    --color-green-5:   color-mix(in srgb, var(--color-green) 5%, var(--color-black));
+    --color-green-10:  color-mix(in srgb, var(--color-green) 10%, var(--color-black));
+    --color-green-15:  color-mix(in srgb, var(--color-green) 15%, var(--color-black));
+    --color-green-20:  color-mix(in srgb, var(--color-green) 20%, var(--color-black));
+    --color-green-25:  color-mix(in srgb, var(--color-green) 25%, var(--color-black));
+    --color-green-30:  color-mix(in srgb, var(--color-green) 30%, var(--color-black));
+    --color-green-35:  color-mix(in srgb, var(--color-green) 35%, var(--color-black));
+    --color-green-40:  color-mix(in srgb, var(--color-green) 40%, var(--color-black));
+    --color-green-45:  color-mix(in srgb, var(--color-green) 45%, var(--color-black));
+    --color-green-50:  color-mix(in srgb, var(--color-green) 50%, var(--color-black));
+    --color-green-55:  color-mix(in srgb, var(--color-green) 55%, var(--color-black));
+    --color-green-60:  color-mix(in srgb, var(--color-green) 60%, var(--color-black));
+    --color-green-65:  color-mix(in srgb, var(--color-green) 65%, var(--color-black));
+    --color-green-70:  color-mix(in srgb, var(--color-green) 70%, var(--color-black));
+    --color-green-75:  color-mix(in srgb, var(--color-green) 75%, var(--color-black));
+    --color-green-80:  color-mix(in srgb, var(--color-green) 80%, var(--color-black));
+    --color-green-85:  color-mix(in srgb, var(--color-green) 85%, var(--color-black));
+    --color-green-90:  color-mix(in srgb, var(--color-green) 90%, var(--color-black));
+    --color-green-95:  color-mix(in srgb, var(--color-green) 95%, var(--color-black));
+    --color-green-100: color-mix(in srgb, var(--color-green) 100%, var(--color-black));
 
-    --color-pink-0:   hwb(300 0% 100%);
-    --color-pink-5:   hwb(300 1% 95%);
-    --color-pink-10:  hwb(300 2% 90%);
-    --color-pink-15:  hwb(300 3% 85%);
-    --color-pink-20:  hwb(300 4% 80%);
-    --color-pink-25:  hwb(300 5% 75%);
-    --color-pink-30:  hwb(300 6% 70%);
-    --color-pink-35:  hwb(300 7% 65%);
-    --color-pink-40:  hwb(300 8% 60%);
-    --color-pink-45:  hwb(300 9% 55%);
-    --color-pink-50:  hwb(300 10% 50%);
-    --color-pink-55:  hwb(300 11% 45%);
-    --color-pink-60:  hwb(300 12% 40%);
-    --color-pink-65:  hwb(300 13% 35%);
-    --color-pink-70:  hwb(300 14% 30%);
-    --color-pink-75:  hwb(300 15% 25%);
-    --color-pink-80:  hwb(300 16% 20%);
-    --color-pink-85:  hwb(300 17% 15%);
-    --color-pink-90:  hwb(300 18% 10%);
-    --color-pink-95:  hwb(300 19% 5%);
-    --color-pink-100: hwb(300 20% 0%);
+    --color-emerald-0:   color-mix(in srgb, var(--color-emerald) 0%, var(--color-black));
+    --color-emerald-5:   color-mix(in srgb, var(--color-emerald) 5%, var(--color-black));
+    --color-emerald-10:  color-mix(in srgb, var(--color-emerald) 10%, var(--color-black));
+    --color-emerald-15:  color-mix(in srgb, var(--color-emerald) 15%, var(--color-black));
+    --color-emerald-20:  color-mix(in srgb, var(--color-emerald) 20%, var(--color-black));
+    --color-emerald-25:  color-mix(in srgb, var(--color-emerald) 25%, var(--color-black));
+    --color-emerald-30:  color-mix(in srgb, var(--color-emerald) 30%, var(--color-black));
+    --color-emerald-35:  color-mix(in srgb, var(--color-emerald) 35%, var(--color-black));
+    --color-emerald-40:  color-mix(in srgb, var(--color-emerald) 40%, var(--color-black));
+    --color-emerald-45:  color-mix(in srgb, var(--color-emerald) 45%, var(--color-black));
+    --color-emerald-50:  color-mix(in srgb, var(--color-emerald) 50%, var(--color-black));
+    --color-emerald-55:  color-mix(in srgb, var(--color-emerald) 55%, var(--color-black));
+    --color-emerald-60:  color-mix(in srgb, var(--color-emerald) 60%, var(--color-black));
+    --color-emerald-65:  color-mix(in srgb, var(--color-emerald) 65%, var(--color-black));
+    --color-emerald-70:  color-mix(in srgb, var(--color-emerald) 70%, var(--color-black));
+    --color-emerald-75:  color-mix(in srgb, var(--color-emerald) 75%, var(--color-black));
+    --color-emerald-80:  color-mix(in srgb, var(--color-emerald) 80%, var(--color-black));
+    --color-emerald-85:  color-mix(in srgb, var(--color-emerald) 85%, var(--color-black));
+    --color-emerald-90:  color-mix(in srgb, var(--color-emerald) 90%, var(--color-black));
+    --color-emerald-95:  color-mix(in srgb, var(--color-emerald) 95%, var(--color-black));
+    --color-emerald-100: color-mix(in srgb, var(--color-emerald) 100%, var(--color-black));
+
+    --color-cyan-0:   color-mix(in srgb, var(--color-cyan) 0%, var(--color-black));
+    --color-cyan-5:   color-mix(in srgb, var(--color-cyan) 5%, var(--color-black));
+    --color-cyan-10:  color-mix(in srgb, var(--color-cyan) 10%, var(--color-black));
+    --color-cyan-15:  color-mix(in srgb, var(--color-cyan) 15%, var(--color-black));
+    --color-cyan-20:  color-mix(in srgb, var(--color-cyan) 20%, var(--color-black));
+    --color-cyan-25:  color-mix(in srgb, var(--color-cyan) 25%, var(--color-black));
+    --color-cyan-30:  color-mix(in srgb, var(--color-cyan) 30%, var(--color-black));
+    --color-cyan-35:  color-mix(in srgb, var(--color-cyan) 35%, var(--color-black));
+    --color-cyan-40:  color-mix(in srgb, var(--color-cyan) 40%, var(--color-black));
+    --color-cyan-45:  color-mix(in srgb, var(--color-cyan) 45%, var(--color-black));
+    --color-cyan-50:  color-mix(in srgb, var(--color-cyan) 50%, var(--color-black));
+    --color-cyan-55:  color-mix(in srgb, var(--color-cyan) 55%, var(--color-black));
+    --color-cyan-60:  color-mix(in srgb, var(--color-cyan) 60%, var(--color-black));
+    --color-cyan-65:  color-mix(in srgb, var(--color-cyan) 65%, var(--color-black));
+    --color-cyan-70:  color-mix(in srgb, var(--color-cyan) 70%, var(--color-black));
+    --color-cyan-75:  color-mix(in srgb, var(--color-cyan) 75%, var(--color-black));
+    --color-cyan-80:  color-mix(in srgb, var(--color-cyan) 80%, var(--color-black));
+    --color-cyan-85:  color-mix(in srgb, var(--color-cyan) 85%, var(--color-black));
+    --color-cyan-90:  color-mix(in srgb, var(--color-cyan) 90%, var(--color-black));
+    --color-cyan-95:  color-mix(in srgb, var(--color-cyan) 95%, var(--color-black));
+    --color-cyan-100: color-mix(in srgb, var(--color-cyan) 100%, var(--color-black));
+
+    --color-blue-0:   color-mix(in srgb, var(--color-blue) 0%, var(--color-black));
+    --color-blue-5:   color-mix(in srgb, var(--color-blue) 5%, var(--color-black));
+    --color-blue-10:  color-mix(in srgb, var(--color-blue) 10%, var(--color-black));
+    --color-blue-15:  color-mix(in srgb, var(--color-blue) 15%, var(--color-black));
+    --color-blue-20:  color-mix(in srgb, var(--color-blue) 20%, var(--color-black));
+    --color-blue-25:  color-mix(in srgb, var(--color-blue) 25%, var(--color-black));
+    --color-blue-30:  color-mix(in srgb, var(--color-blue) 30%, var(--color-black));
+    --color-blue-35:  color-mix(in srgb, var(--color-blue) 35%, var(--color-black));
+    --color-blue-40:  color-mix(in srgb, var(--color-blue) 40%, var(--color-black));
+    --color-blue-45:  color-mix(in srgb, var(--color-blue) 45%, var(--color-black));
+    --color-blue-50:  color-mix(in srgb, var(--color-blue) 50%, var(--color-black));
+    --color-blue-55:  color-mix(in srgb, var(--color-blue) 55%, var(--color-black));
+    --color-blue-60:  color-mix(in srgb, var(--color-blue) 60%, var(--color-black));
+    --color-blue-65:  color-mix(in srgb, var(--color-blue) 65%, var(--color-black));
+    --color-blue-70:  color-mix(in srgb, var(--color-blue) 70%, var(--color-black));
+    --color-blue-75:  color-mix(in srgb, var(--color-blue) 75%, var(--color-black));
+    --color-blue-80:  color-mix(in srgb, var(--color-blue) 80%, var(--color-black));
+    --color-blue-85:  color-mix(in srgb, var(--color-blue) 85%, var(--color-black));
+    --color-blue-90:  color-mix(in srgb, var(--color-blue) 90%, var(--color-black));
+    --color-blue-95:  color-mix(in srgb, var(--color-blue) 95%, var(--color-black));
+    --color-blue-100: color-mix(in srgb, var(--color-blue) 100%, var(--color-black));
+
+    --color-indigo-0:   color-mix(in srgb, var(--color-indigo) 0%, var(--color-black));
+    --color-indigo-5:   color-mix(in srgb, var(--color-indigo) 5%, var(--color-black));
+    --color-indigo-10:  color-mix(in srgb, var(--color-indigo) 10%, var(--color-black));
+    --color-indigo-15:  color-mix(in srgb, var(--color-indigo) 15%, var(--color-black));
+    --color-indigo-20:  color-mix(in srgb, var(--color-indigo) 20%, var(--color-black));
+    --color-indigo-25:  color-mix(in srgb, var(--color-indigo) 25%, var(--color-black));
+    --color-indigo-30:  color-mix(in srgb, var(--color-indigo) 30%, var(--color-black));
+    --color-indigo-35:  color-mix(in srgb, var(--color-indigo) 35%, var(--color-black));
+    --color-indigo-40:  color-mix(in srgb, var(--color-indigo) 40%, var(--color-black));
+    --color-indigo-45:  color-mix(in srgb, var(--color-indigo) 45%, var(--color-black));
+    --color-indigo-50:  color-mix(in srgb, var(--color-indigo) 50%, var(--color-black));
+    --color-indigo-55:  color-mix(in srgb, var(--color-indigo) 55%, var(--color-black));
+    --color-indigo-60:  color-mix(in srgb, var(--color-indigo) 60%, var(--color-black));
+    --color-indigo-65:  color-mix(in srgb, var(--color-indigo) 65%, var(--color-black));
+    --color-indigo-70:  color-mix(in srgb, var(--color-indigo) 70%, var(--color-black));
+    --color-indigo-75:  color-mix(in srgb, var(--color-indigo) 75%, var(--color-black));
+    --color-indigo-80:  color-mix(in srgb, var(--color-indigo) 80%, var(--color-black));
+    --color-indigo-85:  color-mix(in srgb, var(--color-indigo) 85%, var(--color-black));
+    --color-indigo-90:  color-mix(in srgb, var(--color-indigo) 90%, var(--color-black));
+    --color-indigo-95:  color-mix(in srgb, var(--color-indigo) 95%, var(--color-black));
+    --color-indigo-100: color-mix(in srgb, var(--color-indigo) 100%, var(--color-black));
+
+    --color-purple-0:   color-mix(in srgb, var(--color-purple) 0%, var(--color-black));
+    --color-purple-5:   color-mix(in srgb, var(--color-purple) 5%, var(--color-black));
+    --color-purple-10:  color-mix(in srgb, var(--color-purple) 10%, var(--color-black));
+    --color-purple-15:  color-mix(in srgb, var(--color-purple) 15%, var(--color-black));
+    --color-purple-20:  color-mix(in srgb, var(--color-purple) 20%, var(--color-black));
+    --color-purple-25:  color-mix(in srgb, var(--color-purple) 25%, var(--color-black));
+    --color-purple-30:  color-mix(in srgb, var(--color-purple) 30%, var(--color-black));
+    --color-purple-35:  color-mix(in srgb, var(--color-purple) 35%, var(--color-black));
+    --color-purple-40:  color-mix(in srgb, var(--color-purple) 40%, var(--color-black));
+    --color-purple-45:  color-mix(in srgb, var(--color-purple) 45%, var(--color-black));
+    --color-purple-50:  color-mix(in srgb, var(--color-purple) 50%, var(--color-black));
+    --color-purple-55:  color-mix(in srgb, var(--color-purple) 55%, var(--color-black));
+    --color-purple-60:  color-mix(in srgb, var(--color-purple) 60%, var(--color-black));
+    --color-purple-65:  color-mix(in srgb, var(--color-purple) 65%, var(--color-black));
+    --color-purple-70:  color-mix(in srgb, var(--color-purple) 70%, var(--color-black));
+    --color-purple-75:  color-mix(in srgb, var(--color-purple) 75%, var(--color-black));
+    --color-purple-80:  color-mix(in srgb, var(--color-purple) 80%, var(--color-black));
+    --color-purple-85:  color-mix(in srgb, var(--color-purple) 85%, var(--color-black));
+    --color-purple-90:  color-mix(in srgb, var(--color-purple) 90%, var(--color-black));
+    --color-purple-95:  color-mix(in srgb, var(--color-purple) 95%, var(--color-black));
+    --color-purple-100: color-mix(in srgb, var(--color-purple) 100%, var(--color-black));
+
+    --color-pink-0:   color-mix(in srgb, var(--color-pink) 0%, var(--color-black));
+    --color-pink-5:   color-mix(in srgb, var(--color-pink) 5%, var(--color-black));
+    --color-pink-10:  color-mix(in srgb, var(--color-pink) 10%, var(--color-black));
+    --color-pink-15:  color-mix(in srgb, var(--color-pink) 15%, var(--color-black));
+    --color-pink-20:  color-mix(in srgb, var(--color-pink) 20%, var(--color-black));
+    --color-pink-25:  color-mix(in srgb, var(--color-pink) 25%, var(--color-black));
+    --color-pink-30:  color-mix(in srgb, var(--color-pink) 30%, var(--color-black));
+    --color-pink-35:  color-mix(in srgb, var(--color-pink) 35%, var(--color-black));
+    --color-pink-40:  color-mix(in srgb, var(--color-pink) 40%, var(--color-black));
+    --color-pink-45:  color-mix(in srgb, var(--color-pink) 45%, var(--color-black));
+    --color-pink-50:  color-mix(in srgb, var(--color-pink) 50%, var(--color-black));
+    --color-pink-55:  color-mix(in srgb, var(--color-pink) 55%, var(--color-black));
+    --color-pink-60:  color-mix(in srgb, var(--color-pink) 60%, var(--color-black));
+    --color-pink-65:  color-mix(in srgb, var(--color-pink) 65%, var(--color-black));
+    --color-pink-70:  color-mix(in srgb, var(--color-pink) 70%, var(--color-black));
+    --color-pink-75:  color-mix(in srgb, var(--color-pink) 75%, var(--color-black));
+    --color-pink-80:  color-mix(in srgb, var(--color-pink) 80%, var(--color-black));
+    --color-pink-85:  color-mix(in srgb, var(--color-pink) 85%, var(--color-black));
+    --color-pink-90:  color-mix(in srgb, var(--color-pink) 90%, var(--color-black));
+    --color-pink-95:  color-mix(in srgb, var(--color-pink) 95%, var(--color-black));
+    --color-pink-100: color-mix(in srgb, var(--color-pink) 100%, var(--color-black));
+
+    --color-red-dark:   var(--color-red-45);
+    --color-red-normal: var(--color-red-75);
+    --color-red-bright: var(--color-red-100);
+
+    --color-orange-dark:   var(--color-orange-45);
+    --color-orange-normal: var(--color-orange-75);
+    --color-orange-bright: var(--color-orange-100);
+
+    --color-yellow-dark:   var(--color-yellow-45);
+    --color-yellow-normal: var(--color-yellow-75);
+    --color-yellow-bright: var(--color-yellow-100);
+
+    --color-green-dark:   var(--color-green-45);
+    --color-green-normal: var(--color-green-75);
+    --color-green-bright: var(--color-green-100);
+
+    --color-emerald-dark:   var(--color-emerald-45);
+    --color-emerald-normal: var(--color-emerald-75);
+    --color-emerald-bright: var(--color-emerald-100);
+
+    --color-cyan-dark:   var(--color-cyan-45);
+    --color-cyan-normal: var(--color-cyan-75);
+    --color-cyan-bright: var(--color-cyan-100);
+
+    --color-blue-dark:   var(--color-blue-45);
+    --color-blue-normal: var(--color-blue-75);
+    --color-blue-bright: var(--color-blue-100);
+
+    --color-indigo-dark:   var(--color-indigo-45);
+    --color-indigo-normal: var(--color-indigo-75);
+    --color-indigo-bright: var(--color-indigo-100);
+
+    --color-purple-dark:   var(--color-purple-45);
+    --color-purple-normal: var(--color-purple-75);
+    --color-purple-bright: var(--color-purple-100);
+
+    --color-pink-dark:   var(--color-pink-45);
+    --color-pink-normal: var(--color-pink-75);
+    --color-pink-bright: var(--color-pink-100);
 
     /* Opacity */
 
@@ -221,218 +322,225 @@
     --color-white-opacity-95: color-mix(in srgb, var(--color-white) 95%, transparent);
     --color-white-opacity-100: color-mix(in srgb, var(--color-white) 100%, transparent);
 
-    --color-red-opacity-0: color-mix(in srgb, var(--color-red-100) 0%, transparent);
-    --color-red-opacity-5: color-mix(in srgb, var(--color-red-100) 5%, transparent);
-    --color-red-opacity-10: color-mix(in srgb, var(--color-red-100) 10%, transparent);
-    --color-red-opacity-15: color-mix(in srgb, var(--color-red-100) 15%, transparent);
-    --color-red-opacity-20: color-mix(in srgb, var(--color-red-100) 20%, transparent);
-    --color-red-opacity-25: color-mix(in srgb, var(--color-red-100) 25%, transparent);
-    --color-red-opacity-30: color-mix(in srgb, var(--color-red-100) 30%, transparent);
-    --color-red-opacity-35: color-mix(in srgb, var(--color-red-100) 35%, transparent);
-    --color-red-opacity-40: color-mix(in srgb, var(--color-red-100) 40%, transparent);
-    --color-red-opacity-45: color-mix(in srgb, var(--color-red-100) 45%, transparent);
-    --color-red-opacity-50: color-mix(in srgb, var(--color-red-100) 50%, transparent);
-    --color-red-opacity-55: color-mix(in srgb, var(--color-red-100) 55%, transparent);
-    --color-red-opacity-60: color-mix(in srgb, var(--color-red-100) 60%, transparent);
-    --color-red-opacity-65: color-mix(in srgb, var(--color-red-100) 65%, transparent);
-    --color-red-opacity-70: color-mix(in srgb, var(--color-red-100) 70%, transparent);
-    --color-red-opacity-75: color-mix(in srgb, var(--color-red-100) 75%, transparent);
-    --color-red-opacity-80: color-mix(in srgb, var(--color-red-100) 80%, transparent);
-    --color-red-opacity-85: color-mix(in srgb, var(--color-red-100) 85%, transparent);
-    --color-red-opacity-90: color-mix(in srgb, var(--color-red-100) 90%, transparent);
-    --color-red-opacity-95: color-mix(in srgb, var(--color-red-100) 95%, transparent);
-    --color-red-opacity-100: color-mix(in srgb, var(--color-red-100) 100%, transparent);
+    --color-red-opacity-0: color-mix(in srgb, var(--color-red) 0%, transparent);
+    --color-red-opacity-5: color-mix(in srgb, var(--color-red) 5%, transparent);
+    --color-red-opacity-10: color-mix(in srgb, var(--color-red) 10%, transparent);
+    --color-red-opacity-15: color-mix(in srgb, var(--color-red) 15%, transparent);
+    --color-red-opacity-20: color-mix(in srgb, var(--color-red) 20%, transparent);
+    --color-red-opacity-25: color-mix(in srgb, var(--color-red) 25%, transparent);
+    --color-red-opacity-30: color-mix(in srgb, var(--color-red) 30%, transparent);
+    --color-red-opacity-35: color-mix(in srgb, var(--color-red) 35%, transparent);
+    --color-red-opacity-40: color-mix(in srgb, var(--color-red) 40%, transparent);
+    --color-red-opacity-45: color-mix(in srgb, var(--color-red) 45%, transparent);
+    --color-red-opacity-50: color-mix(in srgb, var(--color-red) 50%, transparent);
+    --color-red-opacity-55: color-mix(in srgb, var(--color-red) 55%, transparent);
+    --color-red-opacity-60: color-mix(in srgb, var(--color-red) 60%, transparent);
+    --color-red-opacity-65: color-mix(in srgb, var(--color-red) 65%, transparent);
+    --color-red-opacity-70: color-mix(in srgb, var(--color-red) 70%, transparent);
+    --color-red-opacity-75: color-mix(in srgb, var(--color-red) 75%, transparent);
+    --color-red-opacity-80: color-mix(in srgb, var(--color-red) 80%, transparent);
+    --color-red-opacity-85: color-mix(in srgb, var(--color-red) 85%, transparent);
+    --color-red-opacity-90: color-mix(in srgb, var(--color-red) 90%, transparent);
+    --color-red-opacity-95: color-mix(in srgb, var(--color-red) 95%, transparent);
+    --color-red-opacity-100: color-mix(in srgb, var(--color-red) 100%, transparent);
 
-    --color-orange-opacity-0: color-mix(in srgb, var(--color-orange-100) 0%, transparent);
-    --color-orange-opacity-5: color-mix(in srgb, var(--color-orange-100) 5%, transparent);
-    --color-orange-opacity-10: color-mix(in srgb, var(--color-orange-100) 10%, transparent);
-    --color-orange-opacity-15: color-mix(in srgb, var(--color-orange-100) 15%, transparent);
-    --color-orange-opacity-20: color-mix(in srgb, var(--color-orange-100) 20%, transparent);
-    --color-orange-opacity-25: color-mix(in srgb, var(--color-orange-100) 25%, transparent);
-    --color-orange-opacity-30: color-mix(in srgb, var(--color-orange-100) 30%, transparent);
-    --color-orange-opacity-35: color-mix(in srgb, var(--color-orange-100) 35%, transparent);
-    --color-orange-opacity-40: color-mix(in srgb, var(--color-orange-100) 40%, transparent);
-    --color-orange-opacity-45: color-mix(in srgb, var(--color-orange-100) 45%, transparent);
-    --color-orange-opacity-50: color-mix(in srgb, var(--color-orange-100) 50%, transparent);
-    --color-orange-opacity-55: color-mix(in srgb, var(--color-orange-100) 55%, transparent);
-    --color-orange-opacity-60: color-mix(in srgb, var(--color-orange-100) 60%, transparent);
-    --color-orange-opacity-65: color-mix(in srgb, var(--color-orange-100) 65%, transparent);
-    --color-orange-opacity-70: color-mix(in srgb, var(--color-orange-100) 70%, transparent);
-    --color-orange-opacity-75: color-mix(in srgb, var(--color-orange-100) 75%, transparent);
-    --color-orange-opacity-80: color-mix(in srgb, var(--color-orange-100) 80%, transparent);
-    --color-orange-opacity-85: color-mix(in srgb, var(--color-orange-100) 85%, transparent);
-    --color-orange-opacity-90: color-mix(in srgb, var(--color-orange-100) 90%, transparent);
-    --color-orange-opacity-95: color-mix(in srgb, var(--color-orange-100) 95%, transparent);
-    --color-orange-opacity-100: color-mix(in srgb, var(--color-orange-100) 100%, transparent);
+    --color-orange-opacity-0: color-mix(in srgb, var(--color-orange) 0%, transparent);
+    --color-orange-opacity-5: color-mix(in srgb, var(--color-orange) 5%, transparent);
+    --color-orange-opacity-10: color-mix(in srgb, var(--color-orange) 10%, transparent);
+    --color-orange-opacity-15: color-mix(in srgb, var(--color-orange) 15%, transparent);
+    --color-orange-opacity-20: color-mix(in srgb, var(--color-orange) 20%, transparent);
+    --color-orange-opacity-25: color-mix(in srgb, var(--color-orange) 25%, transparent);
+    --color-orange-opacity-30: color-mix(in srgb, var(--color-orange) 30%, transparent);
+    --color-orange-opacity-35: color-mix(in srgb, var(--color-orange) 35%, transparent);
+    --color-orange-opacity-40: color-mix(in srgb, var(--color-orange) 40%, transparent);
+    --color-orange-opacity-45: color-mix(in srgb, var(--color-orange) 45%, transparent);
+    --color-orange-opacity-50: color-mix(in srgb, var(--color-orange) 50%, transparent);
+    --color-orange-opacity-55: color-mix(in srgb, var(--color-orange) 55%, transparent);
+    --color-orange-opacity-60: color-mix(in srgb, var(--color-orange) 60%, transparent);
+    --color-orange-opacity-65: color-mix(in srgb, var(--color-orange) 65%, transparent);
+    --color-orange-opacity-70: color-mix(in srgb, var(--color-orange) 70%, transparent);
+    --color-orange-opacity-75: color-mix(in srgb, var(--color-orange) 75%, transparent);
+    --color-orange-opacity-80: color-mix(in srgb, var(--color-orange) 80%, transparent);
+    --color-orange-opacity-85: color-mix(in srgb, var(--color-orange) 85%, transparent);
+    --color-orange-opacity-90: color-mix(in srgb, var(--color-orange) 90%, transparent);
+    --color-orange-opacity-95: color-mix(in srgb, var(--color-orange) 95%, transparent);
+    --color-orange-opacity-100: color-mix(in srgb, var(--color-orange) 100%, transparent);
 
-    --color-yellow-opacity-0: color-mix(in srgb, var(--color-yellow-100) 0%, transparent);
-    --color-yellow-opacity-5: color-mix(in srgb, var(--color-yellow-100) 5%, transparent);
-    --color-yellow-opacity-10: color-mix(in srgb, var(--color-yellow-100) 10%, transparent);
-    --color-yellow-opacity-15: color-mix(in srgb, var(--color-yellow-100) 15%, transparent);
-    --color-yellow-opacity-20: color-mix(in srgb, var(--color-yellow-100) 20%, transparent);
-    --color-yellow-opacity-25: color-mix(in srgb, var(--color-yellow-100) 25%, transparent);
-    --color-yellow-opacity-30: color-mix(in srgb, var(--color-yellow-100) 30%, transparent);
-    --color-yellow-opacity-35: color-mix(in srgb, var(--color-yellow-100) 35%, transparent);
-    --color-yellow-opacity-40: color-mix(in srgb, var(--color-yellow-100) 40%, transparent);
-    --color-yellow-opacity-45: color-mix(in srgb, var(--color-yellow-100) 45%, transparent);
-    --color-yellow-opacity-50: color-mix(in srgb, var(--color-yellow-100) 50%, transparent);
-    --color-yellow-opacity-55: color-mix(in srgb, var(--color-yellow-100) 55%, transparent);
-    --color-yellow-opacity-60: color-mix(in srgb, var(--color-yellow-100) 60%, transparent);
-    --color-yellow-opacity-65: color-mix(in srgb, var(--color-yellow-100) 65%, transparent);
-    --color-yellow-opacity-70: color-mix(in srgb, var(--color-yellow-100) 70%, transparent);
-    --color-yellow-opacity-75: color-mix(in srgb, var(--color-yellow-100) 75%, transparent);
-    --color-yellow-opacity-80: color-mix(in srgb, var(--color-yellow-100) 80%, transparent);
-    --color-yellow-opacity-85: color-mix(in srgb, var(--color-yellow-100) 85%, transparent);
-    --color-yellow-opacity-90: color-mix(in srgb, var(--color-yellow-100) 90%, transparent);
-    --color-yellow-opacity-95: color-mix(in srgb, var(--color-yellow-100) 95%, transparent);
-    --color-yellow-opacity-100: color-mix(in srgb, var(--color-yellow-100) 100%, transparent);
+    --color-yellow-opacity-0: color-mix(in srgb, var(--color-yellow) 0%, transparent);
+    --color-yellow-opacity-5: color-mix(in srgb, var(--color-yellow) 5%, transparent);
+    --color-yellow-opacity-10: color-mix(in srgb, var(--color-yellow) 10%, transparent);
+    --color-yellow-opacity-15: color-mix(in srgb, var(--color-yellow) 15%, transparent);
+    --color-yellow-opacity-20: color-mix(in srgb, var(--color-yellow) 20%, transparent);
+    --color-yellow-opacity-25: color-mix(in srgb, var(--color-yellow) 25%, transparent);
+    --color-yellow-opacity-30: color-mix(in srgb, var(--color-yellow) 30%, transparent);
+    --color-yellow-opacity-35: color-mix(in srgb, var(--color-yellow) 35%, transparent);
+    --color-yellow-opacity-40: color-mix(in srgb, var(--color-yellow) 40%, transparent);
+    --color-yellow-opacity-45: color-mix(in srgb, var(--color-yellow) 45%, transparent);
+    --color-yellow-opacity-50: color-mix(in srgb, var(--color-yellow) 50%, transparent);
+    --color-yellow-opacity-55: color-mix(in srgb, var(--color-yellow) 55%, transparent);
+    --color-yellow-opacity-60: color-mix(in srgb, var(--color-yellow) 60%, transparent);
+    --color-yellow-opacity-65: color-mix(in srgb, var(--color-yellow) 65%, transparent);
+    --color-yellow-opacity-70: color-mix(in srgb, var(--color-yellow) 70%, transparent);
+    --color-yellow-opacity-75: color-mix(in srgb, var(--color-yellow) 75%, transparent);
+    --color-yellow-opacity-80: color-mix(in srgb, var(--color-yellow) 80%, transparent);
+    --color-yellow-opacity-85: color-mix(in srgb, var(--color-yellow) 85%, transparent);
+    --color-yellow-opacity-90: color-mix(in srgb, var(--color-yellow) 90%, transparent);
+    --color-yellow-opacity-95: color-mix(in srgb, var(--color-yellow) 95%, transparent);
+    --color-yellow-opacity-100: color-mix(in srgb, var(--color-yellow) 100%, transparent);
 
-    --color-green-opacity-0: color-mix(in srgb, var(--color-green-100) 0%, transparent);
-    --color-green-opacity-5: color-mix(in srgb, var(--color-green-100) 5%, transparent);
-    --color-green-opacity-10: color-mix(in srgb, var(--color-green-100) 10%, transparent);
-    --color-green-opacity-15: color-mix(in srgb, var(--color-green-100) 15%, transparent);
-    --color-green-opacity-20: color-mix(in srgb, var(--color-green-100) 20%, transparent);
-    --color-green-opacity-25: color-mix(in srgb, var(--color-green-100) 25%, transparent);
-    --color-green-opacity-30: color-mix(in srgb, var(--color-green-100) 30%, transparent);
-    --color-green-opacity-35: color-mix(in srgb, var(--color-green-100) 35%, transparent);
-    --color-green-opacity-40: color-mix(in srgb, var(--color-green-100) 40%, transparent);
-    --color-green-opacity-45: color-mix(in srgb, var(--color-green-100) 45%, transparent);
-    --color-green-opacity-50: color-mix(in srgb, var(--color-green-100) 50%, transparent);
-    --color-green-opacity-55: color-mix(in srgb, var(--color-green-100) 55%, transparent);
-    --color-green-opacity-60: color-mix(in srgb, var(--color-green-100) 60%, transparent);
-    --color-green-opacity-65: color-mix(in srgb, var(--color-green-100) 65%, transparent);
-    --color-green-opacity-70: color-mix(in srgb, var(--color-green-100) 70%, transparent);
-    --color-green-opacity-75: color-mix(in srgb, var(--color-green-100) 75%, transparent);
-    --color-green-opacity-80: color-mix(in srgb, var(--color-green-100) 80%, transparent);
-    --color-green-opacity-85: color-mix(in srgb, var(--color-green-100) 85%, transparent);
-    --color-green-opacity-90: color-mix(in srgb, var(--color-green-100) 90%, transparent);
-    --color-green-opacity-95: color-mix(in srgb, var(--color-green-100) 95%, transparent);
-    --color-green-opacity-100: color-mix(in srgb, var(--color-green-100) 100%, transparent);
+    --color-green-opacity-0: color-mix(in srgb, var(--color-green) 0%, transparent);
+    --color-green-opacity-5: color-mix(in srgb, var(--color-green) 5%, transparent);
+    --color-green-opacity-10: color-mix(in srgb, var(--color-green) 10%, transparent);
+    --color-green-opacity-15: color-mix(in srgb, var(--color-green) 15%, transparent);
+    --color-green-opacity-20: color-mix(in srgb, var(--color-green) 20%, transparent);
+    --color-green-opacity-25: color-mix(in srgb, var(--color-green) 25%, transparent);
+    --color-green-opacity-30: color-mix(in srgb, var(--color-green) 30%, transparent);
+    --color-green-opacity-35: color-mix(in srgb, var(--color-green) 35%, transparent);
+    --color-green-opacity-40: color-mix(in srgb, var(--color-green) 40%, transparent);
+    --color-green-opacity-45: color-mix(in srgb, var(--color-green) 45%, transparent);
+    --color-green-opacity-50: color-mix(in srgb, var(--color-green) 50%, transparent);
+    --color-green-opacity-55: color-mix(in srgb, var(--color-green) 55%, transparent);
+    --color-green-opacity-60: color-mix(in srgb, var(--color-green) 60%, transparent);
+    --color-green-opacity-65: color-mix(in srgb, var(--color-green) 65%, transparent);
+    --color-green-opacity-70: color-mix(in srgb, var(--color-green) 70%, transparent);
+    --color-green-opacity-75: color-mix(in srgb, var(--color-green) 75%, transparent);
+    --color-green-opacity-80: color-mix(in srgb, var(--color-green) 80%, transparent);
+    --color-green-opacity-85: color-mix(in srgb, var(--color-green) 85%, transparent);
+    --color-green-opacity-90: color-mix(in srgb, var(--color-green) 90%, transparent);
+    --color-green-opacity-95: color-mix(in srgb, var(--color-green) 95%, transparent);
+    --color-green-opacity-100: color-mix(in srgb, var(--color-green) 100%, transparent);
 
-    --color-cyan-opacity-0: color-mix(in srgb, var(--color-cyan-100) 0%, transparent);
-    --color-cyan-opacity-5: color-mix(in srgb, var(--color-cyan-100) 5%, transparent);
-    --color-cyan-opacity-10: color-mix(in srgb, var(--color-cyan-100) 10%, transparent);
-    --color-cyan-opacity-15: color-mix(in srgb, var(--color-cyan-100) 15%, transparent);
-    --color-cyan-opacity-20: color-mix(in srgb, var(--color-cyan-100) 20%, transparent);
-    --color-cyan-opacity-25: color-mix(in srgb, var(--color-cyan-100) 25%, transparent);
-    --color-cyan-opacity-30: color-mix(in srgb, var(--color-cyan-100) 30%, transparent);
-    --color-cyan-opacity-35: color-mix(in srgb, var(--color-cyan-100) 35%, transparent);
-    --color-cyan-opacity-40: color-mix(in srgb, var(--color-cyan-100) 40%, transparent);
-    --color-cyan-opacity-45: color-mix(in srgb, var(--color-cyan-100) 45%, transparent);
-    --color-cyan-opacity-50: color-mix(in srgb, var(--color-cyan-100) 50%, transparent);
-    --color-cyan-opacity-55: color-mix(in srgb, var(--color-cyan-100) 55%, transparent);
-    --color-cyan-opacity-60: color-mix(in srgb, var(--color-cyan-100) 60%, transparent);
-    --color-cyan-opacity-65: color-mix(in srgb, var(--color-cyan-100) 65%, transparent);
-    --color-cyan-opacity-70: color-mix(in srgb, var(--color-cyan-100) 70%, transparent);
-    --color-cyan-opacity-75: color-mix(in srgb, var(--color-cyan-100) 75%, transparent);
-    --color-cyan-opacity-80: color-mix(in srgb, var(--color-cyan-100) 80%, transparent);
-    --color-cyan-opacity-85: color-mix(in srgb, var(--color-cyan-100) 85%, transparent);
-    --color-cyan-opacity-90: color-mix(in srgb, var(--color-cyan-100) 90%, transparent);
-    --color-cyan-opacity-95: color-mix(in srgb, var(--color-cyan-100) 95%, transparent);
-    --color-cyan-opacity-100: color-mix(in srgb, var(--color-cyan-100) 100%, transparent);
+    --color-emerald-opacity-0: color-mix(in srgb, var(--color-emerald) 0%, transparent);
+    --color-emerald-opacity-5: color-mix(in srgb, var(--color-emerald) 5%, transparent);
+    --color-emerald-opacity-10: color-mix(in srgb, var(--color-emerald) 10%, transparent);
+    --color-emerald-opacity-15: color-mix(in srgb, var(--color-emerald) 15%, transparent);
+    --color-emerald-opacity-20: color-mix(in srgb, var(--color-emerald) 20%, transparent);
+    --color-emerald-opacity-25: color-mix(in srgb, var(--color-emerald) 25%, transparent);
+    --color-emerald-opacity-30: color-mix(in srgb, var(--color-emerald) 30%, transparent);
+    --color-emerald-opacity-35: color-mix(in srgb, var(--color-emerald) 35%, transparent);
+    --color-emerald-opacity-40: color-mix(in srgb, var(--color-emerald) 40%, transparent);
+    --color-emerald-opacity-45: color-mix(in srgb, var(--color-emerald) 45%, transparent);
+    --color-emerald-opacity-50: color-mix(in srgb, var(--color-emerald) 50%, transparent);
+    --color-emerald-opacity-55: color-mix(in srgb, var(--color-emerald) 55%, transparent);
+    --color-emerald-opacity-60: color-mix(in srgb, var(--color-emerald) 60%, transparent);
+    --color-emerald-opacity-65: color-mix(in srgb, var(--color-emerald) 65%, transparent);
+    --color-emerald-opacity-70: color-mix(in srgb, var(--color-emerald) 70%, transparent);
+    --color-emerald-opacity-75: color-mix(in srgb, var(--color-emerald) 75%, transparent);
+    --color-emerald-opacity-80: color-mix(in srgb, var(--color-emerald) 80%, transparent);
+    --color-emerald-opacity-85: color-mix(in srgb, var(--color-emerald) 85%, transparent);
+    --color-emerald-opacity-90: color-mix(in srgb, var(--color-emerald) 90%, transparent);
+    --color-emerald-opacity-95: color-mix(in srgb, var(--color-emerald) 95%, transparent);
+    --color-emerald-opacity-100: color-mix(in srgb, var(--color-emerald) 100%, transparent);
 
-    --color-blue-opacity-0: color-mix(in srgb, var(--color-blue-100) 0%, transparent);
-    --color-blue-opacity-5: color-mix(in srgb, var(--color-blue-100) 5%, transparent);
-    --color-blue-opacity-10: color-mix(in srgb, var(--color-blue-100) 10%, transparent);
-    --color-blue-opacity-15: color-mix(in srgb, var(--color-blue-100) 15%, transparent);
-    --color-blue-opacity-20: color-mix(in srgb, var(--color-blue-100) 20%, transparent);
-    --color-blue-opacity-25: color-mix(in srgb, var(--color-blue-100) 25%, transparent);
-    --color-blue-opacity-30: color-mix(in srgb, var(--color-blue-100) 30%, transparent);
-    --color-blue-opacity-35: color-mix(in srgb, var(--color-blue-100) 35%, transparent);
-    --color-blue-opacity-40: color-mix(in srgb, var(--color-blue-100) 40%, transparent);
-    --color-blue-opacity-45: color-mix(in srgb, var(--color-blue-100) 45%, transparent);
-    --color-blue-opacity-50: color-mix(in srgb, var(--color-blue-100) 50%, transparent);
-    --color-blue-opacity-55: color-mix(in srgb, var(--color-blue-100) 55%, transparent);
-    --color-blue-opacity-60: color-mix(in srgb, var(--color-blue-100) 60%, transparent);
-    --color-blue-opacity-65: color-mix(in srgb, var(--color-blue-100) 65%, transparent);
-    --color-blue-opacity-70: color-mix(in srgb, var(--color-blue-100) 70%, transparent);
-    --color-blue-opacity-75: color-mix(in srgb, var(--color-blue-100) 75%, transparent);
-    --color-blue-opacity-80: color-mix(in srgb, var(--color-blue-100) 80%, transparent);
-    --color-blue-opacity-85: color-mix(in srgb, var(--color-blue-100) 85%, transparent);
-    --color-blue-opacity-90: color-mix(in srgb, var(--color-blue-100) 90%, transparent);
-    --color-blue-opacity-95: color-mix(in srgb, var(--color-blue-100) 95%, transparent);
-    --color-blue-opacity-100: color-mix(in srgb, var(--color-blue-100) 100%, transparent);
+    --color-cyan-opacity-0: color-mix(in srgb, var(--color-cyan) 0%, transparent);
+    --color-cyan-opacity-5: color-mix(in srgb, var(--color-cyan) 5%, transparent);
+    --color-cyan-opacity-10: color-mix(in srgb, var(--color-cyan) 10%, transparent);
+    --color-cyan-opacity-15: color-mix(in srgb, var(--color-cyan) 15%, transparent);
+    --color-cyan-opacity-20: color-mix(in srgb, var(--color-cyan) 20%, transparent);
+    --color-cyan-opacity-25: color-mix(in srgb, var(--color-cyan) 25%, transparent);
+    --color-cyan-opacity-30: color-mix(in srgb, var(--color-cyan) 30%, transparent);
+    --color-cyan-opacity-35: color-mix(in srgb, var(--color-cyan) 35%, transparent);
+    --color-cyan-opacity-40: color-mix(in srgb, var(--color-cyan) 40%, transparent);
+    --color-cyan-opacity-45: color-mix(in srgb, var(--color-cyan) 45%, transparent);
+    --color-cyan-opacity-50: color-mix(in srgb, var(--color-cyan) 50%, transparent);
+    --color-cyan-opacity-55: color-mix(in srgb, var(--color-cyan) 55%, transparent);
+    --color-cyan-opacity-60: color-mix(in srgb, var(--color-cyan) 60%, transparent);
+    --color-cyan-opacity-65: color-mix(in srgb, var(--color-cyan) 65%, transparent);
+    --color-cyan-opacity-70: color-mix(in srgb, var(--color-cyan) 70%, transparent);
+    --color-cyan-opacity-75: color-mix(in srgb, var(--color-cyan) 75%, transparent);
+    --color-cyan-opacity-80: color-mix(in srgb, var(--color-cyan) 80%, transparent);
+    --color-cyan-opacity-85: color-mix(in srgb, var(--color-cyan) 85%, transparent);
+    --color-cyan-opacity-90: color-mix(in srgb, var(--color-cyan) 90%, transparent);
+    --color-cyan-opacity-95: color-mix(in srgb, var(--color-cyan) 95%, transparent);
+    --color-cyan-opacity-100: color-mix(in srgb, var(--color-cyan) 100%, transparent);
 
-    --color-purple-opacity-0: color-mix(in srgb, var(--color-purple-100) 0%, transparent);
-    --color-purple-opacity-5: color-mix(in srgb, var(--color-purple-100) 5%, transparent);
-    --color-purple-opacity-10: color-mix(in srgb, var(--color-purple-100) 10%, transparent);
-    --color-purple-opacity-15: color-mix(in srgb, var(--color-purple-100) 15%, transparent);
-    --color-purple-opacity-20: color-mix(in srgb, var(--color-purple-100) 20%, transparent);
-    --color-purple-opacity-25: color-mix(in srgb, var(--color-purple-100) 25%, transparent);
-    --color-purple-opacity-30: color-mix(in srgb, var(--color-purple-100) 30%, transparent);
-    --color-purple-opacity-35: color-mix(in srgb, var(--color-purple-100) 35%, transparent);
-    --color-purple-opacity-40: color-mix(in srgb, var(--color-purple-100) 40%, transparent);
-    --color-purple-opacity-45: color-mix(in srgb, var(--color-purple-100) 45%, transparent);
-    --color-purple-opacity-50: color-mix(in srgb, var(--color-purple-100) 50%, transparent);
-    --color-purple-opacity-55: color-mix(in srgb, var(--color-purple-100) 55%, transparent);
-    --color-purple-opacity-60: color-mix(in srgb, var(--color-purple-100) 60%, transparent);
-    --color-purple-opacity-65: color-mix(in srgb, var(--color-purple-100) 65%, transparent);
-    --color-purple-opacity-70: color-mix(in srgb, var(--color-purple-100) 70%, transparent);
-    --color-purple-opacity-75: color-mix(in srgb, var(--color-purple-100) 75%, transparent);
-    --color-purple-opacity-80: color-mix(in srgb, var(--color-purple-100) 80%, transparent);
-    --color-purple-opacity-85: color-mix(in srgb, var(--color-purple-100) 85%, transparent);
-    --color-purple-opacity-90: color-mix(in srgb, var(--color-purple-100) 90%, transparent);
-    --color-purple-opacity-95: color-mix(in srgb, var(--color-purple-100) 95%, transparent);
-    --color-purple-opacity-100: color-mix(in srgb, var(--color-purple-100) 100%, transparent);
+    --color-blue-opacity-0: color-mix(in srgb, var(--color-blue) 0%, transparent);
+    --color-blue-opacity-5: color-mix(in srgb, var(--color-blue) 5%, transparent);
+    --color-blue-opacity-10: color-mix(in srgb, var(--color-blue) 10%, transparent);
+    --color-blue-opacity-15: color-mix(in srgb, var(--color-blue) 15%, transparent);
+    --color-blue-opacity-20: color-mix(in srgb, var(--color-blue) 20%, transparent);
+    --color-blue-opacity-25: color-mix(in srgb, var(--color-blue) 25%, transparent);
+    --color-blue-opacity-30: color-mix(in srgb, var(--color-blue) 30%, transparent);
+    --color-blue-opacity-35: color-mix(in srgb, var(--color-blue) 35%, transparent);
+    --color-blue-opacity-40: color-mix(in srgb, var(--color-blue) 40%, transparent);
+    --color-blue-opacity-45: color-mix(in srgb, var(--color-blue) 45%, transparent);
+    --color-blue-opacity-50: color-mix(in srgb, var(--color-blue) 50%, transparent);
+    --color-blue-opacity-55: color-mix(in srgb, var(--color-blue) 55%, transparent);
+    --color-blue-opacity-60: color-mix(in srgb, var(--color-blue) 60%, transparent);
+    --color-blue-opacity-65: color-mix(in srgb, var(--color-blue) 65%, transparent);
+    --color-blue-opacity-70: color-mix(in srgb, var(--color-blue) 70%, transparent);
+    --color-blue-opacity-75: color-mix(in srgb, var(--color-blue) 75%, transparent);
+    --color-blue-opacity-80: color-mix(in srgb, var(--color-blue) 80%, transparent);
+    --color-blue-opacity-85: color-mix(in srgb, var(--color-blue) 85%, transparent);
+    --color-blue-opacity-90: color-mix(in srgb, var(--color-blue) 90%, transparent);
+    --color-blue-opacity-95: color-mix(in srgb, var(--color-blue) 95%, transparent);
+    --color-blue-opacity-100: color-mix(in srgb, var(--color-blue) 100%, transparent);
 
-    --color-pink-opacity-0: color-mix(in srgb, var(--color-pink-100) 0%, transparent);
-    --color-pink-opacity-5: color-mix(in srgb, var(--color-pink-100) 5%, transparent);
-    --color-pink-opacity-10: color-mix(in srgb, var(--color-pink-100) 10%, transparent);
-    --color-pink-opacity-15: color-mix(in srgb, var(--color-pink-100) 15%, transparent);
-    --color-pink-opacity-20: color-mix(in srgb, var(--color-pink-100) 20%, transparent);
-    --color-pink-opacity-25: color-mix(in srgb, var(--color-pink-100) 25%, transparent);
-    --color-pink-opacity-30: color-mix(in srgb, var(--color-pink-100) 30%, transparent);
-    --color-pink-opacity-35: color-mix(in srgb, var(--color-pink-100) 35%, transparent);
-    --color-pink-opacity-40: color-mix(in srgb, var(--color-pink-100) 40%, transparent);
-    --color-pink-opacity-45: color-mix(in srgb, var(--color-pink-100) 45%, transparent);
-    --color-pink-opacity-50: color-mix(in srgb, var(--color-pink-100) 50%, transparent);
-    --color-pink-opacity-55: color-mix(in srgb, var(--color-pink-100) 55%, transparent);
-    --color-pink-opacity-60: color-mix(in srgb, var(--color-pink-100) 60%, transparent);
-    --color-pink-opacity-65: color-mix(in srgb, var(--color-pink-100) 65%, transparent);
-    --color-pink-opacity-70: color-mix(in srgb, var(--color-pink-100) 70%, transparent);
-    --color-pink-opacity-75: color-mix(in srgb, var(--color-pink-100) 75%, transparent);
-    --color-pink-opacity-80: color-mix(in srgb, var(--color-pink-100) 80%, transparent);
-    --color-pink-opacity-85: color-mix(in srgb, var(--color-pink-100) 85%, transparent);
-    --color-pink-opacity-90: color-mix(in srgb, var(--color-pink-100) 90%, transparent);
-    --color-pink-opacity-95: color-mix(in srgb, var(--color-pink-100) 95%, transparent);
-    --color-pink-opacity-100: color-mix(in srgb, var(--color-pink-100) 100%, transparent);
+    --color-indigo-opacity-0: color-mix(in srgb, var(--color-indigo) 0%, transparent);
+    --color-indigo-opacity-5: color-mix(in srgb, var(--color-indigo) 5%, transparent);
+    --color-indigo-opacity-10: color-mix(in srgb, var(--color-indigo) 10%, transparent);
+    --color-indigo-opacity-15: color-mix(in srgb, var(--color-indigo) 15%, transparent);
+    --color-indigo-opacity-20: color-mix(in srgb, var(--color-indigo) 20%, transparent);
+    --color-indigo-opacity-25: color-mix(in srgb, var(--color-indigo) 25%, transparent);
+    --color-indigo-opacity-30: color-mix(in srgb, var(--color-indigo) 30%, transparent);
+    --color-indigo-opacity-35: color-mix(in srgb, var(--color-indigo) 35%, transparent);
+    --color-indigo-opacity-40: color-mix(in srgb, var(--color-indigo) 40%, transparent);
+    --color-indigo-opacity-45: color-mix(in srgb, var(--color-indigo) 45%, transparent);
+    --color-indigo-opacity-50: color-mix(in srgb, var(--color-indigo) 50%, transparent);
+    --color-indigo-opacity-55: color-mix(in srgb, var(--color-indigo) 55%, transparent);
+    --color-indigo-opacity-60: color-mix(in srgb, var(--color-indigo) 60%, transparent);
+    --color-indigo-opacity-65: color-mix(in srgb, var(--color-indigo) 65%, transparent);
+    --color-indigo-opacity-70: color-mix(in srgb, var(--color-indigo) 70%, transparent);
+    --color-indigo-opacity-75: color-mix(in srgb, var(--color-indigo) 75%, transparent);
+    --color-indigo-opacity-80: color-mix(in srgb, var(--color-indigo) 80%, transparent);
+    --color-indigo-opacity-85: color-mix(in srgb, var(--color-indigo) 85%, transparent);
+    --color-indigo-opacity-90: color-mix(in srgb, var(--color-indigo) 90%, transparent);
+    --color-indigo-opacity-95: color-mix(in srgb, var(--color-indigo) 95%, transparent);
+    --color-indigo-opacity-100: color-mix(in srgb, var(--color-indigo) 100%, transparent);
 
-    /* Brightness */
+    --color-purple-opacity-0: color-mix(in srgb, var(--color-purple) 0%, transparent);
+    --color-purple-opacity-5: color-mix(in srgb, var(--color-purple) 5%, transparent);
+    --color-purple-opacity-10: color-mix(in srgb, var(--color-purple) 10%, transparent);
+    --color-purple-opacity-15: color-mix(in srgb, var(--color-purple) 15%, transparent);
+    --color-purple-opacity-20: color-mix(in srgb, var(--color-purple) 20%, transparent);
+    --color-purple-opacity-25: color-mix(in srgb, var(--color-purple) 25%, transparent);
+    --color-purple-opacity-30: color-mix(in srgb, var(--color-purple) 30%, transparent);
+    --color-purple-opacity-35: color-mix(in srgb, var(--color-purple) 35%, transparent);
+    --color-purple-opacity-40: color-mix(in srgb, var(--color-purple) 40%, transparent);
+    --color-purple-opacity-45: color-mix(in srgb, var(--color-purple) 45%, transparent);
+    --color-purple-opacity-50: color-mix(in srgb, var(--color-purple) 50%, transparent);
+    --color-purple-opacity-55: color-mix(in srgb, var(--color-purple) 55%, transparent);
+    --color-purple-opacity-60: color-mix(in srgb, var(--color-purple) 60%, transparent);
+    --color-purple-opacity-65: color-mix(in srgb, var(--color-purple) 65%, transparent);
+    --color-purple-opacity-70: color-mix(in srgb, var(--color-purple) 70%, transparent);
+    --color-purple-opacity-75: color-mix(in srgb, var(--color-purple) 75%, transparent);
+    --color-purple-opacity-80: color-mix(in srgb, var(--color-purple) 80%, transparent);
+    --color-purple-opacity-85: color-mix(in srgb, var(--color-purple) 85%, transparent);
+    --color-purple-opacity-90: color-mix(in srgb, var(--color-purple) 90%, transparent);
+    --color-purple-opacity-95: color-mix(in srgb, var(--color-purple) 95%, transparent);
+    --color-purple-opacity-100: color-mix(in srgb, var(--color-purple) 100%, transparent);
 
-    --color-black: hwb(0 0% 100%);
-    --color-white: hwb(0 100% 0%);
-
-    --color-red-dark:   var(--color-red-45);
-    --color-red:        var(--color-red-75);
-    --color-red-bright: var(--color-red-100);
-
-    --color-orange-dark:   var(--color-orange-45);
-    --color-orange:        var(--color-orange-75);
-    --color-orange-bright: var(--color-orange-100);
-
-    --color-yellow-dark:   var(--color-yellow-45);
-    --color-yellow:        var(--color-yellow-75);
-    --color-yellow-bright: var(--color-yellow-100);
-
-    --color-green-dark:   var(--color-green-45);
-    --color-green:        var(--color-green-75);
-    --color-green-bright: var(--color-green-100);
-
-    --color-cyan-dark:   var(--color-cyan-45);
-    --color-cyan:        var(--color-cyan-75);
-    --color-cyan-bright: var(--color-cyan-100);
-
-    --color-blue-dark:   var(--color-blue-45);
-    --color-blue:        var(--color-blue-75);
-    --color-blue-bright: var(--color-blue-100);
-
-    --color-purple-dark:   var(--color-purple-45);
-    --color-purple:        var(--color-purple-75);
-    --color-purple-bright: var(--color-purple-100);
-
-    --color-pink-dark:   var(--color-pink-45);
-    --color-pink:        var(--color-pink-75);
-    --color-pink-bright: var(--color-pink-100);
+    --color-pink-opacity-0: color-mix(in srgb, var(--color-pink) 0%, transparent);
+    --color-pink-opacity-5: color-mix(in srgb, var(--color-pink) 5%, transparent);
+    --color-pink-opacity-10: color-mix(in srgb, var(--color-pink) 10%, transparent);
+    --color-pink-opacity-15: color-mix(in srgb, var(--color-pink) 15%, transparent);
+    --color-pink-opacity-20: color-mix(in srgb, var(--color-pink) 20%, transparent);
+    --color-pink-opacity-25: color-mix(in srgb, var(--color-pink) 25%, transparent);
+    --color-pink-opacity-30: color-mix(in srgb, var(--color-pink) 30%, transparent);
+    --color-pink-opacity-35: color-mix(in srgb, var(--color-pink) 35%, transparent);
+    --color-pink-opacity-40: color-mix(in srgb, var(--color-pink) 40%, transparent);
+    --color-pink-opacity-45: color-mix(in srgb, var(--color-pink) 45%, transparent);
+    --color-pink-opacity-50: color-mix(in srgb, var(--color-pink) 50%, transparent);
+    --color-pink-opacity-55: color-mix(in srgb, var(--color-pink) 55%, transparent);
+    --color-pink-opacity-60: color-mix(in srgb, var(--color-pink) 60%, transparent);
+    --color-pink-opacity-65: color-mix(in srgb, var(--color-pink) 65%, transparent);
+    --color-pink-opacity-70: color-mix(in srgb, var(--color-pink) 70%, transparent);
+    --color-pink-opacity-75: color-mix(in srgb, var(--color-pink) 75%, transparent);
+    --color-pink-opacity-80: color-mix(in srgb, var(--color-pink) 80%, transparent);
+    --color-pink-opacity-85: color-mix(in srgb, var(--color-pink) 85%, transparent);
+    --color-pink-opacity-90: color-mix(in srgb, var(--color-pink) 90%, transparent);
+    --color-pink-opacity-95: color-mix(in srgb, var(--color-pink) 95%, transparent);
+    --color-pink-opacity-100: color-mix(in srgb, var(--color-pink) 100%, transparent);
 
     /* Semantic */
 
@@ -450,37 +558,37 @@
     --color-border-alt: var(--color-white-opacity-15);
 
     --color-information-dark:   var(--color-blue-dark);
-    --color-information:        var(--color-blue);
+    --color-information-normal: var(--color-blue-normal);
     --color-information-bright: var(--color-blue-bright);
 
     --color-success-dark:   var(--color-green-dark);
-    --color-success:        var(--color-green);
+    --color-success-normal: var(--color-green-normal);
     --color-success-bright: var(--color-green-bright);
 
     --color-warning-dark:   var(--color-yellow-dark);
-    --color-warning:        var(--color-yellow);
+    --color-warning-normal: var(--color-yellow-normal);
     --color-warning-bright: var(--color-yellow-bright);
 
     --color-error-dark:   var(--color-red-dark);
-    --color-error:        var(--color-red);
+    --color-error-normal: var(--color-red-normal);
     --color-error-bright: var(--color-red-bright);
 
     /* Semantic (GitHub Markdown) */
 
     --color-note-dark:   var(--color-blue-dark);
-    --color-note:        var(--color-blue);
+    --color-note-normal: var(--color-blue-normal);
     --color-note-bright: var(--color-blue-bright);
 
-    --color-tip-dark:   var(--color-green-dark);
-    --color-tip:        var(--color-green);
-    --color-tip-bright: var(--color-green-bright);
+    --color-tip-dark:   var(--color-emerald-dark);
+    --color-tip-normal: var(--color-emerald-normal);
+    --color-tip-bright: var(--color-emerald-bright);
 
     --color-important-dark:   var(--color-purple-dark);
-    --color-important:        var(--color-purple);
+    --color-important-normal: var(--color-purple-normal);
     --color-important-bright: var(--color-purple-bright);
 
     --color-caution-dark:   var(--color-red-dark);
-    --color-caution:        var(--color-red);
+    --color-caution-normal: var(--color-red-normal);
     --color-caution-bright: var(--color-red-bright);
 
     /* Semantic (Components) */
@@ -498,19 +606,19 @@
 
     --color-button-information-foreground: var(--color-information-bright);
     --color-button-information-background: color-mix(in srgb, var(--color-information-bright) 10%, transparent);
-    --color-button-information-border:     var(--color-information);
+    --color-button-information-border:     var(--color-information-normal);
 
     --color-button-success-foreground: var(--color-success-bright);
     --color-button-success-background: color-mix(in srgb, var(--color-success-bright) 10%, transparent);
-    --color-button-success-border:     var(--color-success);
+    --color-button-success-border:     var(--color-success-normal);
 
     --color-button-warning-foreground: var(--color-warning-bright);
     --color-button-warning-background: color-mix(in srgb, var(--color-warning-bright) 10%, transparent);
-    --color-button-warning-border:     var(--color-warning);
+    --color-button-warning-border:     var(--color-warning-normal);
 
     --color-button-error-foreground: var(--color-error-bright);
     --color-button-error-background: color-mix(in srgb, var(--color-error-bright) 10%, transparent);
-    --color-button-error-border:     var(--color-error);
+    --color-button-error-border:     var(--color-error-normal);
 
     --color-textfield-foreground: var(--color-foreground-alt);
     --color-textfield-background: var(--color-layer-alt);
@@ -557,19 +665,19 @@
 
     --color-toast-information-foreground: var(--color-information-bright);
     --color-toast-information-background: color-mix(in srgb, var(--color-information-bright) 10%, var(--color-background-alt));
-    --color-toast-information-border:     var(--color-information);
+    --color-toast-information-border:     var(--color-information-normal);
 
     --color-toast-success-foreground: var(--color-success-bright);
     --color-toast-success-background: color-mix(in srgb, var(--color-success-bright) 10%, var(--color-background-alt));
-    --color-toast-success-border:     var(--color-success);
+    --color-toast-success-border:     var(--color-success-normal);
 
     --color-toast-warning-foreground: var(--color-warning-bright);
     --color-toast-warning-background: color-mix(in srgb, var(--color-warning-bright) 10%, var(--color-background-alt));
-    --color-toast-warning-border:     var(--color-warning);
+    --color-toast-warning-border:     var(--color-warning-normal);
 
     --color-toast-error-foreground: var(--color-error-bright);
     --color-toast-error-background: color-mix(in srgb, var(--color-error-bright) 10%, var(--color-background-alt));
-    --color-toast-error-border:     var(--color-error);
+    --color-toast-error-border:     var(--color-error-normal);
 
     --color-sidebar-foreground:        var(--color-foreground);
     --color-sidebar-background:        var(--color-background);
@@ -693,6 +801,28 @@
 .fg-color-green-95, .text-color-green-95 { color: var(--color-green-95) !important; }
 .fg-color-green-100, .text-color-green-100 { color: var(--color-green-100) !important; }
 
+.fg-color-emerald-0, .text-color-emerald-0 { color: var(--color-emerald-0) !important; }
+.fg-color-emerald-5, .text-color-emerald-5 { color: var(--color-emerald-5) !important; }
+.fg-color-emerald-10, .text-color-emerald-10 { color: var(--color-emerald-10) !important; }
+.fg-color-emerald-15, .text-color-emerald-15 { color: var(--color-emerald-15) !important; }
+.fg-color-emerald-20, .text-color-emerald-20 { color: var(--color-emerald-20) !important; }
+.fg-color-emerald-25, .text-color-emerald-25 { color: var(--color-emerald-25) !important; }
+.fg-color-emerald-30, .text-color-emerald-30 { color: var(--color-emerald-30) !important; }
+.fg-color-emerald-35, .text-color-emerald-35 { color: var(--color-emerald-35) !important; }
+.fg-color-emerald-40, .text-color-emerald-40 { color: var(--color-emerald-40) !important; }
+.fg-color-emerald-45, .text-color-emerald-45 { color: var(--color-emerald-45) !important; }
+.fg-color-emerald-50, .text-color-emerald-50 { color: var(--color-emerald-50) !important; }
+.fg-color-emerald-55, .text-color-emerald-55 { color: var(--color-emerald-55) !important; }
+.fg-color-emerald-60, .text-color-emerald-60 { color: var(--color-emerald-60) !important; }
+.fg-color-emerald-65, .text-color-emerald-65 { color: var(--color-emerald-65) !important; }
+.fg-color-emerald-70, .text-color-emerald-70 { color: var(--color-emerald-70) !important; }
+.fg-color-emerald-75, .text-color-emerald-75 { color: var(--color-emerald-75) !important; }
+.fg-color-emerald-80, .text-color-emerald-80 { color: var(--color-emerald-80) !important; }
+.fg-color-emerald-85, .text-color-emerald-85 { color: var(--color-emerald-85) !important; }
+.fg-color-emerald-90, .text-color-emerald-90 { color: var(--color-emerald-90) !important; }
+.fg-color-emerald-95, .text-color-emerald-95 { color: var(--color-emerald-95) !important; }
+.fg-color-emerald-100, .text-color-emerald-100 { color: var(--color-emerald-100) !important; }
+
 .fg-color-cyan-0, .text-color-cyan-0 { color: var(--color-cyan-0) !important; }
 .fg-color-cyan-5, .text-color-cyan-5 { color: var(--color-cyan-5) !important; }
 .fg-color-cyan-10, .text-color-cyan-10 { color: var(--color-cyan-10) !important; }
@@ -736,6 +866,28 @@
 .fg-color-blue-90, .text-color-blue-90 { color: var(--color-blue-90) !important; }
 .fg-color-blue-95, .text-color-blue-95 { color: var(--color-blue-95) !important; }
 .fg-color-blue-100, .text-color-blue-100 { color: var(--color-blue-100) !important; }
+
+.fg-color-indigo-0, .text-color-indigo-0 { color: var(--color-indigo-0) !important; }
+.fg-color-indigo-5, .text-color-indigo-5 { color: var(--color-indigo-5) !important; }
+.fg-color-indigo-10, .text-color-indigo-10 { color: var(--color-indigo-10) !important; }
+.fg-color-indigo-15, .text-color-indigo-15 { color: var(--color-indigo-15) !important; }
+.fg-color-indigo-20, .text-color-indigo-20 { color: var(--color-indigo-20) !important; }
+.fg-color-indigo-25, .text-color-indigo-25 { color: var(--color-indigo-25) !important; }
+.fg-color-indigo-30, .text-color-indigo-30 { color: var(--color-indigo-30) !important; }
+.fg-color-indigo-35, .text-color-indigo-35 { color: var(--color-indigo-35) !important; }
+.fg-color-indigo-40, .text-color-indigo-40 { color: var(--color-indigo-40) !important; }
+.fg-color-indigo-45, .text-color-indigo-45 { color: var(--color-indigo-45) !important; }
+.fg-color-indigo-50, .text-color-indigo-50 { color: var(--color-indigo-50) !important; }
+.fg-color-indigo-55, .text-color-indigo-55 { color: var(--color-indigo-55) !important; }
+.fg-color-indigo-60, .text-color-indigo-60 { color: var(--color-indigo-60) !important; }
+.fg-color-indigo-65, .text-color-indigo-65 { color: var(--color-indigo-65) !important; }
+.fg-color-indigo-70, .text-color-indigo-70 { color: var(--color-indigo-70) !important; }
+.fg-color-indigo-75, .text-color-indigo-75 { color: var(--color-indigo-75) !important; }
+.fg-color-indigo-80, .text-color-indigo-80 { color: var(--color-indigo-80) !important; }
+.fg-color-indigo-85, .text-color-indigo-85 { color: var(--color-indigo-85) !important; }
+.fg-color-indigo-90, .text-color-indigo-90 { color: var(--color-indigo-90) !important; }
+.fg-color-indigo-95, .text-color-indigo-95 { color: var(--color-indigo-95) !important; }
+.fg-color-indigo-100, .text-color-indigo-100 { color: var(--color-indigo-100) !important; }
 
 .fg-color-purple-0, .text-color-purple-0 { color: var(--color-purple-0) !important; }
 .fg-color-purple-5, .text-color-purple-5 { color: var(--color-purple-5) !important; }
@@ -891,6 +1043,28 @@
 .fg-color-green-opacity-95, .text-color-green-opacity-95 { color: var(--color-green-opacity-95) !important; }
 .fg-color-green-opacity-100, .text-color-green-opacity-100 { color: var(--color-green-opacity-100) !important; }
 
+.fg-color-emerald-opacity-0, .text-color-emerald-opacity-0 { color: var(--color-emerald-opacity-0) !important; }
+.fg-color-emerald-opacity-5, .text-color-emerald-opacity-5 { color: var(--color-emerald-opacity-5) !important; }
+.fg-color-emerald-opacity-10, .text-color-emerald-opacity-10 { color: var(--color-emerald-opacity-10) !important; }
+.fg-color-emerald-opacity-15, .text-color-emerald-opacity-15 { color: var(--color-emerald-opacity-15) !important; }
+.fg-color-emerald-opacity-20, .text-color-emerald-opacity-20 { color: var(--color-emerald-opacity-20) !important; }
+.fg-color-emerald-opacity-25, .text-color-emerald-opacity-25 { color: var(--color-emerald-opacity-25) !important; }
+.fg-color-emerald-opacity-30, .text-color-emerald-opacity-30 { color: var(--color-emerald-opacity-30) !important; }
+.fg-color-emerald-opacity-35, .text-color-emerald-opacity-35 { color: var(--color-emerald-opacity-35) !important; }
+.fg-color-emerald-opacity-40, .text-color-emerald-opacity-40 { color: var(--color-emerald-opacity-40) !important; }
+.fg-color-emerald-opacity-45, .text-color-emerald-opacity-45 { color: var(--color-emerald-opacity-45) !important; }
+.fg-color-emerald-opacity-50, .text-color-emerald-opacity-50 { color: var(--color-emerald-opacity-50) !important; }
+.fg-color-emerald-opacity-55, .text-color-emerald-opacity-55 { color: var(--color-emerald-opacity-55) !important; }
+.fg-color-emerald-opacity-60, .text-color-emerald-opacity-60 { color: var(--color-emerald-opacity-60) !important; }
+.fg-color-emerald-opacity-65, .text-color-emerald-opacity-65 { color: var(--color-emerald-opacity-65) !important; }
+.fg-color-emerald-opacity-70, .text-color-emerald-opacity-70 { color: var(--color-emerald-opacity-70) !important; }
+.fg-color-emerald-opacity-75, .text-color-emerald-opacity-75 { color: var(--color-emerald-opacity-75) !important; }
+.fg-color-emerald-opacity-80, .text-color-emerald-opacity-80 { color: var(--color-emerald-opacity-80) !important; }
+.fg-color-emerald-opacity-85, .text-color-emerald-opacity-85 { color: var(--color-emerald-opacity-85) !important; }
+.fg-color-emerald-opacity-90, .text-color-emerald-opacity-90 { color: var(--color-emerald-opacity-90) !important; }
+.fg-color-emerald-opacity-95, .text-color-emerald-opacity-95 { color: var(--color-emerald-opacity-95) !important; }
+.fg-color-emerald-opacity-100, .text-color-emerald-opacity-100 { color: var(--color-emerald-opacity-100) !important; }
+
 .fg-color-cyan-opacity-0, .text-color-cyan-opacity-0 { color: var(--color-cyan-opacity-0) !important; }
 .fg-color-cyan-opacity-5, .text-color-cyan-opacity-5 { color: var(--color-cyan-opacity-5) !important; }
 .fg-color-cyan-opacity-10, .text-color-cyan-opacity-10 { color: var(--color-cyan-opacity-10) !important; }
@@ -934,6 +1108,28 @@
 .fg-color-blue-opacity-90, .text-color-blue-opacity-90 { color: var(--color-blue-opacity-90) !important; }
 .fg-color-blue-opacity-95, .text-color-blue-opacity-95 { color: var(--color-blue-opacity-95) !important; }
 .fg-color-blue-opacity-100, .text-color-blue-opacity-100 { color: var(--color-blue-opacity-100) !important; }
+
+.fg-color-indigo-opacity-0, .text-color-indigo-opacity-0 { color: var(--color-indigo-opacity-0) !important; }
+.fg-color-indigo-opacity-5, .text-color-indigo-opacity-5 { color: var(--color-indigo-opacity-5) !important; }
+.fg-color-indigo-opacity-10, .text-color-indigo-opacity-10 { color: var(--color-indigo-opacity-10) !important; }
+.fg-color-indigo-opacity-15, .text-color-indigo-opacity-15 { color: var(--color-indigo-opacity-15) !important; }
+.fg-color-indigo-opacity-20, .text-color-indigo-opacity-20 { color: var(--color-indigo-opacity-20) !important; }
+.fg-color-indigo-opacity-25, .text-color-indigo-opacity-25 { color: var(--color-indigo-opacity-25) !important; }
+.fg-color-indigo-opacity-30, .text-color-indigo-opacity-30 { color: var(--color-indigo-opacity-30) !important; }
+.fg-color-indigo-opacity-35, .text-color-indigo-opacity-35 { color: var(--color-indigo-opacity-35) !important; }
+.fg-color-indigo-opacity-40, .text-color-indigo-opacity-40 { color: var(--color-indigo-opacity-40) !important; }
+.fg-color-indigo-opacity-45, .text-color-indigo-opacity-45 { color: var(--color-indigo-opacity-45) !important; }
+.fg-color-indigo-opacity-50, .text-color-indigo-opacity-50 { color: var(--color-indigo-opacity-50) !important; }
+.fg-color-indigo-opacity-55, .text-color-indigo-opacity-55 { color: var(--color-indigo-opacity-55) !important; }
+.fg-color-indigo-opacity-60, .text-color-indigo-opacity-60 { color: var(--color-indigo-opacity-60) !important; }
+.fg-color-indigo-opacity-65, .text-color-indigo-opacity-65 { color: var(--color-indigo-opacity-65) !important; }
+.fg-color-indigo-opacity-70, .text-color-indigo-opacity-70 { color: var(--color-indigo-opacity-70) !important; }
+.fg-color-indigo-opacity-75, .text-color-indigo-opacity-75 { color: var(--color-indigo-opacity-75) !important; }
+.fg-color-indigo-opacity-80, .text-color-indigo-opacity-80 { color: var(--color-indigo-opacity-80) !important; }
+.fg-color-indigo-opacity-85, .text-color-indigo-opacity-85 { color: var(--color-indigo-opacity-85) !important; }
+.fg-color-indigo-opacity-90, .text-color-indigo-opacity-90 { color: var(--color-indigo-opacity-90) !important; }
+.fg-color-indigo-opacity-95, .text-color-indigo-opacity-95 { color: var(--color-indigo-opacity-95) !important; }
+.fg-color-indigo-opacity-100, .text-color-indigo-opacity-100 { color: var(--color-indigo-opacity-100) !important; }
 
 .fg-color-purple-opacity-0, .text-color-purple-opacity-0 { color: var(--color-purple-opacity-0) !important; }
 .fg-color-purple-opacity-5, .text-color-purple-opacity-5 { color: var(--color-purple-opacity-5) !important; }
@@ -979,52 +1175,59 @@
 .fg-color-pink-opacity-95, .text-color-pink-opacity-95 { color: var(--color-pink-opacity-95) !important; }
 .fg-color-pink-opacity-100, .text-color-pink-opacity-100 { color: var(--color-pink-opacity-100) !important; }
 
-.fg-color-red, .text-color-red { color: var(--color-red) !important; }
+.fg-color-red-normal, .text-color-red-normal { color: var(--color-red-normal) !important; }
 .fg-color-red-dark, .text-color-red-dark { color: var(--color-red-dark) !important; }
 .fg-color-red-bright, .text-color-red-bright { color: var(--color-red-bright) !important; }
-.fg-color-orange, .text-color-orange { color: var(--color-orange) !important; }
+.fg-color-orange-normal, .text-color-orange-normal { color: var(--color-orange-normal) !important; }
 .fg-color-orange-dark, .text-color-orange-dark { color: var(--color-orange-dark) !important; }
 .fg-color-orange-bright, .text-color-orange-bright { color: var(--color-orange-bright) !important; }
-.fg-color-yellow, .text-color-yellow { color: var(--color-yellow) !important; }
+.fg-color-yellow-normal, .text-color-yellow-normal { color: var(--color-yellow-normal) !important; }
 .fg-color-yellow-dark, .text-color-yellow-dark { color: var(--color-yellow-dark) !important; }
 .fg-color-yellow-bright, .text-color-yellow-bright { color: var(--color-yellow-bright) !important; }
-.fg-color-green, .text-color-green { color: var(--color-green) !important; }
+.fg-color-green-normal, .text-color-green-normal { color: var(--color-green-normal) !important; }
 .fg-color-green-dark, .text-color-green-dark { color: var(--color-green-dark) !important; }
 .fg-color-green-bright, .text-color-green-bright { color: var(--color-green-bright) !important; }
-.fg-color-cyan, .text-color-cyan { color: var(--color-cyan) !important; }
+.fg-color-emerald-normal, .text-color-emerald-normal { color: var(--color-emerald-normal) !important; }
+.fg-color-emerald-dark, .text-color-emerald-dark { color: var(--color-emerald-dark) !important; }
+.fg-color-emerald-bright, .text-color-emerald-bright { color: var(--color-emerald-bright) !important; }
+.fg-color-cyan-normal, .text-color-cyan-normal { color: var(--color-cyan-normal) !important; }
 .fg-color-cyan-dark, .text-color-cyan-dark { color: var(--color-cyan-dark) !important; }
 .fg-color-cyan-bright, .text-color-cyan-bright { color: var(--color-cyan-bright) !important; }
-.fg-color-blue, .text-color-blue { color: var(--color-blue) !important; }
+.fg-color-blue-normal, .text-color-blue-normal { color: var(--color-blue-normal) !important; }
 .fg-color-blue-dark, .text-color-blue-dark { color: var(--color-blue-dark) !important; }
 .fg-color-blue-bright, .text-color-blue-bright { color: var(--color-blue-bright) !important; }
-.fg-color-purple, .text-color-purple { color: var(--color-purple) !important; }
+.fg-color-indigo-normal, .text-color-indigo-normal { color: var(--color-indigo-normal) !important; }
+.fg-color-indigo-dark, .text-color-indigo-dark { color: var(--color-indigo-dark) !important; }
+.fg-color-indigo-bright, .text-color-indigo-bright { color: var(--color-indigo-bright) !important; }
+.fg-color-purple-normal, .text-color-purple-normal { color: var(--color-purple-normal) !important; }
 .fg-color-purple-dark, .text-color-purple-dark { color: var(--color-purple-dark) !important; }
 .fg-color-purple-bright, .text-color-purple-bright { color: var(--color-purple-bright) !important; }
-.fg-color-pink, .text-color-pink { color: var(--color-pink) !important; }
+.fg-color-pink-normal, .text-color-pink-normal { color: var(--color-pink-normal) !important; }
 .fg-color-pink-dark, .text-color-pink-dark { color: var(--color-pink-dark) !important; }
 .fg-color-pink-bright, .text-color-pink-bright { color: var(--color-pink-bright) !important; }
-.fg-color-information, .text-color-information { color: var(--color-information) !important; }
+
+.fg-color-information-normal, .text-color-information-normal { color: var(--color-information-normal) !important; }
 .fg-color-information-dark, .text-color-information-dark { color: var(--color-information-dark) !important; }
 .fg-color-information-bright, .text-color-information-bright { color: var(--color-information-bright) !important; }
-.fg-color-success, .text-color-success { color: var(--color-success) !important; }
+.fg-color-success-normal, .text-color-success-normal { color: var(--color-success-normal) !important; }
 .fg-color-success-dark, .text-color-success-dark { color: var(--color-success-dark) !important; }
 .fg-color-success-bright, .text-color-success-bright { color: var(--color-success-bright) !important; }
-.fg-color-warning, .text-color-warning { color: var(--color-warning) !important; }
+.fg-color-warning-normal, .text-color-warning-normal { color: var(--color-warning-normal) !important; }
 .fg-color-warning-dark, .text-color-warning-dark { color: var(--color-warning-dark) !important; }
 .fg-color-warning-bright, .text-color-warning-bright { color: var(--color-warning-bright) !important; }
-.fg-color-error, .text-color-error { color: var(--color-error) !important; }
+.fg-color-error-normal, .text-color-error-normal { color: var(--color-error-normal) !important; }
 .fg-color-error-dark, .text-color-error-dark { color: var(--color-error-dark) !important; }
 .fg-color-error-bright, .text-color-error-bright { color: var(--color-error-bright) !important; }
-.fg-color-note, .text-color-note { color: var(--color-note) !important; }
+.fg-color-note-normal, .text-color-note-normal { color: var(--color-note-normal) !important; }
 .fg-color-note-dark, .text-color-note-dark { color: var(--color-note-dark) !important; }
 .fg-color-note-bright, .text-color-note-bright { color: var(--color-note-bright) !important; }
-.fg-color-tip, .text-color-tip { color: var(--color-tip) !important; }
+.fg-color-tip-normal, .text-color-tip-normal { color: var(--color-tip-normal) !important; }
 .fg-color-tip-dark, .text-color-tip-dark { color: var(--color-tip-dark) !important; }
 .fg-color-tip-bright, .text-color-tip-bright { color: var(--color-tip-bright) !important; }
-.fg-color-important, .text-color-important { color: var(--color-important) !important; }
+.fg-color-important-normal, .text-color-important-normal { color: var(--color-important-normal) !important; }
 .fg-color-important-dark, .text-color-important-dark { color: var(--color-important-dark) !important; }
 .fg-color-important-bright, .text-color-important-bright { color: var(--color-important-bright) !important; }
-.fg-color-caution, .text-color-caution { color: var(--color-caution) !important; }
+.fg-color-caution-normal, .text-color-caution-normal { color: var(--color-caution-normal) !important; }
 .fg-color-caution-dark, .text-color-caution-dark { color: var(--color-caution-dark) !important; }
 .fg-color-caution-bright, .text-color-caution-bright { color: var(--color-caution-bright) !important; }
 
@@ -1140,6 +1343,28 @@
 .bg-color-green-95, .background-color-green-95 { background-color: var(--color-green-95) !important; }
 .bg-color-green-100, .background-color-green-100 { background-color: var(--color-green-100) !important; }
 
+.bg-color-emerald-0, .background-color-emerald-0 { background-color: var(--color-emerald-0) !important; }
+.bg-color-emerald-5, .background-color-emerald-5 { background-color: var(--color-emerald-5) !important; }
+.bg-color-emerald-10, .background-color-emerald-10 { background-color: var(--color-emerald-10) !important; }
+.bg-color-emerald-15, .background-color-emerald-15 { background-color: var(--color-emerald-15) !important; }
+.bg-color-emerald-20, .background-color-emerald-20 { background-color: var(--color-emerald-20) !important; }
+.bg-color-emerald-25, .background-color-emerald-25 { background-color: var(--color-emerald-25) !important; }
+.bg-color-emerald-30, .background-color-emerald-30 { background-color: var(--color-emerald-30) !important; }
+.bg-color-emerald-35, .background-color-emerald-35 { background-color: var(--color-emerald-35) !important; }
+.bg-color-emerald-40, .background-color-emerald-40 { background-color: var(--color-emerald-40) !important; }
+.bg-color-emerald-45, .background-color-emerald-45 { background-color: var(--color-emerald-45) !important; }
+.bg-color-emerald-50, .background-color-emerald-50 { background-color: var(--color-emerald-50) !important; }
+.bg-color-emerald-55, .background-color-emerald-55 { background-color: var(--color-emerald-55) !important; }
+.bg-color-emerald-60, .background-color-emerald-60 { background-color: var(--color-emerald-60) !important; }
+.bg-color-emerald-65, .background-color-emerald-65 { background-color: var(--color-emerald-65) !important; }
+.bg-color-emerald-70, .background-color-emerald-70 { background-color: var(--color-emerald-70) !important; }
+.bg-color-emerald-75, .background-color-emerald-75 { background-color: var(--color-emerald-75) !important; }
+.bg-color-emerald-80, .background-color-emerald-80 { background-color: var(--color-emerald-80) !important; }
+.bg-color-emerald-85, .background-color-emerald-85 { background-color: var(--color-emerald-85) !important; }
+.bg-color-emerald-90, .background-color-emerald-90 { background-color: var(--color-emerald-90) !important; }
+.bg-color-emerald-95, .background-color-emerald-95 { background-color: var(--color-emerald-95) !important; }
+.bg-color-emerald-100, .background-color-emerald-100 { background-color: var(--color-emerald-100) !important; }
+
 .bg-color-cyan-0, .background-color-cyan-0 { background-color: var(--color-cyan-0) !important; }
 .bg-color-cyan-5, .background-color-cyan-5 { background-color: var(--color-cyan-5) !important; }
 .bg-color-cyan-10, .background-color-cyan-10 { background-color: var(--color-cyan-10) !important; }
@@ -1183,6 +1408,28 @@
 .bg-color-blue-90, .background-color-blue-90 { background-color: var(--color-blue-90) !important; }
 .bg-color-blue-95, .background-color-blue-95 { background-color: var(--color-blue-95) !important; }
 .bg-color-blue-100, .background-color-blue-100 { background-color: var(--color-blue-100) !important; }
+
+.bg-color-indigo-0, .background-color-indigo-0 { background-color: var(--color-indigo-0) !important; }
+.bg-color-indigo-5, .background-color-indigo-5 { background-color: var(--color-indigo-5) !important; }
+.bg-color-indigo-10, .background-color-indigo-10 { background-color: var(--color-indigo-10) !important; }
+.bg-color-indigo-15, .background-color-indigo-15 { background-color: var(--color-indigo-15) !important; }
+.bg-color-indigo-20, .background-color-indigo-20 { background-color: var(--color-indigo-20) !important; }
+.bg-color-indigo-25, .background-color-indigo-25 { background-color: var(--color-indigo-25) !important; }
+.bg-color-indigo-30, .background-color-indigo-30 { background-color: var(--color-indigo-30) !important; }
+.bg-color-indigo-35, .background-color-indigo-35 { background-color: var(--color-indigo-35) !important; }
+.bg-color-indigo-40, .background-color-indigo-40 { background-color: var(--color-indigo-40) !important; }
+.bg-color-indigo-45, .background-color-indigo-45 { background-color: var(--color-indigo-45) !important; }
+.bg-color-indigo-50, .background-color-indigo-50 { background-color: var(--color-indigo-50) !important; }
+.bg-color-indigo-55, .background-color-indigo-55 { background-color: var(--color-indigo-55) !important; }
+.bg-color-indigo-60, .background-color-indigo-60 { background-color: var(--color-indigo-60) !important; }
+.bg-color-indigo-65, .background-color-indigo-65 { background-color: var(--color-indigo-65) !important; }
+.bg-color-indigo-70, .background-color-indigo-70 { background-color: var(--color-indigo-70) !important; }
+.bg-color-indigo-75, .background-color-indigo-75 { background-color: var(--color-indigo-75) !important; }
+.bg-color-indigo-80, .background-color-indigo-80 { background-color: var(--color-indigo-80) !important; }
+.bg-color-indigo-85, .background-color-indigo-85 { background-color: var(--color-indigo-85) !important; }
+.bg-color-indigo-90, .background-color-indigo-90 { background-color: var(--color-indigo-90) !important; }
+.bg-color-indigo-95, .background-color-indigo-95 { background-color: var(--color-indigo-95) !important; }
+.bg-color-indigo-100, .background-color-indigo-100 { background-color: var(--color-indigo-100) !important; }
 
 .bg-color-purple-0, .background-color-purple-0 { background-color: var(--color-purple-0) !important; }
 .bg-color-purple-5, .background-color-purple-5 { background-color: var(--color-purple-5) !important; }
@@ -1338,6 +1585,28 @@
 .bg-color-green-opacity-95, .background-color-green-opacity-95 { background-color: var(--color-green-opacity-95) !important; }
 .bg-color-green-opacity-100, .background-color-green-opacity-100 { background-color: var(--color-green-opacity-100) !important; }
 
+.bg-color-emerald-opacity-0, .background-color-emerald-opacity-0 { background-color: var(--color-emerald-opacity-0) !important; }
+.bg-color-emerald-opacity-5, .background-color-emerald-opacity-5 { background-color: var(--color-emerald-opacity-5) !important; }
+.bg-color-emerald-opacity-10, .background-color-emerald-opacity-10 { background-color: var(--color-emerald-opacity-10) !important; }
+.bg-color-emerald-opacity-15, .background-color-emerald-opacity-15 { background-color: var(--color-emerald-opacity-15) !important; }
+.bg-color-emerald-opacity-20, .background-color-emerald-opacity-20 { background-color: var(--color-emerald-opacity-20) !important; }
+.bg-color-emerald-opacity-25, .background-color-emerald-opacity-25 { background-color: var(--color-emerald-opacity-25) !important; }
+.bg-color-emerald-opacity-30, .background-color-emerald-opacity-30 { background-color: var(--color-emerald-opacity-30) !important; }
+.bg-color-emerald-opacity-35, .background-color-emerald-opacity-35 { background-color: var(--color-emerald-opacity-35) !important; }
+.bg-color-emerald-opacity-40, .background-color-emerald-opacity-40 { background-color: var(--color-emerald-opacity-40) !important; }
+.bg-color-emerald-opacity-45, .background-color-emerald-opacity-45 { background-color: var(--color-emerald-opacity-45) !important; }
+.bg-color-emerald-opacity-50, .background-color-emerald-opacity-50 { background-color: var(--color-emerald-opacity-50) !important; }
+.bg-color-emerald-opacity-55, .background-color-emerald-opacity-55 { background-color: var(--color-emerald-opacity-55) !important; }
+.bg-color-emerald-opacity-60, .background-color-emerald-opacity-60 { background-color: var(--color-emerald-opacity-60) !important; }
+.bg-color-emerald-opacity-65, .background-color-emerald-opacity-65 { background-color: var(--color-emerald-opacity-65) !important; }
+.bg-color-emerald-opacity-70, .background-color-emerald-opacity-70 { background-color: var(--color-emerald-opacity-70) !important; }
+.bg-color-emerald-opacity-75, .background-color-emerald-opacity-75 { background-color: var(--color-emerald-opacity-75) !important; }
+.bg-color-emerald-opacity-80, .background-color-emerald-opacity-80 { background-color: var(--color-emerald-opacity-80) !important; }
+.bg-color-emerald-opacity-85, .background-color-emerald-opacity-85 { background-color: var(--color-emerald-opacity-85) !important; }
+.bg-color-emerald-opacity-90, .background-color-emerald-opacity-90 { background-color: var(--color-emerald-opacity-90) !important; }
+.bg-color-emerald-opacity-95, .background-color-emerald-opacity-95 { background-color: var(--color-emerald-opacity-95) !important; }
+.bg-color-emerald-opacity-100, .background-color-emerald-opacity-100 { background-color: var(--color-emerald-opacity-100) !important; }
+
 .bg-color-cyan-opacity-0, .background-color-cyan-opacity-0 { background-color: var(--color-cyan-opacity-0) !important; }
 .bg-color-cyan-opacity-5, .background-color-cyan-opacity-5 { background-color: var(--color-cyan-opacity-5) !important; }
 .bg-color-cyan-opacity-10, .background-color-cyan-opacity-10 { background-color: var(--color-cyan-opacity-10) !important; }
@@ -1381,6 +1650,28 @@
 .bg-color-blue-opacity-90, .background-color-blue-opacity-90 { background-color: var(--color-blue-opacity-90) !important; }
 .bg-color-blue-opacity-95, .background-color-blue-opacity-95 { background-color: var(--color-blue-opacity-95) !important; }
 .bg-color-blue-opacity-100, .background-color-blue-opacity-100 { background-color: var(--color-blue-opacity-100) !important; }
+
+.bg-color-indigo-opacity-0, .background-color-indigo-opacity-0 { background-color: var(--color-indigo-opacity-0) !important; }
+.bg-color-indigo-opacity-5, .background-color-indigo-opacity-5 { background-color: var(--color-indigo-opacity-5) !important; }
+.bg-color-indigo-opacity-10, .background-color-indigo-opacity-10 { background-color: var(--color-indigo-opacity-10) !important; }
+.bg-color-indigo-opacity-15, .background-color-indigo-opacity-15 { background-color: var(--color-indigo-opacity-15) !important; }
+.bg-color-indigo-opacity-20, .background-color-indigo-opacity-20 { background-color: var(--color-indigo-opacity-20) !important; }
+.bg-color-indigo-opacity-25, .background-color-indigo-opacity-25 { background-color: var(--color-indigo-opacity-25) !important; }
+.bg-color-indigo-opacity-30, .background-color-indigo-opacity-30 { background-color: var(--color-indigo-opacity-30) !important; }
+.bg-color-indigo-opacity-35, .background-color-indigo-opacity-35 { background-color: var(--color-indigo-opacity-35) !important; }
+.bg-color-indigo-opacity-40, .background-color-indigo-opacity-40 { background-color: var(--color-indigo-opacity-40) !important; }
+.bg-color-indigo-opacity-45, .background-color-indigo-opacity-45 { background-color: var(--color-indigo-opacity-45) !important; }
+.bg-color-indigo-opacity-50, .background-color-indigo-opacity-50 { background-color: var(--color-indigo-opacity-50) !important; }
+.bg-color-indigo-opacity-55, .background-color-indigo-opacity-55 { background-color: var(--color-indigo-opacity-55) !important; }
+.bg-color-indigo-opacity-60, .background-color-indigo-opacity-60 { background-color: var(--color-indigo-opacity-60) !important; }
+.bg-color-indigo-opacity-65, .background-color-indigo-opacity-65 { background-color: var(--color-indigo-opacity-65) !important; }
+.bg-color-indigo-opacity-70, .background-color-indigo-opacity-70 { background-color: var(--color-indigo-opacity-70) !important; }
+.bg-color-indigo-opacity-75, .background-color-indigo-opacity-75 { background-color: var(--color-indigo-opacity-75) !important; }
+.bg-color-indigo-opacity-80, .background-color-indigo-opacity-80 { background-color: var(--color-indigo-opacity-80) !important; }
+.bg-color-indigo-opacity-85, .background-color-indigo-opacity-85 { background-color: var(--color-indigo-opacity-85) !important; }
+.bg-color-indigo-opacity-90, .background-color-indigo-opacity-90 { background-color: var(--color-indigo-opacity-90) !important; }
+.bg-color-indigo-opacity-95, .background-color-indigo-opacity-95 { background-color: var(--color-indigo-opacity-95) !important; }
+.bg-color-indigo-opacity-100, .background-color-indigo-opacity-100 { background-color: var(--color-indigo-opacity-100) !important; }
 
 .bg-color-purple-opacity-0, .background-color-purple-opacity-0 { background-color: var(--color-purple-opacity-0) !important; }
 .bg-color-purple-opacity-5, .background-color-purple-opacity-5 { background-color: var(--color-purple-opacity-5) !important; }
@@ -1426,52 +1717,59 @@
 .bg-color-pink-opacity-95, .background-color-pink-opacity-95 { background-color: var(--color-pink-opacity-95) !important; }
 .bg-color-pink-opacity-100, .background-color-pink-opacity-100 { background-color: var(--color-pink-opacity-100) !important; }
 
-.bg-color-red, .background-color-red { background-color: var(--color-red) !important; }
+.bg-color-red-normal, .background-color-red-normal { background-color: var(--color-red-normal) !important; }
 .bg-color-red-dark, .background-color-red-dark { background-color: var(--color-red-dark) !important; }
 .bg-color-red-bright, .background-color-red-bright { background-color: var(--color-red-bright) !important; }
-.bg-color-orange, .background-color-orange { background-color: var(--color-orange) !important; }
+.bg-color-orange-normal, .background-color-orange-normal { background-color: var(--color-orange-normal) !important; }
 .bg-color-orange-dark, .background-color-orange-dark { background-color: var(--color-orange-dark) !important; }
 .bg-color-orange-bright, .background-color-orange-bright { background-color: var(--color-orange-bright) !important; }
-.bg-color-yellow, .background-color-yellow { background-color: var(--color-yellow) !important; }
+.bg-color-yellow-normal, .background-color-yellow-normal { background-color: var(--color-yellow-normal) !important; }
 .bg-color-yellow-dark, .background-color-yellow-dark { background-color: var(--color-yellow-dark) !important; }
 .bg-color-yellow-bright, .background-color-yellow-bright { background-color: var(--color-yellow-bright) !important; }
-.bg-color-green, .background-color-green { background-color: var(--color-green) !important; }
+.bg-color-green-normal, .background-color-green-normal { background-color: var(--color-green-normal) !important; }
 .bg-color-green-dark, .background-color-green-dark { background-color: var(--color-green-dark) !important; }
 .bg-color-green-bright, .background-color-green-bright { background-color: var(--color-green-bright) !important; }
-.bg-color-cyan, .background-color-cyan { background-color: var(--color-cyan) !important; }
+.bg-color-emerald-normal, .background-color-emerald-normal { background-color: var(--color-emerald-normal) !important; }
+.bg-color-emerald-dark, .background-color-emerald-dark { background-color: var(--color-emerald-dark) !important; }
+.bg-color-emerald-bright, .background-color-emerald-bright { background-color: var(--color-emerald-bright) !important; }
+.bg-color-cyan-normal, .background-color-cyan-normal { background-color: var(--color-cyan-normal) !important; }
 .bg-color-cyan-dark, .background-color-cyan-dark { background-color: var(--color-cyan-dark) !important; }
 .bg-color-cyan-bright, .background-color-cyan-bright { background-color: var(--color-cyan-bright) !important; }
-.bg-color-blue, .background-color-blue { background-color: var(--color-blue) !important; }
+.bg-color-blue-normal, .background-color-blue-normal { background-color: var(--color-blue-normal) !important; }
 .bg-color-blue-dark, .background-color-blue-dark { background-color: var(--color-blue-dark) !important; }
 .bg-color-blue-bright, .background-color-blue-bright { background-color: var(--color-blue-bright) !important; }
-.bg-color-purple, .background-color-purple { background-color: var(--color-purple) !important; }
+.bg-color-indigo-normal, .background-color-indigo-normal { background-color: var(--color-indigo-normal) !important; }
+.bg-color-indigo-dark, .background-color-indigo-dark { background-color: var(--color-indigo-dark) !important; }
+.bg-color-indigo-bright, .background-color-indigo-bright { background-color: var(--color-indigo-bright) !important; }
+.bg-color-purple-normal, .background-color-purple-normal { background-color: var(--color-purple-normal) !important; }
 .bg-color-purple-dark, .background-color-purple-dark { background-color: var(--color-purple-dark) !important; }
 .bg-color-purple-bright, .background-color-purple-bright { background-color: var(--color-purple-bright) !important; }
-.bg-color-pink, .background-color-pink { background-color: var(--color-pink) !important; }
+.bg-color-pink-normal, .background-color-pink-normal { background-color: var(--color-pink-normal) !important; }
 .bg-color-pink-dark, .background-color-pink-dark { background-color: var(--color-pink-dark) !important; }
 .bg-color-pink-bright, .background-color-pink-bright { background-color: var(--color-pink-bright) !important; }
-.bg-color-information, .background-color-information { background-color: var(--color-information) !important; }
+
+.bg-color-information-normal, .background-color-information-normal { background-color: var(--color-information-normal) !important; }
 .bg-color-information-dark, .background-color-information-dark { background-color: var(--color-information-dark) !important; }
 .bg-color-information-bright, .background-color-information-bright { background-color: var(--color-information-bright) !important; }
-.bg-color-success, .background-color-success { background-color: var(--color-success) !important; }
+.bg-color-success-normal, .background-color-success-normal { background-color: var(--color-success-normal) !important; }
 .bg-color-success-dark, .background-color-success-dark { background-color: var(--color-success-dark) !important; }
 .bg-color-success-bright, .background-color-success-bright { background-color: var(--color-success-bright) !important; }
-.bg-color-warning, .background-color-warning { background-color: var(--color-warning) !important; }
+.bg-color-warning-normal, .background-color-warning-normal { background-color: var(--color-warning-normal) !important; }
 .bg-color-warning-dark, .background-color-warning-dark { background-color: var(--color-warning-dark) !important; }
 .bg-color-warning-bright, .background-color-warning-bright { background-color: var(--color-warning-bright) !important; }
-.bg-color-error, .background-color-error { background-color: var(--color-error) !important; }
+.bg-color-error-normal, .background-color-error-normal { background-color: var(--color-error-normal) !important; }
 .bg-color-error-dark, .background-color-error-dark { background-color: var(--color-error-dark) !important; }
 .bg-color-error-bright, .background-color-error-bright { background-color: var(--color-error-bright) !important; }
-.bg-color-note, .background-color-note { background-color: var(--color-note) !important; }
+.bg-color-note-normal, .background-color-note-normal { background-color: var(--color-note-normal) !important; }
 .bg-color-note-dark, .background-color-note-dark { background-color: var(--color-note-dark) !important; }
 .bg-color-note-bright, .background-color-note-bright { background-color: var(--color-note-bright) !important; }
-.bg-color-tip, .background-color-tip { background-color: var(--color-tip) !important; }
+.bg-color-tip-normal, .background-color-tip-normal { background-color: var(--color-tip-normal) !important; }
 .bg-color-tip-dark, .background-color-tip-dark { background-color: var(--color-tip-dark) !important; }
 .bg-color-tip-bright, .background-color-tip-bright { background-color: var(--color-tip-bright) !important; }
-.bg-color-important, .background-color-important { background-color: var(--color-important) !important; }
+.bg-color-important-normal, .background-color-important-normal { background-color: var(--color-important-normal) !important; }
 .bg-color-important-dark, .background-color-important-dark { background-color: var(--color-important-dark) !important; }
 .bg-color-important-bright, .background-color-important-bright { background-color: var(--color-important-bright) !important; }
-.bg-color-caution, .background-color-caution { background-color: var(--color-caution) !important; }
+.bg-color-caution-normal, .background-color-caution-normal { background-color: var(--color-caution-normal) !important; }
 .bg-color-caution-dark, .background-color-caution-dark { background-color: var(--color-caution-dark) !important; }
 .bg-color-caution-bright, .background-color-caution-bright { background-color: var(--color-caution-bright) !important; }
 
@@ -1586,6 +1884,28 @@
 .bd-color-green-95, .border-color-green-95 { border-color: var(--color-green-95) !important; }
 .bd-color-green-100, .border-color-green-100 { border-color: var(--color-green-100) !important; }
 
+.bd-color-emerald-0, .border-color-emerald-0 { border-color: var(--color-emerald-0) !important; }
+.bd-color-emerald-5, .border-color-emerald-5 { border-color: var(--color-emerald-5) !important; }
+.bd-color-emerald-10, .border-color-emerald-10 { border-color: var(--color-emerald-10) !important; }
+.bd-color-emerald-15, .border-color-emerald-15 { border-color: var(--color-emerald-15) !important; }
+.bd-color-emerald-20, .border-color-emerald-20 { border-color: var(--color-emerald-20) !important; }
+.bd-color-emerald-25, .border-color-emerald-25 { border-color: var(--color-emerald-25) !important; }
+.bd-color-emerald-30, .border-color-emerald-30 { border-color: var(--color-emerald-30) !important; }
+.bd-color-emerald-35, .border-color-emerald-35 { border-color: var(--color-emerald-35) !important; }
+.bd-color-emerald-40, .border-color-emerald-40 { border-color: var(--color-emerald-40) !important; }
+.bd-color-emerald-45, .border-color-emerald-45 { border-color: var(--color-emerald-45) !important; }
+.bd-color-emerald-50, .border-color-emerald-50 { border-color: var(--color-emerald-50) !important; }
+.bd-color-emerald-55, .border-color-emerald-55 { border-color: var(--color-emerald-55) !important; }
+.bd-color-emerald-60, .border-color-emerald-60 { border-color: var(--color-emerald-60) !important; }
+.bd-color-emerald-65, .border-color-emerald-65 { border-color: var(--color-emerald-65) !important; }
+.bd-color-emerald-70, .border-color-emerald-70 { border-color: var(--color-emerald-70) !important; }
+.bd-color-emerald-75, .border-color-emerald-75 { border-color: var(--color-emerald-75) !important; }
+.bd-color-emerald-80, .border-color-emerald-80 { border-color: var(--color-emerald-80) !important; }
+.bd-color-emerald-85, .border-color-emerald-85 { border-color: var(--color-emerald-85) !important; }
+.bd-color-emerald-90, .border-color-emerald-90 { border-color: var(--color-emerald-90) !important; }
+.bd-color-emerald-95, .border-color-emerald-95 { border-color: var(--color-emerald-95) !important; }
+.bd-color-emerald-100, .border-color-emerald-100 { border-color: var(--color-emerald-100) !important; }
+
 .bd-color-cyan-0, .border-color-cyan-0 { border-color: var(--color-cyan-0) !important; }
 .bd-color-cyan-5, .border-color-cyan-5 { border-color: var(--color-cyan-5) !important; }
 .bd-color-cyan-10, .border-color-cyan-10 { border-color: var(--color-cyan-10) !important; }
@@ -1629,6 +1949,28 @@
 .bd-color-blue-90, .border-color-blue-90 { border-color: var(--color-blue-90) !important; }
 .bd-color-blue-95, .border-color-blue-95 { border-color: var(--color-blue-95) !important; }
 .bd-color-blue-100, .border-color-blue-100 { border-color: var(--color-blue-100) !important; }
+
+.bd-color-indigo-0, .border-color-indigo-0 { border-color: var(--color-indigo-0) !important; }
+.bd-color-indigo-5, .border-color-indigo-5 { border-color: var(--color-indigo-5) !important; }
+.bd-color-indigo-10, .border-color-indigo-10 { border-color: var(--color-indigo-10) !important; }
+.bd-color-indigo-15, .border-color-indigo-15 { border-color: var(--color-indigo-15) !important; }
+.bd-color-indigo-20, .border-color-indigo-20 { border-color: var(--color-indigo-20) !important; }
+.bd-color-indigo-25, .border-color-indigo-25 { border-color: var(--color-indigo-25) !important; }
+.bd-color-indigo-30, .border-color-indigo-30 { border-color: var(--color-indigo-30) !important; }
+.bd-color-indigo-35, .border-color-indigo-35 { border-color: var(--color-indigo-35) !important; }
+.bd-color-indigo-40, .border-color-indigo-40 { border-color: var(--color-indigo-40) !important; }
+.bd-color-indigo-45, .border-color-indigo-45 { border-color: var(--color-indigo-45) !important; }
+.bd-color-indigo-50, .border-color-indigo-50 { border-color: var(--color-indigo-50) !important; }
+.bd-color-indigo-55, .border-color-indigo-55 { border-color: var(--color-indigo-55) !important; }
+.bd-color-indigo-60, .border-color-indigo-60 { border-color: var(--color-indigo-60) !important; }
+.bd-color-indigo-65, .border-color-indigo-65 { border-color: var(--color-indigo-65) !important; }
+.bd-color-indigo-70, .border-color-indigo-70 { border-color: var(--color-indigo-70) !important; }
+.bd-color-indigo-75, .border-color-indigo-75 { border-color: var(--color-indigo-75) !important; }
+.bd-color-indigo-80, .border-color-indigo-80 { border-color: var(--color-indigo-80) !important; }
+.bd-color-indigo-85, .border-color-indigo-85 { border-color: var(--color-indigo-85) !important; }
+.bd-color-indigo-90, .border-color-indigo-90 { border-color: var(--color-indigo-90) !important; }
+.bd-color-indigo-95, .border-color-indigo-95 { border-color: var(--color-indigo-95) !important; }
+.bd-color-indigo-100, .border-color-indigo-100 { border-color: var(--color-indigo-100) !important; }
 
 .bd-color-purple-0, .border-color-purple-0 { border-color: var(--color-purple-0) !important; }
 .bd-color-purple-5, .border-color-purple-5 { border-color: var(--color-purple-5) !important; }
@@ -1784,6 +2126,28 @@
 .bd-color-green-opacity-95, .border-color-green-opacity-95 { border-color: var(--color-green-opacity-95) !important; }
 .bd-color-green-opacity-100, .border-color-green-opacity-100 { border-color: var(--color-green-opacity-100) !important; }
 
+.bd-color-emerald-opacity-0, .border-color-emerald-opacity-0 { border-color: var(--color-emerald-opacity-0) !important; }
+.bd-color-emerald-opacity-5, .border-color-emerald-opacity-5 { border-color: var(--color-emerald-opacity-5) !important; }
+.bd-color-emerald-opacity-10, .border-color-emerald-opacity-10 { border-color: var(--color-emerald-opacity-10) !important; }
+.bd-color-emerald-opacity-15, .border-color-emerald-opacity-15 { border-color: var(--color-emerald-opacity-15) !important; }
+.bd-color-emerald-opacity-20, .border-color-emerald-opacity-20 { border-color: var(--color-emerald-opacity-20) !important; }
+.bd-color-emerald-opacity-25, .border-color-emerald-opacity-25 { border-color: var(--color-emerald-opacity-25) !important; }
+.bd-color-emerald-opacity-30, .border-color-emerald-opacity-30 { border-color: var(--color-emerald-opacity-30) !important; }
+.bd-color-emerald-opacity-35, .border-color-emerald-opacity-35 { border-color: var(--color-emerald-opacity-35) !important; }
+.bd-color-emerald-opacity-40, .border-color-emerald-opacity-40 { border-color: var(--color-emerald-opacity-40) !important; }
+.bd-color-emerald-opacity-45, .border-color-emerald-opacity-45 { border-color: var(--color-emerald-opacity-45) !important; }
+.bd-color-emerald-opacity-50, .border-color-emerald-opacity-50 { border-color: var(--color-emerald-opacity-50) !important; }
+.bd-color-emerald-opacity-55, .border-color-emerald-opacity-55 { border-color: var(--color-emerald-opacity-55) !important; }
+.bd-color-emerald-opacity-60, .border-color-emerald-opacity-60 { border-color: var(--color-emerald-opacity-60) !important; }
+.bd-color-emerald-opacity-65, .border-color-emerald-opacity-65 { border-color: var(--color-emerald-opacity-65) !important; }
+.bd-color-emerald-opacity-70, .border-color-emerald-opacity-70 { border-color: var(--color-emerald-opacity-70) !important; }
+.bd-color-emerald-opacity-75, .border-color-emerald-opacity-75 { border-color: var(--color-emerald-opacity-75) !important; }
+.bd-color-emerald-opacity-80, .border-color-emerald-opacity-80 { border-color: var(--color-emerald-opacity-80) !important; }
+.bd-color-emerald-opacity-85, .border-color-emerald-opacity-85 { border-color: var(--color-emerald-opacity-85) !important; }
+.bd-color-emerald-opacity-90, .border-color-emerald-opacity-90 { border-color: var(--color-emerald-opacity-90) !important; }
+.bd-color-emerald-opacity-95, .border-color-emerald-opacity-95 { border-color: var(--color-emerald-opacity-95) !important; }
+.bd-color-emerald-opacity-100, .border-color-emerald-opacity-100 { border-color: var(--color-emerald-opacity-100) !important; }
+
 .bd-color-cyan-opacity-0, .border-color-cyan-opacity-0 { border-color: var(--color-cyan-opacity-0) !important; }
 .bd-color-cyan-opacity-5, .border-color-cyan-opacity-5 { border-color: var(--color-cyan-opacity-5) !important; }
 .bd-color-cyan-opacity-10, .border-color-cyan-opacity-10 { border-color: var(--color-cyan-opacity-10) !important; }
@@ -1827,6 +2191,28 @@
 .bd-color-blue-opacity-90, .border-color-blue-opacity-90 { border-color: var(--color-blue-opacity-90) !important; }
 .bd-color-blue-opacity-95, .border-color-blue-opacity-95 { border-color: var(--color-blue-opacity-95) !important; }
 .bd-color-blue-opacity-100, .border-color-blue-opacity-100 { border-color: var(--color-blue-opacity-100) !important; }
+
+.bd-color-indigo-opacity-0, .border-color-indigo-opacity-0 { border-color: var(--color-indigo-opacity-0) !important; }
+.bd-color-indigo-opacity-5, .border-color-indigo-opacity-5 { border-color: var(--color-indigo-opacity-5) !important; }
+.bd-color-indigo-opacity-10, .border-color-indigo-opacity-10 { border-color: var(--color-indigo-opacity-10) !important; }
+.bd-color-indigo-opacity-15, .border-color-indigo-opacity-15 { border-color: var(--color-indigo-opacity-15) !important; }
+.bd-color-indigo-opacity-20, .border-color-indigo-opacity-20 { border-color: var(--color-indigo-opacity-20) !important; }
+.bd-color-indigo-opacity-25, .border-color-indigo-opacity-25 { border-color: var(--color-indigo-opacity-25) !important; }
+.bd-color-indigo-opacity-30, .border-color-indigo-opacity-30 { border-color: var(--color-indigo-opacity-30) !important; }
+.bd-color-indigo-opacity-35, .border-color-indigo-opacity-35 { border-color: var(--color-indigo-opacity-35) !important; }
+.bd-color-indigo-opacity-40, .border-color-indigo-opacity-40 { border-color: var(--color-indigo-opacity-40) !important; }
+.bd-color-indigo-opacity-45, .border-color-indigo-opacity-45 { border-color: var(--color-indigo-opacity-45) !important; }
+.bd-color-indigo-opacity-50, .border-color-indigo-opacity-50 { border-color: var(--color-indigo-opacity-50) !important; }
+.bd-color-indigo-opacity-55, .border-color-indigo-opacity-55 { border-color: var(--color-indigo-opacity-55) !important; }
+.bd-color-indigo-opacity-60, .border-color-indigo-opacity-60 { border-color: var(--color-indigo-opacity-60) !important; }
+.bd-color-indigo-opacity-65, .border-color-indigo-opacity-65 { border-color: var(--color-indigo-opacity-65) !important; }
+.bd-color-indigo-opacity-70, .border-color-indigo-opacity-70 { border-color: var(--color-indigo-opacity-70) !important; }
+.bd-color-indigo-opacity-75, .border-color-indigo-opacity-75 { border-color: var(--color-indigo-opacity-75) !important; }
+.bd-color-indigo-opacity-80, .border-color-indigo-opacity-80 { border-color: var(--color-indigo-opacity-80) !important; }
+.bd-color-indigo-opacity-85, .border-color-indigo-opacity-85 { border-color: var(--color-indigo-opacity-85) !important; }
+.bd-color-indigo-opacity-90, .border-color-indigo-opacity-90 { border-color: var(--color-indigo-opacity-90) !important; }
+.bd-color-indigo-opacity-95, .border-color-indigo-opacity-95 { border-color: var(--color-indigo-opacity-95) !important; }
+.bd-color-indigo-opacity-100, .border-color-indigo-opacity-100 { border-color: var(--color-indigo-opacity-100) !important; }
 
 .bd-color-purple-opacity-0, .border-color-purple-opacity-0 { border-color: var(--color-purple-opacity-0) !important; }
 .bd-color-purple-opacity-5, .border-color-purple-opacity-5 { border-color: var(--color-purple-opacity-5) !important; }
@@ -1872,51 +2258,58 @@
 .bd-color-pink-opacity-95, .border-color-pink-opacity-95 { border-color: var(--color-pink-opacity-95) !important; }
 .bd-color-pink-opacity-100, .border-color-pink-opacity-100 { border-color: var(--color-pink-opacity-100) !important; }
 
-.bd-color-red, .border-color-red { border-color: var(--color-red) !important; }
+.bd-color-red-normal, .border-color-red-normal { border-color: var(--color-red-normal) !important; }
 .bd-color-red-dark, .border-color-red-dark { border-color: var(--color-red-dark) !important; }
 .bd-color-red-bright, .border-color-red-bright { border-color: var(--color-red-bright) !important; }
-.bd-color-orange, .border-color-orange { border-color: var(--color-orange) !important; }
+.bd-color-orange-normal, .border-color-orange-normal { border-color: var(--color-orange-normal) !important; }
 .bd-color-orange-dark, .border-color-orange-dark { border-color: var(--color-orange-dark) !important; }
 .bd-color-orange-bright, .border-color-orange-bright { border-color: var(--color-orange-bright) !important; }
-.bd-color-yellow, .border-color-yellow { border-color: var(--color-yellow) !important; }
+.bd-color-yellow-normal, .border-color-yellow-normal { border-color: var(--color-yellow-normal) !important; }
 .bd-color-yellow-dark, .border-color-yellow-dark { border-color: var(--color-yellow-dark) !important; }
 .bd-color-yellow-bright, .border-color-yellow-bright { border-color: var(--color-yellow-bright) !important; }
-.bd-color-green, .border-color-green { border-color: var(--color-green) !important; }
+.bd-color-green-normal, .border-color-green-normal { border-color: var(--color-green-normal) !important; }
 .bd-color-green-dark, .border-color-green-dark { border-color: var(--color-green-dark) !important; }
 .bd-color-green-bright, .border-color-green-bright { border-color: var(--color-green-bright) !important; }
-.bd-color-cyan, .border-color-cyan { border-color: var(--color-cyan) !important; }
+.bd-color-emerald-normal, .border-color-emerald-normal { border-color: var(--color-emerald-normal) !important; }
+.bd-color-emerald-dark, .border-color-emerald-dark { border-color: var(--color-emerald-dark) !important; }
+.bd-color-emerald-bright, .border-color-emerald-bright { border-color: var(--color-emerald-bright) !important; }
+.bd-color-cyan-normal, .border-color-cyan-normal { border-color: var(--color-cyan-normal) !important; }
 .bd-color-cyan-dark, .border-color-cyan-dark { border-color: var(--color-cyan-dark) !important; }
 .bd-color-cyan-bright, .border-color-cyan-bright { border-color: var(--color-cyan-bright) !important; }
-.bd-color-blue, .border-color-blue { border-color: var(--color-blue) !important; }
+.bd-color-blue-normal, .border-color-blue-normal { border-color: var(--color-blue-normal) !important; }
 .bd-color-blue-dark, .border-color-blue-dark { border-color: var(--color-blue-dark) !important; }
 .bd-color-blue-bright, .border-color-blue-bright { border-color: var(--color-blue-bright) !important; }
-.bd-color-purple, .border-color-purple { border-color: var(--color-purple) !important; }
+.bd-color-indigo-normal, .border-color-indigo-normal { border-color: var(--color-indigo-normal) !important; }
+.bd-color-indigo-dark, .border-color-indigo-dark { border-color: var(--color-indigo-dark) !important; }
+.bd-color-indigo-bright, .border-color-indigo-bright { border-color: var(--color-indigo-bright) !important; }
+.bd-color-purple-normal, .border-color-purple-normal { border-color: var(--color-purple-normal) !important; }
 .bd-color-purple-dark, .border-color-purple-dark { border-color: var(--color-purple-dark) !important; }
 .bd-color-purple-bright, .border-color-purple-bright { border-color: var(--color-purple-bright) !important; }
-.bd-color-pink, .border-color-pink { border-color: var(--color-pink) !important; }
+.bd-color-pink-normal, .border-color-pink-normal { border-color: var(--color-pink-normal) !important; }
 .bd-color-pink-dark, .border-color-pink-dark { border-color: var(--color-pink-dark) !important; }
 .bd-color-pink-bright, .border-color-pink-bright { border-color: var(--color-pink-bright) !important; }
-.bd-color-information, .border-color-information { border-color: var(--color-information) !important; }
+
+.bd-color-information-normal, .border-color-information-normal { border-color: var(--color-information-normal) !important; }
 .bd-color-information-dark, .border-color-information-dark { border-color: var(--color-information-dark) !important; }
 .bd-color-information-bright, .border-color-information-bright { border-color: var(--color-information-bright) !important; }
-.bd-color-success, .border-color-success { border-color: var(--color-success) !important; }
+.bd-color-success-normal, .border-color-success-normal { border-color: var(--color-success-normal) !important; }
 .bd-color-success-dark, .border-color-success-dark { border-color: var(--color-success-dark) !important; }
 .bd-color-success-bright, .border-color-success-bright { border-color: var(--color-success-bright) !important; }
-.bd-color-warning, .border-color-warning { border-color: var(--color-warning) !important; }
+.bd-color-warning-normal, .border-color-warning-normal { border-color: var(--color-warning-normal) !important; }
 .bd-color-warning-dark, .border-color-warning-dark { border-color: var(--color-warning-dark) !important; }
 .bd-color-warning-bright, .border-color-warning-bright { border-color: var(--color-warning-bright) !important; }
-.bd-color-error, .border-color-error { border-color: var(--color-error) !important; }
+.bd-color-error-normal, .border-color-error-normal { border-color: var(--color-error-normal) !important; }
 .bd-color-error-dark, .border-color-error-dark { border-color: var(--color-error-dark) !important; }
 .bd-color-error-bright, .border-color-error-bright { border-color: var(--color-error-bright) !important; }
-.bd-color-note, .border-color-note { border-color: var(--color-note) !important; }
+.bd-color-note-normal, .border-color-note-normal { border-color: var(--color-note-normal) !important; }
 .bd-color-note-dark, .border-color-note-dark { border-color: var(--color-note-dark) !important; }
 .bd-color-note-bright, .border-color-note-bright { border-color: var(--color-note-bright) !important; }
-.bd-color-tip, .border-color-tip { border-color: var(--color-tip) !important; }
+.bd-color-tip-normal, .border-color-tip-normal { border-color: var(--color-tip-normal) !important; }
 .bd-color-tip-dark, .border-color-tip-dark { border-color: var(--color-tip-dark) !important; }
 .bd-color-tip-bright, .border-color-tip-bright { border-color: var(--color-tip-bright) !important; }
-.bd-color-important, .border-color-important { border-color: var(--color-important) !important; }
+.bd-color-important-normal, .border-color-important-normal { border-color: var(--color-important-normal) !important; }
 .bd-color-important-dark, .border-color-important-dark { border-color: var(--color-important-dark) !important; }
 .bd-color-important-bright, .border-color-important-bright { border-color: var(--color-important-bright) !important; }
-.bd-color-caution, .border-color-caution { border-color: var(--color-caution) !important; }
+.bd-color-caution-normal, .border-color-caution-normal { border-color: var(--color-caution-normal) !important; }
 .bd-color-caution-dark, .border-color-caution-dark { border-color: var(--color-caution-dark) !important; }
 .bd-color-caution-bright, .border-color-caution-bright { border-color: var(--color-caution-bright) !important; }
