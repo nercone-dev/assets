@@ -633,9 +633,6 @@
     --color-progress:       var(--color-foreground-alt);
     --color-progress-track: var(--color-layer);
 
-    --color-spinner:       var(--color-foreground-alt);
-    --color-spinner-track: var(--color-layer);
-
     --color-slider:       var(--color-foreground-alt);
     --color-slider-track: var(--color-layer);
     --color-slider-thumb: var(--color-foreground-alt);
@@ -687,6 +684,20 @@
     --color-sidebar-active-foreground: var(--color-foreground-alt);
     --color-sidebar-active-background: var(--color-layer-alt);
     --color-sidebar-backdrop:          color-mix(in srgb, var(--color-black) 50%, transparent);
+
+    --color-segmented-control-foreground:        var(--color-foreground);
+    --color-segmented-control-background:        var(--color-layer-alt);
+    --color-segmented-control-border:            var(--color-border);
+    --color-segmented-control-hover:             var(--color-white-opacity-15);
+    --color-segmented-control-active-foreground: var(--color-button-primary-foreground);
+    --color-segmented-control-active-background: var(--color-button-primary-background);
+    --color-segmented-control-focus:             var(--color-foreground-alt);
+
+    --color-swatch-foreground:    var(--color-foreground);
+    --color-swatch-border:        var(--color-border);
+    --color-swatch-focus:         var(--color-foreground-alt);
+    --color-swatch-checker-light: var(--color-grey-20);
+    --color-swatch-checker-dark:  var(--color-grey-10);
 }
 
 /* Foreground (color) */

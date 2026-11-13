@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="dark">
+        <title>Progress - Nercone Design</title>
+        <link rel="icon" href="../images/favicon.svg">
+        <link rel="stylesheet" href="../styles/index.css">
+        <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+        <script type="module" src="../scripts/index.js"></script>
+    </head>
+    <body>
+        <div id="cursor"></div>
+        <div id="loading-overlay">
+            <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+        <header>
+            <div>
+                <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+                <a href="/docs/index.html"><b>Nercone Design</b></a>
+            </div>
+        </header>
+        <nav class="sidebar" id="sidebar" popover aria-label="Nercone Design">
+            <a href="/docs/index.html">Home</a>
+            <a href="/docs/colors.html">Colors</a>
+            <a href="/docs/typography.html">Typography</a>
+            <a href="/docs/layout.html">Layout</a>
+            <a href="/docs/tables.html">Tables</a>
+            <a href="/docs/forms.html">Forms</a>
+            <a href="/docs/progress.html">Progress</a>
+            <a href="/docs/overlays.html">Overlays</a>
+        </nav>
+        <main>
+            <div class="hero">
+                <h1>Progress</h1>
+                <p>Linear, Circular, and Logo progress indicators.</p>
+            </div>
+
+            <p>Shows how much of a task is done. <code>progress.js</code> reads the value from <code>aria-valuenow</code>, within <code>aria-valuemin</code> (default <code>0</code>) and <code>aria-valuemax</code> (default <code>100</code>). Without <code>aria-valuenow</code>, the progress is indeterminate.</p>
+            <div class="layer">
+                <label for="progress-value">Value: <output id="progress-output" for="progress-value">40</output></label>
+                <input id="progress-value" type="range" min="0" max="100" value="40">
+                <div class="flex" style="flex-wrap: wrap">
+                    <button id="progress-indeterminate" type="button">Make indeterminate</button>
+                    <button class="button-primary" id="progress-run" type="button">Run from 0 to 100</button>
+                </div>
+            </div>
+
+            <h2>Linear</h2>
+            <div class="progress-linear" data-progress-demo role="progressbar" aria-label="Linear" aria-valuenow="40"></div>
+
+            <h2>Circular and logo</h2>
+            <div class="flex" style="flex-wrap: wrap; align-items: center">
+                <svg class="progress-circular" data-progress-demo viewBox="0 0 48 48" role="progressbar" aria-label="Circular" aria-valuenow="40">
+                    <circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/>
+                    <circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/>
+                </svg>
+                <svg class="progress-logo" data-progress-demo viewBox="0 0 78 48" role="progressbar" aria-label="Logo" aria-valuenow="40">
+                    <polyline class="progress-track"     points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+                    <polyline class="progress-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+                </svg>
+            </div>
+
+            <h2>Range</h2>
+            <p><code>aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"</code> is 60%.</p>
+            <div class="progress-linear" role="progressbar" aria-label="Steps" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"></div>
+
+            <h2>Customization</h2>
+            <p>Change the size with <code>--progress-size</code> (default <code>48px</code>) and <code>--progress-thickness</code> (default <code>4px</code>), the indeterminate animation with <code>--progress-duration</code>, and the colors with <code>--color-progress</code> and <code>--color-progress-track</code>.</p>
+            <div class="flex" style="flex-wrap: wrap; align-items: center; --progress-size: 96px; --progress-thickness: 2px">
+                <svg class="progress-circular" viewBox="0 0 48 48" role="progressbar" aria-label="Success" aria-valuenow="75" style="--color-progress: var(--color-success-bright)">
+                    <circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/>
+                    <circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/>
+                </svg>
+                <svg class="progress-logo" viewBox="0 0 78 48" role="progressbar" aria-label="Information" style="--color-progress: var(--color-information-bright)">
+                    <polyline class="progress-track"     points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+                    <polyline class="progress-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
+                </svg>
+            </div>
+            <div class="progress-linear" role="progressbar" aria-label="Warning" aria-valuenow="30" style="--color-progress: var(--color-warning-bright); --progress-thickness: 8px"></div>
+
+            <h2>Usage</h2>
+            <pre><code>&lt;div class="progress-linear" role="progressbar" aria-label="Upload" aria-valuenow="40"&gt;&lt;/div&gt;
+
+&lt;svg class="progress-circular" viewBox="0 0 48 48" role="progressbar" aria-label="Upload" aria-valuenow="40"&gt;
+    &lt;circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/&gt;
+    &lt;circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/&gt;
+&lt;/svg&gt;</code></pre>
+
+            <script>
+                (() => {
+                    const range         = document.getElementById('progress-value');
+                    const output        = document.getElementById('progress-output');
+                    const progresses    = document.querySelectorAll('[data-progress-demo]');
+                    let timer = 0;
+
+                    const setValue = (value) => {
+                        range.value = value;
+                        window.nercone.get('slider')?.update(range);
+                        output.value = value;
+                        for (const progress of progresses) progress.setAttribute('aria-valuenow', value);
+                    };
+
+                    range.addEventListener('input', () => {
+                        clearInterval(timer);
+                        setValue(range.value);
+                    });
+                    document.getElementById('progress-indeterminate').addEventListener('click', () => {
+                        clearInterval(timer);
+                        output.value = '-';
+                        for (const progress of progresses) progress.removeAttribute('aria-valuenow');
+                    });
+                    document.getElementById('progress-run').addEventListener('click', () => {
+                        clearInterval(timer);
+                        let value = 0;
+                        setValue(value);
+                        timer = setInterval(() => {
+                            value = Math.min(value + 5, 100);
+                            setValue(value);
+                            if (value === 100) clearInterval(timer);
+                        }, 200);
+                    });
+                })();
+            </script>
+        </main>
+    </body>
+</html>

@@ -7,5 +7,6 @@ import "./popup.js";
 import "./progress.js";
 import "./sidebar.js";
 import "./slider.js";
+import "./swatch.js";
 import "./toast.js";
 import "./view-transition.js";

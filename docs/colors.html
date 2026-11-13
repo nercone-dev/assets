@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="dark">
+        <title>Colors - Nercone Design</title>
+        <link rel="icon" href="../images/favicon.svg">
+        <link rel="stylesheet" href="../styles/index.css">
+        <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+        <script type="module" src="../scripts/index.js"></script>
+        <style>
+            .palette-header {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                gap: 8px 16px;
+            }
+            .palette-header > span {
+                font-size: small;
+            }
+            .palette-rows {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+
+                padding: 3px;
+                margin: -3px;
+                overflow-x: auto;
+            }
+            .palette-row {
+                display: grid;
+                grid-template-columns: 72px 1fr;
+                align-items: center;
+                gap: 8px;
+                min-width: 760px;
+            }
+            .palette-row > span {
+                font-size: small;
+            }
+            .palette-group {
+                color: var(--color-foreground-alt);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cursor"></div>
+        <div id="loading-overlay">
+            <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+        <header>
+            <div>
+                <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+                <a href="/docs/index.html"><b>Nercone Design</b></a>
+            </div>
+        </header>
+        <nav class="sidebar" id="sidebar" popover aria-label="Nercone Design">
+            <a href="/docs/index.html">Home</a>
+            <a href="/docs/colors.html">Colors</a>
+            <a href="/docs/typography.html">Typography</a>
+            <a href="/docs/layout.html">Layout</a>
+            <a href="/docs/tables.html">Tables</a>
+            <a href="/docs/forms.html">Forms</a>
+            <a href="/docs/progress.html">Progress</a>
+            <a href="/docs/overlays.html">Overlays</a>
+        </nav>
+        <main>
+            <div class="hero">
+                <h1>Colors</h1>
+                <p>All colors defined in <code>color.css</code>. Click a swatch to copy its color. Use the control at the top right of each panel to choose the copied format: variable name, RGB, or hex.</p>
+            </div>
+
+            <noscript><p>JavaScript is required to show and copy the swatches.</p></noscript>
+
+            <h2>Palette</h2>
+            <p>Each hue has 21 steps from <code>0</code> (black) to <code>100</code> (brightest), in increments of 5. Refer to them as <code>--color-{hue}-{step}</code>.</p>
+            <div class="layer" data-swatch-format="variable">
+                <div class="palette-header">
+                    <span>Click to copy</span>
+                    <div class="segmented-control" role="radiogroup" aria-label="Copy format">
+                        <label><input type="radio" name="palette-format" value="variable" checked><span>Variable</span></label>
+                        <label><input type="radio" name="palette-format" value="rgb"><span>RGB</span></label>
+                        <label><input type="radio" name="palette-format" value="hex"><span>Hex</span></label>
+                    </div>
+                </div>
+                <div class="palette-rows" data-swatches="palette"></div>
+            </div>
+
+            <h2>Brightness</h2>
+            <p>Frequently used steps have names: <code>-dark</code> is 45, <code>-normal</code> is 75, and <code>-bright</code> is 100. <code>--color-{hue}</code> is the base color of each hue.</p>
+            <div class="layer" data-swatch-format="variable">
+                <div class="palette-header">
+                    <span>Click to copy</span>
+                    <div class="segmented-control" role="radiogroup" aria-label="Copy format">
+                        <label><input type="radio" name="brightness-format" value="variable" checked><span>Variable</span></label>
+                        <label><input type="radio" name="brightness-format" value="rgb"><span>RGB</span></label>
+                        <label><input type="radio" name="brightness-format" value="hex"><span>Hex</span></label>
+                    </div>
+                </div>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="brightness"></div>
+            </div>
+
+            <h2>Opacity</h2>
+            <p><code>--color-{hue}-opacity-{step}</code> is the base color of the hue mixed with transparent at the given percentage. <code>white</code> is also available.</p>
+            <div class="layer" data-swatch-format="variable">
+                <div class="palette-header">
+                    <span>Click to copy</span>
+                    <div class="segmented-control" role="radiogroup" aria-label="Copy format">
+                        <label><input type="radio" name="opacity-format" value="variable" checked><span>Variable</span></label>
+                        <label><input type="radio" name="opacity-format" value="rgb"><span>RGB</span></label>
+                        <label><input type="radio" name="opacity-format" value="hex"><span>Hex</span></label>
+                    </div>
+                </div>
+                <div class="palette-rows" data-swatches="opacity"></div>
+            </div>
+
+            <h2>Semantic</h2>
+            <p>Colors by purpose. Pages and components use these, so overriding them changes the whole color scheme. Component colors are <code>--color-{component}-*</code>, and they refer to the colors above by default.</p>
+            <div class="layer" data-swatch-format="variable">
+                <div class="palette-header">
+                    <span>Click to copy</span>
+                    <div class="segmented-control" role="radiogroup" aria-label="Copy format">
+                        <label><input type="radio" name="semantic-format" value="variable" checked><span>Variable</span></label>
+                        <label><input type="radio" name="semantic-format" value="rgb"><span>RGB</span></label>
+                        <label><input type="radio" name="semantic-format" value="hex"><span>Hex</span></label>
+                    </div>
+                </div>
+                <b class="palette-group">Base</b>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="base"></div>
+                <b class="palette-group">Status</b>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="status"></div>
+                <b class="palette-group">GitHub Markdown</b>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="markdown"></div>
+                <b class="palette-group">Components</b>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="components"></div>
+            </div>
+
+            <h2>Utility classes</h2>
+            <p>Every color above except the component colors has classes for the text color (<code>fg-color-</code> / <code>text-color-</code>), the background color (<code>bg-color-</code> / <code>background-color-</code>), and the border color (<code>bd-color-</code> / <code>border-color-</code>).</p>
+            <p>
+                <span class="fg-color-red-bright">red-bright</span>
+                <span class="fg-color-orange-bright">orange-bright</span>
+                <span class="fg-color-yellow-bright">yellow-bright</span>
+                <span class="fg-color-green-bright">green-bright</span>
+                <span class="fg-color-emerald-bright">emerald-bright</span>
+                <span class="fg-color-cyan-bright">cyan-bright</span>
+                <span class="fg-color-blue-bright">blue-bright</span>
+                <span class="fg-color-indigo-bright">indigo-bright</span>
+                <span class="fg-color-purple-bright">purple-bright</span>
+                <span class="fg-color-pink-bright">pink-bright</span>
+            </p>
+            <div class="flex" style="flex-wrap: wrap">
+                <div class="layer bg-color-blue-opacity-10">bg-color-blue-opacity-10</div>
+                <div class="block bd-color-green-normal">bd-color-green-normal</div>
+                <div class="block bg-color-purple-opacity-10 bd-color-purple-normal fg-color-purple-bright">All three combined</div>
+            </div>
+            <pre><code>&lt;span class="fg-color-red-bright"&gt;…&lt;/span&gt;
+&lt;div class="block bg-color-purple-opacity-10 bd-color-purple-normal"&gt;…&lt;/div&gt;</code></pre>
+
+            <h2>Customization</h2>
+            <p>The variables are defined on <code>:root</code>, so they can be overridden on any element. An override applies only to that element and its descendants.</p>
+            <div class="layer" style="--color-button-primary-background: var(--color-pink-bright); --color-button-primary-border: var(--color-pink-bright); --color-slider: var(--color-pink-bright); --color-slider-thumb: var(--color-pink-bright)">
+                <div class="flex" style="flex-wrap: wrap">
+                    <button class="button-primary" type="button">Pink primary</button>
+                </div>
+                <input type="range" value="60" aria-label="Pink slider">
+            </div>
+            <pre><code>&lt;div style="--color-button-primary-background: var(--color-pink-bright)"&gt;
+    &lt;button class="button-primary"&gt;Pink primary&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+
+            <script>
+                (() => {
+                    const HUES = ['grey', 'red', 'orange', 'yellow', 'green', 'emerald', 'cyan', 'blue', 'indigo', 'purple', 'pink'];
+                    const STEPS = Array.from({ length: 21 }, (_, index) => index * 5);
+                    const words = text => text.trim().split(/\s+/);
+
+                    // Rows are { label, names } and are drawn with compact swatches; flat lists are drawn with named swatches.
+                    const ROWS = {
+                        palette: HUES.map(hue => ({ label: hue, names: STEPS.map(step => `${hue}-${step}`) })),
+                        opacity: ['white', ...HUES.slice(1)].map(hue => ({ label: hue, names: STEPS.map(step => `${hue}-opacity-${step}`) }))
+                    };
+                    const LISTS = {
+                        brightness: ['black', 'white', 'grey', ...HUES.slice(1).flatMap(hue => [hue, `${hue}-dark`, `${hue}-normal`, `${hue}-bright`])],
+                        base:       words('foreground foreground-alt background background-alt layer layer-alt border border-alt'),
+                        status:     words('information success warning error').flatMap(name => [`${name}-dark`, `${name}-normal`, `${name}-bright`]),
+                        markdown:   words('note tip important caution').flatMap(name => [`${name}-dark`, `${name}-normal`, `${name}-bright`]),
+                        components: words(`
+                            cursor cursor-on-link
+                            button-foreground button-background button-border
+                            button-primary-foreground button-primary-background button-primary-border
+                            button-information-foreground button-information-background button-information-border
+                            button-success-foreground button-success-background button-success-border
+                            button-warning-foreground button-warning-background button-warning-border
+                            button-error-foreground button-error-background button-error-border
+                            textfield-foreground textfield-background textfield-border textfield-focus
+                            dropdown-foreground dropdown-background dropdown-border dropdown-focus
+                            progress progress-track
+                            slider slider-track slider-thumb slider-focus
+                            table-foreground table-header-foreground table-header-background table-border table-stripe table-hover
+                            details-foreground details-background details-summary-foreground details-summary-background details-summary-hover
+                            popup-foreground popup-background popup-border popup-backdrop
+                            toast-foreground toast-background toast-border
+                            toast-information-foreground toast-information-background toast-information-border
+                            toast-success-foreground toast-success-background toast-success-border
+                            toast-warning-foreground toast-warning-background toast-warning-border
+                            toast-error-foreground toast-error-background toast-error-border
+                            sidebar-foreground sidebar-background sidebar-border sidebar-heading sidebar-hover
+                            sidebar-active-foreground sidebar-active-background sidebar-backdrop
+                            segmented-control-foreground segmented-control-background segmented-control-border segmented-control-hover
+                            segmented-control-active-foreground segmented-control-active-background segmented-control-focus
+                            swatch-foreground swatch-border swatch-focus swatch-checker-light swatch-checker-dark
+                        `)
+                    };
+
+                    const swatchOf = (name, label, compact) => {
+                        const property = `--color-${name}`;
+                        const swatch = document.createElement('button');
+                        swatch.className = compact ? 'swatch swatch-compact' : 'swatch';
+                        swatch.type = 'button';
+                        swatch.title = property;
+                        swatch.dataset.swatch = property;
+                        swatch.style.setProperty('--swatch-color', `var(${property})`);
+                        const text = document.createElement('span');
+                        text.textContent = label;
+                        swatch.append(text);
+                        return swatch;
+                    };
+
+                    for (const container of document.querySelectorAll('[data-swatches]')) {
+                        const group = container.dataset.swatches;
+                        if (ROWS[group]) {
+                            for (const { label, names } of ROWS[group]) {
+                                const row = document.createElement('div');
+                                row.className = 'palette-row';
+                                const heading = document.createElement('span');
+                                heading.textContent = label;
+                                const grid = document.createElement('div');
+                                grid.className = 'grid';
+                                grid.style.cssText = `--grid-columns: ${names.length}; --grid-min-width: 0px; --grid-gap: 2px`;
+                                grid.append(...names.map(name => swatchOf(name, name.split('-').pop(), true)));
+                                row.append(heading, grid);
+                                container.append(row);
+                            }
+                        } else {
+                            container.append(...LISTS[group].map(name => swatchOf(name, name, false)));
+                        }
+                    }
+
+                    // The selected format is kept on the panel, where swatch.js reads it (data-swatch-format).
+                    // It is read from the checked input on load as well, because the browser may restore form state.
+                    for (const panel of document.querySelectorAll('[data-swatch-format]')) {
+                        const sync = () => {
+                            const checked = panel.querySelector('.segmented-control input:checked');
+                            if (checked) panel.dataset.swatchFormat = checked.value;
+                        };
+                        panel.addEventListener('change', sync);
+                        sync();
+                    }
+                })();
+            </script>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+.segmented-control {
+    color: var(--color-segmented-control-foreground);
+    background-color: var(--color-segmented-control-background);
+    border: solid 1px var(--color-segmented-control-border);
+
+    line-height: 1.5;
+
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.segmented-control > label {
+    position: relative;
+
+    display: inline-flex;
+    flex: 1 1 auto;
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* The input stays in the accessibility tree and keeps keyboard focus; the <span> next to it is drawn instead. */
+.segmented-control > label > input {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    opacity: 0;
+    appearance: none;
+    pointer-events: none;
+}
+
+.segmented-control > label > span {
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    white-space: nowrap;
+
+    flex: 1;
+
+    padding: var(--segmented-control-padding, 4px 12px);
+
+    transition:
+        color            0.15s ease,
+        background-color 0.15s ease;
+}
+
+.segmented-control > label:hover > input:not(:checked, :disabled) + span {
+    background-color: var(--color-segmented-control-hover);
+}
+.segmented-control > label > input:checked + span {
+    color: var(--color-segmented-control-active-foreground);
+    background-color: var(--color-segmented-control-active-background);
+}
+.segmented-control > label > input:focus-visible + span {
+    outline: solid 1px var(--color-segmented-control-focus);
+    outline-offset: 2px;
+}
+
+.segmented-control > label:has(> input:disabled) {
+    cursor: not-allowed;
+}
+.segmented-control > label > input:disabled + span {
+    opacity: 0.5;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="dark">
+        <title>Forms - Nercone Design</title>
+        <link rel="icon" href="../images/favicon.svg">
+        <link rel="stylesheet" href="../styles/index.css">
+        <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+        <script type="module" src="../scripts/index.js"></script>
+    </head>
+    <body>
+        <div id="cursor"></div>
+        <div id="loading-overlay">
+            <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+        <header>
+            <div>
+                <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+                <a href="/docs/index.html"><b>Nercone Design</b></a>
+            </div>
+        </header>
+        <nav class="sidebar" id="sidebar" popover aria-label="Nercone Design">
+            <a href="/docs/index.html">Home</a>
+            <a href="/docs/colors.html">Colors</a>
+            <a href="/docs/typography.html">Typography</a>
+            <a href="/docs/layout.html">Layout</a>
+            <a href="/docs/tables.html">Tables</a>
+            <a href="/docs/forms.html">Forms</a>
+            <a href="/docs/progress.html">Progress</a>
+            <a href="/docs/overlays.html">Overlays</a>
+        </nav>
+        <main>
+            <div class="hero">
+                <h1>Forms</h1>
+                <p>Text field, Button, Dropdown, Slider, and Segmented control.</p>
+            </div>
+
+            <h2>Text field</h2>
+            <p>Applies without a class to <code>&lt;textarea&gt;</code> and to <code>&lt;input&gt;</code> whose <code>type</code> is <code>text</code>, <code>search</code>, <code>email</code>, <code>url</code>, <code>tel</code>, <code>password</code>, <code>number</code>, a date or time type, or not set. Other elements can get the same look with the <code>textfield</code> class.</p>
+            <h3>Types</h3>
+            <div class="grid" style="--grid-min-width: 240px">
+                <input type="text" placeholder="text" aria-label="text">
+                <input type="password" placeholder="password" aria-label="password">
+                <input type="email" placeholder="you@example.com" aria-label="email">
+                <input type="number" placeholder="number" aria-label="number">
+                <input type="search" placeholder="search" aria-label="search">
+                <input type="tel" placeholder="tel" aria-label="tel">
+                <input type="url" placeholder="https://example.com" aria-label="url">
+                <input type="date" aria-label="date">
+                <input type="time" aria-label="time">
+                <input type="datetime-local" aria-label="datetime-local">
+                <input type="month" aria-label="month">
+                <input type="week" aria-label="week">
+            </div>
+            <textarea rows="4" placeholder="textarea" aria-label="textarea"></textarea>
+            <h3>States</h3>
+            <div class="grid" style="--grid-min-width: 240px">
+                <input type="text" value="Invalid (aria-invalid)" aria-invalid="true" aria-label="Invalid">
+                <input type="email" value="not-an-email" required aria-label="Invalid after editing">
+                <input type="text" value="Read-only (readonly)" readonly aria-label="Read-only">
+                <input type="text" value="Disabled (disabled)" disabled aria-label="Disabled">
+            </div>
+            <p><small>The second field fails validation and shows the error state after you edit it (<code>:user-invalid</code>).</small></p>
+            <h3>Customization</h3>
+            <p>Change the padding with <code>--textfield-padding</code> (default <code>8px 12px</code>) and the colors with <code>--color-textfield-*</code>.</p>
+            <div class="grid" style="--grid-min-width: 240px">
+                <input type="text" placeholder="--textfield-padding: 4px 8px" aria-label="Compact" style="--textfield-padding: 4px 8px">
+                <input type="text" placeholder="--color-textfield-focus: var(--color-success-bright)" aria-label="Custom focus color" style="--color-textfield-focus: var(--color-success-bright)">
+            </div>
+            <pre><code>&lt;input type="email" placeholder="you@example.com"&gt;
+&lt;textarea rows="4"&gt;&lt;/textarea&gt;</code></pre>
+
+            <h2>Button</h2>
+            <p>Applies without a class to <code>&lt;button&gt;</code>, <code>&lt;input type="button"&gt;</code>, <code>&lt;input type="submit"&gt;</code>, and <code>&lt;input type="reset"&gt;</code>. Add the <code>button</code> class to other elements, such as <code>&lt;a&gt;</code>. Add one variant class if needed.</p>
+            <h3>Variants</h3>
+            <div class="flex" style="flex-wrap: wrap">
+                <button type="button">Default</button>
+                <button class="button-primary" type="button">Primary</button>
+                <button class="button-information" type="button">Information</button>
+                <button class="button-success" type="button">Success</button>
+                <button class="button-warning" type="button">Warning</button>
+                <button class="button-error" type="button">Error</button>
+            </div>
+            <h3>Links and inputs</h3>
+            <div class="flex" style="flex-wrap: wrap">
+                <a class="button" href="/docs/index.html">Back to Home</a>
+                <a class="button button-primary" href="/docs/overlays.html">Next: Overlays</a>
+                <input type="button" value="input type=button">
+            </div>
+            <h3>Disabled</h3>
+            <p>Use the <code>disabled</code> attribute, or <code>aria-disabled="true"</code> on elements without it.</p>
+            <div class="flex" style="flex-wrap: wrap">
+                <button type="button" disabled>Default</button>
+                <button class="button-primary" type="button" disabled>Primary</button>
+                <a class="button button-error" aria-disabled="true">Error (a)</a>
+            </div>
+            <h3>Customization</h3>
+            <p>Change the padding with <code>--button-padding</code> (default <code>8px 16px</code>) and the colors with <code>--color-button-*</code>.</p>
+            <div class="flex" style="flex-wrap: wrap; align-items: center; --button-padding: 4px 8px">
+                <button type="button">Small</button>
+                <button class="button-primary" type="button">Small</button>
+            </div>
+            <pre><code>&lt;button type="button"&gt;Cancel&lt;/button&gt;
+&lt;button class="button-primary" type="submit"&gt;Save&lt;/button&gt;
+&lt;a class="button button-error" href="/delete"&gt;Delete&lt;/a&gt;</code></pre>
+
+            <h2>Dropdown</h2>
+            <p>Applies to <code>&lt;select&gt;</code> without a class. Other elements can get the same look with the <code>dropdown</code> class.</p>
+            <div class="grid" style="--grid-min-width: 200px">
+                <select aria-label="Basic">
+                    <option>One</option>
+                    <option>Two</option>
+                    <option>Three</option>
+                </select>
+                <select aria-label="Groups">
+                    <optgroup label="Fruits">
+                        <option>Apple</option>
+                        <option>Orange</option>
+                    </optgroup>
+                    <optgroup label="Vegetables">
+                        <option>Carrot</option>
+                        <option>Tomato</option>
+                    </optgroup>
+                </select>
+                <select aria-label="Invalid" aria-invalid="true">
+                    <option>Invalid (aria-invalid)</option>
+                </select>
+                <select aria-label="Disabled" disabled>
+                    <option>Disabled (disabled)</option>
+                </select>
+                <select aria-label="Compact" style="--dropdown-padding: 4px 8px">
+                    <option>--dropdown-padding: 4px 8px</option>
+                </select>
+            </div>
+            <p>With <code>multiple</code> or a <code>size</code> greater than 1, the arrow is not drawn.</p>
+            <select multiple aria-label="Multiple">
+                <option selected>Multiple One</option>
+                <option>Multiple Two</option>
+                <option selected>Multiple Three</option>
+            </select>
+            <pre><code>&lt;select&gt;
+    &lt;option&gt;One&lt;/option&gt;
+    &lt;option&gt;Two&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+            <h2>Slider</h2>
+            <p>Applies to <code>&lt;input type="range"&gt;</code> without a class. Other elements can get the same look with the <code>slider</code> class. <code>slider.js</code> fills the track up to the current value.</p>
+            <div class="layer">
+                <label for="slider-volume">Volume: <output id="slider-volume-output" for="slider-volume">30</output></label>
+                <input id="slider-volume" type="range" min="0" max="100" value="30">
+                <label for="slider-step">Steps (<code>min="1" max="5" step="1"</code>): <output id="slider-step-output" for="slider-step">3</output></label>
+                <input id="slider-step" type="range" min="1" max="5" step="1" value="3">
+            </div>
+            <h3>States</h3>
+            <input type="range" value="70" aria-label="Invalid (aria-invalid)" aria-invalid="true">
+            <input type="range" value="50" aria-label="Disabled (disabled)" disabled>
+            <h3>Customization</h3>
+            <p>Change the size with <code>--slider-thickness</code> (default <code>4px</code>) and <code>--slider-thumb-size</code> (default <code>16px</code>), and the colors with <code>--color-slider-*</code>.</p>
+            <input type="range" value="40" aria-label="Large success slider" style="--color-slider: var(--color-success-bright); --color-slider-thumb: var(--color-success-bright); --slider-thickness: 8px; --slider-thumb-size: 24px">
+            <input type="range" value="80" aria-label="Thin slider" style="--slider-thickness: 2px; --slider-thumb-size: 12px">
+            <pre><code>&lt;input type="range" min="0" max="100" value="30"&gt;</code></pre>
+            <div class="block block-note">
+                <b>Note</b>
+                <p>Setting the <code>value</code> property from a script fires no <code>input</code> event, so call <code>window.nercone.get('slider').update(element)</code> afterwards.</p>
+            </div>
+
+            <h2>Segmented control</h2>
+            <p>A set of mutually exclusive options. Put a radio button and a <code>&lt;span&gt;</code> in each <code>&lt;label&gt;</code>. The radio button stays focusable and readable by assistive technology, while the <code>&lt;span&gt;</code> is drawn.</p>
+            <div class="segmented-control" role="radiogroup" aria-label="View">
+                <label><input type="radio" name="segmented-view" value="list" checked><span>List</span></label>
+                <label><input type="radio" name="segmented-view" value="grid"><span>Grid</span></label>
+                <label><input type="radio" name="segmented-view" value="table"><span>Table</span></label>
+                <label><input type="radio" name="segmented-view" value="map" disabled><span>Map</span></label>
+            </div>
+            <p>Change the padding of each option with <code>--segmented-control-padding</code> (default <code>4px 12px</code>).</p>
+            <pre><code>&lt;div class="segmented-control" role="radiogroup" aria-label="View"&gt;
+    &lt;label&gt;&lt;input type="radio" name="view" value="list" checked&gt;&lt;span&gt;List&lt;/span&gt;&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="view" value="grid"&gt;&lt;span&gt;Grid&lt;/span&gt;&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            <h2>Example form</h2>
+            <form class="layer" id="form-example">
+                <b>Contact</b>
+                <label for="form-name">Name</label>
+                <input id="form-name" type="text" autocomplete="off" required>
+                <label for="form-email">Email</label>
+                <input id="form-email" type="email" autocomplete="off" required>
+                <label for="form-topic">Topic</label>
+                <select id="form-topic">
+                    <option>Question</option>
+                    <option>Bug report</option>
+                    <option>Other</option>
+                </select>
+                <label for="form-message">Message</label>
+                <textarea id="form-message" rows="4" required></textarea>
+                <label for="form-priority">Priority</label>
+                <input id="form-priority" type="range" min="1" max="3" value="2">
+                <div class="flex">
+                    <button type="reset">Reset</button>
+                    <button class="button-primary" type="submit">Send</button>
+                </div>
+            </form>
+            <p><small>This form is not sent anywhere.</small></p>
+
+            <script>
+                (() => {
+                    for (const [id, outputId] of [['slider-volume', 'slider-volume-output'], ['slider-step', 'slider-step-output']]) {
+                        const slider = document.getElementById(id);
+                        const output = document.getElementById(outputId);
+                        slider.addEventListener('input', () => output.value = slider.value);
+                    }
+
+                    document.getElementById('form-example').addEventListener('submit', (event) => {
+                        event.preventDefault();
+                        window.nercone.get('toast')?.show('The form is valid. Nothing was sent.', { variant: 'success' });
+                    });
+                })();
+            </script>
+        </main>
+    </body>
+</html>

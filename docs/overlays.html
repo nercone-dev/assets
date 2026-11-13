@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="dark">
+        <title>Overlays - Nercone Design</title>
+        <link rel="icon" href="../images/favicon.svg">
+        <link rel="stylesheet" href="../styles/index.css">
+        <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+        <script type="module" src="../scripts/index.js"></script>
+    </head>
+    <body>
+        <div id="cursor"></div>
+        <div id="loading-overlay">
+            <svg viewBox="96 256 832 512" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="872 572.75 152 332 152 692 512 692 872 332 872 692 684.5 692" fill="none" stroke="currentColor" stroke-width="48" stroke-miterlimit="10"/>
+            </svg>
+        </div>
+        <header>
+            <div>
+                <button class="sidebar-toggle" type="button" popovertarget="sidebar" aria-label="Menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+                <a href="/docs/index.html"><b>Nercone Design</b></a>
+            </div>
+        </header>
+        <nav class="sidebar" id="sidebar" popover aria-label="Nercone Design">
+            <a href="/docs/index.html">Home</a>
+            <a href="/docs/colors.html">Colors</a>
+            <a href="/docs/typography.html">Typography</a>
+            <a href="/docs/layout.html">Layout</a>
+            <a href="/docs/tables.html">Tables</a>
+            <a href="/docs/forms.html">Forms</a>
+            <a href="/docs/progress.html">Progress</a>
+            <a href="/docs/overlays.html">Overlays</a>
+        </nav>
+        <main>
+            <div class="hero">
+                <h1>Overlays</h1>
+                <p>Popup and Toast. Both are drawn above the page.</p>
+            </div>
+
+            <h2>Popup</h2>
+            <p>Applies to <code>&lt;dialog&gt;</code> without a class. With <code>popup.js</code>, an element with <code>data-popup-open="ID"</code> opens the popup with that ID as a modal, and an element with <code>data-popup-close</code> inside a popup closes it. <kbd>Esc</kbd> also closes it.</p>
+            <div class="flex" style="flex-wrap: wrap">
+                <button type="button" data-popup-open="popup-basic">Basic</button>
+                <button type="button" data-popup-open="popup-dismiss">Close by clicking outside</button>
+                <button class="button-error" type="button" data-popup-open="popup-confirm">Confirm</button>
+                <button type="button" data-popup-open="popup-form">Form</button>
+                <button type="button" data-popup-open="popup-long">Long content</button>
+            </div>
+            <p>Result: <output id="popup-result">-</output></p>
+
+            <dialog id="popup-basic" aria-labelledby="popup-basic-title">
+                <h2 id="popup-basic-title">Popup</h2>
+                <p>This is a basic popup.</p>
+                <div class="popup-actions">
+                    <button class="button-primary" type="button" data-popup-close>Close</button>
+                </div>
+            </dialog>
+
+            <dialog id="popup-dismiss" closedby="any" aria-labelledby="popup-dismiss-title">
+                <h2 id="popup-dismiss-title">Close by clicking outside</h2>
+                <p>With <code>closedby="any"</code>, clicking outside the popup also closes it. In browsers that do not support the attribute, <code>popup.js</code> does the same.</p>
+            </dialog>
+
+            <dialog id="popup-confirm" aria-labelledby="popup-confirm-title" style="--popup-width: 360px">
+                <h2 id="popup-confirm-title">Delete this item?</h2>
+                <p>This cannot be undone.</p>
+                <div class="popup-actions">
+                    <button type="button" data-popup-close="cancel">Cancel</button>
+                    <button class="button-error" type="button" data-popup-close="delete">Delete</button>
+                </div>
+            </dialog>
+
+            <dialog id="popup-form" aria-labelledby="popup-form-title">
+                <h2 id="popup-form-title">Rename</h2>
+                <form method="dialog" class="flex" style="flex-direction: column">
+                    <label for="popup-form-name">New name</label>
+                    <input id="popup-form-name" name="name" type="text" autocomplete="off" required autofocus>
+                    <div class="popup-actions">
+                        <button type="button" data-popup-close>Cancel</button>
+                        <button class="button-primary" type="submit" value="save">Save</button>
+                    </div>
+                </form>
+            </dialog>
+
+            <dialog id="popup-long" closedby="any" aria-labelledby="popup-long-title">
+                <h2 id="popup-long-title">Long content</h2>
+                <p>When the content does not fit on the screen, only the inside of the popup scrolls.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="popup-actions">
+                    <button class="button-primary" type="button" data-popup-close>Close</button>
+                </div>
+            </dialog>
+
+            <pre><code>&lt;button type="button" data-popup-open="confirm"&gt;Delete&lt;/button&gt;
+
+&lt;dialog id="confirm" closedby="any" aria-labelledby="confirm-title"&gt;
+    &lt;h2 id="confirm-title"&gt;Delete this item?&lt;/h2&gt;
+    &lt;div class="popup-actions"&gt;
+        &lt;button type="button" data-popup-close="cancel"&gt;Cancel&lt;/button&gt;
+        &lt;button class="button-error" type="button" data-popup-close="delete"&gt;Delete&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+            <p><code>popup-actions</code> lines up buttons at the end of the popup.</p>
+
+            <h3>Return value</h3>
+            <p>The value of <code>data-popup-close</code> becomes the <code>returnValue</code> of the dialog, which can be read in the <code>close</code> event. <code>&lt;form method="dialog"&gt;</code> also works, and the <code>value</code> of the submit button becomes the return value.</p>
+            <pre><code>document.getElementById('confirm').addEventListener('close', (event) =&gt; {
+    if (event.target.returnValue === 'delete') { … }
+});</code></pre>
+
+            <h3>Script</h3>
+            <p>Each method takes an ID or a <code>&lt;dialog&gt;</code> element, and returns the dialog, or <code>null</code> when nothing changed.</p>
+            <pre><code>const popup = window.nercone.get('popup');
+popup.open('confirm');
+popup.close('confirm', 'cancel');
+popup.toggle(document.getElementById('confirm'));</code></pre>
+
+            <h3>Customization</h3>
+            <p>Change the width with <code>--popup-width</code> (default <code>480px</code>), the padding with <code>--popup-padding</code> (default <code>24px</code>), the backdrop blur with <code>--popup-backdrop-blur</code> (default <code>4px</code>), and the colors with <code>--color-popup-*</code>.</p>
+            <div class="flex">
+                <button type="button" data-popup-open="popup-custom">Customized popup</button>
+            </div>
+            <dialog id="popup-custom" closedby="any" aria-labelledby="popup-custom-title" style="--popup-width: 640px; --popup-padding: 48px; --popup-backdrop-blur: 16px; --color-popup-border: var(--color-information-bright)">
+                <h2 id="popup-custom-title">Customized</h2>
+                <p><code>--popup-width: 640px; --popup-padding: 48px; --popup-backdrop-blur: 16px; --color-popup-border: var(--color-information-bright)</code></p>
+            </dialog>
+
+            <h2>Toast</h2>
+            <p>Shows a short notification at the edge of the screen, and closes it after a while. With <code>toast.js</code>, click an element with <code>data-toast="Message"</code>, or show one from a script. A toast does not close by itself while the pointer or focus is on it. Toasts stay above popups.</p>
+
+            <h3>Variants</h3>
+            <p>Set <code>data-toast-variant</code> to <code>information</code>, <code>success</code>, <code>warning</code>, or <code>error</code>. <code>warning</code> and <code>error</code> get <code>role="alert"</code>, so assistive technology announces them right away.</p>
+            <div class="flex" style="flex-wrap: wrap">
+                <button type="button" data-toast="Saved">Default</button>
+                <button class="button-information" type="button" data-toast="A new version is available" data-toast-variant="information">Information</button>
+                <button class="button-success" type="button" data-toast="Upload complete" data-toast-variant="success">Success</button>
+                <button class="button-warning" type="button" data-toast="Storage is almost full" data-toast-variant="warning">Warning</button>
+                <button class="button-error" type="button" data-toast="Connection failed" data-toast-variant="error">Error</button>
+            </div>
+            <pre><code>&lt;button type="button" data-toast="Saved" data-toast-variant="success"&gt;Save&lt;/button&gt;</code></pre>
+
+            <h3>Script</h3>
+            <div class="flex" style="flex-wrap: wrap">
+                <button type="button" id="toast-persistent">Does not close by itself</button>
+                <button type="button" id="toast-long">Long message</button>
+                <button type="button" id="toast-many">Show 7 (limit is 5)</button>
+                <button type="button" id="toast-undismissible">Without close button</button>
+                <button type="button" id="toast-paused">Pause for 3 seconds</button>
+                <button type="button" id="toast-over-popup">Over a popup</button>
+                <button type="button" id="toast-clear">Close all</button>
+            </div>
+            <dialog id="popup-toast" closedby="any" aria-labelledby="popup-toast-title">
+                <h2 id="popup-toast-title">Toast over a popup</h2>
+                <p>The toast container is kept in the top layer, so toasts are drawn above modal popups.</p>
+                <div class="popup-actions">
+                    <button type="button" data-toast="Shown above the popup" data-toast-variant="information">Show toast</button>
+                    <button class="button-primary" type="button" data-popup-close>Close</button>
+                </div>
+            </dialog>
+            <pre><code>const toast = window.nercone.get('toast');
+toast.show('Saved', { variant: 'success' });
+toast.show('Stays until closed', { duration: 0 });
+toast.show('No close button', { dismissible: false });
+
+const element = toast.show('Working');
+toast.pause(element);   // Stop the timer
+toast.resume(element);  // Continue from where it stopped
+toast.close(element);
+toast.clear();</code></pre>
+            <p><code>show()</code> returns the toast element. The message can be a string or a <code>Node</code>.</p>
+
+            <h3>Customization</h3>
+            <p>Change the width with <code>--toast-width</code> (default <code>360px</code>), the distance from the edge of the screen with <code>--toast-offset</code> (default <code>24px</code>), the padding with <code>--toast-padding</code> (default <code>12px 16px</code>), and the colors with <code>--color-toast-*</code>. The container is created directly under <code>&lt;body&gt;</code>, so set them on <code>:root</code> or <code>body</code>.</p>
+            <pre><code>:root {
+    --toast-width:  420px;
+    --toast-offset: 16px;
+}</code></pre>
+            <p>To change the options, register a new instance under the same name. <code>position</code> is one of <code>top-start</code>, <code>top-center</code>, <code>top-end</code>, <code>bottom-start</code>, <code>bottom-center</code>, and <code>bottom-end</code> (default).</p>
+            <pre><code>window.nercone.register('toast', new window.nercone.Toast({
+    position:   'top-center',
+    duration:   3000,
+    limit:      3,
+    label:      'Notifications',
+    closeLabel: 'Close'
+}));</code></pre>
+
+            <script>
+                (() => {
+                    const result = document.getElementById('popup-result');
+                    for (const popup of document.querySelectorAll('dialog')) {
+                        popup.addEventListener('close', () => {
+                            result.value = `${popup.id}: ${popup.returnValue || '(none)'}`;
+                            popup.returnValue = '';
+                        });
+                    }
+
+                    const toast = () => window.nercone.get('toast');
+                    document.getElementById('toast-persistent').addEventListener('click', () => {
+                        toast().show('This message stays until you close it', { duration: 0 });
+                    });
+                    document.getElementById('toast-long').addEventListener('click', () => {
+                        toast().show('Long messages wrap onto several lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', { variant: 'information' });
+                    });
+                    document.getElementById('toast-many').addEventListener('click', () => {
+                        for (let index = 1; index <= 7; index++) toast().show(`Notification ${index}`);
+                    });
+                    document.getElementById('toast-undismissible').addEventListener('click', () => {
+                        toast().show('This toast has no close button', { dismissible: false });
+                    });
+                    document.getElementById('toast-paused').addEventListener('click', () => {
+                        const element = toast().show('The timer starts in 3 seconds', { duration: 2000 });
+                        toast().pause(element);
+                        setTimeout(() => toast().resume(element), 3000);
+                    });
+                    document.getElementById('toast-over-popup').addEventListener('click', () => {
+                        window.nercone.get('popup').open('popup-toast');
+                    });
+                    document.getElementById('toast-clear').addEventListener('click', () => {
+                        toast().clear();
+                    });
+                })();
+            </script>
+        </main>
+    </body>
+</html>
