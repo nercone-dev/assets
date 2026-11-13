@@ -113,6 +113,7 @@ jobs:
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
 
   # Archives of the whole repository, with script.js and style.css built in.
+  # script.js and style.css are also attached to the release as separate assets.
   contents:
     needs: prepare
     runs-on: ubuntu-24.04
@@ -139,8 +140,9 @@ jobs:
           "$ESBUILD" --version
           tools/build.sh "$TAG"
 
+      # upload.sh removes each file after uploading it; removing script.js and style.css from dist/assets-$TAG/ is harmless because the archives are already built.
       - name: Upload contents
-        run: .github/scripts/upload.sh dist/assets-"$TAG".zip dist/assets-"$TAG".7z dist/assets-"$TAG".tar.gz dist/assets-"$TAG".tar.xz
+        run: .github/scripts/upload.sh dist/assets-"$TAG"/script.js dist/assets-"$TAG"/style.css dist/assets-"$TAG".zip dist/assets-"$TAG".7z dist/assets-"$TAG".tar.gz dist/assets-"$TAG".tar.xz
 
   # Attached as separate assets: inside the archives they made the zip and tar.gz larger than the asset limit.
   # WOFF 1.0 cannot contain a collection, so only TTC and WOFF2 are made.
