@@ -34,7 +34,7 @@
                 grid-template-columns: 72px 1fr;
                 align-items: center;
                 gap: 8px;
-                min-width: 760px;
+                min-width: calc(80px + var(--palette-columns) * 32px);
             }
             .palette-row > span {
                 font-size: small;
@@ -78,7 +78,7 @@
             <noscript><p>JavaScript is required to show and copy the swatches.</p></noscript>
 
             <h2>Palette</h2>
-            <p>Each hue has 21 steps from <code>0</code> (black) to <code>100</code> (brightest), in increments of 5. Refer to them as <code>--color-{hue}-{step}</code>.</p>
+            <p>Each hue has 41 steps in increments of 5: from <code>0</code> (black) to <code>100</code> (the base color), the base color is mixed with black, and from <code>100</code> to <code>200</code> (white), it is mixed with white. Refer to them as <code>--color-{hue}-{step}</code>.</p>
             <div class="layer" data-swatch-format="variable">
                 <div class="palette-header">
                     <span>Click to copy</span>
@@ -177,13 +177,15 @@
             <script>
                 (() => {
                     const HUES = ['grey', 'red', 'orange', 'yellow', 'green', 'emerald', 'cyan', 'blue', 'indigo', 'purple', 'pink'];
-                    const STEPS = Array.from({ length: 21 }, (_, index) => index * 5);
+                    const stepsTo = last => Array.from({ length: last / 5 + 1 }, (_, index) => index * 5);
+                    const PALETTE_STEPS = stepsTo(200);
+                    const OPACITY_STEPS = stepsTo(100);
                     const words = text => text.trim().split(/\s+/);
 
                     // Rows are { label, names } and are drawn with compact swatches; flat lists are drawn with named swatches.
                     const ROWS = {
-                        palette: HUES.map(hue => ({ label: hue, names: STEPS.map(step => `${hue}-${step}`) })),
-                        opacity: ['white', ...HUES.slice(1)].map(hue => ({ label: hue, names: STEPS.map(step => `${hue}-opacity-${step}`) }))
+                        palette: HUES.map(hue => ({ label: hue, names: PALETTE_STEPS.map(step => `${hue}-${step}`) })),
+                        opacity: ['white', ...HUES.slice(1)].map(hue => ({ label: hue, names: OPACITY_STEPS.map(step => `${hue}-opacity-${step}`) }))
                     };
                     const LISTS = {
                         brightness: ['black', 'white', 'grey', ...HUES.slice(1).flatMap(hue => [hue, `${hue}-dark`, `${hue}-normal`, `${hue}-bright`])],
@@ -238,6 +240,7 @@
                             for (const { label, names } of ROWS[group]) {
                                 const row = document.createElement('div');
                                 row.className = 'palette-row';
+                                row.style.setProperty('--palette-columns', names.length);
                                 const heading = document.createElement('span');
                                 heading.textContent = label;
                                 const grid = document.createElement('div');
