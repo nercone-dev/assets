@@ -112,8 +112,8 @@ jobs:
           echo "Release $TAG is linked to tag $TAG at $sha"
           echo "sha=$sha" >> "$GITHUB_OUTPUT"
 
-  # Archives of the whole repository, with script.js and style.css built in.
-  # script.js and style.css are also attached to the release as separate assets.
+  # Archives of the whole repository, with script.js, style.css and style-THEME.css built in.
+  # These are also attached to the release as separate assets.
   contents:
     needs: prepare
     runs-on: ubuntu-24.04
@@ -140,9 +140,13 @@ jobs:
           "$ESBUILD" --version
           tools/build.sh "$TAG"
 
-      # upload.sh removes each file after uploading it; removing script.js and style.css from dist/assets-$TAG/ is harmless because the archives are already built.
+      # upload.sh removes each file after uploading it; removing the bundles from dist/assets-$TAG/ is harmless because the archives are already built.
       - name: Upload contents
-        run: .github/scripts/upload.sh dist/assets-"$TAG"/script.js dist/assets-"$TAG"/style.css dist/assets-"$TAG".zip dist/assets-"$TAG".7z dist/assets-"$TAG".tar.gz dist/assets-"$TAG".tar.xz
+        run: |
+          stage=dist/assets-"$TAG"
+          set -- "$stage"/style-*.css
+          [ -e "$1" ] || { echo "::error::No style-THEME.css was built"; exit 1; }
+          .github/scripts/upload.sh "$stage"/script.js "$stage"/style.css "$@" dist/assets-"$TAG".zip dist/assets-"$TAG".7z dist/assets-"$TAG".tar.gz dist/assets-"$TAG".tar.xz
 
   # Attached as separate assets: inside the archives they made the zip and tar.gz larger than the asset limit.
   # WOFF 1.0 cannot contain a collection, so only TTC and WOFF2 are made.

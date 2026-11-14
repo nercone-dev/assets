@@ -1,5 +1,5 @@
 #!/bin/sh
-# Builds the release contents: a directory with the repository's files, script.js and style.css, and its archives.
+# Builds the release contents: a directory with the repository's files, script.js, style.css and style-THEME.css, and its archives.
 
 set -eu
 
@@ -15,7 +15,8 @@ Usage: $progname [options] [VERSION]
 
 Writes OUTDIR/assets-VERSION/ and OUTDIR/assets-VERSION.{zip,7z,tar.gz,tar.xz}.
 assets-VERSION/ holds the files tracked by git in: $contents
-plus script.js and style.css, bundled from scripts/index.js and styles/index.css.
+plus script.js and style.css, bundled from scripts/index.js and styles/index.css,
+and style-THEME.css for each styles/themes/THEME.css: style.css with that theme applied.
 VERSION defaults to the output of \`git describe --tags --always --dirty\`.
 
 Options:
@@ -128,6 +129,22 @@ done
 # --format=iife keeps script.js a classic script, loaded with <script src> as before.
 "$esbuild" scripts/index.js --bundle --format=iife --charset=utf8 --log-level=warning --outfile="$stage/script.js"
 "$esbuild" styles/index.css --bundle --charset=utf8 --log-level=warning --outfile="$stage/style.css"
+
+# style-THEME.css: style.css followed by styles/themes/THEME.css, so the theme overrides the default colors.
+# esbuild writes one file per entry point, so each theme is bundled on its own and appended to style.css.
+# Only files directly in styles/themes/ are themes (the pathspec * also matches "/").
+themes=$(git ls-files -- 'styles/themes/*.css' | grep -v '^styles/themes/.*/' || true)
+[ -n "$themes" ] || { err "no themes found in styles/themes"; exit 1; }
+for path in $themes; do
+	theme=${path##*/}
+	theme=${theme%.css}
+	case $theme in
+		'' | *[!a-z0-9-]*) err "unsupported theme name: $path (allowed: a-z 0-9 -)"; exit 1 ;;
+	esac
+	"$esbuild" "$path" --bundle --charset=utf8 --log-level=warning --outfile="$stage/theme-$theme.css"
+	cat "$stage/style.css" "$stage/theme-$theme.css" > "$stage/style-$theme.css"
+	rm -f "$stage/theme-$theme.css"
+done
 
 cd "$outdir"
 

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../styles/index.css">
         <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
         <script type="module" src="../scripts/index.js"></script>
+        <script type="module">window.nercone.register('theme', new window.nercone.Theme({ baseURL: '../styles/themes/', storageKey: 'nercone-theme' }));</script>
         <style>
             .palette-header {
                 display: flex;
@@ -106,7 +107,7 @@
             </div>
 
             <h2>Opacity</h2>
-            <p><code>--color-{hue}-opacity-{step}</code> is the base color of the hue mixed with transparent at the given percentage. <code>white</code> is also available.</p>
+            <p><code>--color-{hue}-opacity-{step}</code> is the base color of the hue mixed with transparent at the given percentage. <code>black</code> and <code>white</code> are also available.</p>
             <div class="layer" data-swatch-format="variable">
                 <div class="palette-header">
                     <span>Click to copy</span>
@@ -147,7 +148,6 @@
                 <span class="fg-color-orange-bright">orange-bright</span>
                 <span class="fg-color-yellow-bright">yellow-bright</span>
                 <span class="fg-color-green-bright">green-bright</span>
-                <span class="fg-color-emerald-bright">emerald-bright</span>
                 <span class="fg-color-cyan-bright">cyan-bright</span>
                 <span class="fg-color-blue-bright">blue-bright</span>
                 <span class="fg-color-indigo-bright">indigo-bright</span>
@@ -161,6 +161,28 @@
             </div>
             <pre><code>&lt;span class="fg-color-red-bright"&gt;…&lt;/span&gt;
 &lt;div class="block bg-color-purple-opacity-10 bd-color-purple-normal"&gt;…&lt;/div&gt;</code></pre>
+
+            <h2>Themes</h2>
+            <p>A theme sets the semantic colors for the whole page. <code>style.css</code> uses <code>dark</code>; <code>black</code>, <code>light</code>, and <code>white</code> are also available. Choose one here to see it on this site.</p>
+            <div class="segmented-control" role="radiogroup" aria-label="Theme">
+                <label><input type="radio" name="theme" data-theme-trigger="dark"><span>Dark</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="black"><span>Black</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="light"><span>Light</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="white"><span>White</span></label>
+            </div>
+            <p>To use one theme only, load <code>style-{theme}.css</code> from the release instead of <code>style.css</code>. It is <code>style.css</code> followed by <code>styles/themes/{theme}.css</code>.</p>
+            <pre><code>&lt;link rel="stylesheet" href="style-light.css"&gt;</code></pre>
+            <p>To change the theme while the page is open, use <code>theme.js</code>. It adds <code>{baseURL}{theme}.css</code> after the other stylesheets, removes the previous theme once the new one is loaded, and sets <code>data-theme</code> on <code>&lt;html&gt;</code>. Clicking an element with <code>data-theme-trigger="light"</code> applies that theme, and <code>data-theme-trigger=""</code> removes it. Radio buttons and checkboxes with <code>data-theme-trigger</code> are checked when their theme is applied.</p>
+            <pre><code>const theme = window.nercone.get('theme');
+await theme.set('light'); // true when applied, false when the stylesheet failed to load
+theme.get();              // 'light'
+await theme.set(null);    // back to the colors in style.css</code></pre>
+            <p>On load, <code>theme.js</code> applies the saved theme, then the one in <code>&lt;html data-theme="…"&gt;</code>, then the <code>theme</code> option; names not in <code>themes</code> are ignored. The theme is saved to <code>localStorage</code> only when <code>storageKey</code> is set. The default <code>baseURL</code> is <code>https://assets.nercone.dev/styles/themes/</code>; a relative URL is resolved against the page. To change the options, register a new instance under the same name:</p>
+            <pre><code>window.nercone.register('theme', new window.nercone.Theme({
+    baseURL:    '../styles/themes/',
+    storageKey: 'nercone-theme'
+}));</code></pre>
+            <p>The theme stylesheet has <code>data-view-transition-keep</code>, so <code>view-transition.js</code> keeps it when it moves to another page. Because it is loaded by a script, the page is drawn with the default colors until it is loaded; <code>style-{theme}.css</code> does not have this delay.</p>
 
             <h2>Customization</h2>
             <p>The variables are defined on <code>:root</code>, so they can be overridden on any element. An override applies only to that element and its descendants.</p>
@@ -176,7 +198,7 @@
 
             <script>
                 (() => {
-                    const HUES = ['grey', 'red', 'orange', 'yellow', 'green', 'emerald', 'cyan', 'blue', 'indigo', 'purple', 'pink'];
+                    const HUES = ['grey', 'red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'indigo', 'purple', 'pink'];
                     const stepsTo = last => Array.from({ length: last / 5 + 1 }, (_, index) => index * 5);
                     const PALETTE_STEPS = stepsTo(200);
                     const OPACITY_STEPS = stepsTo(100);
@@ -185,7 +207,7 @@
                     // Rows are { label, names } and are drawn with compact swatches; flat lists are drawn with named swatches.
                     const ROWS = {
                         palette: HUES.map(hue => ({ label: hue, names: PALETTE_STEPS.map(step => `${hue}-${step}`) })),
-                        opacity: ['white', ...HUES.slice(1)].map(hue => ({ label: hue, names: OPACITY_STEPS.map(step => `${hue}-opacity-${step}`) }))
+                        opacity: ['black', 'white', ...HUES.slice(1)].map(hue => ({ label: hue, names: OPACITY_STEPS.map(step => `${hue}-opacity-${step}`) }))
                     };
                     const LISTS = {
                         brightness: ['black', 'white', 'grey', ...HUES.slice(1).flatMap(hue => [hue, `${hue}-dark`, `${hue}-normal`, `${hue}-bright`])],

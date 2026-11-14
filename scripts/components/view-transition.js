@@ -1,9 +1,11 @@
 (() => {
     class PageTransition {
         static DEFAULTS = {
-            regions:  ['header', 'main'],
-            keepMeta: ['charset', 'viewport', 'color-scheme', 'theme-color'],
-            headers:  { 'X-Requested-With': 'view-transition' }
+            regions:       ['header', 'main'],
+            keepMeta:      ['charset', 'viewport', 'color-scheme', 'theme-color'],
+            // Stylesheets with this attribute stay when the page is swapped, even if the new page does not have them.
+            keepAttribute: 'data-view-transition-keep',
+            headers:       { 'X-Requested-With': 'view-transition' }
         };
 
         constructor(options = {}) {
@@ -225,6 +227,7 @@
             // Stylesheets
             const stylesheets = new Set(PageTransition.stylesheetsOf(page.doc).map(link => PageTransition.urlOf(link, page.base)));
             for (const link of PageTransition.stylesheetsOf(document)) {
+                if (link.hasAttribute(this.options.keepAttribute)) continue;
                 if (!stylesheets.has(this.sourceOf(link))) link.remove();
             }
 
