@@ -33,7 +33,7 @@
 }
 main > .hero {
     width: auto;
-    margin: -24px -24px 0;
+    margin: -24px -24px 8px;
 }
 .hero > * {
     position: relative;
