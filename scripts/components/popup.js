@@ -51,7 +51,7 @@
             }
 
             const popup = event.target;
-            if (popup.matches?.(this.options.selector) && Popup.isLightDismissible(popup) && !Popup.contains(popup, event)) this.close(popup);
+            if (popup.matches?.(this.options.selector) && Popup.isLightDismissible(popup) && !Popup.isPointInside(popup, event.clientX, event.clientY)) this.close(popup);
         };
 
         // Control
@@ -87,9 +87,9 @@
             return popup.getAttribute('closedby') === 'any';
         }
 
-        static contains(popup, event) {
-            const rect = popup.getBoundingClientRect();
-            return event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+        static isPointInside(element, x, y) {
+            const rect = element.getBoundingClientRect();
+            return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
         }
     }
 

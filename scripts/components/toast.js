@@ -53,7 +53,7 @@
 
         // Control
         show(message, { variant = null, duration = this.options.duration, dismissible = this.options.dismissible } = {}) {
-            const container = this.containerOf();
+            const container = this.ensureContainer();
             const toast = document.createElement('div');
             toast.className = 'toast';
             if (Toast.VARIANTS.includes(variant)) toast.classList.add(`toast-${variant}`);
@@ -126,7 +126,8 @@
         }
 
         // Rendering
-        containerOf() {
+        // Returns the container, and creates it first when there is none in the document.
+        ensureContainer() {
             if (this.container?.isConnected) return this.container;
             const container = document.createElement('section');
             container.className = `toast-container toast-container-${this.options.position}`;

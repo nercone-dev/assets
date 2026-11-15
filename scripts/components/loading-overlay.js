@@ -26,12 +26,17 @@
             this.element = document.querySelector(this.options.selector);
             if (!this.element) return;
             window.nercone.topLayer.add(this.element, this.options.layer);
-            this.play().catch(() => {}).finally(() => this.remove());
+            this.play().catch(LoadingOverlay.onPlayError).finally(() => this.remove());
         }
 
         destroy() {
             for (const animation of this.animations) animation.cancel();
             this.remove();
+        }
+
+        static onPlayError(error) {
+            // destroy() cancels the animations, which rejects their finished promises with an AbortError.
+            if (error?.name !== 'AbortError') console.error('[nercone] loading-overlay.play() failed:', error);
         }
 
         // Playback
@@ -68,9 +73,8 @@
             ]);
         }
 
-        // Moves the end of the polyline along its vertices from one ratio of
-        // its length to another, like placing points with a pen tool. The
-        // fill closes the shape back to the first vertex at every step.
+        // Moves the end of the polyline along its vertices from one ratio of its length to another, like placing points with a pen tool.
+        // The fill closes the shape back to the first vertex at every step.
         trace(line, vertices, from, to, duration) {
             const animation = line.animate([], { duration, easing: this.options.easing, fill: 'forwards' });
             this.animations.push(animation);
@@ -89,8 +93,7 @@
             return animation.finished.then(update);
         }
 
-        // Returns the points attribute for the part of a polyline that covers
-        // the given ratio (0 to 1) of its total length from the first vertex.
+        // Returns the points attribute for the part of a polyline that covers the given ratio (0 to 1) of its total length from the first vertex.
         static tracePoints(vertices, ratio) {
             const lengths = [];
             let total = 0;
@@ -100,7 +103,7 @@
                 total += length;
             }
 
-            let remaining = total * Math.min(Math.max(ratio, 0), 1);
+            let remaining = total * window.nercone.Numbers.clamp(ratio, 0, 1);
             const points = vertices.length ? [vertices[0]] : [];
             for (let i = 1; i < vertices.length; i++) {
                 const length = lengths[i - 1];

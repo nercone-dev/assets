@@ -78,7 +78,8 @@
         }
 
         static hide(sidebar) {
-            if (typeof sidebar.hidePopover === 'function' && sidebar.matches(':popover-open')) sidebar.hidePopover();
+            const { TopLayer } = window.nercone;
+            if (TopLayer.isSupported() && TopLayer.isOpen(sidebar)) sidebar.hidePopover();
         }
     }
 

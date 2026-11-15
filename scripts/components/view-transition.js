@@ -103,7 +103,7 @@
                 }
 
                 preloads = this.preload(page);
-                await Promise.all(preloads.map(link => PageTransition.whenLoaded(link)));
+                await Promise.all(preloads.map(link => window.nercone.Nercone.whenLoaded(link)));
                 if (signal.aborted) return;
 
                 if (!pop) this.saveScroll();
@@ -159,7 +159,7 @@
         // Swap
         async swap(page, { pop, scroll, signal }) {
             const styles = this.addStylesheets(page);
-            await Promise.all(styles.map(link => PageTransition.whenLoaded(link)));
+            await Promise.all(styles.map(link => window.nercone.Nercone.whenLoaded(link)));
             if (signal.aborted) {
                 for (const link of styles) link.remove();
                 return;
@@ -360,13 +360,6 @@
         static isHTML(response) {
             const type = response.headers.get('Content-Type') ?? '';
             return type.split(';')[0].trim().toLowerCase() === 'text/html';
-        }
-
-        static whenLoaded(element) {
-            return new Promise(resolve => {
-                element.addEventListener('load',  resolve, { once: true });
-                element.addEventListener('error', resolve, { once: true });
-            });
         }
 
         static whenPageLoaded(callback) {

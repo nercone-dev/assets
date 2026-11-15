@@ -79,17 +79,11 @@
         }
 
         static ratioOf(element) {
-            const value = element.valueAsNumber;
-            const min = Slider.parseNumber(element.min, 0);
-            const max = Slider.parseNumber(element.max, 100);
-            if (!Number.isFinite(value) || max <= min) return null;
-            return Math.min(Math.max((value - min) / (max - min), 0), 1);
-        }
-
-        static parseNumber(value, fallback) {
-            if (value === null || value.trim() === '') return fallback;
-            const number = Number(value);
-            return Number.isFinite(number) ? number : fallback;
+            const { Numbers } = window.nercone;
+            // The defaults of min and max of <input type="range">.
+            const min = Numbers.parse(element.min, 0);
+            const max = Numbers.parse(element.max, 100);
+            return Numbers.ratio(element.valueAsNumber, min, max);
         }
     }
 

@@ -62,18 +62,11 @@
         }
 
         ratioOf(element) {
-            const value = Progress.parseNumber(element.getAttribute('aria-valuenow'), null);
-            if (value === null) return null;
-            const min = Progress.parseNumber(element.getAttribute('aria-valuemin'), this.options.min);
-            const max = Progress.parseNumber(element.getAttribute('aria-valuemax'), this.options.max);
-            if (max <= min) return null;
-            return Math.min(Math.max((value - min) / (max - min), 0), 1);
-        }
-
-        static parseNumber(value, fallback) {
-            if (value === null || value.trim() === '') return fallback;
-            const number = Number(value);
-            return Number.isFinite(number) ? number : fallback;
+            const { Numbers } = window.nercone;
+            const value = Numbers.parse(element.getAttribute('aria-valuenow'), null);
+            const min   = Numbers.parse(element.getAttribute('aria-valuemin'), this.options.min);
+            const max   = Numbers.parse(element.getAttribute('aria-valuemax'), this.options.max);
+            return value === null ? null : Numbers.ratio(value, min, max);
         }
     }
 

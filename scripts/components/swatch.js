@@ -113,11 +113,12 @@
             const [red, green, blue] = tokens.slice(0, 3).map(token => Swatch.parseComponent(token, scale) / scale * 255);
             const alpha = tokens.length === 4 ? Swatch.parseComponent(tokens[3], 1) : 1;
             if (![red, green, blue, alpha].every(Number.isFinite)) return null;
+            const { clamp } = window.nercone.Numbers;
             return {
-                red:   Swatch.clamp(red, 0, 255),
-                green: Swatch.clamp(green, 0, 255),
-                blue:  Swatch.clamp(blue, 0, 255),
-                alpha: Swatch.clamp(alpha, 0, 1)
+                red:   clamp(red,   0, 255),
+                green: clamp(green, 0, 255),
+                blue:  clamp(blue,  0, 255),
+                alpha: clamp(alpha, 0, 1)
             };
         }
 
@@ -137,10 +138,6 @@
             const hex = channel => Math.round(channel).toString(16).padStart(2, '0');
             const opacity = Math.round(alpha * 255);
             return `#${hex(red)}${hex(green)}${hex(blue)}${opacity === 255 ? '' : hex(opacity)}`;
-        }
-
-        static clamp(value, min, max) {
-            return Math.min(Math.max(value, min), max);
         }
     }
 

@@ -2,9 +2,9 @@
     class Theme {
         static DEFAULTS = {
             baseURL:          'https://assets.nercone.dev/styles/themes/',
-            themes:           ['auto', 'auto-ud', 'auto-stark', 'auto-stark-ud','dark', 'light', 'black', 'white', 'dark-ud', 'light-ud', 'black-ud', 'white-ud'],
-            theme:            "auto-stark",
-            storageKey:       "nercone-theme",
+            themes:           ['auto', 'auto-ud', 'auto-stark', 'auto-stark-ud', 'dark', 'light', 'black', 'white', 'dark-ud', 'light-ud', 'black-ud', 'white-ud'],
+            theme:            'auto-stark',
+            storageKey:       'nercone-theme',
             rootAttribute:    'data-theme',
             triggerAttribute: 'data-theme-trigger',
             // Kept by view-transition.js when it swaps the page, so the theme stays applied without loading again.
@@ -83,7 +83,7 @@
                 for (const [attribute, value] of Object.entries(this.options.linkAttributes)) link.setAttribute(attribute, value);
                 document.head.append(link);
                 // The old stylesheet stays until the new one is loaded, so the colors do not flash.
-                const loaded = await Theme.whenLoaded(link);
+                const loaded = await window.nercone.Nercone.whenLoaded(link);
                 if (request !== this.request) {
                     link.remove();
                     return false;
@@ -131,14 +131,6 @@
                 if (input.type !== 'radio' && input.type !== 'checkbox') continue;
                 input.checked = input.getAttribute(triggerAttribute) === (this.name ?? '');
             }
-        }
-
-        // Helpers
-        static whenLoaded(link) {
-            return new Promise(resolve => {
-                link.addEventListener('load',  () => resolve(true),  { once: true });
-                link.addEventListener('error', () => resolve(false), { once: true });
-            });
         }
     }
 

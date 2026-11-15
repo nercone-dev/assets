@@ -66,6 +66,33 @@
             if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', callback, { once: true });
             else callback();
         }
+
+        // Resolves to true when ELEMENT (such as a <link> or <script>) fires load, and to false when it fires error.
+        static whenLoaded(element) {
+            return new Promise(resolve => {
+                element.addEventListener('load',  () => resolve(true),  { once: true });
+                element.addEventListener('error', () => resolve(false), { once: true });
+            });
+        }
+    }
+
+    class Numbers {
+        static clamp(value, min, max) {
+            return Math.min(Math.max(value, min), max);
+        }
+
+        // Parses VALUE (such as an attribute value) as a finite number. Returns FALLBACK when VALUE is null, blank or not a finite number.
+        static parse(value, fallback) {
+            if (value === null || value.trim() === '') return fallback;
+            const number = Number(value);
+            return Number.isFinite(number) ? number : fallback;
+        }
+
+        // Returns where VALUE is between MIN and MAX, from 0 to 1. Returns null when VALUE is not finite or MAX is not above MIN.
+        static ratio(value, min, max) {
+            if (!Number.isFinite(value) || max <= min) return null;
+            return Numbers.clamp((value - min) / (max - min), 0, 1);
+        }
     }
 
     class TopLayer {
@@ -131,5 +158,6 @@
     window.nercone ??= new Nercone();
     window.nercone.Nercone = Nercone;
     window.nercone.TopLayer = TopLayer;
+    window.nercone.Numbers = Numbers;
     window.nercone.topLayer ??= new TopLayer();
 })();
