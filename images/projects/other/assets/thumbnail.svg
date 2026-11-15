@@ -32,9 +32,9 @@
     </style>
   </defs>
   <rect class="cls-5" width="1280" height="640"/>
-  <text class="cls-1" transform="translate(123.98 329.97)"><tspan x="0" y="0">assets</tspan></text>
-  <text class="cls-2" transform="translate(127.81 382.64)"><tspan x="0" y="0">A repository for storing created images and</tspan><tspan x="0" y="40">CSS/JS files for sharing works, etc.</tspan></text>
-  <text class="cls-4" transform="translate(128.3 506.88)"><tspan x="0" y="0">nercone-dev</tspan></text>
+  <text class="cls-1" transform="translate(123.98 281.97)"><tspan x="0" y="0">Assets</tspan></text>
+  <text class="cls-2" transform="translate(127.81 334.64)"><tspan x="0" y="0">A repository for storing created images and</tspan><tspan x="0" y="40">CSS/JS files for sharing works, etc.</tspan></text>
+  <text class="cls-4" transform="translate(128.3 458.88)"><tspan x="0" y="0">nercone-dev</tspan></text>
   <rect class="cls-3" x="960" width="320" height="640"/>
   <polyline class="cls-5" points="1210 335.19 1030 275 1030 365 1120 365 1210 275 1210 365 1163.12 365"/>
 </svg>
