@@ -23,7 +23,7 @@
         font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
         font-size: 24px;
         font-variation-settings: 'wght' 400;
-        opacity: .25;
+        opacity: .75;
       }
 
       .cls-5 {
