@@ -2,16 +2,16 @@
     --color-black: hwb(0 0% 100%);
     --color-white: hwb(0 100% 0%);
 
-    --color-grey:   hwb(0   100% 0%);
-    --color-red:    hwb(0    30% 0%);
-    --color-orange: hwb(30    0% 0%);
-    --color-yellow: hwb(50    0% 0%);
-    --color-green:  hwb(150   0% 0%);
-    --color-cyan:   hwb(200  20% 0%);
-    --color-blue:   hwb(220  30% 0%);
-    --color-indigo: hwb(230  30% 0%);
-    --color-purple: hwb(260  20% 0%);
-    --color-pink:   hwb(330  30% 0%);
+    --color-grey:   hwb(0  100%  0%);
+    --color-red:    hwb(0   30%  0%);
+    --color-orange: hwb(40   0%  0%);
+    --color-yellow: hwb(55   0%  0%);
+    --color-green:  hwb(155  0% 10%);
+    --color-cyan:   hwb(185  0%  0%);
+    --color-blue:   hwb(205  0%  0%);
+    --color-indigo: hwb(230 30%  0%);
+    --color-purple: hwb(270 20%  0%);
+    --color-pink:   hwb(320 30%  0%);
 
     /* JIS Safety Colors (JIS Z 9103:2018) */
     --color-jis-white: rgb(255 255 255);
