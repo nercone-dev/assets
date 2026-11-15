@@ -185,10 +185,12 @@
 
             <h2>Themes</h2>
             <p>A theme sets the semantic colors for the whole page. <code>style.css</code> uses <code>dark</code>; <code>black</code>, <code>light</code>, and <code>white</code> are also available. <code>dark-ud</code>, <code>light-ud</code>, <code>black-ud</code>, and <code>white-ud</code> are <code>dark</code>, <code>light</code>, <code>black</code>, and <code>white</code> with the status and GitHub Markdown colors replaced by the JIS safety colors, which keep the same lightness in every variant. Choose one here to see it on this site.</p>
-            <p><code>auto</code> follows the system setting: <code>light</code> when the system prefers a light color scheme, <code>dark</code> otherwise. <code>auto-stark</code> does the same with <code>white</code> and <code>black</code>.</p>
+            <p><code>auto</code> follows the system setting: <code>light</code> when the system prefers a light color scheme, <code>dark</code> otherwise. <code>auto-stark</code> does the same with <code>white</code> and <code>black</code>. <code>auto-ud</code> and <code>auto-stark-ud</code> are the same two with the <code>-ud</code> variants.</p>
             <div class="segmented-control" role="radiogroup" aria-label="Theme">
                 <label><input type="radio" name="theme" data-theme-trigger="auto"><span>Auto</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="auto-ud"><span>Auto (UD)</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="auto-stark"><span>Auto (Stark)</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="auto-stark-ud"><span>Auto (Stark, UD)</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="dark"><span>Dark</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="light"><span>Light</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="black"><span>Black</span></label>
