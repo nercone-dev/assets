@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../styles/index.css">
         <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
         <script type="module" src="../scripts/index.js"></script>
-        <script type="module">window.nercone.register('theme', new window.nercone.Theme({ baseURL: '../styles/themes/', storageKey: 'nercone-theme' }));</script>
+        <script type="module">window.nercone.register('theme', new window.nercone.Theme({ baseURL: '../styles/themes/' }));</script>
         <style>
             .palette-header {
                 display: flex;
@@ -120,6 +120,20 @@
                 <div class="palette-rows" data-swatches="opacity"></div>
             </div>
 
+            <h2>JIS Safety Colors</h2>
+            <p><code>--color-jis-{name}</code> are the safety colors of JIS Z 9103:2018. JIS does not allow changing their lightness, so they have no palette, brightness, or opacity variants; use them as they are. <code>dark-ud</code> and <code>light-ud</code> use them for the status and GitHub Markdown colors.</p>
+            <div class="layer" data-swatch-format="variable">
+                <div class="palette-header">
+                    <span>Click to copy</span>
+                    <div class="segmented-control" role="radiogroup" aria-label="Copy format">
+                        <label><input type="radio" name="jis-format" value="variable" checked><span>Variable</span></label>
+                        <label><input type="radio" name="jis-format" value="rgb"><span>RGB</span></label>
+                        <label><input type="radio" name="jis-format" value="hex"><span>Hex</span></label>
+                    </div>
+                </div>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="jis"></div>
+            </div>
+
             <h2>Semantic</h2>
             <p>Colors by purpose. Pages and components use these, so overriding them changes the whole color scheme. Component colors are <code>--color-{component}-*</code>, and they refer to the colors above by default.</p>
             <div class="layer" data-swatch-format="variable">
@@ -159,16 +173,26 @@
                 <div class="block bd-color-green-normal">bd-color-green-normal</div>
                 <div class="block bg-color-purple-opacity-10 bd-color-purple-normal fg-color-purple-bright">All three combined</div>
             </div>
+            <p>
+                <span class="fg-color-jis-red">jis-red</span>
+                <span class="fg-color-jis-red-yellow">jis-red-yellow</span>
+                <span class="fg-color-jis-yellow">jis-yellow</span>
+                <span class="fg-color-jis-green">jis-green</span>
+                <span class="fg-color-jis-blue">jis-blue</span>
+                <span class="fg-color-jis-red-purple">jis-red-purple</span>
+            </p>
             <pre><code>&lt;span class="fg-color-red-bright"&gt;…&lt;/span&gt;
 &lt;div class="block bg-color-purple-opacity-10 bd-color-purple-normal"&gt;…&lt;/div&gt;</code></pre>
 
             <h2>Themes</h2>
-            <p>A theme sets the semantic colors for the whole page. <code>style.css</code> uses <code>dark</code>; <code>black</code>, <code>light</code>, and <code>white</code> are also available. Choose one here to see it on this site.</p>
+            <p>A theme sets the semantic colors for the whole page. <code>style.css</code> uses <code>dark</code>; <code>black</code>, <code>light</code>, and <code>white</code> are also available. <code>dark-ud</code> and <code>light-ud</code> are <code>dark</code> and <code>light</code> with the status and GitHub Markdown colors replaced by the JIS safety colors, which keep the same lightness in every variant. Choose one here to see it on this site.</p>
             <div class="segmented-control" role="radiogroup" aria-label="Theme">
                 <label><input type="radio" name="theme" data-theme-trigger="dark"><span>Dark</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="black"><span>Black</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="light"><span>Light</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="white"><span>White</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="dark-ud"><span>Dark UD</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="light-ud"><span>Light UD</span></label>
             </div>
             <p>To use one theme only, load <code>style-{theme}.css</code> from the release instead of <code>style.css</code>. It is <code>style.css</code> followed by <code>styles/themes/{theme}.css</code>.</p>
             <pre><code>&lt;link rel="stylesheet" href="style-light.css"&gt;</code></pre>
@@ -211,6 +235,7 @@ await theme.set(null);    // back to the colors in style.css</code></pre>
                     };
                     const LISTS = {
                         brightness: ['black', 'white', 'grey', ...HUES.slice(1).flatMap(hue => [hue, `${hue}-dark`, `${hue}-normal`, `${hue}-bright`])],
+                        jis:        words('white black red red-yellow yellow green blue red-purple').map(name => `jis-${name}`),
                         base:       words('foreground foreground-alt background background-alt layer layer-alt border border-alt'),
                         status:     words('information success warning error').flatMap(name => [`${name}-dark`, `${name}-normal`, `${name}-bright`]),
                         markdown:   words('note tip important caution').flatMap(name => [`${name}-dark`, `${name}-normal`, `${name}-bright`]),

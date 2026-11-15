@@ -2,9 +2,9 @@
     class Theme {
         static DEFAULTS = {
             baseURL:          'https://assets.nercone.dev/styles/themes/',
-            themes:           ['dark', 'black', 'light', 'white'],
+            themes:           ['dark', 'black', 'light', 'white', 'dark-ud', 'light-ud'],
             theme:            null,
-            storageKey:       null,
+            storageKey:       "nercone-theme",
             rootAttribute:    'data-theme',
             triggerAttribute: 'data-theme-trigger',
             // Kept by view-transition.js when it swaps the page, so the theme stays applied without loading again.
