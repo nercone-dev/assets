@@ -14,6 +14,6 @@
       }
     </style>
   </defs>
-  <path class="cls-2" d="M604,852h-184c-4.42,0-8-3.58-8-8v-192h200v192c0,4.42-3.58,8-8,8Z"/>
-  <rect class="cls-1" x="192" y="172" width="640" height="480" rx="8" ry="8"/>
+  <path class="cls-2" d="M604,832h-184c-4.42,0-8-2.87-8-6.4v-153.6h200v153.6c0,3.53-3.58,6.4-8,6.4Z"/>
+  <rect class="cls-1" x="192" y="192" width="640" height="480" rx="8" ry="8"/>
 </svg>
