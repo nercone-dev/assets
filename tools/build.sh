@@ -6,7 +6,7 @@ set -eu
 progname=${0##*/}
 
 # Top-level paths of the repository that are included.
-contents='README.md fonts images scripts sounds styles'
+contents='README.md docs fonts images scripts sounds styles'
 all_formats='zip,7z,tar.gz,tar.xz'
 
 usage() {
