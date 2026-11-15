@@ -3,7 +3,7 @@
         static DEFAULTS = {
             baseURL:          'https://assets.nercone.dev/styles/themes/',
             themes:           ['auto', 'auto-stark', 'dark', 'light', 'black', 'white', 'dark-ud', 'light-ud', 'black-ud', 'white-ud'],
-            theme:            "dark",
+            theme:            "auto-stark",
             storageKey:       "nercone-theme",
             rootAttribute:    'data-theme',
             triggerAttribute: 'data-theme-trigger',
