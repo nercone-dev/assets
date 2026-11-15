@@ -121,7 +121,7 @@
             </div>
 
             <h2>JIS Safety Colors</h2>
-            <p><code>--color-jis-{name}</code> are the safety colors of JIS Z 9103:2018. JIS does not allow changing their lightness, so they have no palette, brightness, or opacity variants; use them as they are. <code>dark-ud</code> and <code>light-ud</code> use them for the status and GitHub Markdown colors.</p>
+            <p><code>--color-jis-{name}</code> are the safety colors of JIS Z 9103:2018. JIS does not allow changing their lightness, so they have no palette, brightness, or opacity variants; use them as they are. <code>dark-ud</code>, <code>light-ud</code>, <code>black-ud</code>, and <code>white-ud</code> use them for the status and GitHub Markdown colors.</p>
             <div class="layer" data-swatch-format="variable">
                 <div class="palette-header">
                     <span>Click to copy</span>
@@ -185,14 +185,19 @@
 &lt;div class="block bg-color-purple-opacity-10 bd-color-purple-normal"&gt;…&lt;/div&gt;</code></pre>
 
             <h2>Themes</h2>
-            <p>A theme sets the semantic colors for the whole page. <code>style.css</code> uses <code>dark</code>; <code>black</code>, <code>light</code>, and <code>white</code> are also available. <code>dark-ud</code> and <code>light-ud</code> are <code>dark</code> and <code>light</code> with the status and GitHub Markdown colors replaced by the JIS safety colors, which keep the same lightness in every variant. Choose one here to see it on this site.</p>
+            <p>A theme sets the semantic colors for the whole page. <code>style.css</code> uses <code>dark</code>; <code>black</code>, <code>light</code>, and <code>white</code> are also available. <code>dark-ud</code>, <code>light-ud</code>, <code>black-ud</code>, and <code>white-ud</code> are <code>dark</code>, <code>light</code>, <code>black</code>, and <code>white</code> with the status and GitHub Markdown colors replaced by the JIS safety colors, which keep the same lightness in every variant. Choose one here to see it on this site.</p>
+            <p><code>auto</code> follows the system setting: <code>light</code> when the system prefers a light color scheme, <code>dark</code> otherwise. <code>auto-stark</code> does the same with <code>white</code> and <code>black</code>.</p>
             <div class="segmented-control" role="radiogroup" aria-label="Theme">
+                <label><input type="radio" name="theme" data-theme-trigger="auto"><span>Auto</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="auto-stark"><span>Auto (Stark)</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="dark"><span>Dark</span></label>
-                <label><input type="radio" name="theme" data-theme-trigger="black"><span>Black</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="light"><span>Light</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="black"><span>Black</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="white"><span>White</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="dark-ud"><span>Dark UD</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="light-ud"><span>Light UD</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="black-ud"><span>Black UD</span></label>
+                <label><input type="radio" name="theme" data-theme-trigger="white-ud"><span>White UD</span></label>
             </div>
             <p>To use one theme only, load <code>style-{theme}.css</code> from the release instead of <code>style.css</code>. It is <code>style.css</code> followed by <code>styles/themes/{theme}.css</code>.</p>
             <pre><code>&lt;link rel="stylesheet" href="style-light.css"&gt;</code></pre>

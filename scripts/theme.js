@@ -2,8 +2,8 @@
     class Theme {
         static DEFAULTS = {
             baseURL:          'https://assets.nercone.dev/styles/themes/',
-            themes:           ['dark', 'black', 'light', 'white', 'dark-ud', 'light-ud'],
-            theme:            null,
+            themes:           ['auto', 'auto-stark', 'dark', 'light', 'black', 'white', 'dark-ud', 'light-ud', 'black-ud', 'white-ud'],
+            theme:            "dark",
             storageKey:       "nercone-theme",
             rootAttribute:    'data-theme',
             triggerAttribute: 'data-theme-trigger',

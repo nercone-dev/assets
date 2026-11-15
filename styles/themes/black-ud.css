@@ -1,0 +1,158 @@
+:root {
+    color-scheme: dark;
+
+    --color-stark: var(--color-white);
+
+    --color-foreground:     var(--color-white-opacity-75);
+    --color-foreground-alt: var(--color-white-opacity-100);
+    --color-background:     var(--color-grey-0);
+    --color-background-alt: var(--color-grey-5);
+
+    --color-layer:     var(--color-white-opacity-5);
+    --color-layer-alt: var(--color-white-opacity-10);
+
+    --color-border:     var(--color-white-opacity-10);
+    --color-border-alt: var(--color-white-opacity-15);
+
+    --color-information-dark:   var(--color-jis-blue);
+    --color-information-normal: var(--color-jis-blue);
+    --color-information-bright: var(--color-jis-blue);
+
+    --color-success-dark:   var(--color-jis-green);
+    --color-success-normal: var(--color-jis-green);
+    --color-success-bright: var(--color-jis-green);
+
+    --color-warning-dark:   var(--color-jis-red-yellow);
+    --color-warning-normal: var(--color-jis-red-yellow);
+    --color-warning-bright: var(--color-jis-red-yellow);
+
+    --color-error-dark:   var(--color-jis-red);
+    --color-error-normal: var(--color-jis-red);
+    --color-error-bright: var(--color-jis-red);
+
+    /* GitHub Markdown */
+
+    --color-note-dark:   var(--color-jis-blue);
+    --color-note-normal: var(--color-jis-blue);
+    --color-note-bright: var(--color-jis-blue);
+
+    --color-tip-dark:   var(--color-jis-blue);
+    --color-tip-normal: var(--color-jis-blue);
+    --color-tip-bright: var(--color-jis-blue);
+
+    --color-important-dark:   var(--color-jis-red);
+    --color-important-normal: var(--color-jis-red);
+    --color-important-bright: var(--color-jis-red);
+
+    --color-caution-dark:   var(--color-jis-red);
+    --color-caution-normal: var(--color-jis-red);
+    --color-caution-bright: var(--color-jis-red);
+
+    /* Components */
+
+    --color-cursor:         var(--color-white-opacity-75);
+    --color-cursor-on-link: var(--color-white-opacity-20);
+
+    --color-button-foreground: var(--color-foreground-alt);
+    --color-button-background: var(--color-layer-alt);
+    --color-button-border:     var(--color-border);
+
+    --color-button-primary-foreground: var(--color-background);
+    --color-button-primary-background: var(--color-foreground-alt);
+    --color-button-primary-border:     var(--color-foreground-alt);
+
+    --color-button-information-foreground: var(--color-information-bright);
+    --color-button-information-background: color-mix(in srgb, transparent, var(--color-information-bright) 10%);
+    --color-button-information-border:     var(--color-information-normal);
+
+    --color-button-success-foreground: var(--color-success-bright);
+    --color-button-success-background: color-mix(in srgb, transparent, var(--color-success-bright) 10%);
+    --color-button-success-border:     var(--color-success-normal);
+
+    --color-button-warning-foreground: var(--color-warning-bright);
+    --color-button-warning-background: color-mix(in srgb, transparent, var(--color-warning-bright) 10%);
+    --color-button-warning-border:     var(--color-warning-normal);
+
+    --color-button-error-foreground: var(--color-error-bright);
+    --color-button-error-background: color-mix(in srgb, transparent, var(--color-error-bright) 10%);
+    --color-button-error-border:     var(--color-error-normal);
+
+    --color-textfield-foreground: var(--color-foreground-alt);
+    --color-textfield-background: var(--color-layer-alt);
+    --color-textfield-border:     var(--color-border);
+    --color-textfield-focus:      var(--color-foreground-alt);
+
+    --color-dropdown-foreground: var(--color-foreground-alt);
+    --color-dropdown-background: var(--color-layer-alt);
+    --color-dropdown-border:     var(--color-border);
+    --color-dropdown-focus:      var(--color-foreground-alt);
+
+    --color-progress:       var(--color-foreground-alt);
+    --color-progress-track: var(--color-layer);
+
+    --color-slider:       var(--color-foreground-alt);
+    --color-slider-track: var(--color-layer);
+    --color-slider-thumb: var(--color-foreground-alt);
+    --color-slider-focus: var(--color-foreground-alt);
+
+    --color-table-foreground:        var(--color-foreground);
+    --color-table-header-foreground: var(--color-foreground-alt);
+    --color-table-header-background: var(--color-layer-alt);
+    --color-table-border:            var(--color-border);
+    --color-table-stripe:            var(--color-layer-alt);
+    --color-table-hover:             var(--color-layer);
+
+    --color-details-foreground:         var(--color-foreground);
+    --color-details-background:         var(--color-layer);
+    --color-details-summary-foreground: var(--color-foreground-alt);
+    --color-details-summary-background: var(--color-layer-alt);
+    --color-details-summary-hover:      var(--color-white-opacity-15);
+
+    --color-popup-foreground: var(--color-foreground);
+    --color-popup-background: var(--color-background-alt);
+    --color-popup-border:     var(--color-border);
+    --color-popup-backdrop:   color-mix(in srgb, transparent, var(--color-black) 50%);
+
+    --color-toast-foreground: var(--color-foreground-alt);
+    --color-toast-background: var(--color-background-alt);
+    --color-toast-border:     var(--color-border);
+
+    --color-toast-information-foreground: var(--color-information-bright);
+    --color-toast-information-background: color-mix(in srgb, var(--color-information-bright) 10%, var(--color-background-alt));
+    --color-toast-information-border:     var(--color-information-normal);
+
+    --color-toast-success-foreground: var(--color-success-bright);
+    --color-toast-success-background: color-mix(in srgb, var(--color-success-bright) 10%, var(--color-background-alt));
+    --color-toast-success-border:     var(--color-success-normal);
+
+    --color-toast-warning-foreground: var(--color-warning-bright);
+    --color-toast-warning-background: color-mix(in srgb, var(--color-warning-bright) 10%, var(--color-background-alt));
+    --color-toast-warning-border:     var(--color-warning-normal);
+
+    --color-toast-error-foreground: var(--color-error-bright);
+    --color-toast-error-background: color-mix(in srgb, var(--color-error-bright) 10%, var(--color-background-alt));
+    --color-toast-error-border:     var(--color-error-normal);
+
+    --color-sidebar-foreground:        var(--color-foreground);
+    --color-sidebar-background:        var(--color-background);
+    --color-sidebar-border:            var(--color-border);
+    --color-sidebar-heading:           var(--color-foreground-alt);
+    --color-sidebar-hover:             var(--color-layer);
+    --color-sidebar-active-foreground: var(--color-foreground-alt);
+    --color-sidebar-active-background: var(--color-layer-alt);
+    --color-sidebar-backdrop:          color-mix(in srgb, transparent, var(--color-black) 50%);
+
+    --color-segmented-control-foreground:        var(--color-foreground);
+    --color-segmented-control-background:        var(--color-layer-alt);
+    --color-segmented-control-border:            var(--color-border);
+    --color-segmented-control-hover:             var(--color-white-opacity-15);
+    --color-segmented-control-active-foreground: var(--color-button-primary-foreground);
+    --color-segmented-control-active-background: var(--color-button-primary-background);
+    --color-segmented-control-focus:             var(--color-foreground-alt);
+
+    --color-swatch-foreground:    var(--color-foreground);
+    --color-swatch-border:        var(--color-border);
+    --color-swatch-focus:         var(--color-foreground-alt);
+    --color-swatch-checker-light: var(--color-grey-20);
+    --color-swatch-checker-dark:  var(--color-grey-10);
+}
