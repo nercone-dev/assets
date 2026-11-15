@@ -14,9 +14,9 @@
     --color-border:     var(--color-white-opacity-10);
     --color-border-alt: var(--color-white-opacity-15);
 
-    --color-information-dark:   var(--color-blue-dark);
-    --color-information-normal: var(--color-blue-normal);
-    --color-information-bright: var(--color-blue-bright);
+    --color-information-dark:   var(--color-sky-dark);
+    --color-information-normal: var(--color-sky-normal);
+    --color-information-bright: var(--color-sky-bright);
 
     --color-success-dark:   var(--color-green-dark);
     --color-success-normal: var(--color-green-normal);
@@ -32,9 +32,9 @@
 
     /* GitHub Markdown */
 
-    --color-note-dark:   var(--color-blue-dark);
-    --color-note-normal: var(--color-blue-normal);
-    --color-note-bright: var(--color-blue-bright);
+    --color-note-dark:   var(--color-sky-dark);
+    --color-note-normal: var(--color-sky-normal);
+    --color-note-bright: var(--color-sky-bright);
 
     --color-tip-dark:   var(--color-green-dark);
     --color-tip-normal: var(--color-green-normal);

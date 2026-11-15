@@ -165,8 +165,8 @@
                 <span class="fg-color-yellow-bright">yellow-bright</span>
                 <span class="fg-color-green-bright">green-bright</span>
                 <span class="fg-color-cyan-bright">cyan-bright</span>
+                <span class="fg-color-sky-bright">sky-bright</span>
                 <span class="fg-color-blue-bright">blue-bright</span>
-                <span class="fg-color-indigo-bright">indigo-bright</span>
                 <span class="fg-color-purple-bright">purple-bright</span>
                 <span class="fg-color-pink-bright">pink-bright</span>
             </p>
@@ -231,7 +231,7 @@ await theme.set(null);    // back to the colors in style.css</code></pre>
 
             <script>
                 (() => {
-                    const HUES = ['grey', 'red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'indigo', 'purple', 'pink'];
+                    const HUES = ['grey', 'red', 'orange', 'yellow', 'green', 'cyan', 'sky', 'blue', 'purple', 'pink'];
                     const stepsTo = last => Array.from({ length: last / 5 + 1 }, (_, index) => index * 5);
                     const PALETTE_STEPS = stepsTo(200);
                     const OPACITY_STEPS = stepsTo(100);
