@@ -22,9 +22,9 @@
     --color-success-normal: var(--color-jis-green);
     --color-success-bright: var(--color-jis-green);
 
-    --color-warning-dark:   var(--color-jis-yellow);
-    --color-warning-normal: var(--color-jis-yellow);
-    --color-warning-bright: var(--color-jis-yellow);
+    --color-warning-dark:   var(--color-jis-red-yellow);
+    --color-warning-normal: var(--color-jis-red-yellow);
+    --color-warning-bright: var(--color-jis-red-yellow);
 
     --color-error-dark:   var(--color-jis-red);
     --color-error-normal: var(--color-jis-red);
@@ -40,9 +40,9 @@
     --color-tip-normal: var(--color-jis-blue);
     --color-tip-bright: var(--color-jis-blue);
 
-    --color-important-dark:   var(--color-jis-red-yellow);
-    --color-important-normal: var(--color-jis-red-yellow);
-    --color-important-bright: var(--color-jis-red-yellow);
+    --color-important-dark:   var(--color-jis-red);
+    --color-important-normal: var(--color-jis-red);
+    --color-important-bright: var(--color-jis-red);
 
     --color-caution-dark:   var(--color-jis-red);
     --color-caution-normal: var(--color-jis-red);

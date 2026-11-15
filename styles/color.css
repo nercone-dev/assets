@@ -751,9 +751,9 @@
     --color-success-normal: var(--color-green-normal);
     --color-success-bright: var(--color-green-bright);
 
-    --color-warning-dark:   var(--color-yellow-dark);
-    --color-warning-normal: var(--color-yellow-normal);
-    --color-warning-bright: var(--color-yellow-bright);
+    --color-warning-dark:   var(--color-orange-dark);
+    --color-warning-normal: var(--color-orange-normal);
+    --color-warning-bright: var(--color-orange-bright);
 
     --color-error-dark:   var(--color-red-dark);
     --color-error-normal: var(--color-red-normal);
