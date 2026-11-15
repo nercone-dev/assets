@@ -67,7 +67,7 @@
       }
 
       .cls-24 {
-        opacity: 0;
+        opacity: .04;
       }
 
       .cls-25 {
@@ -98,10 +98,6 @@
         letter-spacing: 0em;
       }
 
-      .cls-27 {
-        fill: #1a1a1a;
-      }
-
       .cls-21 {
         opacity: .1;
       }
@@ -115,7 +111,7 @@
       }
     </style>
   </defs>
-  <rect class="cls-27" width="796" height="360"/>
+  <rect width="796" height="360"/>
   <polyline class="cls-11" points="29 30.5 29 329.5 760 329.5"/>
   <line class="cls-10" x1="30" y1="180" x2="760" y2="180"/>
   <text class="cls-2" transform="translate(10.73 23.16)"><tspan x="0" y="0">12dB</tspan></text>

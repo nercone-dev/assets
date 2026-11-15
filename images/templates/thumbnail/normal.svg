@@ -9,7 +9,7 @@
         font-weight: 700;
       }
 
-      .cls-1, .cls-2, .cls-3, .cls-4 {
+      .cls-1, .cls-2, .cls-3 {
         fill: #fff;
       }
 
@@ -19,22 +19,26 @@
         font-variation-settings: 'opsz' 14, 'wght' 400;
       }
 
-      .cls-5 {
+      .cls-4 {
         fill: #39f;
       }
 
-      .cls-4 {
+      .cls-3 {
         font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
         font-size: 24px;
         font-variation-settings: 'wght' 400;
         opacity: .75;
       }
+
+      .cls-5 {
+        fill: #1a1a1a;
+      }
     </style>
   </defs>
   <rect class="cls-5" width="1280" height="640"/>
-  <text class="cls-1" transform="translate(123.98 281.97)"><tspan x="0" y="0">__TITLE__</tspan></text>
-  <text class="cls-2" transform="translate(127.81 334.64)"><tspan x="0" y="0">__DESCRIPTION__</tspan></text>
-  <text class="cls-4" transform="translate(128.3 458.88)"><tspan x="0" y="0">__PATH__</tspan></text>
-  <rect class="cls-3" x="960" width="320" height="640"/>
-  <polyline class="cls-5" points="1210 335.19 1030 275 1030 365 1120 365 1210 275 1210 365 1163.12 365"/>
+  <text class="cls-1" transform="translate(123.98 329.97)"><tspan x="0" y="0">__TITLE__</tspan></text>
+  <text class="cls-2" transform="translate(127.81 382.64)"><tspan x="0" y="0">__DESCRIPTION__</tspan></text>
+  <text class="cls-3" transform="translate(128.3 506.88)"><tspan x="0" y="0">__PATH__</tspan></text>
+  <rect class="cls-4" x="960" width="320" height="640"/>
+  <polyline class="cls-5" points="1210 335.19 1030 275 1030 365 1120 365 1210 275 1210 365 1163.25 365"/>
 </svg>

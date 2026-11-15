@@ -49,6 +49,14 @@
         letter-spacing: -.02em;
       }
 
+      .cls-34, .cls-30, .cls-35 {
+        fill: #fd3;
+      }
+
+      .cls-34, .cls-36 {
+        letter-spacing: 0em;
+      }
+
       .cls-16 {
         font-family: NerconeSansCJKVariable-Medium, 'Nercone Sans CJK Variable';
         font-size: 32px;
@@ -58,14 +66,6 @@
 
       .cls-9, .cls-13 {
         font-size: 20px;
-      }
-
-      .cls-34, .cls-30, .cls-35 {
-        fill: #ffd500;
-      }
-
-      .cls-34, .cls-36 {
-        letter-spacing: 0em;
       }
 
       .cls-17, .cls-23, .cls-37, .cls-14 {
