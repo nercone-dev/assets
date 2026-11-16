@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #e0e0e0;
+      }
+
+      .cls-3 {
+        font-size: 16px;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-5 {
+        fill: #bfa626;
+      }
+
+      .cls-6 {
+        font-family: NerconeSansCJKVariable-Bold, 'Nercone Sans CJK Variable';
+        font-size: 96px;
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-6, .cls-7, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        opacity: .5;
+      }
+
+      .cls-7 {
+        font-family: NerconeSansCJK-Variable, 'Nercone Sans CJK Variable';
+        font-size: 30px;
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-8 {
+        fill: #39f;
+      }
+
+      .cls-9 {
+        fill: #26bf80;
+      }
+
+      .cls-4 {
+        font-size: 24px;
+        opacity: .75;
+      }
+
+      .cls-10 {
+        fill: silver;
+      }
+
+      .cls-11 {
+        fill: #bf268c;
+      }
+
+      .cls-12 {
+        opacity: .25;
+      }
+
+      .cls-13 {
+        fill: #26a6bf;
+      }
+
+      .cls-14 {
+        fill: #bf2626;
+      }
+
+      .cls-15 {
+        fill: #2673bf;
+      }
+
+      .cls-16 {
+        fill: #1a1a1a;
+      }
+    </style>
+  </defs>
+  <rect class="cls-16" width="1280" height="640"/>
+  <g class="cls-12">
+    <rect class="cls-11" x="313" y="76" width="86" height="18"/>
+    <rect class="cls-15" x="245" y="76" width="58" height="18"/>
+    <rect class="cls-13" x="409" y="76" width="58" height="18"/>
+    <rect class="cls-9" x="81" y="76" width="68" height="18"/>
+    <rect class="cls-5" x="157.5" y="76" width="78" height="18"/>
+    <rect class="cls-14" x="275.5" y="439" width="75" height="20"/>
+    <rect class="cls-14" x="275.5" y="467" width="75" height="20"/>
+    <rect class="cls-14" x="24" y="76" width="48" height="18"/>
+    <text class="cls-3" transform="translate(23.58 34.53)"><tspan class="cls-10"><tspan x="0" y="0">── Color ──</tspan></tspan><tspan class="cls-1" x="0" y="28"> </tspan><tspan class="cls-14" x="9.63" y="28">red</tspan><tspan class="cls-1" x="38.53" y="28" xml:space="preserve">   </tspan><tspan class="cls-9" x="67.43" y="28">green</tspan><tspan class="cls-1" x="115.59" y="28" xml:space="preserve">   </tspan><tspan class="cls-5" x="144.49" y="28">yellow</tspan><tspan class="cls-1" x="202.29" y="28" xml:space="preserve">   </tspan><tspan class="cls-15" x="231.19" y="28">blue</tspan><tspan class="cls-1" x="269.72" y="28" xml:space="preserve">   </tspan><tspan class="cls-11" x="298.62" y="28">magenta</tspan><tspan class="cls-1" x="366.05" y="28" xml:space="preserve">   </tspan><tspan class="cls-13" x="394.95" y="28">cyan</tspan><tspan class="cls-1" x="433.48" y="28"> </tspan><tspan class="cls-1"><tspan x="0" y="56" xml:space="preserve"> red   green   yellow   blue   magenta   cyan </tspan></tspan><tspan class="cls-10"><tspan x="0" y="112">── Text ──</tspan></tspan><tspan class="cls-13" x="0" y="140">Hello,</tspan><tspan class="cls-1" x="57.8" y="140"> </tspan><tspan class="cls-5"><tspan x="0" y="168">world!</tspan></tspan><tspan class="cls-13" x="0" y="196">Hello,</tspan><tspan class="cls-1" x="57.8" y="196"> </tspan><tspan class="cls-5" x="67.43" y="196">world!</tspan><tspan class="cls-10"><tspan x="0" y="252">── Logging ──</tspan></tspan><tspan class="cls-2" x="0" y="280">2026-06-13T03:12:41Z</tspan><tspan class="cls-1" x="192.66" y="280"> </tspan><tspan class="cls-13" x="202.29" y="280">Main</tspan><tspan class="cls-1" x="240.82" y="280"> </tspan><tspan class="cls-15" x="250.45" y="280">INFO</tspan><tspan class="cls-1" x="288.98" y="280" xml:space="preserve">     </tspan><tspan class="cls-10" x="337.15" y="280">Main #0</tspan><tspan class="cls-2" x="0" y="308">2026-06-13T03:12:42Z</tspan><tspan class="cls-1" x="192.66" y="308" xml:space="preserve">      </tspan><tspan class="cls-5" x="250.45" y="308">WARNING</tspan><tspan class="cls-1" x="317.88" y="308" xml:space="preserve">  </tspan><tspan class="cls-10" x="337.15" y="308">Main #1</tspan><tspan class="cls-1" x="0" y="336" xml:space="preserve">                     </tspan><tspan class="cls-9" x="202.29" y="336">Sub</tspan><tspan class="cls-1" x="231.19" y="336" xml:space="preserve">  </tspan><tspan class="cls-15" x="250.45" y="336">INFO</tspan><tspan class="cls-1" x="288.98" y="336" xml:space="preserve">     </tspan><tspan class="cls-10" x="337.15" y="336">Sub #0</tspan><tspan class="cls-2" x="0" y="364">2026-06-13T03:12:44Z</tspan><tspan class="cls-1" x="192.66" y="364"> </tspan><tspan class="cls-13" x="202.29" y="364">Main</tspan><tspan class="cls-1" x="240.82" y="364"> </tspan><tspan class="cls-15" x="250.45" y="364">INFO</tspan><tspan class="cls-1" x="288.98" y="364" xml:space="preserve">     </tspan><tspan class="cls-10" x="337.15" y="364">Main #2</tspan><tspan class="cls-2" x="0" y="392">2026-06-13T03:12:45Z</tspan><tspan class="cls-1" x="192.66" y="392" xml:space="preserve">      </tspan><tspan class="cls-14" x="250.45" y="392">ERROR</tspan><tspan class="cls-1" x="298.62" y="392" xml:space="preserve">    </tspan><tspan class="cls-10" x="337.15" y="392">Main #3</tspan><tspan class="cls-1" x="0" y="420" xml:space="preserve">                     </tspan><tspan class="cls-9" x="202.29" y="420">Sub</tspan><tspan class="cls-1" x="231.19" y="420" xml:space="preserve">  CRITICAL </tspan><tspan class="cls-10" x="337.15" y="420">Sub #1</tspan><tspan class="cls-2" x="0" y="448">2026-06-13T03:12:47Z</tspan><tspan class="cls-1" x="192.66" y="448"> </tspan><tspan class="cls-13" x="202.29" y="448">Main</tspan><tspan class="cls-1" x="240.82" y="448" xml:space="preserve"> CRITICAL </tspan><tspan class="cls-10" x="337.15" y="448">Main #4</tspan><tspan class="cls-10"><tspan x="0" y="504">── ProgressBar ──</tspan></tspan><tspan class="cls-15" x="0" y="532">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Download</tspan><tspan class="cls-1" x="1184.84" y="532"> </tspan><tspan class="cls-2" x="1194.47" y="532">DONE</tspan><tspan class="cls-13" x="0" y="560">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Extract</tspan><tspan class="cls-1" x="1175.2" y="560" xml:space="preserve">  </tspan><tspan class="cls-2" x="1194.47" y="560">DONE</tspan><tspan class="cls-9" x="0" y="588">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Install</tspan><tspan class="cls-1" x="1175.2" y="588" xml:space="preserve">  </tspan><tspan class="cls-2" x="1194.47" y="588">DONE</tspan></text>
+  </g>
+  <g>
+    <rect class="cls-8" x="960" width="320" height="640"/>
+    <polyline class="cls-16" points="1210 335.19 1030 275 1030 365 1120 365 1210 275 1210 365 1163.25 365"/>
+  </g>
+  <text class="cls-6" transform="translate(123.98 329.97)"><tspan x="0" y="0">Modern</tspan></text>
+  <text class="cls-7" transform="translate(127.81 382.64)"><tspan x="0" y="0">Modern Logging and Progress Bar Library</tspan></text>
+  <text class="cls-4" transform="translate(128.3 506.88)"><tspan x="0" y="0">nercone-dev</tspan></text>
+</svg>

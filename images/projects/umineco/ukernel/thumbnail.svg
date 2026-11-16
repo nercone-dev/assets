@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: NerconeSansCJKVariable-Bold, 'Nercone Sans CJK Variable';
+        font-size: 96px;
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #39f;
+        stroke-linecap: square;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-2 {
+        font-family: NerconeSansCJK-Variable, 'Nercone Sans CJK Variable';
+        font-size: 30px;
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-5 {
+        fill: #39f;
+      }
+
+      .cls-3 {
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-size: 24px;
+        font-variation-settings: 'wght' 400;
+        opacity: .75;
+      }
+
+      .cls-6 {
+        fill: #1a1a1a;
+      }
+    </style>
+  </defs>
+  <rect class="cls-6" width="1280" height="640"/>
+  <g>
+    <rect class="cls-5" x="960" width="320" height="640"/>
+    <polyline class="cls-6" points="1210 335.19 1030 275 1030 365 1120 365 1210 275 1210 365 1163.25 365"/>
+  </g>
+  <text class="cls-1" transform="translate(123.98 329.97)"><tspan x="0" y="0">uKernel</tspan></text>
+  <text class="cls-2" transform="translate(127.81 382.64)"><tspan x="0" y="0">uNique Micro Kernel Implementation</tspan></text>
+  <text class="cls-3" transform="translate(128.3 506.88)"><tspan x="0" y="0">umineco-dev</tspan></text>
+  <g>
+    <rect class="cls-6" x="1030" y="230" width="180" height="180"/>
+    <path class="cls-4" d="M1066.56,293.28v26.72c0,14.76,11.96,26.72,26.72,26.72h0c14.76,0,26.72-11.96,26.72-26.72v-26.72s26.72,26.72,26.72,26.72l26.72-26.72v53.44"/>
+  </g>
+</svg>

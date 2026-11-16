@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        font-family: NerconeSansCJKVariable-Bold, 'Nercone Sans CJK Variable';
+        font-size: 96px;
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-2 {
+        fill: #39f;
+      }
+
+      .cls-3 {
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-size: 24px;
+        font-variation-settings: 'wght' 400;
+        opacity: .75;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        font-family: NerconeSansCJKNF-Variable, 'Nercone Sans CJK NF Variable';
+        font-size: 30px;
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-5 {
+        fill: #1a1a1a;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" width="1280" height="640"/>
+  <g>
+    <rect class="cls-2" x="960" width="320" height="640"/>
+    <polyline class="cls-5" points="1210 335.19 1030 275 1030 365 1120 365 1210 275 1210 365 1163.25 365"/>
+  </g>
+  <text class="cls-1" transform="translate(123.98 329.97)"><tspan x="0" y="0">Fonts</tspan></text>
+  <text class="cls-4" transform="translate(127.81 382.64)"><tspan x="0" y="0">作った合成フォントの保管場所</tspan></text>
+  <text class="cls-3" transform="translate(128.3 506.88)"><tspan x="0" y="0">nercone-dev</tspan></text>
+</svg>

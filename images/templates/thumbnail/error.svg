@@ -36,9 +36,11 @@
     </style>
   </defs>
   <rect class="cls-5" width="1280" height="640"/>
+  <g>
+    <rect class="cls-4" x="960" width="320" height="640"/>
+    <polyline class="cls-5" points="1210 335.19 1030 275 1030 365 1120 365 1210 275 1210 365 1163.25 365"/>
+  </g>
   <text class="cls-1" transform="translate(123.98 329.97)"><tspan x="0" y="0">__TITLE__</tspan></text>
   <text class="cls-2" transform="translate(127.81 382.64)"><tspan x="0" y="0">__DESCRIPTION__</tspan></text>
   <text class="cls-3" transform="translate(128.3 506.88)"><tspan x="0" y="0">__PATH__</tspan></text>
-  <rect class="cls-4" x="960" width="320" height="640"/>
-  <polyline class="cls-5" points="1210 335.19 1030 275 1030 365 1120 365 1210 275 1210 365 1163.25 365"/>
 </svg>
