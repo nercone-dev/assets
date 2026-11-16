@@ -6,7 +6,11 @@
         <title>Overlays - Nercone Design</title>
         <link rel="icon" href="../images/favicon.svg">
         <link rel="stylesheet" href="../styles/index.css">
-        <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+        <noscript>
+            <link rel="stylesheet" href="../styles/noscript.css">
+            <!-- theme.js applies auto-stark by default; without it, the same theme is loaded here. -->
+            <link rel="stylesheet" href="../styles/themes/auto-stark.css">
+        </noscript>
         <script type="module" src="../scripts/index.js"></script>
         <script type="module">window.nercone.register('theme', new window.nercone.Theme({ baseURL: '../styles/themes/' }));</script>
     </head>
@@ -36,7 +40,7 @@
             <a href="/docs/tables.html">Tables</a>
             <a href="/docs/forms.html">Forms</a>
             <a href="/docs/progress.html">Progress</a>
-            <a href="/docs/overlays.html">Overlays</a>
+            <a href="/docs/overlays.html" aria-current="page">Overlays</a>
         </nav>
         <main>
             <div class="hero">
@@ -45,35 +49,38 @@
             </div>
 
             <h2>Popup</h2>
-            <p>Applies to <code>&lt;dialog&gt;</code> without a class. With <code>popup.js</code>, an element with <code>data-popup-open="ID"</code> opens the popup with that ID as a modal, and an element with <code>data-popup-close</code> inside a popup closes it. <kbd>Esc</kbd> also closes it.</p>
+            <p>Applies to <code>&lt;dialog&gt;</code> without a class. A button with <code>commandfor="ID" command="show-modal"</code> opens the popup with that ID as a modal, and a button with <code>commandfor="ID" command="close"</code> closes it. <kbd>Esc</kbd> also closes it. These are HTML invoker commands, so they work without JavaScript; in browsers that do not support them, <code>popup.js</code> does the same.</p>
             <div class="flex" style="flex-wrap: wrap">
-                <button type="button" data-popup-open="popup-basic">Basic</button>
-                <button type="button" data-popup-open="popup-dismiss">Close by clicking outside</button>
-                <button class="button-error" type="button" data-popup-open="popup-confirm">Confirm</button>
-                <button type="button" data-popup-open="popup-form">Form</button>
-                <button type="button" data-popup-open="popup-long">Long content</button>
+                <button type="button" commandfor="popup-basic" command="show-modal">Basic</button>
+                <button type="button" commandfor="popup-dismiss" command="show-modal">Close by clicking outside</button>
+                <button class="button-error" type="button" commandfor="popup-confirm" command="show-modal">Confirm</button>
+                <button type="button" commandfor="popup-form" command="show-modal">Form</button>
+                <button type="button" commandfor="popup-long" command="show-modal">Long content</button>
             </div>
-            <p>Result: <output id="popup-result">-</output></p>
+            <p class="script-only">Result: <output id="popup-result">-</output></p>
 
             <dialog id="popup-basic" aria-labelledby="popup-basic-title">
                 <h2 id="popup-basic-title">Popup</h2>
                 <p>This is a basic popup.</p>
                 <div class="popup-actions">
-                    <button class="button-primary" type="button" data-popup-close>Close</button>
+                    <button class="button-primary" type="button" commandfor="popup-basic" command="close">Close</button>
                 </div>
             </dialog>
 
             <dialog id="popup-dismiss" closedby="any" aria-labelledby="popup-dismiss-title">
                 <h2 id="popup-dismiss-title">Close by clicking outside</h2>
-                <p>With <code>closedby="any"</code>, clicking outside the popup also closes it. In browsers that do not support the attribute, <code>popup.js</code> does the same.</p>
+                <p>With <code>closedby="any"</code>, clicking outside the popup also closes it. In browsers that do not support the attribute, <code>popup.js</code> does the same. Keep a close button as well, because without JavaScript those browsers can close the popup only with <kbd>Esc</kbd>.</p>
+                <div class="popup-actions">
+                    <button class="button-primary" type="button" commandfor="popup-dismiss" command="close">Close</button>
+                </div>
             </dialog>
 
             <dialog id="popup-confirm" aria-labelledby="popup-confirm-title" style="--popup-width: 360px">
                 <h2 id="popup-confirm-title">Delete this item?</h2>
                 <p>This cannot be undone.</p>
                 <div class="popup-actions">
-                    <button type="button" data-popup-close="cancel">Cancel</button>
-                    <button class="button-error" type="button" data-popup-close="delete">Delete</button>
+                    <button type="button" commandfor="popup-confirm" command="close" value="cancel">Cancel</button>
+                    <button class="button-error" type="button" commandfor="popup-confirm" command="close" value="delete">Delete</button>
                 </div>
             </dialog>
 
@@ -83,7 +90,7 @@
                     <label for="popup-form-name">New name</label>
                     <input id="popup-form-name" name="name" type="text" autocomplete="off" required autofocus>
                     <div class="popup-actions">
-                        <button type="button" data-popup-close>Cancel</button>
+                        <button type="button" commandfor="popup-form" command="close">Cancel</button>
                         <button class="button-primary" type="submit" value="save">Save</button>
                     </div>
                 </form>
@@ -103,23 +110,24 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <div class="popup-actions">
-                    <button class="button-primary" type="button" data-popup-close>Close</button>
+                    <button class="button-primary" type="button" commandfor="popup-long" command="close">Close</button>
                 </div>
             </dialog>
 
-            <pre><code>&lt;button type="button" data-popup-open="confirm"&gt;Delete&lt;/button&gt;
+            <pre><code>&lt;button type="button" commandfor="confirm" command="show-modal"&gt;Delete&lt;/button&gt;
 
 &lt;dialog id="confirm" closedby="any" aria-labelledby="confirm-title"&gt;
     &lt;h2 id="confirm-title"&gt;Delete this item?&lt;/h2&gt;
     &lt;div class="popup-actions"&gt;
-        &lt;button type="button" data-popup-close="cancel"&gt;Cancel&lt;/button&gt;
-        &lt;button class="button-error" type="button" data-popup-close="delete"&gt;Delete&lt;/button&gt;
+        &lt;button type="button" commandfor="confirm" command="close" value="cancel"&gt;Cancel&lt;/button&gt;
+        &lt;button class="button-error" type="button" commandfor="confirm" command="close" value="delete"&gt;Delete&lt;/button&gt;
     &lt;/div&gt;
 &lt;/dialog&gt;</code></pre>
             <p><code>popup-actions</code> lines up buttons at the end of the popup.</p>
+            <p><code>popup.js</code> also supports <code>data-popup-open="ID"</code> on any element, and <code>data-popup-close</code> on an element inside a popup. They need JavaScript, so prefer <code>commandfor</code> and <code>command</code>.</p>
 
             <h3>Return value</h3>
-            <p>The value of <code>data-popup-close</code> becomes the <code>returnValue</code> of the dialog, which can be read in the <code>close</code> event. <code>&lt;form method="dialog"&gt;</code> also works, and the <code>value</code> of the submit button becomes the return value.</p>
+            <p>The <code>value</code> of a <code>command="close"</code> button (or the value of <code>data-popup-close</code>) becomes the <code>returnValue</code> of the dialog, which can be read in the <code>close</code> event. <code>&lt;form method="dialog"&gt;</code> also works, and the <code>value</code> of the submit button becomes the return value.</p>
             <pre><code>document.getElementById('confirm').addEventListener('close', (event) =&gt; {
     if (event.target.returnValue === 'delete') { … }
 });</code></pre>
@@ -134,19 +142,24 @@ popup.toggle(document.getElementById('confirm'));</code></pre>
             <h3>Customization</h3>
             <p>Change the width with <code>--popup-width</code> (default <code>480px</code>), the padding with <code>--popup-padding</code> (default <code>24px</code>), the backdrop blur with <code>--popup-backdrop-blur</code> (default <code>4px</code>), and the colors with <code>--color-popup-*</code>.</p>
             <div class="flex">
-                <button type="button" data-popup-open="popup-custom">Customized popup</button>
+                <button type="button" commandfor="popup-custom" command="show-modal">Customized popup</button>
             </div>
             <dialog id="popup-custom" closedby="any" aria-labelledby="popup-custom-title" style="--popup-width: 640px; --popup-padding: 48px; --popup-backdrop-blur: 16px; --color-popup-border: var(--color-information-bright)">
                 <h2 id="popup-custom-title">Customized</h2>
                 <p><code>--popup-width: 640px; --popup-padding: 48px; --popup-backdrop-blur: 16px; --color-popup-border: var(--color-information-bright)</code></p>
+                <div class="popup-actions">
+                    <button class="button-primary" type="button" commandfor="popup-custom" command="close">Close</button>
+                </div>
             </dialog>
 
             <h2>Toast</h2>
             <p>Shows a short notification at the edge of the screen, and closes it after a while. With <code>toast.js</code>, click an element with <code>data-toast="Message"</code>, or show one from a script. A toast does not close by itself while the pointer or focus is on it. Toasts stay above popups.</p>
+            <p>Toasts need JavaScript, so do not use them for anything the page cannot work without. Buttons that only show toasts can have the <code>script-only</code> class, which hides them when JavaScript is disabled (see <a href="/docs/layout.html#script-only">Layout</a>).</p>
+            <noscript><p>JavaScript is required to show toasts, so the examples below are hidden.</p></noscript>
 
             <h3>Variants</h3>
             <p>Set <code>data-toast-variant</code> to <code>information</code>, <code>success</code>, <code>warning</code>, or <code>error</code>. <code>warning</code> and <code>error</code> get <code>role="alert"</code>, so assistive technology announces them right away.</p>
-            <div class="flex" style="flex-wrap: wrap">
+            <div class="flex script-only" style="flex-wrap: wrap">
                 <button type="button" data-toast="Saved">Default</button>
                 <button class="button-information" type="button" data-toast="A new version is available" data-toast-variant="information">Information</button>
                 <button class="button-success" type="button" data-toast="Upload complete" data-toast-variant="success">Success</button>
@@ -156,7 +169,7 @@ popup.toggle(document.getElementById('confirm'));</code></pre>
             <pre><code>&lt;button type="button" data-toast="Saved" data-toast-variant="success"&gt;Save&lt;/button&gt;</code></pre>
 
             <h3>Script</h3>
-            <div class="flex" style="flex-wrap: wrap">
+            <div class="flex script-only" style="flex-wrap: wrap">
                 <button type="button" id="toast-persistent">Does not close by itself</button>
                 <button type="button" id="toast-long">Long message</button>
                 <button type="button" id="toast-many">Show 7 (limit is 5)</button>
@@ -170,7 +183,7 @@ popup.toggle(document.getElementById('confirm'));</code></pre>
                 <p>The toast container is kept in the top layer, so toasts are drawn above modal popups.</p>
                 <div class="popup-actions">
                     <button type="button" data-toast="Shown above the popup" data-toast-variant="information">Show toast</button>
-                    <button class="button-primary" type="button" data-popup-close>Close</button>
+                    <button class="button-primary" type="button" commandfor="popup-toast" command="close">Close</button>
                 </div>
             </dialog>
             <pre><code>const toast = window.nercone.get('toast');

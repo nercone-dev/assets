@@ -6,7 +6,11 @@
         <title>Progress - Nercone Design</title>
         <link rel="icon" href="../images/favicon.svg">
         <link rel="stylesheet" href="../styles/index.css">
-        <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+        <noscript>
+            <link rel="stylesheet" href="../styles/noscript.css">
+            <!-- theme.js applies auto-stark by default; without it, the same theme is loaded here. -->
+            <link rel="stylesheet" href="../styles/themes/auto-stark.css">
+        </noscript>
         <script type="module" src="../scripts/index.js"></script>
         <script type="module">window.nercone.register('theme', new window.nercone.Theme({ baseURL: '../styles/themes/' }));</script>
     </head>
@@ -35,7 +39,7 @@
             <a href="/docs/layout.html">Layout</a>
             <a href="/docs/tables.html">Tables</a>
             <a href="/docs/forms.html">Forms</a>
-            <a href="/docs/progress.html">Progress</a>
+            <a href="/docs/progress.html" aria-current="page">Progress</a>
             <a href="/docs/overlays.html">Overlays</a>
         </nav>
         <main>
@@ -44,8 +48,9 @@
                 <p>Linear, Circular, and Logo progress indicators.</p>
             </div>
 
-            <p>Shows how much of a task is done. <code>progress.js</code> reads the value from <code>aria-valuenow</code>, within <code>aria-valuemin</code> (default <code>0</code>) and <code>aria-valuemax</code> (default <code>100</code>). Without <code>aria-valuenow</code>, the progress is indeterminate.</p>
-            <div class="layer">
+            <p>Shows how much of a task is done. <code>progress.js</code> reads the value from <code>aria-valuenow</code>, within <code>aria-valuemin</code> (default <code>0</code>) and <code>aria-valuemax</code> (default <code>100</code>), and sets <code>--progress-value</code> (from <code>0</code> to <code>1</code>) on the element. Without <code>aria-valuenow</code>, the progress is indeterminate.</p>
+            <p>Set <code>--progress-value</code> in the <code>style</code> attribute as well, so the progress is drawn without JavaScript. <code>progress.js</code> replaces it when <code>aria-valuenow</code> changes.</p>
+            <div class="layer script-only">
                 <label for="progress-value">Value: <output id="progress-output" for="progress-value">40</output></label>
                 <input id="progress-value" type="range" min="0" max="100" value="40">
                 <div class="flex" style="flex-wrap: wrap">
@@ -55,15 +60,15 @@
             </div>
 
             <h2>Linear</h2>
-            <div class="progress-linear" data-progress-demo role="progressbar" aria-label="Linear" aria-valuenow="40"></div>
+            <div class="progress-linear" data-progress-demo role="progressbar" aria-label="Linear" aria-valuenow="40" style="--progress-value: 0.4"></div>
 
             <h2>Circular and logo</h2>
             <div class="flex" style="flex-wrap: wrap; align-items: center">
-                <svg class="progress-circular" data-progress-demo viewBox="0 0 48 48" role="progressbar" aria-label="Circular" aria-valuenow="40">
+                <svg class="progress-circular" data-progress-demo viewBox="0 0 48 48" role="progressbar" aria-label="Circular" aria-valuenow="40" style="--progress-value: 0.4">
                     <circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/>
                     <circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/>
                 </svg>
-                <svg class="progress-logo" data-progress-demo viewBox="0 0 78 48" role="progressbar" aria-label="Logo" aria-valuenow="40">
+                <svg class="progress-logo" data-progress-demo viewBox="0 0 78 48" role="progressbar" aria-label="Logo" aria-valuenow="40" style="--progress-value: 0.4">
                     <polyline class="progress-track"     points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
                     <polyline class="progress-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
                 </svg>
@@ -71,12 +76,12 @@
 
             <h2>Range</h2>
             <p><code>aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"</code> is 60%.</p>
-            <div class="progress-linear" role="progressbar" aria-label="Steps" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3"></div>
+            <div class="progress-linear" role="progressbar" aria-label="Steps" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3" style="--progress-value: 0.6"></div>
 
             <h2>Customization</h2>
             <p>Change the size with <code>--progress-size</code> (default <code>48px</code>) and <code>--progress-thickness</code> (default <code>4px</code>), the indeterminate animation with <code>--progress-duration</code>, and the colors with <code>--color-progress</code> and <code>--color-progress-track</code>.</p>
             <div class="flex" style="flex-wrap: wrap; align-items: center; --progress-size: 96px; --progress-thickness: 2px">
-                <svg class="progress-circular" viewBox="0 0 48 48" role="progressbar" aria-label="Success" aria-valuenow="75" style="--color-progress: var(--color-success-bright)">
+                <svg class="progress-circular" viewBox="0 0 48 48" role="progressbar" aria-label="Success" aria-valuenow="75" style="--progress-value: 0.75; --color-progress: var(--color-success-bright)">
                     <circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/>
                     <circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/>
                 </svg>
@@ -85,12 +90,12 @@
                     <polyline class="progress-indicator" points="72.75 29.6953125 5.25 7.125 5.25 40.875 39 40.875 72.75 7.125 72.75 40.875 55.171875 40.875" pathLength="1"/>
                 </svg>
             </div>
-            <div class="progress-linear" role="progressbar" aria-label="Warning" aria-valuenow="30" style="--color-progress: var(--color-warning-bright); --progress-thickness: 8px"></div>
+            <div class="progress-linear" role="progressbar" aria-label="Warning" aria-valuenow="30" style="--progress-value: 0.3; --color-progress: var(--color-warning-bright); --progress-thickness: 8px"></div>
 
             <h2>Usage</h2>
-            <pre><code>&lt;div class="progress-linear" role="progressbar" aria-label="Upload" aria-valuenow="40"&gt;&lt;/div&gt;
+            <pre><code>&lt;div class="progress-linear" role="progressbar" aria-label="Upload" aria-valuenow="40" style="--progress-value: 0.4"&gt;&lt;/div&gt;
 
-&lt;svg class="progress-circular" viewBox="0 0 48 48" role="progressbar" aria-label="Upload" aria-valuenow="40"&gt;
+&lt;svg class="progress-circular" viewBox="0 0 48 48" role="progressbar" aria-label="Upload" aria-valuenow="40" style="--progress-value: 0.4"&gt;
     &lt;circle class="progress-track"     cx="24" cy="24" r="20" pathLength="1"/&gt;
     &lt;circle class="progress-indicator" cx="24" cy="24" r="20" pathLength="1"/&gt;
 &lt;/svg&gt;</code></pre>

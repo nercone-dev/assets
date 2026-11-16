@@ -19,6 +19,9 @@
     padding: 0;
 
     pointer-events: none;
+
+    /* loading-overlay.js removes the overlay. If the script fails to load or run, this hides it so it does not cover the page forever. */
+    animation: loading-overlay-timeout 0.5s ease var(--loading-overlay-timeout, 10s) forwards;
 }
 #loading-overlay svg {
     will-change: opacity, filter, transform;
@@ -33,4 +36,11 @@
     height: calc(var(--size) * 512 / 832);
 
     transform: scale(1);
+}
+
+@keyframes loading-overlay-timeout {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }

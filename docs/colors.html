@@ -6,7 +6,11 @@
         <title>Colors - Nercone Design</title>
         <link rel="icon" href="../images/favicon.svg">
         <link rel="stylesheet" href="../styles/index.css">
-        <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+        <noscript>
+            <link rel="stylesheet" href="../styles/noscript.css">
+            <!-- theme.js applies auto-stark by default; without it, the same theme is loaded here. -->
+            <link rel="stylesheet" href="../styles/themes/auto-stark.css">
+        </noscript>
         <script type="module" src="../scripts/index.js"></script>
         <script type="module">window.nercone.register('theme', new window.nercone.Theme({ baseURL: '../styles/themes/' }));</script>
         <style>
@@ -64,7 +68,7 @@
         </header>
         <nav class="sidebar" id="sidebar" popover aria-label="Nercone Design">
             <a href="/docs/index.html">Home</a>
-            <a href="/docs/colors.html">Colors</a>
+            <a href="/docs/colors.html" aria-current="page">Colors</a>
             <a href="/docs/typography.html">Typography</a>
             <a href="/docs/layout.html">Layout</a>
             <a href="/docs/tables.html">Tables</a>
@@ -75,15 +79,15 @@
         <main>
             <div class="hero">
                 <h1>Colors</h1>
-                <p>All colors defined in <code>color.css</code>. Click a swatch to copy its color. Use the control at the top right of each panel to choose the copied format: variable name, RGB, or hex.</p>
+                <p>All colors defined in <code>color.css</code>. Hover a swatch to see its variable name.<span class="script-only"> Click a swatch to copy its color. Use the control at the top right of each panel to choose the copied format: variable name, RGB, or hex.</span></p>
             </div>
 
-            <noscript><p>JavaScript is required to show and copy the swatches.</p></noscript>
+            <noscript><p>JavaScript is required to copy the swatches.</p></noscript>
 
             <h2>Palette</h2>
             <p>Each hue has 41 steps in increments of 5: from <code>0</code> (black) to <code>100</code> (the base color), the base color is mixed with black, and from <code>100</code> to <code>200</code> (white), it is mixed with white. Refer to them as <code>--color-{hue}-{step}</code>.</p>
             <div class="layer" data-swatch-format="variable">
-                <div class="palette-header">
+                <div class="palette-header script-only">
                     <span>Click to copy</span>
                     <div class="segmented-control" role="radiogroup" aria-label="Copy format">
                         <label><input type="radio" name="palette-format" value="variable" checked><span>Variable</span></label>
@@ -91,13 +95,474 @@
                         <label><input type="radio" name="palette-format" value="hex"><span>Hex</span></label>
                     </div>
                 </div>
-                <div class="palette-rows" data-swatches="palette"></div>
+                <div class="palette-rows" data-swatches="palette">
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>grey</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-0" data-swatch="--color-grey-0" style="--swatch-color: var(--color-grey-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-5" data-swatch="--color-grey-5" style="--swatch-color: var(--color-grey-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-10" data-swatch="--color-grey-10" style="--swatch-color: var(--color-grey-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-15" data-swatch="--color-grey-15" style="--swatch-color: var(--color-grey-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-20" data-swatch="--color-grey-20" style="--swatch-color: var(--color-grey-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-25" data-swatch="--color-grey-25" style="--swatch-color: var(--color-grey-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-30" data-swatch="--color-grey-30" style="--swatch-color: var(--color-grey-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-35" data-swatch="--color-grey-35" style="--swatch-color: var(--color-grey-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-40" data-swatch="--color-grey-40" style="--swatch-color: var(--color-grey-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-45" data-swatch="--color-grey-45" style="--swatch-color: var(--color-grey-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-50" data-swatch="--color-grey-50" style="--swatch-color: var(--color-grey-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-55" data-swatch="--color-grey-55" style="--swatch-color: var(--color-grey-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-60" data-swatch="--color-grey-60" style="--swatch-color: var(--color-grey-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-65" data-swatch="--color-grey-65" style="--swatch-color: var(--color-grey-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-70" data-swatch="--color-grey-70" style="--swatch-color: var(--color-grey-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-75" data-swatch="--color-grey-75" style="--swatch-color: var(--color-grey-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-80" data-swatch="--color-grey-80" style="--swatch-color: var(--color-grey-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-85" data-swatch="--color-grey-85" style="--swatch-color: var(--color-grey-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-90" data-swatch="--color-grey-90" style="--swatch-color: var(--color-grey-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-95" data-swatch="--color-grey-95" style="--swatch-color: var(--color-grey-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-100" data-swatch="--color-grey-100" style="--swatch-color: var(--color-grey-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-105" data-swatch="--color-grey-105" style="--swatch-color: var(--color-grey-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-110" data-swatch="--color-grey-110" style="--swatch-color: var(--color-grey-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-115" data-swatch="--color-grey-115" style="--swatch-color: var(--color-grey-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-120" data-swatch="--color-grey-120" style="--swatch-color: var(--color-grey-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-125" data-swatch="--color-grey-125" style="--swatch-color: var(--color-grey-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-130" data-swatch="--color-grey-130" style="--swatch-color: var(--color-grey-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-135" data-swatch="--color-grey-135" style="--swatch-color: var(--color-grey-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-140" data-swatch="--color-grey-140" style="--swatch-color: var(--color-grey-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-145" data-swatch="--color-grey-145" style="--swatch-color: var(--color-grey-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-150" data-swatch="--color-grey-150" style="--swatch-color: var(--color-grey-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-155" data-swatch="--color-grey-155" style="--swatch-color: var(--color-grey-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-160" data-swatch="--color-grey-160" style="--swatch-color: var(--color-grey-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-165" data-swatch="--color-grey-165" style="--swatch-color: var(--color-grey-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-170" data-swatch="--color-grey-170" style="--swatch-color: var(--color-grey-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-175" data-swatch="--color-grey-175" style="--swatch-color: var(--color-grey-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-180" data-swatch="--color-grey-180" style="--swatch-color: var(--color-grey-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-185" data-swatch="--color-grey-185" style="--swatch-color: var(--color-grey-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-190" data-swatch="--color-grey-190" style="--swatch-color: var(--color-grey-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-195" data-swatch="--color-grey-195" style="--swatch-color: var(--color-grey-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-grey-200" data-swatch="--color-grey-200" style="--swatch-color: var(--color-grey-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>red</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-red-0" data-swatch="--color-red-0" style="--swatch-color: var(--color-red-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-5" data-swatch="--color-red-5" style="--swatch-color: var(--color-red-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-10" data-swatch="--color-red-10" style="--swatch-color: var(--color-red-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-15" data-swatch="--color-red-15" style="--swatch-color: var(--color-red-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-20" data-swatch="--color-red-20" style="--swatch-color: var(--color-red-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-25" data-swatch="--color-red-25" style="--swatch-color: var(--color-red-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-30" data-swatch="--color-red-30" style="--swatch-color: var(--color-red-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-35" data-swatch="--color-red-35" style="--swatch-color: var(--color-red-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-40" data-swatch="--color-red-40" style="--swatch-color: var(--color-red-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-45" data-swatch="--color-red-45" style="--swatch-color: var(--color-red-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-50" data-swatch="--color-red-50" style="--swatch-color: var(--color-red-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-55" data-swatch="--color-red-55" style="--swatch-color: var(--color-red-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-60" data-swatch="--color-red-60" style="--swatch-color: var(--color-red-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-65" data-swatch="--color-red-65" style="--swatch-color: var(--color-red-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-70" data-swatch="--color-red-70" style="--swatch-color: var(--color-red-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-75" data-swatch="--color-red-75" style="--swatch-color: var(--color-red-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-80" data-swatch="--color-red-80" style="--swatch-color: var(--color-red-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-85" data-swatch="--color-red-85" style="--swatch-color: var(--color-red-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-90" data-swatch="--color-red-90" style="--swatch-color: var(--color-red-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-95" data-swatch="--color-red-95" style="--swatch-color: var(--color-red-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-100" data-swatch="--color-red-100" style="--swatch-color: var(--color-red-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-105" data-swatch="--color-red-105" style="--swatch-color: var(--color-red-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-110" data-swatch="--color-red-110" style="--swatch-color: var(--color-red-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-115" data-swatch="--color-red-115" style="--swatch-color: var(--color-red-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-120" data-swatch="--color-red-120" style="--swatch-color: var(--color-red-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-125" data-swatch="--color-red-125" style="--swatch-color: var(--color-red-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-130" data-swatch="--color-red-130" style="--swatch-color: var(--color-red-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-135" data-swatch="--color-red-135" style="--swatch-color: var(--color-red-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-140" data-swatch="--color-red-140" style="--swatch-color: var(--color-red-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-145" data-swatch="--color-red-145" style="--swatch-color: var(--color-red-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-150" data-swatch="--color-red-150" style="--swatch-color: var(--color-red-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-155" data-swatch="--color-red-155" style="--swatch-color: var(--color-red-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-160" data-swatch="--color-red-160" style="--swatch-color: var(--color-red-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-165" data-swatch="--color-red-165" style="--swatch-color: var(--color-red-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-170" data-swatch="--color-red-170" style="--swatch-color: var(--color-red-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-175" data-swatch="--color-red-175" style="--swatch-color: var(--color-red-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-180" data-swatch="--color-red-180" style="--swatch-color: var(--color-red-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-185" data-swatch="--color-red-185" style="--swatch-color: var(--color-red-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-190" data-swatch="--color-red-190" style="--swatch-color: var(--color-red-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-195" data-swatch="--color-red-195" style="--swatch-color: var(--color-red-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-200" data-swatch="--color-red-200" style="--swatch-color: var(--color-red-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>orange</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-0" data-swatch="--color-orange-0" style="--swatch-color: var(--color-orange-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-5" data-swatch="--color-orange-5" style="--swatch-color: var(--color-orange-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-10" data-swatch="--color-orange-10" style="--swatch-color: var(--color-orange-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-15" data-swatch="--color-orange-15" style="--swatch-color: var(--color-orange-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-20" data-swatch="--color-orange-20" style="--swatch-color: var(--color-orange-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-25" data-swatch="--color-orange-25" style="--swatch-color: var(--color-orange-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-30" data-swatch="--color-orange-30" style="--swatch-color: var(--color-orange-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-35" data-swatch="--color-orange-35" style="--swatch-color: var(--color-orange-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-40" data-swatch="--color-orange-40" style="--swatch-color: var(--color-orange-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-45" data-swatch="--color-orange-45" style="--swatch-color: var(--color-orange-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-50" data-swatch="--color-orange-50" style="--swatch-color: var(--color-orange-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-55" data-swatch="--color-orange-55" style="--swatch-color: var(--color-orange-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-60" data-swatch="--color-orange-60" style="--swatch-color: var(--color-orange-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-65" data-swatch="--color-orange-65" style="--swatch-color: var(--color-orange-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-70" data-swatch="--color-orange-70" style="--swatch-color: var(--color-orange-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-75" data-swatch="--color-orange-75" style="--swatch-color: var(--color-orange-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-80" data-swatch="--color-orange-80" style="--swatch-color: var(--color-orange-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-85" data-swatch="--color-orange-85" style="--swatch-color: var(--color-orange-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-90" data-swatch="--color-orange-90" style="--swatch-color: var(--color-orange-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-95" data-swatch="--color-orange-95" style="--swatch-color: var(--color-orange-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-100" data-swatch="--color-orange-100" style="--swatch-color: var(--color-orange-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-105" data-swatch="--color-orange-105" style="--swatch-color: var(--color-orange-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-110" data-swatch="--color-orange-110" style="--swatch-color: var(--color-orange-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-115" data-swatch="--color-orange-115" style="--swatch-color: var(--color-orange-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-120" data-swatch="--color-orange-120" style="--swatch-color: var(--color-orange-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-125" data-swatch="--color-orange-125" style="--swatch-color: var(--color-orange-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-130" data-swatch="--color-orange-130" style="--swatch-color: var(--color-orange-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-135" data-swatch="--color-orange-135" style="--swatch-color: var(--color-orange-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-140" data-swatch="--color-orange-140" style="--swatch-color: var(--color-orange-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-145" data-swatch="--color-orange-145" style="--swatch-color: var(--color-orange-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-150" data-swatch="--color-orange-150" style="--swatch-color: var(--color-orange-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-155" data-swatch="--color-orange-155" style="--swatch-color: var(--color-orange-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-160" data-swatch="--color-orange-160" style="--swatch-color: var(--color-orange-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-165" data-swatch="--color-orange-165" style="--swatch-color: var(--color-orange-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-170" data-swatch="--color-orange-170" style="--swatch-color: var(--color-orange-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-175" data-swatch="--color-orange-175" style="--swatch-color: var(--color-orange-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-180" data-swatch="--color-orange-180" style="--swatch-color: var(--color-orange-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-185" data-swatch="--color-orange-185" style="--swatch-color: var(--color-orange-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-190" data-swatch="--color-orange-190" style="--swatch-color: var(--color-orange-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-195" data-swatch="--color-orange-195" style="--swatch-color: var(--color-orange-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-200" data-swatch="--color-orange-200" style="--swatch-color: var(--color-orange-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>yellow</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-0" data-swatch="--color-yellow-0" style="--swatch-color: var(--color-yellow-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-5" data-swatch="--color-yellow-5" style="--swatch-color: var(--color-yellow-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-10" data-swatch="--color-yellow-10" style="--swatch-color: var(--color-yellow-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-15" data-swatch="--color-yellow-15" style="--swatch-color: var(--color-yellow-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-20" data-swatch="--color-yellow-20" style="--swatch-color: var(--color-yellow-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-25" data-swatch="--color-yellow-25" style="--swatch-color: var(--color-yellow-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-30" data-swatch="--color-yellow-30" style="--swatch-color: var(--color-yellow-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-35" data-swatch="--color-yellow-35" style="--swatch-color: var(--color-yellow-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-40" data-swatch="--color-yellow-40" style="--swatch-color: var(--color-yellow-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-45" data-swatch="--color-yellow-45" style="--swatch-color: var(--color-yellow-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-50" data-swatch="--color-yellow-50" style="--swatch-color: var(--color-yellow-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-55" data-swatch="--color-yellow-55" style="--swatch-color: var(--color-yellow-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-60" data-swatch="--color-yellow-60" style="--swatch-color: var(--color-yellow-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-65" data-swatch="--color-yellow-65" style="--swatch-color: var(--color-yellow-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-70" data-swatch="--color-yellow-70" style="--swatch-color: var(--color-yellow-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-75" data-swatch="--color-yellow-75" style="--swatch-color: var(--color-yellow-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-80" data-swatch="--color-yellow-80" style="--swatch-color: var(--color-yellow-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-85" data-swatch="--color-yellow-85" style="--swatch-color: var(--color-yellow-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-90" data-swatch="--color-yellow-90" style="--swatch-color: var(--color-yellow-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-95" data-swatch="--color-yellow-95" style="--swatch-color: var(--color-yellow-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-100" data-swatch="--color-yellow-100" style="--swatch-color: var(--color-yellow-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-105" data-swatch="--color-yellow-105" style="--swatch-color: var(--color-yellow-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-110" data-swatch="--color-yellow-110" style="--swatch-color: var(--color-yellow-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-115" data-swatch="--color-yellow-115" style="--swatch-color: var(--color-yellow-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-120" data-swatch="--color-yellow-120" style="--swatch-color: var(--color-yellow-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-125" data-swatch="--color-yellow-125" style="--swatch-color: var(--color-yellow-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-130" data-swatch="--color-yellow-130" style="--swatch-color: var(--color-yellow-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-135" data-swatch="--color-yellow-135" style="--swatch-color: var(--color-yellow-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-140" data-swatch="--color-yellow-140" style="--swatch-color: var(--color-yellow-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-145" data-swatch="--color-yellow-145" style="--swatch-color: var(--color-yellow-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-150" data-swatch="--color-yellow-150" style="--swatch-color: var(--color-yellow-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-155" data-swatch="--color-yellow-155" style="--swatch-color: var(--color-yellow-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-160" data-swatch="--color-yellow-160" style="--swatch-color: var(--color-yellow-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-165" data-swatch="--color-yellow-165" style="--swatch-color: var(--color-yellow-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-170" data-swatch="--color-yellow-170" style="--swatch-color: var(--color-yellow-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-175" data-swatch="--color-yellow-175" style="--swatch-color: var(--color-yellow-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-180" data-swatch="--color-yellow-180" style="--swatch-color: var(--color-yellow-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-185" data-swatch="--color-yellow-185" style="--swatch-color: var(--color-yellow-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-190" data-swatch="--color-yellow-190" style="--swatch-color: var(--color-yellow-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-195" data-swatch="--color-yellow-195" style="--swatch-color: var(--color-yellow-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-200" data-swatch="--color-yellow-200" style="--swatch-color: var(--color-yellow-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>green</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-green-0" data-swatch="--color-green-0" style="--swatch-color: var(--color-green-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-5" data-swatch="--color-green-5" style="--swatch-color: var(--color-green-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-10" data-swatch="--color-green-10" style="--swatch-color: var(--color-green-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-15" data-swatch="--color-green-15" style="--swatch-color: var(--color-green-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-20" data-swatch="--color-green-20" style="--swatch-color: var(--color-green-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-25" data-swatch="--color-green-25" style="--swatch-color: var(--color-green-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-30" data-swatch="--color-green-30" style="--swatch-color: var(--color-green-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-35" data-swatch="--color-green-35" style="--swatch-color: var(--color-green-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-40" data-swatch="--color-green-40" style="--swatch-color: var(--color-green-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-45" data-swatch="--color-green-45" style="--swatch-color: var(--color-green-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-50" data-swatch="--color-green-50" style="--swatch-color: var(--color-green-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-55" data-swatch="--color-green-55" style="--swatch-color: var(--color-green-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-60" data-swatch="--color-green-60" style="--swatch-color: var(--color-green-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-65" data-swatch="--color-green-65" style="--swatch-color: var(--color-green-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-70" data-swatch="--color-green-70" style="--swatch-color: var(--color-green-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-75" data-swatch="--color-green-75" style="--swatch-color: var(--color-green-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-80" data-swatch="--color-green-80" style="--swatch-color: var(--color-green-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-85" data-swatch="--color-green-85" style="--swatch-color: var(--color-green-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-90" data-swatch="--color-green-90" style="--swatch-color: var(--color-green-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-95" data-swatch="--color-green-95" style="--swatch-color: var(--color-green-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-100" data-swatch="--color-green-100" style="--swatch-color: var(--color-green-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-105" data-swatch="--color-green-105" style="--swatch-color: var(--color-green-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-110" data-swatch="--color-green-110" style="--swatch-color: var(--color-green-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-115" data-swatch="--color-green-115" style="--swatch-color: var(--color-green-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-120" data-swatch="--color-green-120" style="--swatch-color: var(--color-green-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-125" data-swatch="--color-green-125" style="--swatch-color: var(--color-green-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-130" data-swatch="--color-green-130" style="--swatch-color: var(--color-green-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-135" data-swatch="--color-green-135" style="--swatch-color: var(--color-green-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-140" data-swatch="--color-green-140" style="--swatch-color: var(--color-green-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-145" data-swatch="--color-green-145" style="--swatch-color: var(--color-green-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-150" data-swatch="--color-green-150" style="--swatch-color: var(--color-green-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-155" data-swatch="--color-green-155" style="--swatch-color: var(--color-green-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-160" data-swatch="--color-green-160" style="--swatch-color: var(--color-green-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-165" data-swatch="--color-green-165" style="--swatch-color: var(--color-green-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-170" data-swatch="--color-green-170" style="--swatch-color: var(--color-green-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-175" data-swatch="--color-green-175" style="--swatch-color: var(--color-green-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-180" data-swatch="--color-green-180" style="--swatch-color: var(--color-green-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-185" data-swatch="--color-green-185" style="--swatch-color: var(--color-green-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-190" data-swatch="--color-green-190" style="--swatch-color: var(--color-green-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-195" data-swatch="--color-green-195" style="--swatch-color: var(--color-green-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-200" data-swatch="--color-green-200" style="--swatch-color: var(--color-green-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>cyan</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-0" data-swatch="--color-cyan-0" style="--swatch-color: var(--color-cyan-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-5" data-swatch="--color-cyan-5" style="--swatch-color: var(--color-cyan-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-10" data-swatch="--color-cyan-10" style="--swatch-color: var(--color-cyan-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-15" data-swatch="--color-cyan-15" style="--swatch-color: var(--color-cyan-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-20" data-swatch="--color-cyan-20" style="--swatch-color: var(--color-cyan-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-25" data-swatch="--color-cyan-25" style="--swatch-color: var(--color-cyan-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-30" data-swatch="--color-cyan-30" style="--swatch-color: var(--color-cyan-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-35" data-swatch="--color-cyan-35" style="--swatch-color: var(--color-cyan-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-40" data-swatch="--color-cyan-40" style="--swatch-color: var(--color-cyan-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-45" data-swatch="--color-cyan-45" style="--swatch-color: var(--color-cyan-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-50" data-swatch="--color-cyan-50" style="--swatch-color: var(--color-cyan-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-55" data-swatch="--color-cyan-55" style="--swatch-color: var(--color-cyan-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-60" data-swatch="--color-cyan-60" style="--swatch-color: var(--color-cyan-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-65" data-swatch="--color-cyan-65" style="--swatch-color: var(--color-cyan-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-70" data-swatch="--color-cyan-70" style="--swatch-color: var(--color-cyan-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-75" data-swatch="--color-cyan-75" style="--swatch-color: var(--color-cyan-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-80" data-swatch="--color-cyan-80" style="--swatch-color: var(--color-cyan-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-85" data-swatch="--color-cyan-85" style="--swatch-color: var(--color-cyan-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-90" data-swatch="--color-cyan-90" style="--swatch-color: var(--color-cyan-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-95" data-swatch="--color-cyan-95" style="--swatch-color: var(--color-cyan-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-100" data-swatch="--color-cyan-100" style="--swatch-color: var(--color-cyan-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-105" data-swatch="--color-cyan-105" style="--swatch-color: var(--color-cyan-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-110" data-swatch="--color-cyan-110" style="--swatch-color: var(--color-cyan-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-115" data-swatch="--color-cyan-115" style="--swatch-color: var(--color-cyan-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-120" data-swatch="--color-cyan-120" style="--swatch-color: var(--color-cyan-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-125" data-swatch="--color-cyan-125" style="--swatch-color: var(--color-cyan-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-130" data-swatch="--color-cyan-130" style="--swatch-color: var(--color-cyan-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-135" data-swatch="--color-cyan-135" style="--swatch-color: var(--color-cyan-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-140" data-swatch="--color-cyan-140" style="--swatch-color: var(--color-cyan-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-145" data-swatch="--color-cyan-145" style="--swatch-color: var(--color-cyan-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-150" data-swatch="--color-cyan-150" style="--swatch-color: var(--color-cyan-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-155" data-swatch="--color-cyan-155" style="--swatch-color: var(--color-cyan-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-160" data-swatch="--color-cyan-160" style="--swatch-color: var(--color-cyan-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-165" data-swatch="--color-cyan-165" style="--swatch-color: var(--color-cyan-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-170" data-swatch="--color-cyan-170" style="--swatch-color: var(--color-cyan-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-175" data-swatch="--color-cyan-175" style="--swatch-color: var(--color-cyan-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-180" data-swatch="--color-cyan-180" style="--swatch-color: var(--color-cyan-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-185" data-swatch="--color-cyan-185" style="--swatch-color: var(--color-cyan-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-190" data-swatch="--color-cyan-190" style="--swatch-color: var(--color-cyan-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-195" data-swatch="--color-cyan-195" style="--swatch-color: var(--color-cyan-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-200" data-swatch="--color-cyan-200" style="--swatch-color: var(--color-cyan-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>sky</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-0" data-swatch="--color-sky-0" style="--swatch-color: var(--color-sky-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-5" data-swatch="--color-sky-5" style="--swatch-color: var(--color-sky-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-10" data-swatch="--color-sky-10" style="--swatch-color: var(--color-sky-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-15" data-swatch="--color-sky-15" style="--swatch-color: var(--color-sky-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-20" data-swatch="--color-sky-20" style="--swatch-color: var(--color-sky-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-25" data-swatch="--color-sky-25" style="--swatch-color: var(--color-sky-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-30" data-swatch="--color-sky-30" style="--swatch-color: var(--color-sky-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-35" data-swatch="--color-sky-35" style="--swatch-color: var(--color-sky-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-40" data-swatch="--color-sky-40" style="--swatch-color: var(--color-sky-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-45" data-swatch="--color-sky-45" style="--swatch-color: var(--color-sky-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-50" data-swatch="--color-sky-50" style="--swatch-color: var(--color-sky-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-55" data-swatch="--color-sky-55" style="--swatch-color: var(--color-sky-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-60" data-swatch="--color-sky-60" style="--swatch-color: var(--color-sky-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-65" data-swatch="--color-sky-65" style="--swatch-color: var(--color-sky-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-70" data-swatch="--color-sky-70" style="--swatch-color: var(--color-sky-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-75" data-swatch="--color-sky-75" style="--swatch-color: var(--color-sky-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-80" data-swatch="--color-sky-80" style="--swatch-color: var(--color-sky-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-85" data-swatch="--color-sky-85" style="--swatch-color: var(--color-sky-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-90" data-swatch="--color-sky-90" style="--swatch-color: var(--color-sky-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-95" data-swatch="--color-sky-95" style="--swatch-color: var(--color-sky-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-100" data-swatch="--color-sky-100" style="--swatch-color: var(--color-sky-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-105" data-swatch="--color-sky-105" style="--swatch-color: var(--color-sky-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-110" data-swatch="--color-sky-110" style="--swatch-color: var(--color-sky-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-115" data-swatch="--color-sky-115" style="--swatch-color: var(--color-sky-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-120" data-swatch="--color-sky-120" style="--swatch-color: var(--color-sky-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-125" data-swatch="--color-sky-125" style="--swatch-color: var(--color-sky-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-130" data-swatch="--color-sky-130" style="--swatch-color: var(--color-sky-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-135" data-swatch="--color-sky-135" style="--swatch-color: var(--color-sky-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-140" data-swatch="--color-sky-140" style="--swatch-color: var(--color-sky-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-145" data-swatch="--color-sky-145" style="--swatch-color: var(--color-sky-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-150" data-swatch="--color-sky-150" style="--swatch-color: var(--color-sky-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-155" data-swatch="--color-sky-155" style="--swatch-color: var(--color-sky-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-160" data-swatch="--color-sky-160" style="--swatch-color: var(--color-sky-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-165" data-swatch="--color-sky-165" style="--swatch-color: var(--color-sky-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-170" data-swatch="--color-sky-170" style="--swatch-color: var(--color-sky-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-175" data-swatch="--color-sky-175" style="--swatch-color: var(--color-sky-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-180" data-swatch="--color-sky-180" style="--swatch-color: var(--color-sky-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-185" data-swatch="--color-sky-185" style="--swatch-color: var(--color-sky-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-190" data-swatch="--color-sky-190" style="--swatch-color: var(--color-sky-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-195" data-swatch="--color-sky-195" style="--swatch-color: var(--color-sky-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-200" data-swatch="--color-sky-200" style="--swatch-color: var(--color-sky-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>blue</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-0" data-swatch="--color-blue-0" style="--swatch-color: var(--color-blue-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-5" data-swatch="--color-blue-5" style="--swatch-color: var(--color-blue-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-10" data-swatch="--color-blue-10" style="--swatch-color: var(--color-blue-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-15" data-swatch="--color-blue-15" style="--swatch-color: var(--color-blue-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-20" data-swatch="--color-blue-20" style="--swatch-color: var(--color-blue-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-25" data-swatch="--color-blue-25" style="--swatch-color: var(--color-blue-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-30" data-swatch="--color-blue-30" style="--swatch-color: var(--color-blue-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-35" data-swatch="--color-blue-35" style="--swatch-color: var(--color-blue-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-40" data-swatch="--color-blue-40" style="--swatch-color: var(--color-blue-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-45" data-swatch="--color-blue-45" style="--swatch-color: var(--color-blue-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-50" data-swatch="--color-blue-50" style="--swatch-color: var(--color-blue-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-55" data-swatch="--color-blue-55" style="--swatch-color: var(--color-blue-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-60" data-swatch="--color-blue-60" style="--swatch-color: var(--color-blue-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-65" data-swatch="--color-blue-65" style="--swatch-color: var(--color-blue-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-70" data-swatch="--color-blue-70" style="--swatch-color: var(--color-blue-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-75" data-swatch="--color-blue-75" style="--swatch-color: var(--color-blue-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-80" data-swatch="--color-blue-80" style="--swatch-color: var(--color-blue-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-85" data-swatch="--color-blue-85" style="--swatch-color: var(--color-blue-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-90" data-swatch="--color-blue-90" style="--swatch-color: var(--color-blue-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-95" data-swatch="--color-blue-95" style="--swatch-color: var(--color-blue-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-100" data-swatch="--color-blue-100" style="--swatch-color: var(--color-blue-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-105" data-swatch="--color-blue-105" style="--swatch-color: var(--color-blue-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-110" data-swatch="--color-blue-110" style="--swatch-color: var(--color-blue-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-115" data-swatch="--color-blue-115" style="--swatch-color: var(--color-blue-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-120" data-swatch="--color-blue-120" style="--swatch-color: var(--color-blue-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-125" data-swatch="--color-blue-125" style="--swatch-color: var(--color-blue-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-130" data-swatch="--color-blue-130" style="--swatch-color: var(--color-blue-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-135" data-swatch="--color-blue-135" style="--swatch-color: var(--color-blue-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-140" data-swatch="--color-blue-140" style="--swatch-color: var(--color-blue-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-145" data-swatch="--color-blue-145" style="--swatch-color: var(--color-blue-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-150" data-swatch="--color-blue-150" style="--swatch-color: var(--color-blue-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-155" data-swatch="--color-blue-155" style="--swatch-color: var(--color-blue-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-160" data-swatch="--color-blue-160" style="--swatch-color: var(--color-blue-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-165" data-swatch="--color-blue-165" style="--swatch-color: var(--color-blue-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-170" data-swatch="--color-blue-170" style="--swatch-color: var(--color-blue-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-175" data-swatch="--color-blue-175" style="--swatch-color: var(--color-blue-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-180" data-swatch="--color-blue-180" style="--swatch-color: var(--color-blue-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-185" data-swatch="--color-blue-185" style="--swatch-color: var(--color-blue-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-190" data-swatch="--color-blue-190" style="--swatch-color: var(--color-blue-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-195" data-swatch="--color-blue-195" style="--swatch-color: var(--color-blue-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-200" data-swatch="--color-blue-200" style="--swatch-color: var(--color-blue-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>purple</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-0" data-swatch="--color-purple-0" style="--swatch-color: var(--color-purple-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-5" data-swatch="--color-purple-5" style="--swatch-color: var(--color-purple-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-10" data-swatch="--color-purple-10" style="--swatch-color: var(--color-purple-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-15" data-swatch="--color-purple-15" style="--swatch-color: var(--color-purple-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-20" data-swatch="--color-purple-20" style="--swatch-color: var(--color-purple-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-25" data-swatch="--color-purple-25" style="--swatch-color: var(--color-purple-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-30" data-swatch="--color-purple-30" style="--swatch-color: var(--color-purple-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-35" data-swatch="--color-purple-35" style="--swatch-color: var(--color-purple-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-40" data-swatch="--color-purple-40" style="--swatch-color: var(--color-purple-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-45" data-swatch="--color-purple-45" style="--swatch-color: var(--color-purple-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-50" data-swatch="--color-purple-50" style="--swatch-color: var(--color-purple-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-55" data-swatch="--color-purple-55" style="--swatch-color: var(--color-purple-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-60" data-swatch="--color-purple-60" style="--swatch-color: var(--color-purple-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-65" data-swatch="--color-purple-65" style="--swatch-color: var(--color-purple-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-70" data-swatch="--color-purple-70" style="--swatch-color: var(--color-purple-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-75" data-swatch="--color-purple-75" style="--swatch-color: var(--color-purple-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-80" data-swatch="--color-purple-80" style="--swatch-color: var(--color-purple-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-85" data-swatch="--color-purple-85" style="--swatch-color: var(--color-purple-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-90" data-swatch="--color-purple-90" style="--swatch-color: var(--color-purple-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-95" data-swatch="--color-purple-95" style="--swatch-color: var(--color-purple-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-100" data-swatch="--color-purple-100" style="--swatch-color: var(--color-purple-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-105" data-swatch="--color-purple-105" style="--swatch-color: var(--color-purple-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-110" data-swatch="--color-purple-110" style="--swatch-color: var(--color-purple-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-115" data-swatch="--color-purple-115" style="--swatch-color: var(--color-purple-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-120" data-swatch="--color-purple-120" style="--swatch-color: var(--color-purple-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-125" data-swatch="--color-purple-125" style="--swatch-color: var(--color-purple-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-130" data-swatch="--color-purple-130" style="--swatch-color: var(--color-purple-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-135" data-swatch="--color-purple-135" style="--swatch-color: var(--color-purple-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-140" data-swatch="--color-purple-140" style="--swatch-color: var(--color-purple-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-145" data-swatch="--color-purple-145" style="--swatch-color: var(--color-purple-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-150" data-swatch="--color-purple-150" style="--swatch-color: var(--color-purple-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-155" data-swatch="--color-purple-155" style="--swatch-color: var(--color-purple-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-160" data-swatch="--color-purple-160" style="--swatch-color: var(--color-purple-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-165" data-swatch="--color-purple-165" style="--swatch-color: var(--color-purple-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-170" data-swatch="--color-purple-170" style="--swatch-color: var(--color-purple-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-175" data-swatch="--color-purple-175" style="--swatch-color: var(--color-purple-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-180" data-swatch="--color-purple-180" style="--swatch-color: var(--color-purple-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-185" data-swatch="--color-purple-185" style="--swatch-color: var(--color-purple-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-190" data-swatch="--color-purple-190" style="--swatch-color: var(--color-purple-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-195" data-swatch="--color-purple-195" style="--swatch-color: var(--color-purple-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-200" data-swatch="--color-purple-200" style="--swatch-color: var(--color-purple-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 41">
+                        <span>pink</span>
+                        <div class="grid" style="--grid-columns: 41; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-0" data-swatch="--color-pink-0" style="--swatch-color: var(--color-pink-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-5" data-swatch="--color-pink-5" style="--swatch-color: var(--color-pink-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-10" data-swatch="--color-pink-10" style="--swatch-color: var(--color-pink-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-15" data-swatch="--color-pink-15" style="--swatch-color: var(--color-pink-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-20" data-swatch="--color-pink-20" style="--swatch-color: var(--color-pink-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-25" data-swatch="--color-pink-25" style="--swatch-color: var(--color-pink-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-30" data-swatch="--color-pink-30" style="--swatch-color: var(--color-pink-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-35" data-swatch="--color-pink-35" style="--swatch-color: var(--color-pink-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-40" data-swatch="--color-pink-40" style="--swatch-color: var(--color-pink-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-45" data-swatch="--color-pink-45" style="--swatch-color: var(--color-pink-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-50" data-swatch="--color-pink-50" style="--swatch-color: var(--color-pink-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-55" data-swatch="--color-pink-55" style="--swatch-color: var(--color-pink-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-60" data-swatch="--color-pink-60" style="--swatch-color: var(--color-pink-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-65" data-swatch="--color-pink-65" style="--swatch-color: var(--color-pink-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-70" data-swatch="--color-pink-70" style="--swatch-color: var(--color-pink-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-75" data-swatch="--color-pink-75" style="--swatch-color: var(--color-pink-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-80" data-swatch="--color-pink-80" style="--swatch-color: var(--color-pink-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-85" data-swatch="--color-pink-85" style="--swatch-color: var(--color-pink-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-90" data-swatch="--color-pink-90" style="--swatch-color: var(--color-pink-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-95" data-swatch="--color-pink-95" style="--swatch-color: var(--color-pink-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-100" data-swatch="--color-pink-100" style="--swatch-color: var(--color-pink-100)"><span>100</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-105" data-swatch="--color-pink-105" style="--swatch-color: var(--color-pink-105)"><span>105</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-110" data-swatch="--color-pink-110" style="--swatch-color: var(--color-pink-110)"><span>110</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-115" data-swatch="--color-pink-115" style="--swatch-color: var(--color-pink-115)"><span>115</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-120" data-swatch="--color-pink-120" style="--swatch-color: var(--color-pink-120)"><span>120</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-125" data-swatch="--color-pink-125" style="--swatch-color: var(--color-pink-125)"><span>125</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-130" data-swatch="--color-pink-130" style="--swatch-color: var(--color-pink-130)"><span>130</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-135" data-swatch="--color-pink-135" style="--swatch-color: var(--color-pink-135)"><span>135</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-140" data-swatch="--color-pink-140" style="--swatch-color: var(--color-pink-140)"><span>140</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-145" data-swatch="--color-pink-145" style="--swatch-color: var(--color-pink-145)"><span>145</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-150" data-swatch="--color-pink-150" style="--swatch-color: var(--color-pink-150)"><span>150</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-155" data-swatch="--color-pink-155" style="--swatch-color: var(--color-pink-155)"><span>155</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-160" data-swatch="--color-pink-160" style="--swatch-color: var(--color-pink-160)"><span>160</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-165" data-swatch="--color-pink-165" style="--swatch-color: var(--color-pink-165)"><span>165</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-170" data-swatch="--color-pink-170" style="--swatch-color: var(--color-pink-170)"><span>170</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-175" data-swatch="--color-pink-175" style="--swatch-color: var(--color-pink-175)"><span>175</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-180" data-swatch="--color-pink-180" style="--swatch-color: var(--color-pink-180)"><span>180</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-185" data-swatch="--color-pink-185" style="--swatch-color: var(--color-pink-185)"><span>185</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-190" data-swatch="--color-pink-190" style="--swatch-color: var(--color-pink-190)"><span>190</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-195" data-swatch="--color-pink-195" style="--swatch-color: var(--color-pink-195)"><span>195</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-200" data-swatch="--color-pink-200" style="--swatch-color: var(--color-pink-200)"><span>200</span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <h2>Brightness</h2>
             <p>Frequently used steps have names: <code>-dark</code> is 45, <code>-normal</code> is 75, and <code>-bright</code> is 100. <code>--color-{hue}</code> is the base color of each hue.</p>
             <div class="layer" data-swatch-format="variable">
-                <div class="palette-header">
+                <div class="palette-header script-only">
                     <span>Click to copy</span>
                     <div class="segmented-control" role="radiogroup" aria-label="Copy format">
                         <label><input type="radio" name="brightness-format" value="variable" checked><span>Variable</span></label>
@@ -105,13 +570,53 @@
                         <label><input type="radio" name="brightness-format" value="hex"><span>Hex</span></label>
                     </div>
                 </div>
-                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="brightness"></div>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="brightness">
+                    <button class="swatch" type="button" title="--color-black" data-swatch="--color-black" style="--swatch-color: var(--color-black)"><span>black</span></button>
+                    <button class="swatch" type="button" title="--color-white" data-swatch="--color-white" style="--swatch-color: var(--color-white)"><span>white</span></button>
+                    <button class="swatch" type="button" title="--color-grey" data-swatch="--color-grey" style="--swatch-color: var(--color-grey)"><span>grey</span></button>
+                    <button class="swatch" type="button" title="--color-red" data-swatch="--color-red" style="--swatch-color: var(--color-red)"><span>red</span></button>
+                    <button class="swatch" type="button" title="--color-red-dark" data-swatch="--color-red-dark" style="--swatch-color: var(--color-red-dark)"><span>red-dark</span></button>
+                    <button class="swatch" type="button" title="--color-red-normal" data-swatch="--color-red-normal" style="--swatch-color: var(--color-red-normal)"><span>red-normal</span></button>
+                    <button class="swatch" type="button" title="--color-red-bright" data-swatch="--color-red-bright" style="--swatch-color: var(--color-red-bright)"><span>red-bright</span></button>
+                    <button class="swatch" type="button" title="--color-orange" data-swatch="--color-orange" style="--swatch-color: var(--color-orange)"><span>orange</span></button>
+                    <button class="swatch" type="button" title="--color-orange-dark" data-swatch="--color-orange-dark" style="--swatch-color: var(--color-orange-dark)"><span>orange-dark</span></button>
+                    <button class="swatch" type="button" title="--color-orange-normal" data-swatch="--color-orange-normal" style="--swatch-color: var(--color-orange-normal)"><span>orange-normal</span></button>
+                    <button class="swatch" type="button" title="--color-orange-bright" data-swatch="--color-orange-bright" style="--swatch-color: var(--color-orange-bright)"><span>orange-bright</span></button>
+                    <button class="swatch" type="button" title="--color-yellow" data-swatch="--color-yellow" style="--swatch-color: var(--color-yellow)"><span>yellow</span></button>
+                    <button class="swatch" type="button" title="--color-yellow-dark" data-swatch="--color-yellow-dark" style="--swatch-color: var(--color-yellow-dark)"><span>yellow-dark</span></button>
+                    <button class="swatch" type="button" title="--color-yellow-normal" data-swatch="--color-yellow-normal" style="--swatch-color: var(--color-yellow-normal)"><span>yellow-normal</span></button>
+                    <button class="swatch" type="button" title="--color-yellow-bright" data-swatch="--color-yellow-bright" style="--swatch-color: var(--color-yellow-bright)"><span>yellow-bright</span></button>
+                    <button class="swatch" type="button" title="--color-green" data-swatch="--color-green" style="--swatch-color: var(--color-green)"><span>green</span></button>
+                    <button class="swatch" type="button" title="--color-green-dark" data-swatch="--color-green-dark" style="--swatch-color: var(--color-green-dark)"><span>green-dark</span></button>
+                    <button class="swatch" type="button" title="--color-green-normal" data-swatch="--color-green-normal" style="--swatch-color: var(--color-green-normal)"><span>green-normal</span></button>
+                    <button class="swatch" type="button" title="--color-green-bright" data-swatch="--color-green-bright" style="--swatch-color: var(--color-green-bright)"><span>green-bright</span></button>
+                    <button class="swatch" type="button" title="--color-cyan" data-swatch="--color-cyan" style="--swatch-color: var(--color-cyan)"><span>cyan</span></button>
+                    <button class="swatch" type="button" title="--color-cyan-dark" data-swatch="--color-cyan-dark" style="--swatch-color: var(--color-cyan-dark)"><span>cyan-dark</span></button>
+                    <button class="swatch" type="button" title="--color-cyan-normal" data-swatch="--color-cyan-normal" style="--swatch-color: var(--color-cyan-normal)"><span>cyan-normal</span></button>
+                    <button class="swatch" type="button" title="--color-cyan-bright" data-swatch="--color-cyan-bright" style="--swatch-color: var(--color-cyan-bright)"><span>cyan-bright</span></button>
+                    <button class="swatch" type="button" title="--color-sky" data-swatch="--color-sky" style="--swatch-color: var(--color-sky)"><span>sky</span></button>
+                    <button class="swatch" type="button" title="--color-sky-dark" data-swatch="--color-sky-dark" style="--swatch-color: var(--color-sky-dark)"><span>sky-dark</span></button>
+                    <button class="swatch" type="button" title="--color-sky-normal" data-swatch="--color-sky-normal" style="--swatch-color: var(--color-sky-normal)"><span>sky-normal</span></button>
+                    <button class="swatch" type="button" title="--color-sky-bright" data-swatch="--color-sky-bright" style="--swatch-color: var(--color-sky-bright)"><span>sky-bright</span></button>
+                    <button class="swatch" type="button" title="--color-blue" data-swatch="--color-blue" style="--swatch-color: var(--color-blue)"><span>blue</span></button>
+                    <button class="swatch" type="button" title="--color-blue-dark" data-swatch="--color-blue-dark" style="--swatch-color: var(--color-blue-dark)"><span>blue-dark</span></button>
+                    <button class="swatch" type="button" title="--color-blue-normal" data-swatch="--color-blue-normal" style="--swatch-color: var(--color-blue-normal)"><span>blue-normal</span></button>
+                    <button class="swatch" type="button" title="--color-blue-bright" data-swatch="--color-blue-bright" style="--swatch-color: var(--color-blue-bright)"><span>blue-bright</span></button>
+                    <button class="swatch" type="button" title="--color-purple" data-swatch="--color-purple" style="--swatch-color: var(--color-purple)"><span>purple</span></button>
+                    <button class="swatch" type="button" title="--color-purple-dark" data-swatch="--color-purple-dark" style="--swatch-color: var(--color-purple-dark)"><span>purple-dark</span></button>
+                    <button class="swatch" type="button" title="--color-purple-normal" data-swatch="--color-purple-normal" style="--swatch-color: var(--color-purple-normal)"><span>purple-normal</span></button>
+                    <button class="swatch" type="button" title="--color-purple-bright" data-swatch="--color-purple-bright" style="--swatch-color: var(--color-purple-bright)"><span>purple-bright</span></button>
+                    <button class="swatch" type="button" title="--color-pink" data-swatch="--color-pink" style="--swatch-color: var(--color-pink)"><span>pink</span></button>
+                    <button class="swatch" type="button" title="--color-pink-dark" data-swatch="--color-pink-dark" style="--swatch-color: var(--color-pink-dark)"><span>pink-dark</span></button>
+                    <button class="swatch" type="button" title="--color-pink-normal" data-swatch="--color-pink-normal" style="--swatch-color: var(--color-pink-normal)"><span>pink-normal</span></button>
+                    <button class="swatch" type="button" title="--color-pink-bright" data-swatch="--color-pink-bright" style="--swatch-color: var(--color-pink-bright)"><span>pink-bright</span></button>
+                </div>
             </div>
 
             <h2>Opacity</h2>
             <p><code>--color-{hue}-opacity-{step}</code> is the base color of the hue mixed with transparent at the given percentage. <code>black</code> and <code>white</code> are also available.</p>
             <div class="layer" data-swatch-format="variable">
-                <div class="palette-header">
+                <div class="palette-header script-only">
                     <span>Click to copy</span>
                     <div class="segmented-control" role="radiogroup" aria-label="Copy format">
                         <label><input type="radio" name="opacity-format" value="variable" checked><span>Variable</span></label>
@@ -119,13 +624,300 @@
                         <label><input type="radio" name="opacity-format" value="hex"><span>Hex</span></label>
                     </div>
                 </div>
-                <div class="palette-rows" data-swatches="opacity"></div>
+                <div class="palette-rows" data-swatches="opacity">
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>black</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-0" data-swatch="--color-black-opacity-0" style="--swatch-color: var(--color-black-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-5" data-swatch="--color-black-opacity-5" style="--swatch-color: var(--color-black-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-10" data-swatch="--color-black-opacity-10" style="--swatch-color: var(--color-black-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-15" data-swatch="--color-black-opacity-15" style="--swatch-color: var(--color-black-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-20" data-swatch="--color-black-opacity-20" style="--swatch-color: var(--color-black-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-25" data-swatch="--color-black-opacity-25" style="--swatch-color: var(--color-black-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-30" data-swatch="--color-black-opacity-30" style="--swatch-color: var(--color-black-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-35" data-swatch="--color-black-opacity-35" style="--swatch-color: var(--color-black-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-40" data-swatch="--color-black-opacity-40" style="--swatch-color: var(--color-black-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-45" data-swatch="--color-black-opacity-45" style="--swatch-color: var(--color-black-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-50" data-swatch="--color-black-opacity-50" style="--swatch-color: var(--color-black-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-55" data-swatch="--color-black-opacity-55" style="--swatch-color: var(--color-black-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-60" data-swatch="--color-black-opacity-60" style="--swatch-color: var(--color-black-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-65" data-swatch="--color-black-opacity-65" style="--swatch-color: var(--color-black-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-70" data-swatch="--color-black-opacity-70" style="--swatch-color: var(--color-black-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-75" data-swatch="--color-black-opacity-75" style="--swatch-color: var(--color-black-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-80" data-swatch="--color-black-opacity-80" style="--swatch-color: var(--color-black-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-85" data-swatch="--color-black-opacity-85" style="--swatch-color: var(--color-black-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-90" data-swatch="--color-black-opacity-90" style="--swatch-color: var(--color-black-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-95" data-swatch="--color-black-opacity-95" style="--swatch-color: var(--color-black-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-black-opacity-100" data-swatch="--color-black-opacity-100" style="--swatch-color: var(--color-black-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>white</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-0" data-swatch="--color-white-opacity-0" style="--swatch-color: var(--color-white-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-5" data-swatch="--color-white-opacity-5" style="--swatch-color: var(--color-white-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-10" data-swatch="--color-white-opacity-10" style="--swatch-color: var(--color-white-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-15" data-swatch="--color-white-opacity-15" style="--swatch-color: var(--color-white-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-20" data-swatch="--color-white-opacity-20" style="--swatch-color: var(--color-white-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-25" data-swatch="--color-white-opacity-25" style="--swatch-color: var(--color-white-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-30" data-swatch="--color-white-opacity-30" style="--swatch-color: var(--color-white-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-35" data-swatch="--color-white-opacity-35" style="--swatch-color: var(--color-white-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-40" data-swatch="--color-white-opacity-40" style="--swatch-color: var(--color-white-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-45" data-swatch="--color-white-opacity-45" style="--swatch-color: var(--color-white-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-50" data-swatch="--color-white-opacity-50" style="--swatch-color: var(--color-white-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-55" data-swatch="--color-white-opacity-55" style="--swatch-color: var(--color-white-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-60" data-swatch="--color-white-opacity-60" style="--swatch-color: var(--color-white-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-65" data-swatch="--color-white-opacity-65" style="--swatch-color: var(--color-white-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-70" data-swatch="--color-white-opacity-70" style="--swatch-color: var(--color-white-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-75" data-swatch="--color-white-opacity-75" style="--swatch-color: var(--color-white-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-80" data-swatch="--color-white-opacity-80" style="--swatch-color: var(--color-white-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-85" data-swatch="--color-white-opacity-85" style="--swatch-color: var(--color-white-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-90" data-swatch="--color-white-opacity-90" style="--swatch-color: var(--color-white-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-95" data-swatch="--color-white-opacity-95" style="--swatch-color: var(--color-white-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-white-opacity-100" data-swatch="--color-white-opacity-100" style="--swatch-color: var(--color-white-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>red</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-0" data-swatch="--color-red-opacity-0" style="--swatch-color: var(--color-red-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-5" data-swatch="--color-red-opacity-5" style="--swatch-color: var(--color-red-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-10" data-swatch="--color-red-opacity-10" style="--swatch-color: var(--color-red-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-15" data-swatch="--color-red-opacity-15" style="--swatch-color: var(--color-red-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-20" data-swatch="--color-red-opacity-20" style="--swatch-color: var(--color-red-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-25" data-swatch="--color-red-opacity-25" style="--swatch-color: var(--color-red-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-30" data-swatch="--color-red-opacity-30" style="--swatch-color: var(--color-red-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-35" data-swatch="--color-red-opacity-35" style="--swatch-color: var(--color-red-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-40" data-swatch="--color-red-opacity-40" style="--swatch-color: var(--color-red-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-45" data-swatch="--color-red-opacity-45" style="--swatch-color: var(--color-red-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-50" data-swatch="--color-red-opacity-50" style="--swatch-color: var(--color-red-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-55" data-swatch="--color-red-opacity-55" style="--swatch-color: var(--color-red-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-60" data-swatch="--color-red-opacity-60" style="--swatch-color: var(--color-red-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-65" data-swatch="--color-red-opacity-65" style="--swatch-color: var(--color-red-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-70" data-swatch="--color-red-opacity-70" style="--swatch-color: var(--color-red-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-75" data-swatch="--color-red-opacity-75" style="--swatch-color: var(--color-red-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-80" data-swatch="--color-red-opacity-80" style="--swatch-color: var(--color-red-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-85" data-swatch="--color-red-opacity-85" style="--swatch-color: var(--color-red-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-90" data-swatch="--color-red-opacity-90" style="--swatch-color: var(--color-red-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-95" data-swatch="--color-red-opacity-95" style="--swatch-color: var(--color-red-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-red-opacity-100" data-swatch="--color-red-opacity-100" style="--swatch-color: var(--color-red-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>orange</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-0" data-swatch="--color-orange-opacity-0" style="--swatch-color: var(--color-orange-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-5" data-swatch="--color-orange-opacity-5" style="--swatch-color: var(--color-orange-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-10" data-swatch="--color-orange-opacity-10" style="--swatch-color: var(--color-orange-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-15" data-swatch="--color-orange-opacity-15" style="--swatch-color: var(--color-orange-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-20" data-swatch="--color-orange-opacity-20" style="--swatch-color: var(--color-orange-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-25" data-swatch="--color-orange-opacity-25" style="--swatch-color: var(--color-orange-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-30" data-swatch="--color-orange-opacity-30" style="--swatch-color: var(--color-orange-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-35" data-swatch="--color-orange-opacity-35" style="--swatch-color: var(--color-orange-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-40" data-swatch="--color-orange-opacity-40" style="--swatch-color: var(--color-orange-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-45" data-swatch="--color-orange-opacity-45" style="--swatch-color: var(--color-orange-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-50" data-swatch="--color-orange-opacity-50" style="--swatch-color: var(--color-orange-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-55" data-swatch="--color-orange-opacity-55" style="--swatch-color: var(--color-orange-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-60" data-swatch="--color-orange-opacity-60" style="--swatch-color: var(--color-orange-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-65" data-swatch="--color-orange-opacity-65" style="--swatch-color: var(--color-orange-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-70" data-swatch="--color-orange-opacity-70" style="--swatch-color: var(--color-orange-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-75" data-swatch="--color-orange-opacity-75" style="--swatch-color: var(--color-orange-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-80" data-swatch="--color-orange-opacity-80" style="--swatch-color: var(--color-orange-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-85" data-swatch="--color-orange-opacity-85" style="--swatch-color: var(--color-orange-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-90" data-swatch="--color-orange-opacity-90" style="--swatch-color: var(--color-orange-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-95" data-swatch="--color-orange-opacity-95" style="--swatch-color: var(--color-orange-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-orange-opacity-100" data-swatch="--color-orange-opacity-100" style="--swatch-color: var(--color-orange-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>yellow</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-0" data-swatch="--color-yellow-opacity-0" style="--swatch-color: var(--color-yellow-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-5" data-swatch="--color-yellow-opacity-5" style="--swatch-color: var(--color-yellow-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-10" data-swatch="--color-yellow-opacity-10" style="--swatch-color: var(--color-yellow-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-15" data-swatch="--color-yellow-opacity-15" style="--swatch-color: var(--color-yellow-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-20" data-swatch="--color-yellow-opacity-20" style="--swatch-color: var(--color-yellow-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-25" data-swatch="--color-yellow-opacity-25" style="--swatch-color: var(--color-yellow-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-30" data-swatch="--color-yellow-opacity-30" style="--swatch-color: var(--color-yellow-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-35" data-swatch="--color-yellow-opacity-35" style="--swatch-color: var(--color-yellow-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-40" data-swatch="--color-yellow-opacity-40" style="--swatch-color: var(--color-yellow-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-45" data-swatch="--color-yellow-opacity-45" style="--swatch-color: var(--color-yellow-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-50" data-swatch="--color-yellow-opacity-50" style="--swatch-color: var(--color-yellow-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-55" data-swatch="--color-yellow-opacity-55" style="--swatch-color: var(--color-yellow-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-60" data-swatch="--color-yellow-opacity-60" style="--swatch-color: var(--color-yellow-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-65" data-swatch="--color-yellow-opacity-65" style="--swatch-color: var(--color-yellow-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-70" data-swatch="--color-yellow-opacity-70" style="--swatch-color: var(--color-yellow-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-75" data-swatch="--color-yellow-opacity-75" style="--swatch-color: var(--color-yellow-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-80" data-swatch="--color-yellow-opacity-80" style="--swatch-color: var(--color-yellow-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-85" data-swatch="--color-yellow-opacity-85" style="--swatch-color: var(--color-yellow-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-90" data-swatch="--color-yellow-opacity-90" style="--swatch-color: var(--color-yellow-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-95" data-swatch="--color-yellow-opacity-95" style="--swatch-color: var(--color-yellow-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-yellow-opacity-100" data-swatch="--color-yellow-opacity-100" style="--swatch-color: var(--color-yellow-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>green</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-0" data-swatch="--color-green-opacity-0" style="--swatch-color: var(--color-green-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-5" data-swatch="--color-green-opacity-5" style="--swatch-color: var(--color-green-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-10" data-swatch="--color-green-opacity-10" style="--swatch-color: var(--color-green-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-15" data-swatch="--color-green-opacity-15" style="--swatch-color: var(--color-green-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-20" data-swatch="--color-green-opacity-20" style="--swatch-color: var(--color-green-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-25" data-swatch="--color-green-opacity-25" style="--swatch-color: var(--color-green-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-30" data-swatch="--color-green-opacity-30" style="--swatch-color: var(--color-green-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-35" data-swatch="--color-green-opacity-35" style="--swatch-color: var(--color-green-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-40" data-swatch="--color-green-opacity-40" style="--swatch-color: var(--color-green-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-45" data-swatch="--color-green-opacity-45" style="--swatch-color: var(--color-green-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-50" data-swatch="--color-green-opacity-50" style="--swatch-color: var(--color-green-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-55" data-swatch="--color-green-opacity-55" style="--swatch-color: var(--color-green-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-60" data-swatch="--color-green-opacity-60" style="--swatch-color: var(--color-green-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-65" data-swatch="--color-green-opacity-65" style="--swatch-color: var(--color-green-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-70" data-swatch="--color-green-opacity-70" style="--swatch-color: var(--color-green-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-75" data-swatch="--color-green-opacity-75" style="--swatch-color: var(--color-green-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-80" data-swatch="--color-green-opacity-80" style="--swatch-color: var(--color-green-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-85" data-swatch="--color-green-opacity-85" style="--swatch-color: var(--color-green-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-90" data-swatch="--color-green-opacity-90" style="--swatch-color: var(--color-green-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-95" data-swatch="--color-green-opacity-95" style="--swatch-color: var(--color-green-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-green-opacity-100" data-swatch="--color-green-opacity-100" style="--swatch-color: var(--color-green-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>cyan</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-0" data-swatch="--color-cyan-opacity-0" style="--swatch-color: var(--color-cyan-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-5" data-swatch="--color-cyan-opacity-5" style="--swatch-color: var(--color-cyan-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-10" data-swatch="--color-cyan-opacity-10" style="--swatch-color: var(--color-cyan-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-15" data-swatch="--color-cyan-opacity-15" style="--swatch-color: var(--color-cyan-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-20" data-swatch="--color-cyan-opacity-20" style="--swatch-color: var(--color-cyan-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-25" data-swatch="--color-cyan-opacity-25" style="--swatch-color: var(--color-cyan-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-30" data-swatch="--color-cyan-opacity-30" style="--swatch-color: var(--color-cyan-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-35" data-swatch="--color-cyan-opacity-35" style="--swatch-color: var(--color-cyan-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-40" data-swatch="--color-cyan-opacity-40" style="--swatch-color: var(--color-cyan-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-45" data-swatch="--color-cyan-opacity-45" style="--swatch-color: var(--color-cyan-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-50" data-swatch="--color-cyan-opacity-50" style="--swatch-color: var(--color-cyan-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-55" data-swatch="--color-cyan-opacity-55" style="--swatch-color: var(--color-cyan-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-60" data-swatch="--color-cyan-opacity-60" style="--swatch-color: var(--color-cyan-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-65" data-swatch="--color-cyan-opacity-65" style="--swatch-color: var(--color-cyan-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-70" data-swatch="--color-cyan-opacity-70" style="--swatch-color: var(--color-cyan-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-75" data-swatch="--color-cyan-opacity-75" style="--swatch-color: var(--color-cyan-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-80" data-swatch="--color-cyan-opacity-80" style="--swatch-color: var(--color-cyan-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-85" data-swatch="--color-cyan-opacity-85" style="--swatch-color: var(--color-cyan-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-90" data-swatch="--color-cyan-opacity-90" style="--swatch-color: var(--color-cyan-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-95" data-swatch="--color-cyan-opacity-95" style="--swatch-color: var(--color-cyan-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-cyan-opacity-100" data-swatch="--color-cyan-opacity-100" style="--swatch-color: var(--color-cyan-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>sky</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-0" data-swatch="--color-sky-opacity-0" style="--swatch-color: var(--color-sky-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-5" data-swatch="--color-sky-opacity-5" style="--swatch-color: var(--color-sky-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-10" data-swatch="--color-sky-opacity-10" style="--swatch-color: var(--color-sky-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-15" data-swatch="--color-sky-opacity-15" style="--swatch-color: var(--color-sky-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-20" data-swatch="--color-sky-opacity-20" style="--swatch-color: var(--color-sky-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-25" data-swatch="--color-sky-opacity-25" style="--swatch-color: var(--color-sky-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-30" data-swatch="--color-sky-opacity-30" style="--swatch-color: var(--color-sky-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-35" data-swatch="--color-sky-opacity-35" style="--swatch-color: var(--color-sky-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-40" data-swatch="--color-sky-opacity-40" style="--swatch-color: var(--color-sky-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-45" data-swatch="--color-sky-opacity-45" style="--swatch-color: var(--color-sky-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-50" data-swatch="--color-sky-opacity-50" style="--swatch-color: var(--color-sky-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-55" data-swatch="--color-sky-opacity-55" style="--swatch-color: var(--color-sky-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-60" data-swatch="--color-sky-opacity-60" style="--swatch-color: var(--color-sky-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-65" data-swatch="--color-sky-opacity-65" style="--swatch-color: var(--color-sky-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-70" data-swatch="--color-sky-opacity-70" style="--swatch-color: var(--color-sky-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-75" data-swatch="--color-sky-opacity-75" style="--swatch-color: var(--color-sky-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-80" data-swatch="--color-sky-opacity-80" style="--swatch-color: var(--color-sky-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-85" data-swatch="--color-sky-opacity-85" style="--swatch-color: var(--color-sky-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-90" data-swatch="--color-sky-opacity-90" style="--swatch-color: var(--color-sky-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-95" data-swatch="--color-sky-opacity-95" style="--swatch-color: var(--color-sky-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-sky-opacity-100" data-swatch="--color-sky-opacity-100" style="--swatch-color: var(--color-sky-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>blue</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-0" data-swatch="--color-blue-opacity-0" style="--swatch-color: var(--color-blue-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-5" data-swatch="--color-blue-opacity-5" style="--swatch-color: var(--color-blue-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-10" data-swatch="--color-blue-opacity-10" style="--swatch-color: var(--color-blue-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-15" data-swatch="--color-blue-opacity-15" style="--swatch-color: var(--color-blue-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-20" data-swatch="--color-blue-opacity-20" style="--swatch-color: var(--color-blue-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-25" data-swatch="--color-blue-opacity-25" style="--swatch-color: var(--color-blue-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-30" data-swatch="--color-blue-opacity-30" style="--swatch-color: var(--color-blue-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-35" data-swatch="--color-blue-opacity-35" style="--swatch-color: var(--color-blue-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-40" data-swatch="--color-blue-opacity-40" style="--swatch-color: var(--color-blue-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-45" data-swatch="--color-blue-opacity-45" style="--swatch-color: var(--color-blue-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-50" data-swatch="--color-blue-opacity-50" style="--swatch-color: var(--color-blue-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-55" data-swatch="--color-blue-opacity-55" style="--swatch-color: var(--color-blue-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-60" data-swatch="--color-blue-opacity-60" style="--swatch-color: var(--color-blue-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-65" data-swatch="--color-blue-opacity-65" style="--swatch-color: var(--color-blue-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-70" data-swatch="--color-blue-opacity-70" style="--swatch-color: var(--color-blue-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-75" data-swatch="--color-blue-opacity-75" style="--swatch-color: var(--color-blue-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-80" data-swatch="--color-blue-opacity-80" style="--swatch-color: var(--color-blue-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-85" data-swatch="--color-blue-opacity-85" style="--swatch-color: var(--color-blue-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-90" data-swatch="--color-blue-opacity-90" style="--swatch-color: var(--color-blue-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-95" data-swatch="--color-blue-opacity-95" style="--swatch-color: var(--color-blue-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-blue-opacity-100" data-swatch="--color-blue-opacity-100" style="--swatch-color: var(--color-blue-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>purple</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-0" data-swatch="--color-purple-opacity-0" style="--swatch-color: var(--color-purple-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-5" data-swatch="--color-purple-opacity-5" style="--swatch-color: var(--color-purple-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-10" data-swatch="--color-purple-opacity-10" style="--swatch-color: var(--color-purple-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-15" data-swatch="--color-purple-opacity-15" style="--swatch-color: var(--color-purple-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-20" data-swatch="--color-purple-opacity-20" style="--swatch-color: var(--color-purple-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-25" data-swatch="--color-purple-opacity-25" style="--swatch-color: var(--color-purple-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-30" data-swatch="--color-purple-opacity-30" style="--swatch-color: var(--color-purple-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-35" data-swatch="--color-purple-opacity-35" style="--swatch-color: var(--color-purple-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-40" data-swatch="--color-purple-opacity-40" style="--swatch-color: var(--color-purple-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-45" data-swatch="--color-purple-opacity-45" style="--swatch-color: var(--color-purple-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-50" data-swatch="--color-purple-opacity-50" style="--swatch-color: var(--color-purple-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-55" data-swatch="--color-purple-opacity-55" style="--swatch-color: var(--color-purple-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-60" data-swatch="--color-purple-opacity-60" style="--swatch-color: var(--color-purple-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-65" data-swatch="--color-purple-opacity-65" style="--swatch-color: var(--color-purple-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-70" data-swatch="--color-purple-opacity-70" style="--swatch-color: var(--color-purple-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-75" data-swatch="--color-purple-opacity-75" style="--swatch-color: var(--color-purple-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-80" data-swatch="--color-purple-opacity-80" style="--swatch-color: var(--color-purple-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-85" data-swatch="--color-purple-opacity-85" style="--swatch-color: var(--color-purple-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-90" data-swatch="--color-purple-opacity-90" style="--swatch-color: var(--color-purple-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-95" data-swatch="--color-purple-opacity-95" style="--swatch-color: var(--color-purple-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-purple-opacity-100" data-swatch="--color-purple-opacity-100" style="--swatch-color: var(--color-purple-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                    <div class="palette-row" style="--palette-columns: 21">
+                        <span>pink</span>
+                        <div class="grid" style="--grid-columns: 21; --grid-min-width: 0px; --grid-gap: 2px">
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-0" data-swatch="--color-pink-opacity-0" style="--swatch-color: var(--color-pink-opacity-0)"><span>0</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-5" data-swatch="--color-pink-opacity-5" style="--swatch-color: var(--color-pink-opacity-5)"><span>5</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-10" data-swatch="--color-pink-opacity-10" style="--swatch-color: var(--color-pink-opacity-10)"><span>10</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-15" data-swatch="--color-pink-opacity-15" style="--swatch-color: var(--color-pink-opacity-15)"><span>15</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-20" data-swatch="--color-pink-opacity-20" style="--swatch-color: var(--color-pink-opacity-20)"><span>20</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-25" data-swatch="--color-pink-opacity-25" style="--swatch-color: var(--color-pink-opacity-25)"><span>25</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-30" data-swatch="--color-pink-opacity-30" style="--swatch-color: var(--color-pink-opacity-30)"><span>30</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-35" data-swatch="--color-pink-opacity-35" style="--swatch-color: var(--color-pink-opacity-35)"><span>35</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-40" data-swatch="--color-pink-opacity-40" style="--swatch-color: var(--color-pink-opacity-40)"><span>40</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-45" data-swatch="--color-pink-opacity-45" style="--swatch-color: var(--color-pink-opacity-45)"><span>45</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-50" data-swatch="--color-pink-opacity-50" style="--swatch-color: var(--color-pink-opacity-50)"><span>50</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-55" data-swatch="--color-pink-opacity-55" style="--swatch-color: var(--color-pink-opacity-55)"><span>55</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-60" data-swatch="--color-pink-opacity-60" style="--swatch-color: var(--color-pink-opacity-60)"><span>60</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-65" data-swatch="--color-pink-opacity-65" style="--swatch-color: var(--color-pink-opacity-65)"><span>65</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-70" data-swatch="--color-pink-opacity-70" style="--swatch-color: var(--color-pink-opacity-70)"><span>70</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-75" data-swatch="--color-pink-opacity-75" style="--swatch-color: var(--color-pink-opacity-75)"><span>75</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-80" data-swatch="--color-pink-opacity-80" style="--swatch-color: var(--color-pink-opacity-80)"><span>80</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-85" data-swatch="--color-pink-opacity-85" style="--swatch-color: var(--color-pink-opacity-85)"><span>85</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-90" data-swatch="--color-pink-opacity-90" style="--swatch-color: var(--color-pink-opacity-90)"><span>90</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-95" data-swatch="--color-pink-opacity-95" style="--swatch-color: var(--color-pink-opacity-95)"><span>95</span></button>
+                            <button class="swatch swatch-compact" type="button" title="--color-pink-opacity-100" data-swatch="--color-pink-opacity-100" style="--swatch-color: var(--color-pink-opacity-100)"><span>100</span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <h2>JIS Safety Colors</h2>
             <p><code>--color-jis-{name}</code> are the safety colors of JIS Z 9103:2018. JIS does not allow changing their lightness, so they have no palette, brightness, or opacity variants; use them as they are. <code>dark-ud</code>, <code>light-ud</code>, <code>black-ud</code>, and <code>white-ud</code> use them for the status and GitHub Markdown colors.</p>
             <div class="layer" data-swatch-format="variable">
-                <div class="palette-header">
+                <div class="palette-header script-only">
                     <span>Click to copy</span>
                     <div class="segmented-control" role="radiogroup" aria-label="Copy format">
                         <label><input type="radio" name="jis-format" value="variable" checked><span>Variable</span></label>
@@ -133,13 +925,22 @@
                         <label><input type="radio" name="jis-format" value="hex"><span>Hex</span></label>
                     </div>
                 </div>
-                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="jis"></div>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="jis">
+                    <button class="swatch" type="button" title="--color-jis-white" data-swatch="--color-jis-white" style="--swatch-color: var(--color-jis-white)"><span>jis-white</span></button>
+                    <button class="swatch" type="button" title="--color-jis-black" data-swatch="--color-jis-black" style="--swatch-color: var(--color-jis-black)"><span>jis-black</span></button>
+                    <button class="swatch" type="button" title="--color-jis-red" data-swatch="--color-jis-red" style="--swatch-color: var(--color-jis-red)"><span>jis-red</span></button>
+                    <button class="swatch" type="button" title="--color-jis-red-yellow" data-swatch="--color-jis-red-yellow" style="--swatch-color: var(--color-jis-red-yellow)"><span>jis-red-yellow</span></button>
+                    <button class="swatch" type="button" title="--color-jis-yellow" data-swatch="--color-jis-yellow" style="--swatch-color: var(--color-jis-yellow)"><span>jis-yellow</span></button>
+                    <button class="swatch" type="button" title="--color-jis-green" data-swatch="--color-jis-green" style="--swatch-color: var(--color-jis-green)"><span>jis-green</span></button>
+                    <button class="swatch" type="button" title="--color-jis-blue" data-swatch="--color-jis-blue" style="--swatch-color: var(--color-jis-blue)"><span>jis-blue</span></button>
+                    <button class="swatch" type="button" title="--color-jis-red-purple" data-swatch="--color-jis-red-purple" style="--swatch-color: var(--color-jis-red-purple)"><span>jis-red-purple</span></button>
+                </div>
             </div>
 
             <h2>Semantic</h2>
             <p>Colors by purpose. Pages and components use these, so overriding them changes the whole color scheme. Component colors are <code>--color-{component}-*</code>, and they refer to the colors above by default.</p>
             <div class="layer" data-swatch-format="variable">
-                <div class="palette-header">
+                <div class="palette-header script-only">
                     <span>Click to copy</span>
                     <div class="segmented-control" role="radiogroup" aria-label="Copy format">
                         <label><input type="radio" name="semantic-format" value="variable" checked><span>Variable</span></label>
@@ -148,13 +949,133 @@
                     </div>
                 </div>
                 <b class="palette-group">Base</b>
-                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="base"></div>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="base">
+                    <button class="swatch" type="button" title="--color-foreground" data-swatch="--color-foreground" style="--swatch-color: var(--color-foreground)"><span>foreground</span></button>
+                    <button class="swatch" type="button" title="--color-foreground-alt" data-swatch="--color-foreground-alt" style="--swatch-color: var(--color-foreground-alt)"><span>foreground-alt</span></button>
+                    <button class="swatch" type="button" title="--color-background" data-swatch="--color-background" style="--swatch-color: var(--color-background)"><span>background</span></button>
+                    <button class="swatch" type="button" title="--color-background-alt" data-swatch="--color-background-alt" style="--swatch-color: var(--color-background-alt)"><span>background-alt</span></button>
+                    <button class="swatch" type="button" title="--color-layer" data-swatch="--color-layer" style="--swatch-color: var(--color-layer)"><span>layer</span></button>
+                    <button class="swatch" type="button" title="--color-layer-alt" data-swatch="--color-layer-alt" style="--swatch-color: var(--color-layer-alt)"><span>layer-alt</span></button>
+                    <button class="swatch" type="button" title="--color-border" data-swatch="--color-border" style="--swatch-color: var(--color-border)"><span>border</span></button>
+                    <button class="swatch" type="button" title="--color-border-alt" data-swatch="--color-border-alt" style="--swatch-color: var(--color-border-alt)"><span>border-alt</span></button>
+                </div>
                 <b class="palette-group">Status</b>
-                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="status"></div>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="status">
+                    <button class="swatch" type="button" title="--color-information-dark" data-swatch="--color-information-dark" style="--swatch-color: var(--color-information-dark)"><span>information-dark</span></button>
+                    <button class="swatch" type="button" title="--color-information-normal" data-swatch="--color-information-normal" style="--swatch-color: var(--color-information-normal)"><span>information-normal</span></button>
+                    <button class="swatch" type="button" title="--color-information-bright" data-swatch="--color-information-bright" style="--swatch-color: var(--color-information-bright)"><span>information-bright</span></button>
+                    <button class="swatch" type="button" title="--color-success-dark" data-swatch="--color-success-dark" style="--swatch-color: var(--color-success-dark)"><span>success-dark</span></button>
+                    <button class="swatch" type="button" title="--color-success-normal" data-swatch="--color-success-normal" style="--swatch-color: var(--color-success-normal)"><span>success-normal</span></button>
+                    <button class="swatch" type="button" title="--color-success-bright" data-swatch="--color-success-bright" style="--swatch-color: var(--color-success-bright)"><span>success-bright</span></button>
+                    <button class="swatch" type="button" title="--color-warning-dark" data-swatch="--color-warning-dark" style="--swatch-color: var(--color-warning-dark)"><span>warning-dark</span></button>
+                    <button class="swatch" type="button" title="--color-warning-normal" data-swatch="--color-warning-normal" style="--swatch-color: var(--color-warning-normal)"><span>warning-normal</span></button>
+                    <button class="swatch" type="button" title="--color-warning-bright" data-swatch="--color-warning-bright" style="--swatch-color: var(--color-warning-bright)"><span>warning-bright</span></button>
+                    <button class="swatch" type="button" title="--color-error-dark" data-swatch="--color-error-dark" style="--swatch-color: var(--color-error-dark)"><span>error-dark</span></button>
+                    <button class="swatch" type="button" title="--color-error-normal" data-swatch="--color-error-normal" style="--swatch-color: var(--color-error-normal)"><span>error-normal</span></button>
+                    <button class="swatch" type="button" title="--color-error-bright" data-swatch="--color-error-bright" style="--swatch-color: var(--color-error-bright)"><span>error-bright</span></button>
+                </div>
                 <b class="palette-group">GitHub Markdown</b>
-                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="markdown"></div>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="markdown">
+                    <button class="swatch" type="button" title="--color-note-dark" data-swatch="--color-note-dark" style="--swatch-color: var(--color-note-dark)"><span>note-dark</span></button>
+                    <button class="swatch" type="button" title="--color-note-normal" data-swatch="--color-note-normal" style="--swatch-color: var(--color-note-normal)"><span>note-normal</span></button>
+                    <button class="swatch" type="button" title="--color-note-bright" data-swatch="--color-note-bright" style="--swatch-color: var(--color-note-bright)"><span>note-bright</span></button>
+                    <button class="swatch" type="button" title="--color-tip-dark" data-swatch="--color-tip-dark" style="--swatch-color: var(--color-tip-dark)"><span>tip-dark</span></button>
+                    <button class="swatch" type="button" title="--color-tip-normal" data-swatch="--color-tip-normal" style="--swatch-color: var(--color-tip-normal)"><span>tip-normal</span></button>
+                    <button class="swatch" type="button" title="--color-tip-bright" data-swatch="--color-tip-bright" style="--swatch-color: var(--color-tip-bright)"><span>tip-bright</span></button>
+                    <button class="swatch" type="button" title="--color-important-dark" data-swatch="--color-important-dark" style="--swatch-color: var(--color-important-dark)"><span>important-dark</span></button>
+                    <button class="swatch" type="button" title="--color-important-normal" data-swatch="--color-important-normal" style="--swatch-color: var(--color-important-normal)"><span>important-normal</span></button>
+                    <button class="swatch" type="button" title="--color-important-bright" data-swatch="--color-important-bright" style="--swatch-color: var(--color-important-bright)"><span>important-bright</span></button>
+                    <button class="swatch" type="button" title="--color-caution-dark" data-swatch="--color-caution-dark" style="--swatch-color: var(--color-caution-dark)"><span>caution-dark</span></button>
+                    <button class="swatch" type="button" title="--color-caution-normal" data-swatch="--color-caution-normal" style="--swatch-color: var(--color-caution-normal)"><span>caution-normal</span></button>
+                    <button class="swatch" type="button" title="--color-caution-bright" data-swatch="--color-caution-bright" style="--swatch-color: var(--color-caution-bright)"><span>caution-bright</span></button>
+                </div>
                 <b class="palette-group">Components</b>
-                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="components"></div>
+                <div class="grid" style="--grid-min-width: 128px; --grid-gap: 8px" data-swatches="components">
+                    <button class="swatch" type="button" title="--color-cursor" data-swatch="--color-cursor" style="--swatch-color: var(--color-cursor)"><span>cursor</span></button>
+                    <button class="swatch" type="button" title="--color-cursor-on-link" data-swatch="--color-cursor-on-link" style="--swatch-color: var(--color-cursor-on-link)"><span>cursor-on-link</span></button>
+                    <button class="swatch" type="button" title="--color-button-foreground" data-swatch="--color-button-foreground" style="--swatch-color: var(--color-button-foreground)"><span>button-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-button-background" data-swatch="--color-button-background" style="--swatch-color: var(--color-button-background)"><span>button-background</span></button>
+                    <button class="swatch" type="button" title="--color-button-border" data-swatch="--color-button-border" style="--swatch-color: var(--color-button-border)"><span>button-border</span></button>
+                    <button class="swatch" type="button" title="--color-button-primary-foreground" data-swatch="--color-button-primary-foreground" style="--swatch-color: var(--color-button-primary-foreground)"><span>button-primary-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-button-primary-background" data-swatch="--color-button-primary-background" style="--swatch-color: var(--color-button-primary-background)"><span>button-primary-background</span></button>
+                    <button class="swatch" type="button" title="--color-button-primary-border" data-swatch="--color-button-primary-border" style="--swatch-color: var(--color-button-primary-border)"><span>button-primary-border</span></button>
+                    <button class="swatch" type="button" title="--color-button-information-foreground" data-swatch="--color-button-information-foreground" style="--swatch-color: var(--color-button-information-foreground)"><span>button-information-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-button-information-background" data-swatch="--color-button-information-background" style="--swatch-color: var(--color-button-information-background)"><span>button-information-background</span></button>
+                    <button class="swatch" type="button" title="--color-button-information-border" data-swatch="--color-button-information-border" style="--swatch-color: var(--color-button-information-border)"><span>button-information-border</span></button>
+                    <button class="swatch" type="button" title="--color-button-success-foreground" data-swatch="--color-button-success-foreground" style="--swatch-color: var(--color-button-success-foreground)"><span>button-success-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-button-success-background" data-swatch="--color-button-success-background" style="--swatch-color: var(--color-button-success-background)"><span>button-success-background</span></button>
+                    <button class="swatch" type="button" title="--color-button-success-border" data-swatch="--color-button-success-border" style="--swatch-color: var(--color-button-success-border)"><span>button-success-border</span></button>
+                    <button class="swatch" type="button" title="--color-button-warning-foreground" data-swatch="--color-button-warning-foreground" style="--swatch-color: var(--color-button-warning-foreground)"><span>button-warning-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-button-warning-background" data-swatch="--color-button-warning-background" style="--swatch-color: var(--color-button-warning-background)"><span>button-warning-background</span></button>
+                    <button class="swatch" type="button" title="--color-button-warning-border" data-swatch="--color-button-warning-border" style="--swatch-color: var(--color-button-warning-border)"><span>button-warning-border</span></button>
+                    <button class="swatch" type="button" title="--color-button-error-foreground" data-swatch="--color-button-error-foreground" style="--swatch-color: var(--color-button-error-foreground)"><span>button-error-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-button-error-background" data-swatch="--color-button-error-background" style="--swatch-color: var(--color-button-error-background)"><span>button-error-background</span></button>
+                    <button class="swatch" type="button" title="--color-button-error-border" data-swatch="--color-button-error-border" style="--swatch-color: var(--color-button-error-border)"><span>button-error-border</span></button>
+                    <button class="swatch" type="button" title="--color-textfield-foreground" data-swatch="--color-textfield-foreground" style="--swatch-color: var(--color-textfield-foreground)"><span>textfield-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-textfield-background" data-swatch="--color-textfield-background" style="--swatch-color: var(--color-textfield-background)"><span>textfield-background</span></button>
+                    <button class="swatch" type="button" title="--color-textfield-border" data-swatch="--color-textfield-border" style="--swatch-color: var(--color-textfield-border)"><span>textfield-border</span></button>
+                    <button class="swatch" type="button" title="--color-textfield-focus" data-swatch="--color-textfield-focus" style="--swatch-color: var(--color-textfield-focus)"><span>textfield-focus</span></button>
+                    <button class="swatch" type="button" title="--color-dropdown-foreground" data-swatch="--color-dropdown-foreground" style="--swatch-color: var(--color-dropdown-foreground)"><span>dropdown-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-dropdown-background" data-swatch="--color-dropdown-background" style="--swatch-color: var(--color-dropdown-background)"><span>dropdown-background</span></button>
+                    <button class="swatch" type="button" title="--color-dropdown-border" data-swatch="--color-dropdown-border" style="--swatch-color: var(--color-dropdown-border)"><span>dropdown-border</span></button>
+                    <button class="swatch" type="button" title="--color-dropdown-focus" data-swatch="--color-dropdown-focus" style="--swatch-color: var(--color-dropdown-focus)"><span>dropdown-focus</span></button>
+                    <button class="swatch" type="button" title="--color-progress" data-swatch="--color-progress" style="--swatch-color: var(--color-progress)"><span>progress</span></button>
+                    <button class="swatch" type="button" title="--color-progress-track" data-swatch="--color-progress-track" style="--swatch-color: var(--color-progress-track)"><span>progress-track</span></button>
+                    <button class="swatch" type="button" title="--color-slider" data-swatch="--color-slider" style="--swatch-color: var(--color-slider)"><span>slider</span></button>
+                    <button class="swatch" type="button" title="--color-slider-track" data-swatch="--color-slider-track" style="--swatch-color: var(--color-slider-track)"><span>slider-track</span></button>
+                    <button class="swatch" type="button" title="--color-slider-thumb" data-swatch="--color-slider-thumb" style="--swatch-color: var(--color-slider-thumb)"><span>slider-thumb</span></button>
+                    <button class="swatch" type="button" title="--color-slider-focus" data-swatch="--color-slider-focus" style="--swatch-color: var(--color-slider-focus)"><span>slider-focus</span></button>
+                    <button class="swatch" type="button" title="--color-table-foreground" data-swatch="--color-table-foreground" style="--swatch-color: var(--color-table-foreground)"><span>table-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-table-header-foreground" data-swatch="--color-table-header-foreground" style="--swatch-color: var(--color-table-header-foreground)"><span>table-header-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-table-header-background" data-swatch="--color-table-header-background" style="--swatch-color: var(--color-table-header-background)"><span>table-header-background</span></button>
+                    <button class="swatch" type="button" title="--color-table-border" data-swatch="--color-table-border" style="--swatch-color: var(--color-table-border)"><span>table-border</span></button>
+                    <button class="swatch" type="button" title="--color-table-stripe" data-swatch="--color-table-stripe" style="--swatch-color: var(--color-table-stripe)"><span>table-stripe</span></button>
+                    <button class="swatch" type="button" title="--color-table-hover" data-swatch="--color-table-hover" style="--swatch-color: var(--color-table-hover)"><span>table-hover</span></button>
+                    <button class="swatch" type="button" title="--color-details-foreground" data-swatch="--color-details-foreground" style="--swatch-color: var(--color-details-foreground)"><span>details-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-details-background" data-swatch="--color-details-background" style="--swatch-color: var(--color-details-background)"><span>details-background</span></button>
+                    <button class="swatch" type="button" title="--color-details-summary-foreground" data-swatch="--color-details-summary-foreground" style="--swatch-color: var(--color-details-summary-foreground)"><span>details-summary-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-details-summary-background" data-swatch="--color-details-summary-background" style="--swatch-color: var(--color-details-summary-background)"><span>details-summary-background</span></button>
+                    <button class="swatch" type="button" title="--color-details-summary-hover" data-swatch="--color-details-summary-hover" style="--swatch-color: var(--color-details-summary-hover)"><span>details-summary-hover</span></button>
+                    <button class="swatch" type="button" title="--color-popup-foreground" data-swatch="--color-popup-foreground" style="--swatch-color: var(--color-popup-foreground)"><span>popup-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-popup-background" data-swatch="--color-popup-background" style="--swatch-color: var(--color-popup-background)"><span>popup-background</span></button>
+                    <button class="swatch" type="button" title="--color-popup-border" data-swatch="--color-popup-border" style="--swatch-color: var(--color-popup-border)"><span>popup-border</span></button>
+                    <button class="swatch" type="button" title="--color-popup-backdrop" data-swatch="--color-popup-backdrop" style="--swatch-color: var(--color-popup-backdrop)"><span>popup-backdrop</span></button>
+                    <button class="swatch" type="button" title="--color-toast-foreground" data-swatch="--color-toast-foreground" style="--swatch-color: var(--color-toast-foreground)"><span>toast-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-toast-background" data-swatch="--color-toast-background" style="--swatch-color: var(--color-toast-background)"><span>toast-background</span></button>
+                    <button class="swatch" type="button" title="--color-toast-border" data-swatch="--color-toast-border" style="--swatch-color: var(--color-toast-border)"><span>toast-border</span></button>
+                    <button class="swatch" type="button" title="--color-toast-information-foreground" data-swatch="--color-toast-information-foreground" style="--swatch-color: var(--color-toast-information-foreground)"><span>toast-information-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-toast-information-background" data-swatch="--color-toast-information-background" style="--swatch-color: var(--color-toast-information-background)"><span>toast-information-background</span></button>
+                    <button class="swatch" type="button" title="--color-toast-information-border" data-swatch="--color-toast-information-border" style="--swatch-color: var(--color-toast-information-border)"><span>toast-information-border</span></button>
+                    <button class="swatch" type="button" title="--color-toast-success-foreground" data-swatch="--color-toast-success-foreground" style="--swatch-color: var(--color-toast-success-foreground)"><span>toast-success-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-toast-success-background" data-swatch="--color-toast-success-background" style="--swatch-color: var(--color-toast-success-background)"><span>toast-success-background</span></button>
+                    <button class="swatch" type="button" title="--color-toast-success-border" data-swatch="--color-toast-success-border" style="--swatch-color: var(--color-toast-success-border)"><span>toast-success-border</span></button>
+                    <button class="swatch" type="button" title="--color-toast-warning-foreground" data-swatch="--color-toast-warning-foreground" style="--swatch-color: var(--color-toast-warning-foreground)"><span>toast-warning-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-toast-warning-background" data-swatch="--color-toast-warning-background" style="--swatch-color: var(--color-toast-warning-background)"><span>toast-warning-background</span></button>
+                    <button class="swatch" type="button" title="--color-toast-warning-border" data-swatch="--color-toast-warning-border" style="--swatch-color: var(--color-toast-warning-border)"><span>toast-warning-border</span></button>
+                    <button class="swatch" type="button" title="--color-toast-error-foreground" data-swatch="--color-toast-error-foreground" style="--swatch-color: var(--color-toast-error-foreground)"><span>toast-error-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-toast-error-background" data-swatch="--color-toast-error-background" style="--swatch-color: var(--color-toast-error-background)"><span>toast-error-background</span></button>
+                    <button class="swatch" type="button" title="--color-toast-error-border" data-swatch="--color-toast-error-border" style="--swatch-color: var(--color-toast-error-border)"><span>toast-error-border</span></button>
+                    <button class="swatch" type="button" title="--color-sidebar-foreground" data-swatch="--color-sidebar-foreground" style="--swatch-color: var(--color-sidebar-foreground)"><span>sidebar-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-sidebar-background" data-swatch="--color-sidebar-background" style="--swatch-color: var(--color-sidebar-background)"><span>sidebar-background</span></button>
+                    <button class="swatch" type="button" title="--color-sidebar-border" data-swatch="--color-sidebar-border" style="--swatch-color: var(--color-sidebar-border)"><span>sidebar-border</span></button>
+                    <button class="swatch" type="button" title="--color-sidebar-heading" data-swatch="--color-sidebar-heading" style="--swatch-color: var(--color-sidebar-heading)"><span>sidebar-heading</span></button>
+                    <button class="swatch" type="button" title="--color-sidebar-hover" data-swatch="--color-sidebar-hover" style="--swatch-color: var(--color-sidebar-hover)"><span>sidebar-hover</span></button>
+                    <button class="swatch" type="button" title="--color-sidebar-active-foreground" data-swatch="--color-sidebar-active-foreground" style="--swatch-color: var(--color-sidebar-active-foreground)"><span>sidebar-active-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-sidebar-active-background" data-swatch="--color-sidebar-active-background" style="--swatch-color: var(--color-sidebar-active-background)"><span>sidebar-active-background</span></button>
+                    <button class="swatch" type="button" title="--color-sidebar-backdrop" data-swatch="--color-sidebar-backdrop" style="--swatch-color: var(--color-sidebar-backdrop)"><span>sidebar-backdrop</span></button>
+                    <button class="swatch" type="button" title="--color-segmented-control-foreground" data-swatch="--color-segmented-control-foreground" style="--swatch-color: var(--color-segmented-control-foreground)"><span>segmented-control-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-segmented-control-background" data-swatch="--color-segmented-control-background" style="--swatch-color: var(--color-segmented-control-background)"><span>segmented-control-background</span></button>
+                    <button class="swatch" type="button" title="--color-segmented-control-border" data-swatch="--color-segmented-control-border" style="--swatch-color: var(--color-segmented-control-border)"><span>segmented-control-border</span></button>
+                    <button class="swatch" type="button" title="--color-segmented-control-hover" data-swatch="--color-segmented-control-hover" style="--swatch-color: var(--color-segmented-control-hover)"><span>segmented-control-hover</span></button>
+                    <button class="swatch" type="button" title="--color-segmented-control-active-foreground" data-swatch="--color-segmented-control-active-foreground" style="--swatch-color: var(--color-segmented-control-active-foreground)"><span>segmented-control-active-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-segmented-control-active-background" data-swatch="--color-segmented-control-active-background" style="--swatch-color: var(--color-segmented-control-active-background)"><span>segmented-control-active-background</span></button>
+                    <button class="swatch" type="button" title="--color-segmented-control-focus" data-swatch="--color-segmented-control-focus" style="--swatch-color: var(--color-segmented-control-focus)"><span>segmented-control-focus</span></button>
+                    <button class="swatch" type="button" title="--color-swatch-foreground" data-swatch="--color-swatch-foreground" style="--swatch-color: var(--color-swatch-foreground)"><span>swatch-foreground</span></button>
+                    <button class="swatch" type="button" title="--color-swatch-border" data-swatch="--color-swatch-border" style="--swatch-color: var(--color-swatch-border)"><span>swatch-border</span></button>
+                    <button class="swatch" type="button" title="--color-swatch-focus" data-swatch="--color-swatch-focus" style="--swatch-color: var(--color-swatch-focus)"><span>swatch-focus</span></button>
+                    <button class="swatch" type="button" title="--color-swatch-checker-light" data-swatch="--color-swatch-checker-light" style="--swatch-color: var(--color-swatch-checker-light)"><span>swatch-checker-light</span></button>
+                    <button class="swatch" type="button" title="--color-swatch-checker-dark" data-swatch="--color-swatch-checker-dark" style="--swatch-color: var(--color-swatch-checker-dark)"><span>swatch-checker-dark</span></button>
+                </div>
             </div>
 
             <h2>Utility classes</h2>
@@ -187,9 +1108,10 @@
 &lt;div class="block bg-color-purple-opacity-10 bd-color-purple-normal"&gt;…&lt;/div&gt;</code></pre>
 
             <h2>Themes</h2>
-            <p>A theme sets the semantic colors for the whole page. <code>style.css</code> uses <code>dark</code>; <code>black</code>, <code>light</code>, and <code>white</code> are also available. <code>dark-ud</code>, <code>light-ud</code>, <code>black-ud</code>, and <code>white-ud</code> are <code>dark</code>, <code>light</code>, <code>black</code>, and <code>white</code> with the status and GitHub Markdown colors replaced by the JIS safety colors, which keep the same lightness in every variant. Choose one here to see it on this site.</p>
+            <p>A theme sets the semantic colors for the whole page. <code>style.css</code> uses <code>dark</code>; <code>black</code>, <code>light</code>, and <code>white</code> are also available. <code>dark-ud</code>, <code>light-ud</code>, <code>black-ud</code>, and <code>white-ud</code> are <code>dark</code>, <code>light</code>, <code>black</code>, and <code>white</code> with the status and GitHub Markdown colors replaced by the JIS safety colors, which keep the same lightness in every variant. <span class="script-only">Choose one here to see it on this site.</span></p>
             <p><code>auto</code> follows the system setting: <code>light</code> when the system prefers a light color scheme, <code>dark</code> otherwise. <code>auto-stark</code> does the same with <code>white</code> and <code>black</code>. <code>auto-ud</code> and <code>auto-stark-ud</code> are the same two with the <code>-ud</code> variants.</p>
-            <div class="segmented-control" role="radiogroup" aria-label="Theme">
+            <noscript><p>JavaScript is required to change the theme on this site, so the theme selector is hidden.</p></noscript>
+            <div class="segmented-control script-only" role="radiogroup" aria-label="Theme">
                 <label><input type="radio" name="theme" data-theme-trigger="auto"><span>Auto</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="auto-ud"><span>Auto (UD)</span></label>
                 <label><input type="radio" name="theme" data-theme-trigger="auto-stark"><span>Auto (Stark)</span></label>
@@ -231,86 +1153,6 @@ await theme.set(null);    // back to the colors in style.css</code></pre>
 
             <script>
                 (() => {
-                    const HUES = ['grey', 'red', 'orange', 'yellow', 'green', 'cyan', 'sky', 'blue', 'purple', 'pink'];
-                    const stepsTo = last => Array.from({ length: last / 5 + 1 }, (_, index) => index * 5);
-                    const PALETTE_STEPS = stepsTo(200);
-                    const OPACITY_STEPS = stepsTo(100);
-                    const words = text => text.trim().split(/\s+/);
-
-                    // Rows are { label, names } and are drawn with compact swatches; flat lists are drawn with named swatches.
-                    const ROWS = {
-                        palette: HUES.map(hue => ({ label: hue, names: PALETTE_STEPS.map(step => `${hue}-${step}`) })),
-                        opacity: ['black', 'white', ...HUES.slice(1)].map(hue => ({ label: hue, names: OPACITY_STEPS.map(step => `${hue}-opacity-${step}`) }))
-                    };
-                    const LISTS = {
-                        brightness: ['black', 'white', 'grey', ...HUES.slice(1).flatMap(hue => [hue, `${hue}-dark`, `${hue}-normal`, `${hue}-bright`])],
-                        jis:        words('white black red red-yellow yellow green blue red-purple').map(name => `jis-${name}`),
-                        base:       words('foreground foreground-alt background background-alt layer layer-alt border border-alt'),
-                        status:     words('information success warning error').flatMap(name => [`${name}-dark`, `${name}-normal`, `${name}-bright`]),
-                        markdown:   words('note tip important caution').flatMap(name => [`${name}-dark`, `${name}-normal`, `${name}-bright`]),
-                        components: words(`
-                            cursor cursor-on-link
-                            button-foreground button-background button-border
-                            button-primary-foreground button-primary-background button-primary-border
-                            button-information-foreground button-information-background button-information-border
-                            button-success-foreground button-success-background button-success-border
-                            button-warning-foreground button-warning-background button-warning-border
-                            button-error-foreground button-error-background button-error-border
-                            textfield-foreground textfield-background textfield-border textfield-focus
-                            dropdown-foreground dropdown-background dropdown-border dropdown-focus
-                            progress progress-track
-                            slider slider-track slider-thumb slider-focus
-                            table-foreground table-header-foreground table-header-background table-border table-stripe table-hover
-                            details-foreground details-background details-summary-foreground details-summary-background details-summary-hover
-                            popup-foreground popup-background popup-border popup-backdrop
-                            toast-foreground toast-background toast-border
-                            toast-information-foreground toast-information-background toast-information-border
-                            toast-success-foreground toast-success-background toast-success-border
-                            toast-warning-foreground toast-warning-background toast-warning-border
-                            toast-error-foreground toast-error-background toast-error-border
-                            sidebar-foreground sidebar-background sidebar-border sidebar-heading sidebar-hover
-                            sidebar-active-foreground sidebar-active-background sidebar-backdrop
-                            segmented-control-foreground segmented-control-background segmented-control-border segmented-control-hover
-                            segmented-control-active-foreground segmented-control-active-background segmented-control-focus
-                            swatch-foreground swatch-border swatch-focus swatch-checker-light swatch-checker-dark
-                        `)
-                    };
-
-                    const swatchOf = (name, label, compact) => {
-                        const property = `--color-${name}`;
-                        const swatch = document.createElement('button');
-                        swatch.className = compact ? 'swatch swatch-compact' : 'swatch';
-                        swatch.type = 'button';
-                        swatch.title = property;
-                        swatch.dataset.swatch = property;
-                        swatch.style.setProperty('--swatch-color', `var(${property})`);
-                        const text = document.createElement('span');
-                        text.textContent = label;
-                        swatch.append(text);
-                        return swatch;
-                    };
-
-                    for (const container of document.querySelectorAll('[data-swatches]')) {
-                        const group = container.dataset.swatches;
-                        if (ROWS[group]) {
-                            for (const { label, names } of ROWS[group]) {
-                                const row = document.createElement('div');
-                                row.className = 'palette-row';
-                                row.style.setProperty('--palette-columns', names.length);
-                                const heading = document.createElement('span');
-                                heading.textContent = label;
-                                const grid = document.createElement('div');
-                                grid.className = 'grid';
-                                grid.style.cssText = `--grid-columns: ${names.length}; --grid-min-width: 0px; --grid-gap: 2px`;
-                                grid.append(...names.map(name => swatchOf(name, name.split('-').pop(), true)));
-                                row.append(heading, grid);
-                                container.append(row);
-                            }
-                        } else {
-                            container.append(...LISTS[group].map(name => swatchOf(name, name, false)));
-                        }
-                    }
-
                     // The selected format is kept on the panel, where swatch.js reads it (data-swatch-format).
                     // It is read from the checked input on load as well, because the browser may restore form state.
                     for (const panel of document.querySelectorAll('[data-swatch-format]')) {

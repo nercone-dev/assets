@@ -1,3 +1,20 @@
+/* Loaded only from <noscript>, so these rules apply only when JavaScript is disabled. */
+
 #loading-overlay {
     display: none;
+}
+
+/* Controls that do nothing without JavaScript. */
+.script-only {
+    display: none !important;
+}
+
+/* slider.js fills the track up to the value. Without it the fill would stay where the page left it, so the track is drawn without a fill. */
+.slider, :where(input[type="range"]) {
+    --slider-fill: 0px;
+}
+/* Firefox draws the fill itself. */
+.slider::-moz-range-progress, :where(input[type="range"])::-moz-range-progress {
+    background-color: var(--color-slider);
+    height: var(--slider-thickness, 4px);
 }

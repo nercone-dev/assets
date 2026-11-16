@@ -6,7 +6,11 @@
         <title>Tables - Nercone Design</title>
         <link rel="icon" href="../images/favicon.svg">
         <link rel="stylesheet" href="../styles/index.css">
-        <noscript><link rel="stylesheet" href="../styles/noscript.css"></noscript>
+        <noscript>
+            <link rel="stylesheet" href="../styles/noscript.css">
+            <!-- theme.js applies auto-stark by default; without it, the same theme is loaded here. -->
+            <link rel="stylesheet" href="../styles/themes/auto-stark.css">
+        </noscript>
         <script type="module" src="../scripts/index.js"></script>
         <script type="module">window.nercone.register('theme', new window.nercone.Theme({ baseURL: '../styles/themes/' }));</script>
     </head>
@@ -33,7 +37,7 @@
             <a href="/docs/colors.html">Colors</a>
             <a href="/docs/typography.html">Typography</a>
             <a href="/docs/layout.html">Layout</a>
-            <a href="/docs/tables.html">Tables</a>
+            <a href="/docs/tables.html" aria-current="page">Tables</a>
             <a href="/docs/forms.html">Forms</a>
             <a href="/docs/progress.html">Progress</a>
             <a href="/docs/overlays.html">Overlays</a>

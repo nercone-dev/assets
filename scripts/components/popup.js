@@ -37,6 +37,13 @@
             if (event.defaultPrevented) return;
             const { openAttribute, closeAttribute } = this.options;
 
+            // Browsers with invoker commands run commandfor and command themselves, without JavaScript.
+            const invoker = Popup.isCommandSupported() ? null : event.target.closest?.('button[commandfor][command]');
+            if (invoker) {
+                if (this.invoke(invoker)) event.preventDefault();
+                return;
+            }
+
             const opener = event.target.closest?.(`[${openAttribute}]`);
             if (opener) {
                 if (this.open(opener.getAttribute(openAttribute))) event.preventDefault();
@@ -76,7 +83,34 @@
             return popup.open ? this.close(popup) : this.open(popup);
         }
 
+        // Runs the command of BUTTON (command="show-modal", "close" or "request-close") on the dialog named by its commandfor,
+        // as browsers with invoker commands do. Returns the dialog, or null when nothing changed.
+        invoke(button) {
+            // A submit or reset button in a form does that instead of its command.
+            if (button.disabled || (button.form && button.type !== 'button')) return null;
+            const popup = Popup.resolve(button.getAttribute('commandfor'));
+            if (!popup) return null;
+            switch (button.getAttribute('command').toLowerCase()) {
+                case 'show-modal':
+                    return this.open(popup);
+                case 'close':
+                    return this.close(popup, button.value);
+                case 'request-close':
+                    // requestClose() fires cancel, which can keep the dialog open; close() would skip it, so it is not used instead.
+                    if (!popup.open || typeof popup.requestClose !== 'function') return null;
+                    if (button.value) popup.requestClose(button.value);
+                    else popup.requestClose();
+                    return popup;
+                default:
+                    return null;
+            }
+        }
+
         // Helpers
+        static isCommandSupported() {
+            return 'command' in HTMLButtonElement.prototype;
+        }
+
         static resolve(target) {
             const popup = typeof target === 'string' ? document.getElementById(target) : target;
             return popup instanceof HTMLDialogElement ? popup : null;
