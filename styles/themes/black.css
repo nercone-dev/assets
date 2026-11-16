@@ -82,10 +82,13 @@
     --color-textfield-border:     var(--color-border);
     --color-textfield-focus:      var(--color-foreground-alt);
 
-    --color-dropdown-foreground: var(--color-foreground-alt);
-    --color-dropdown-background: var(--color-layer-alt);
-    --color-dropdown-border:     var(--color-border);
-    --color-dropdown-focus:      var(--color-foreground-alt);
+    --color-dropdown-foreground:        var(--color-foreground-alt);
+    --color-dropdown-background:        var(--color-layer-alt);
+    --color-dropdown-border:            var(--color-border);
+    --color-dropdown-focus:             var(--color-foreground-alt);
+    --color-dropdown-hover:             color-mix(in srgb, transparent, var(--color-foreground) 15%);
+    --color-dropdown-active-foreground: var(--color-button-primary-foreground);
+    --color-dropdown-active-background: var(--color-button-primary-background);
 
     --color-progress:       var(--color-foreground-alt);
     --color-progress-track: var(--color-layer);

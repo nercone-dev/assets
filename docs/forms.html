@@ -141,12 +141,30 @@
                     <option>--dropdown-padding: 4px 8px</option>
                 </select>
             </div>
-            <p>With <code>multiple</code> or a <code>size</code> greater than 1, the arrow is not drawn.</p>
-            <select multiple aria-label="Multiple">
-                <option selected>Multiple One</option>
-                <option>Multiple Two</option>
-                <option selected>Multiple Three</option>
-            </select>
+            <p>With <code>multiple</code> or a <code>size</code> greater than 1, the options are drawn as a list instead of an arrow. The list uses <code>appearance: base-select</code>; browsers that do not support it for lists show the native list. The visible rows follow <code>size</code> (default 4). Change the padding of the list with <code>--dropdown-list-padding</code> (one length, default <code>4px</code>) and the padding of each row with <code>--dropdown-option-padding-block</code> (default <code>4px</code>) and <code>--dropdown-option-padding-inline</code> (default <code>8px</code>).</p>
+            <div class="grid" style="--grid-min-width: 200px">
+                <select multiple aria-label="Multiple">
+                    <option selected>Multiple One</option>
+                    <option>Multiple Two</option>
+                    <option selected>Multiple Three</option>
+                    <option disabled>Multiple Four (disabled)</option>
+                </select>
+                <select multiple aria-label="Multiple with groups">
+                    <optgroup label="Fruits">
+                        <option selected>Apple</option>
+                        <option>Orange</option>
+                    </optgroup>
+                    <optgroup label="Vegetables">
+                        <option>Carrot</option>
+                    </optgroup>
+                </select>
+                <select size="4" aria-label="Size">
+                    <option>Size One</option>
+                    <option selected>Size Two</option>
+                    <option>Size Three</option>
+                    <option>Size Four</option>
+                </select>
+            </div>
             <pre><code>&lt;select&gt;
     &lt;option&gt;One&lt;/option&gt;
     &lt;option&gt;Two&lt;/option&gt;

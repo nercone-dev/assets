@@ -36,15 +36,68 @@
         left 15px center,
         left 20px center;
 }
+/*
+ * With multiple or size > 1 the options are drawn inside the box as a list.
+ * base-select is needed here: the native list box forces its own selection colors with !important,
+ * which cannot be overridden and clashes with the colors below. Browsers without base-select for
+ * list boxes keep the native list box, where those forced colors are used as they are.
+ */
 .dropdown[multiple], :where(select)[multiple], .dropdown[size]:not([size="1"]), :where(select)[size]:not([size="1"]) {
+    appearance: base-select;
     background-image: none;
-    padding-inline-end: 12px;
+    padding: var(--dropdown-list-padding, 4px);
     cursor: auto;
+
+    /*
+     * With base-select the browser sets the height to size × line-height, which leaves no room for the padding of the rows.
+     * The height is given here so that exactly size rows fit. Browsers without typed attr() ignore this and keep their own height.
+     */
+    block-size: calc(
+        attr(size type(<integer>), 4) * (1lh + 2 * var(--dropdown-option-padding-block, 4px))
+        + 2 * var(--dropdown-list-padding, 4px)
+        + 2px
+    );
 }
 
 .dropdown option, :where(select) option, .dropdown optgroup, :where(select) optgroup {
     color: var(--color-foreground-alt);
     background-color: var(--color-background-alt);
+}
+
+.dropdown[multiple] :is(option, optgroup), :where(select)[multiple] :is(option, optgroup), .dropdown[size]:not([size="1"]) :is(option, optgroup), :where(select)[size]:not([size="1"]) :is(option, optgroup) {
+    color: inherit;
+    background-color: transparent;
+}
+.dropdown[multiple] optgroup, :where(select)[multiple] optgroup, .dropdown[size]:not([size="1"]) optgroup, :where(select)[size]:not([size="1"]) optgroup {
+    font-weight: var(--font-weight-medium);
+}
+.dropdown[multiple] optgroup > legend, :where(select)[multiple] optgroup > legend, .dropdown[size]:not([size="1"]) optgroup > legend, :where(select)[size]:not([size="1"]) optgroup > legend {
+    padding: var(--dropdown-option-padding-block, 4px) var(--dropdown-option-padding-inline, 8px);
+}
+.dropdown[multiple] option, :where(select)[multiple] option, .dropdown[size]:not([size="1"]) option, :where(select)[size]:not([size="1"]) option {
+    font-weight: normal;
+    outline: none;
+    padding: var(--dropdown-option-padding-block, 4px) var(--dropdown-option-padding-inline, 8px);
+    cursor: pointer;
+}
+.dropdown[multiple] option::checkmark, :where(select)[multiple] option::checkmark, .dropdown[size]:not([size="1"]) option::checkmark, :where(select)[size]:not([size="1"]) option::checkmark {
+    display: none;
+}
+.dropdown[multiple] option:hover:not(:checked, :disabled), :where(select)[multiple] option:hover:not(:checked, :disabled), .dropdown[size]:not([size="1"]) option:hover:not(:checked, :disabled), :where(select)[size]:not([size="1"]) option:hover:not(:checked, :disabled) {
+    background-color: var(--color-dropdown-hover);
+}
+.dropdown[multiple] option:checked, :where(select)[multiple] option:checked, .dropdown[size]:not([size="1"]) option:checked, :where(select)[size]:not([size="1"]) option:checked {
+    color: var(--color-dropdown-active-foreground);
+    background-color: var(--color-dropdown-active-background);
+}
+.dropdown[multiple] option:focus-visible, :where(select)[multiple] option:focus-visible, .dropdown[size]:not([size="1"]) option:focus-visible, :where(select)[size]:not([size="1"]) option:focus-visible {
+    /* currentColor keeps the outline visible on both selected and unselected rows. */
+    outline: solid 1px currentColor;
+    outline-offset: -3px;
+}
+.dropdown[multiple] option:disabled, :where(select)[multiple] option:disabled, .dropdown[size]:not([size="1"]) option:disabled, :where(select)[size]:not([size="1"]) option:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .dropdown:hover, :where(select):hover {
