@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: NerconeSansCJKVariable-Bold, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke: #1a1a1a;
+        stroke-miterlimit: 10;
+        stroke-width: 12px;
+      }
+
+      .cls-4 {
+        font-family: NerconeMonoCJKNF-Variable, 'Nercone Mono CJK NF Variable';
+        font-size: 12px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-4, .cls-3, .cls-5 {
+        opacity: .5;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill: #1a1a1a;
+      }
+
+      .cls-9, .cls-10, .cls-11, .cls-12 {
+        font-family: NerconeSansCJKVariable-Medium, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-13, .cls-8 {
+        font-family: NerconeSansCJK-Variable, 'Nercone Sans CJK Variable';
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-14 {
+        fill: #39f;
+      }
+
+      .cls-6 {
+        font-size: 32px;
+      }
+
+      .cls-10 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-15 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-8 {
+        font-size: 20px;
+      }
+
+      .cls-18, .cls-12 {
+        letter-spacing: .02em;
+      }
+    </style>
+  </defs>
+  <rect class="cls-7" width="1024" height="1024"/>
+  <g>
+    <path class="cls-14" d="M512,112c-220.92,0-400,179.08-400,400s179.08,400,400,400,400-179.08,400-400S732.92,112,512,112ZM512,612c-55.23,0-100-44.77-100-100s44.77-100,100-100,100,44.77,100,100-44.77,100-100,100Z"/>
+    <g>
+      <path class="cls-3" d="M233.5,455h0c-15.74,0-28.5,12.76-28.5,28.5h0c0,15.74,12.76,28.5,28.5,28.5h57c15.74,0,28.5,12.76,28.5,28.5h0c0,15.74-12.76,28.5-28.5,28.5h0c-15.74,0-28.5-12.76-28.5-28.5v-57c0-15.74-12.76-28.5-28.5-28.5Z"/>
+      <path class="cls-2" d="M233.5,455c-15.74,0-28.5,12.76-28.5,28.5h0c0,15.74,12.76,28.5,28.5,28.5h57c15.74,0,28.5,12.76,28.5,28.5h0c0,15.74-12.76,28.5-28.5,28.5"/>
+    </g>
+    <g>
+      <text class="cls-6" transform="translate(632.73 509.58)"><tspan class="cls-1" x="0" y="0">RucOS</tspan><tspan class="cls-13" x="105.39" y="0"> </tspan><tspan class="cls-11" x="114.39" y="0">R</tspan><tspan class="cls-9" x="134.69" y="0">ec</tspan><tspan class="cls-10" x="171.95" y="0">ov</tspan><tspan class="cls-9" x="208.45" y="0">e</tspan><tspan class="cls-12" x="227.25" y="0">r</tspan><tspan class="cls-9" x="240.12" y="0">y</tspan></text>
+      <text class="cls-8" transform="translate(655.56 537.75)"><tspan class="cls-17" x="0" y="0">R</tspan><tspan x="12.58" y="0">ec</tspan><tspan class="cls-16" x="35.66" y="0">ov</tspan><tspan x="58.12" y="0">e</tspan><tspan class="cls-18" x="69.78" y="0">r</tspan><tspan x="77.62" y="0">y 1</tspan><tspan class="cls-15" x="102.62" y="0">.0.</tspan><tspan x="125.23" y="0">0 - Disk 1</tspan></text>
+    </g>
+    <g>
+      <polyline class="cls-5" points="424.75 749.7 357.25 727.12 357.25 760.88 391 760.88 424.75 727.12 424.75 760.88 407.22 760.88"/>
+      <text class="cls-4" transform="translate(356.67 783.13)"><tspan x="0" y="0" xml:space="preserve">RucOS Recovery 1.0.0                 DISK 1</tspan><tspan x="0" y="21">MA6 x86_32,x86_64,AArch32,AArch64,RV32,RV64</tspan><tspan x="0" y="42">02z1y6wh-z9a7mpt1-aan6de7q-h7gtczck-ebhqpvr</tspan></text>
+    </g>
+  </g>
+</svg>
