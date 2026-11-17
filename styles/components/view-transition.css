@@ -36,6 +36,16 @@ main {
 #cursor {
     view-transition-name: cursor;
 }
+::view-transition-group(cursor),
+::view-transition-new(cursor) {
+    animation: none;
+}
+::view-transition-new(cursor) {
+    height: 100%;
+}
+::view-transition-old(cursor) {
+    display: none;
+}
 
 #loading-overlay {
     view-transition-name: none;
